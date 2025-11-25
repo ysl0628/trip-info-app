@@ -1,6 +1,6 @@
 {
   "name": "2026-california-family-trip",
-  "homepage": "https://ysl0628.github.io/trip-info-app",
+  "homepage": "https://ysl0628.github.io/trip-info-app/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -9,7 +9,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist -t true"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "react": "^19.2.0",
