@@ -4,7 +4,10 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig(({ mode }) => {
     const env = loadEnv(mode, '.', '');
+  const repoBase = env.VITE_BASE_PATH || '/trip-info-app/';
+
     return {
+      base: mode === 'development' ? '/' : repoBase,
       server: {
         port: 3000,
         host: '0.0.0.0',

@@ -18,3 +18,10 @@ View your app in AI Studio: https://ai.studio/apps/drive/1i5GCw_8FWDxI2KKxmH-zkX
 2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
 3. Run the app:
    `npm run dev`
+
+## Deploy to GitHub Pages
+
+1. Update the `homepage` field in `package.json` if your repo slug changes.
+2. Optional: override the base path by setting `VITE_BASE_PATH` before building.
+3. Deploy:
+   `npm run deploy`
