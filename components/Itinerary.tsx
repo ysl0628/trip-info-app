@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
+import { createPortal } from 'react-dom';
 import { ITINERARY } from '../constants';
 import { Map, BedDouble, Utensils, Bus, Car, X, ExternalLink, Navigation, Clock } from 'lucide-react';
 import { DayItinerary } from '../types';
 
 export const Itinerary: React.FC = () => {
   const [selectedMap, setSelectedMap] = useState<DayItinerary | null>(null);
-  const [selectedDay, setSelectedDay] = useState<number>(ITINERARY[0]?.day ?? 1);
+  const [selectedDay, setSelectedDay] = useState<number | 'overview'>('overview');
 
   const getEmbedUrl = (url: string) => {
     try {
@@ -25,19 +26,30 @@ export const Itinerary: React.FC = () => {
     }
   };
 
-  const item = ITINERARY.find(d => d.day === selectedDay);
+  const item = selectedDay === 'overview'
+    ? null
+    : ITINERARY.find(d => d.day === selectedDay);
 
-  if (!item) {
-    return <div className="p-4 text-center text-stone-500">請選擇一天來查看行程。</div>;
-  }
-
-  const isGroupTour = item.title.includes('跟團');
+  const isGroupTour = item ? item.title.includes('跟團') : false;
 
   return (
     <div className="pb-20">
       {/* Pills Tab Navigation */}
       <div className="relative z-20 py-2 -mx-4 px-4 mb-8 md:mb-10">
         <div className="flex overflow-x-auto p-1 gap-2 no-scrollbar md:justify-center md:flex-wrap">
+          <button
+            onClick={() => setSelectedDay('overview')}
+            className={`
+              flex-shrink-0 px-5 py-2.5 rounded-full text-sm font-bold transition-all duration-300 whitespace-nowrap border
+              ${
+                selectedDay === 'overview'
+                  ? 'bg-stone-900 text-white border-stone-900 shadow-lg scale-105'
+                  : 'bg-white text-stone-500 border-stone-200 hover:border-stone-300'
+              }
+            `}
+          >
+            總覽
+          </button>
           {ITINERARY.map(tabItem => (
             <button
               key={tabItem.day}
@@ -57,7 +69,61 @@ export const Itinerary: React.FC = () => {
         </div>
       </div>
       
-      {/* Content for selected day */}
+      {/* Content */}
+      {selectedDay === 'overview' ? (
+        <div className="mt-6 space-y-6">
+          <div>
+            <h3 className="text-2xl md:text-3xl font-bold font-serif text-stone-800 mb-2">
+              行程總覽
+            </h3>
+            <p className="text-stone-600 text-base md:text-lg max-w-3xl">
+              從洛杉磯出發，搭配拉斯維加斯大峽谷跟團、海岸線自駕與聖地牙哥城市探訪，
+              這裡快速總結 13 天行程，點選任一天可查看詳細安排與路線圖。
+            </p>
+          </div>
+
+          <div className="space-y-3">
+            {ITINERARY.map(day => {
+              const dayIsGroup = day.title.includes('跟團');
+              return (
+                <button
+                  key={day.day}
+                  onClick={() => setSelectedDay(day.day)}
+                  className="w-full text-left p-4 md:p-5 rounded-2xl bg-white border border-stone-100 hover:border-stone-300 transition-all shadow-sm hover:shadow-md flex items-start gap-4"
+                >
+                  <div className="flex flex-col items-center justify-center shrink-0 w-14">
+                    <span className="text-[11px] font-bold uppercase tracking-wider text-stone-400">
+                      Day
+                    </span>
+                    <span className="text-xl md:text-2xl font-serif font-bold text-stone-800">
+                      {day.day}
+                    </span>
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <div className="flex flex-wrap items-center gap-2 mb-1">
+                      <span className="text-xs font-bold text-stone-400 uppercase tracking-wider">
+                        {day.date}
+                      </span>
+                      {dayIsGroup && (
+                        <span className="px-2 py-0.5 rounded text-[10px] font-bold border bg-amber-50 text-amber-700 border-amber-200">
+                          跟團行程
+                        </span>
+                      )}
+                    </div>
+                    <p className="text-base md:text-lg font-semibold text-stone-800 truncate">
+                      {day.title.replace('【跟團】', '').replace('【跟團結束】', '')}
+                    </p>
+                    <p className="text-sm md:text-base text-stone-500 mt-1 line-clamp-2">
+                      {day.description}
+                    </p>
+                  </div>
+                </button>
+              );
+            })}
+          </div>
+        </div>
+      ) : item ? (
+      /* Content for selected day */
       <div className="mt-6" key={item.day}>
         {/* Page Header */}
         <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-8">
@@ -156,59 +222,64 @@ export const Itinerary: React.FC = () => {
             )}
         </div>
       </div>
-
-      {/* Map Dialog - Keeping the same logic but improving z-index for mobile */}
-      {selectedMap && (
-        <div 
-          className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-stone-900/80 backdrop-blur-sm animate-fade-in"
-          onClick={() => setSelectedMap(null)}
-        >
-          <div 
-            className="bg-white rounded-2xl shadow-2xl w-full max-w-4xl h-[70vh] md:h-[80vh] overflow-hidden flex flex-col transform transition-all scale-100"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <div className="px-4 py-3 border-b border-stone-100 flex justify-between items-center bg-white shrink-0">
-              <div className="flex items-center gap-2 min-w-0">
-                <span className="shrink-0 bg-stone-100 text-stone-600 text-xs font-bold px-2 py-0.5 rounded">Day {selectedMap.day}</span>
-                <h3 className="font-bold text-stone-800 truncate">{selectedMap.title}</h3>
-              </div>
-              <button onClick={() => setSelectedMap(null)} className="p-2 rounded-full hover:bg-stone-100 text-stone-500 shrink-0">
-                <X size={20} />
-              </button>
-            </div>
-            
-            <div className="flex-1 bg-stone-100 relative w-full">
-               {selectedMap.mapLink && getEmbedUrl(selectedMap.mapLink) ? (
-                 <iframe
-                   width="100%"
-                   height="100%"
-                   frameBorder="0"
-                   src={getEmbedUrl(selectedMap.mapLink)!}
-                   allowFullScreen
-                   className="w-full h-full absolute inset-0"
-                   title="map"
-                 ></iframe>
-               ) : (
-                 <div className="absolute inset-0 flex items-center justify-center text-stone-400">
-                    <p>無法預覽地圖</p>
-                 </div>
-               )}
-            </div>
-            
-            <div className="p-4 bg-white border-t border-stone-100 shrink-0 pb-safe">
-                <a 
-                  href={selectedMap.mapLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 w-full bg-stone-900 text-white font-bold py-3.5 rounded-xl hover:bg-stone-700 transition-colors shadow-lg"
-                >
-                  <Navigation size={18} />
-                  開啟 Google Maps
-                </a>
-            </div>
-          </div>
-        </div>
+      ) : (
+        <div className="p-4 text-center text-stone-500">請選擇一天來查看行程。</div>
       )}
+
+      {/* Map Dialog - rendered via portal for full-page mask */}
+      {selectedMap &&
+        createPortal(
+          <div 
+            className="fixed inset-0 z-[200] flex items-center justify-center p-4 bg-stone-900/80 backdrop-blur-sm animate-fade-in"
+            onClick={() => setSelectedMap(null)}
+          >
+            <div 
+              className="bg-white rounded-2xl shadow-2xl w-full max-w-4xl h-[70vh] md:h-[80vh] overflow-hidden flex flex-col transform transition-all scale-100"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <div className="px-4 py-3 border-b border-stone-100 flex justify-between items-center bg-white shrink-0">
+                <div className="flex items-center gap-2 min-w-0">
+                  <span className="shrink-0 bg-stone-100 text-stone-600 text-xs font-bold px-2 py-0.5 rounded">Day {selectedMap.day}</span>
+                  <h3 className="font-bold text-stone-800 truncate">{selectedMap.title}</h3>
+                </div>
+                <button onClick={() => setSelectedMap(null)} className="p-2 rounded-full hover:bg-stone-100 text-stone-500 shrink-0">
+                  <X size={20} />
+                </button>
+              </div>
+              
+              <div className="flex-1 bg-stone-100 relative w-full">
+                {selectedMap.mapLink && getEmbedUrl(selectedMap.mapLink) ? (
+                  <iframe
+                    width="100%"
+                    height="100%"
+                    frameBorder="0"
+                    src={getEmbedUrl(selectedMap.mapLink)!}
+                    allowFullScreen
+                    className="w-full h-full absolute inset-0"
+                    title="map"
+                  ></iframe>
+                ) : (
+                  <div className="absolute inset-0 flex items-center justify-center text-stone-400">
+                    <p>無法預覽地圖</p>
+                  </div>
+                )}
+              </div>
+              
+              <div className="p-4 bg-white border-t border-stone-100 shrink-0 pb-safe">
+                  <a 
+                    href={selectedMap.mapLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center gap-2 w-full bg-stone-900 text-white font-bold py-3.5 rounded-xl hover:bg-stone-700 transition-colors shadow-lg"
+                  >
+                    <Navigation size={18} />
+                    開啟 Google Maps
+                  </a>
+              </div>
+            </div>
+          </div>,
+          document.body
+        )}
     </div>
   );
 };
