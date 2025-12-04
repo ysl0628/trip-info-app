@@ -47,80 +47,8 @@ export const ITINERARY: DayItinerary[] = [
   {
     day: 2,
     date: '4/2 (週四)',
-    title: '【跟團】前往拉斯維加斯',
-    description: '早晨集合出發前往賭城，途經沙漠風光。晚上自由活動，可參觀百樂宮噴泉或舊城區燈光秀。',
-    highlights: ['拉斯維加斯大道', '百樂宮噴泉', 'Fremont Street Experience'],
-    accommodation: {
-      location: 'Las Vegas',
-      hotels: ['STRAT酒店', '拉斯維加斯楓丹白露']
-    },
-    meals: {
-      breakfast: '羅蘭岡自理',
-      lunch: '途中自理 (如 Barstow Outlets)',
-      dinner: '拉斯維加斯自理'
-    },
-    transport: ['旅行團巴士 (約 4-5 小時)'],
-    mapLink: 'https://www.google.com/maps/dir/Rowland+Heights/Las+Vegas'
-  },
-  {
-    day: 3,
-    date: '4/3 (週五)',
-    title: '【跟團】大峽谷 & 馬蹄灣',
-    description: '壯麗的大峽谷國家公園之旅，下午前往馬蹄灣欣賞科羅拉多河大迴轉。',
-    highlights: ['大峽谷國家公園', '南大峽谷', '東大峽谷', '馬蹄灣'],
-    accommodation: {
-      location: 'Page / Lake Powell',
-      hotels: ['佩奇/鮑威爾湖戴斯套房酒店 (Days Inn)']
-    },
-    meals: {
-      breakfast: '拉斯維加斯自理',
-      lunch: '大峽谷西緣景區自理',
-      dinner: '返回拉斯維加斯後自理'
-    },
-    transport: ['旅行團巴士 (單程約 4.5 小時)'],
-    mapLink: 'https://www.google.com/maps/dir/Las+Vegas/Grand+Canyon+National+Park/Horseshoe+Bend'
-  },
-  {
-    day: 4,
-    date: '4/4 (週六)',
-    title: '【跟團】羚羊峽谷 & 鮑威爾湖',
-    description: '深入羚羊峽谷體驗光影魔術，隨後前往鮑威爾湖，傍晚返回拉斯維加斯。',
-    highlights: ['下羚羊峽谷 (Lower Antelope Canyon)', '鮑威爾湖 (Lake Powell)'],
-    accommodation: {
-      location: 'Las Vegas',
-      hotels: ['STRAT酒店-娛樂場-塔樓']
-    },
-    meals: {
-      breakfast: '自理',
-      lunch: '自理',
-      dinner: '返回拉斯維加斯後自理'
-    },
-    transport: ['旅行團巴士 (返程約 4.5 小時)'],
-    mapLink: 'https://www.google.com/maps/dir/Page/Lower+Antelope+Canyon/Lake+Powell/Las+Vegas'
-  },
-  {
-    day: 5,
-    date: '4/5 (週日)',
-    title: '【跟團結束】七彩石 & 巧克力工廠',
-    description: '參觀網紅景點七彩石，回程停留Barstow Outlets購物，傍晚返回羅蘭岡。',
-    highlights: ['Welcome to Fabulous Las Vegas Sign', '七彩石 (Seven Magic Mountains)', 'Barstow Outlets'],
-    accommodation: {
-      location: '羅蘭岡 (Rowland Heights)',
-      hotels: ['返回原住宿點']
-    },
-    meals: {
-      breakfast: '拉斯維加斯自理',
-      lunch: '自理',
-      dinner: '羅蘭岡自理'
-    },
-    transport: ['旅行團巴士 (約 4-5 小時)', '自行搭車返回住宿'],
-    mapLink: 'https://www.google.com/maps/dir/Las+Vegas/Seven+Magic+Mountains/Barstow/Rowland+Heights'
-  },
-  {
-    day: 6,
-    date: '4/6 (週一)',
     title: '海岸風情 Santa Monica',
-    description: '領取租車，前往充滿活力的聖塔莫尼卡海灘與碼頭，享受加州陽光。',
+    description: '領取租車，前往充滿活力的聖塔莫尼卡海灘與碼頭，享受加州陽光與太平洋海風。',
     highlights: ['聖塔莫尼卡碼頭 (Santa Monica Pier)', '66號公路終點'],
     accommodation: {
       location: '羅蘭岡 (Rowland Heights)',
@@ -135,10 +63,10 @@ export const ITINERARY: DayItinerary[] = [
     mapLink: 'https://www.google.com/maps/dir/Rowland+Heights/Santa+Monica'
   },
   {
-    day: 7,
-    date: '4/7 (週二)',
+    day: 3,
+    date: '4/3 (週五)',
     title: '藝術與奢華',
-    description: '上午參觀蓋蒂中心欣賞藝術收藏，下午漫步於奢華的比佛利山莊。',
+    description: '上午參觀蓋蒂中心欣賞藝術收藏，下午漫步於奢華的比佛利山莊與羅迪歐大道。',
     highlights: ['蓋蒂中心 (The Getty Center)', '比佛利山莊 (Beverly Hills)'],
     accommodation: {
       location: '羅蘭岡 (Rowland Heights)',
@@ -153,8 +81,8 @@ export const ITINERARY: DayItinerary[] = [
     mapLink: 'https://www.google.com/maps/dir/Rowland+Heights/The+Getty/Beverly+Hills'
   },
   {
-    day: 8,
-    date: '4/8 (週三)',
+    day: 4,
+    date: '4/4 (週六)',
     title: 'NBA 球賽體驗夜',
     description: '白天輕鬆購物行程，晚上前往 Crypto.com Arena 感受 NBA 現場氣氛。',
     highlights: ['Crypto.com Arena (Lakers/Clippers home)', 'L.A. Live'],
@@ -171,10 +99,82 @@ export const ITINERARY: DayItinerary[] = [
     mapLink: 'https://www.google.com/maps/dir/Rowland+Heights/Crypto.com+Arena'
   },
   {
+    day: 5,
+    date: '4/5 (週日)',
+    title: '【跟團】前往拉斯維加斯',
+    description: '早晨集合出發前往賭城，途經沙漠風光。晚上自由活動，可參觀百樂宮噴泉或舊城區燈光秀。',
+    highlights: ['拉斯維加斯大道', '百樂宮噴泉', 'Fremont Street Experience'],
+    accommodation: {
+      location: 'Las Vegas',
+      hotels: ['STRAT酒店', '拉斯維加斯楓丹白露']
+    },
+    meals: {
+      breakfast: '羅蘭岡自理',
+      lunch: '途中自理 (如 Barstow Outlets)',
+      dinner: '拉斯維加斯自理'
+    },
+    transport: ['旅行團巴士 (約 4-5 小時)'],
+    mapLink: 'https://www.google.com/maps/dir/Rowland+Heights/Las+Vegas'
+  },
+  {
+    day: 6,
+    date: '4/6 (週一)',
+    title: '【跟團】大峽谷 & 馬蹄灣',
+    description: '壯麗的大峽谷國家公園之旅，下午前往馬蹄灣欣賞科羅拉多河大迴轉。',
+    highlights: ['大峽谷國家公園', '南大峽谷', '東大峽谷', '馬蹄灣'],
+    accommodation: {
+      location: 'Page / Lake Powell',
+      hotels: ['佩奇/鮑威爾湖戴斯套房酒店 (Days Inn)']
+    },
+    meals: {
+      breakfast: '拉斯維加斯自理',
+      lunch: '大峽谷西緣景區自理',
+      dinner: '返回拉斯維加斯後自理'
+    },
+    transport: ['旅行團巴士 (單程約 4.5 小時)'],
+    mapLink: 'https://www.google.com/maps/dir/Las+Vegas/Grand+Canyon+National+Park/Horseshoe+Bend'
+  },
+  {
+    day: 7,
+    date: '4/7 (週二)',
+    title: '【跟團】羚羊峽谷 & 鮑威爾湖',
+    description: '深入羚羊峽谷體驗光影魔術，隨後前往鮑威爾湖，傍晚返回拉斯維加斯。',
+    highlights: ['下羚羊峽谷 (Lower Antelope Canyon)', '鮑威爾湖 (Lake Powell)'],
+    accommodation: {
+      location: 'Las Vegas',
+      hotels: ['STRAT酒店-娛樂場-塔樓']
+    },
+    meals: {
+      breakfast: '自理',
+      lunch: '自理',
+      dinner: '返回拉斯維加斯後自理'
+    },
+    transport: ['旅行團巴士 (返程約 4.5 小時)'],
+    mapLink: 'https://www.google.com/maps/dir/Page/Lower+Antelope+Canyon/Lake+Powell/Las+Vegas'
+  },
+  {
+    day: 8,
+    date: '4/8 (週三)',
+    title: '【跟團結束】七彩石 & 巧克力工廠',
+    description: '參觀網紅景點七彩石，回程停留Barstow Outlets購物，傍晚返回羅蘭岡。',
+    highlights: ['Welcome to Fabulous Las Vegas Sign', '七彩石 (Seven Magic Mountains)', 'Barstow Outlets'],
+    accommodation: {
+      location: '羅蘭岡 (Rowland Heights)',
+      hotels: ['返回原住宿點']
+    },
+    meals: {
+      breakfast: '拉斯維加斯自理',
+      lunch: '自理',
+      dinner: '羅蘭岡自理'
+    },
+    transport: ['旅行團巴士 (約 4-5 小時)', '自行搭車返回住宿'],
+    mapLink: 'https://www.google.com/maps/dir/Las+Vegas/Seven+Magic+Mountains/Barstow/Rowland+Heights'
+  },
+  {
     day: 9,
     date: '4/9 (週四)',
     title: '悠閒海岸線 Malibu',
-    description: '沿著太平洋海岸公路 (PCH) 駕駛，前往馬里布享受私人海灘般的寧靜。',
+    description: '沿著太平洋海岸公路 (PCH) 駕駛，前往馬里布享受私人海灘般的寧靜，回程可順道探索洛杉磯周邊小鎮。',
     highlights: ['太平洋海岸公路 (PCH)', '馬里布 (Malibu)'],
     accommodation: {
       location: '羅蘭岡 (Rowland Heights)',

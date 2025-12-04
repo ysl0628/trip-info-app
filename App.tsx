@@ -6,6 +6,7 @@ import { Attractions } from "./components/Attractions";
 import { Food } from "./components/Food";
 import { GeneralInfo } from "./components/GeneralInfo";
 import { ArrowUp, CalendarDays, Plane, MapPin, Utensils, Info, Sun, Sparkles } from "lucide-react";
+import { Logo } from "./components/Logo";
 
 const App: React.FC = () => {
   const [activeTab, setActiveTab] = useState("itinerary");
@@ -87,12 +88,8 @@ const App: React.FC = () => {
         <div className="max-w-6xl mx-auto px-4 md:px-8">
           <div className="flex items-center justify-between h-16 md:h-20">
             {/* Logo Area */}
+            <Logo />
             <div className="flex items-center gap-3">
-              <div className="flex flex-col">
-                <h1 className="font-serif text-2xl md:text-3xl font-bold text-stone-900 leading-none tracking-tight flex items-center gap-1">
-                  SoCal<span className="text-amber-500">.</span>
-                </h1>
-              </div>
               <div className="hidden md:block w-px h-6 bg-stone-300 mx-1"></div>
               <span className="hidden md:block text-[11px] font-bold tracking-[0.2em] text-stone-500 uppercase pt-1">
                 Family Trip 2026
