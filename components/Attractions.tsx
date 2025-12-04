@@ -39,7 +39,7 @@ export const Attractions: React.FC = () => {
       
       {/* Horizontal Tabs - Visible at top (Both Mobile & Desktop now) */}
       <div className="relative z-20 py-2 -mx-4 px-4 mb-8 md:mb-10">
-          <div className="flex overflow-x-auto pb-1 gap-2 no-scrollbar md:justify-center md:flex-wrap">
+          <div className="flex overflow-x-auto p-2 gap-2 no-scrollbar md:justify-center md:flex-wrap">
             {regions.map((region) => (
               <button
                 key={region}

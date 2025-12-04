@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Navigation } from './components/Navigation';
 import { Itinerary } from './components/Itinerary';
 import { Flights } from './components/Flights';
@@ -10,21 +10,32 @@ import { ArrowUp, CalendarDays, Plane, MapPin, Utensils, Info, Sun, Sparkles } f
 const App: React.FC = () => {
   const [activeTab, setActiveTab] = useState('itinerary');
   const [showScrollTop, setShowScrollTop] = useState(false);
+  const mainRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
+    const main = mainRef.current;
+    if (!main) return;
+
     const handleScroll = () => {
-      setShowScrollTop(window.scrollY > 300);
+      setShowScrollTop(main.scrollTop > 300);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    main.addEventListener('scroll', handleScroll);
+    return () => main.removeEventListener('scroll', handleScroll);
   }, []);
 
   const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
+    if (mainRef.current) {
+      mainRef.current.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    } else {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    }
   };
 
   const renderContent = () => {
@@ -47,13 +58,13 @@ const App: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-[#FDFCF8] text-stone-800 font-sans-tc">
+    <div className="bg-[#FDFCF8] text-stone-800 font-sans-tc h-screen flex flex-col">
       
       {/* Universal Header 
           Mobile: Relative (Scrolls away) -> Maximize space
           Desktop: Sticky (Stays visible) -> Ease of navigation
       */}
-      <header className="relative md:sticky md:top-0 z-40 bg-white/95 backdrop-blur-md border-b border-stone-100 shadow-sm transition-all duration-300">
+      <header className="relative md:sticky md:top-0 z-40 bg-white/95 backdrop-blur-md border-b border-stone-100 shadow-sm transition-all duration-300 flex-none">
         <div className="max-w-6xl mx-auto px-4 md:px-8">
             <div className="flex items-center justify-between h-16 md:h-20">
                 {/* Logo Area */}
@@ -109,7 +120,10 @@ const App: React.FC = () => {
       </header>
 
       {/* Main Content Wrapper */}
-      <div className="relative pb-safe">
+      <main
+        ref={mainRef}
+        className="relative pb-safe flex-1 overflow-y-auto"
+      >
         
         {/* Light Magazine Hero Section */}
         <div className="relative pt-8 pb-12 md:pt-20 md:pb-24 overflow-hidden">
@@ -164,13 +178,13 @@ const App: React.FC = () => {
         >
           <ArrowUp size={20} />
         </button>
-      </div>
-      
-      {/* Footer - Hidden on Mobile */}
-      <footer className="hidden md:block py-12 text-center border-t border-stone-100 bg-stone-50">
-         <div className="font-serif font-bold text-xl text-stone-300 mb-2">SoCal.</div>
-         <p className="text-stone-400 text-xs font-medium">Created for the 2026 Family Trip</p>
-      </footer>
+        
+        {/* Footer - Hidden on Mobile, scrolls with content */}
+        <footer className="hidden md:block py-12 text-center border-t border-stone-100 bg-stone-50">
+          <div className="font-serif font-bold text-xl text-stone-300 mb-2">SoCal.</div>
+          <p className="text-stone-400 text-xs font-medium">Created for the 2026 Family Trip</p>
+        </footer>
+      </main>
     </div>
   );
 };

@@ -82,7 +82,7 @@ export const Food: React.FC = () => {
       <div className="relative z-20 -mx-4 px-4 mb-8 space-y-4 md:space-y-0 md:flex md:flex-col md:items-center md:gap-4">
            {/* Region Selector */}
            <div className="w-full md:w-full">
-               <div className="flex overflow-x-auto gap-2 no-scrollbar pb-1 md:justify-center">
+               <div className="flex overflow-x-auto p-2 gap-2 no-scrollbar md:justify-center">
                   {regions.map((region) => (
                   <button
                       key={region}
