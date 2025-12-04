@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Region } from '../types';
+import { SlidersHorizontal } from 'lucide-react';
 
 const DEFAULT_REGIONS: Region[] = ['洛杉磯/橙縣', '拉斯維加斯/大峽谷', '聖地牙哥', '棕櫚泉'];
 
@@ -55,13 +56,33 @@ export const RegionSidebar: React.FC<RegionSidebarProps> = ({
   title = '區域 Regions',
   children,
 }) => {
+  const [open, setOpen] = useState(false);
+
   return (
     <div
-      className={`hidden lg:block fixed left-4 lg:left-8 top-32 z-30 w-48 transition-all duration-500 ease-out transform ${
-        show ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8 pointer-events-none'
+      className={`hidden lg:block fixed left-4 lg:left-8 bottom-24 z-40 transition-all duration-500 ease-out transform ${
+        show ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'
       }`}
     >
-      <div className="bg-white/90 backdrop-blur-xl border border-white/40 shadow-[0_8px_30px_rgb(0,0,0,0.12)] rounded-2xl p-4 space-y-6">
+      {/* Floating toggle button */}
+      <button
+        type="button"
+        onClick={() => setOpen((v) => !v)}
+        className="w-11 h-11 rounded-full bg-stone-900 text-white flex items-center justify-center shadow-lg shadow-stone-900/30 hover:bg-stone-700 transition-colors"
+        aria-label="切換篩選面板"
+      >
+        <SlidersHorizontal size={18} />
+      </button>
+
+      {/* Popover panel */}
+      <div
+        className={`
+          mt-3 w-56 origin-bottom-right bg-white/95 backdrop-blur-xl border border-white/40
+          shadow-[0_10px_40px_rgba(15,23,42,0.35)] rounded-2xl p-4 space-y-6
+          transition-all duration-200
+          ${open ? 'opacity-100 scale-100 translate-y-0' : 'opacity-0 scale-95 translate-y-1 pointer-events-none'}
+        `}
+      >
         <div className="space-y-2">
           <div className="px-2">
             <h3 className="text-[10px] font-bold text-stone-400 uppercase tracking-wider">{title}</h3>
