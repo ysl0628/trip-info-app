@@ -57,7 +57,7 @@ export const RegionSidebar: React.FC<RegionSidebarProps> = ({
 }) => {
   return (
     <div
-      className={`hidden md:block fixed left-4 lg:left-8 top-32 z-30 w-48 transition-all duration-500 ease-out transform ${
+      className={`hidden lg:block fixed left-4 lg:left-8 top-32 z-30 w-48 transition-all duration-500 ease-out transform ${
         show ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8 pointer-events-none'
       }`}
     >
