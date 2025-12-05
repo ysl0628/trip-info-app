@@ -9,7 +9,7 @@
     "build": "rm -rf node_modules/.cache/gh-pages && vite build",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "rm -rf node_modules/.cache/gh-pages && echo '# Empty .gitmodules to prevent GitHub Pages submodule errors' > dist/.gitmodules && gh-pages -d dist --dotfiles --no-history --message 'Deploy: Update'"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "lucide-react": "^0.554.0",
