@@ -113,7 +113,7 @@ export const Attractions: React.FC = () => {
                   rel="noopener noreferrer"
                   className="mt-auto w-full group/btn flex items-center justify-center gap-2 bg-stone-50 text-stone-800 font-bold py-3 rounded-xl hover:bg-stone-900 hover:text-white transition-all duration-300"
                 >
-                  <span className="text-sm">導航前往</span>
+                  <span className="text-sm">導航</span>
                   <ArrowRight size={16} className="group-hover/btn:translate-x-1 transition-transform" />
                 </a>
               </div>
