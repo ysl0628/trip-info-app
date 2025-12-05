@@ -7,6 +7,7 @@ import { RegionTabs, RegionSidebar } from './RegionControls';
 
 export const Attractions: React.FC = () => {
   const [activeRegion, setActiveRegion] = useState<Region>('洛杉磯/橙縣');
+  const [imageErrors, setImageErrors] = useState<Set<string>>(new Set());
   // 主捲動在 App 裡的 <main>，所以這裡監聽 main 的 scrollTop
   const showFloatingSidebar = useScrollThreshold(400, { target: { selector: 'main' } });
 
@@ -26,6 +27,10 @@ export const Attractions: React.FC = () => {
 
   // Simplified image logic with more stable random seeds
   const getImageUrl = (name: string) => `https://picsum.photos/seed/${name.replace(/\s/g, '')}/800/600`;
+
+  const handleImageError = (name: string) => {
+    setImageErrors((prev) => new Set(prev).add(name));
+  };
 
   return (
     <div className="pb-20 relative">
@@ -47,12 +52,19 @@ export const Attractions: React.FC = () => {
               
               {/* Image Area */}
               <div className="h-56 overflow-hidden relative bg-stone-200">
-                <img 
-                  src={getImageUrl(spot.name)} 
-                  alt={spot.name}
-                  loading="lazy"
-                  className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
-                />
+                {imageErrors.has(spot.name) ? (
+                  <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-stone-200 to-stone-300">
+                    <MapPin size={48} className="text-stone-400 opacity-50" />
+                  </div>
+                ) : (
+                  <img 
+                    src={getImageUrl(spot.name)} 
+                    alt={spot.name}
+                    loading="lazy"
+                    onError={() => handleImageError(spot.name)}
+                    className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
+                  />
+                )}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-80"></div>
                 
                 <div className="absolute top-4 left-4">
