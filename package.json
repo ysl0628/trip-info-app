@@ -9,7 +9,7 @@
     "build": "rm -rf node_modules/.cache/gh-pages && vite build",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "rm -rf node_modules/.cache/gh-pages && gh-pages -d dist"
   },
   "dependencies": {
     "lucide-react": "^0.554.0",
