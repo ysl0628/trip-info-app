@@ -6,7 +6,7 @@ import { useScrollThreshold } from '../hooks/useScrollThreshold';
 import { RegionTabs, RegionSidebar } from './RegionControls';
 
 export const Attractions: React.FC = () => {
-  const [activeRegion, setActiveRegion] = useState<Region>('洛杉磯/橙縣');
+  const [activeRegion, setActiveRegion] = useState<Region>('洛杉磯');
   const [imageErrors, setImageErrors] = useState<Set<string>>(new Set());
   // 主捲動在 App 裡的 <main>，所以這裡監聽 main 的 scrollTop
   const showFloatingSidebar = useScrollThreshold(400, { target: { selector: 'main' } });

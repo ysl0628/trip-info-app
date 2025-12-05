@@ -6,7 +6,7 @@ import { useScrollThreshold } from '../hooks/useScrollThreshold';
 import { RegionTabs, RegionSidebar } from './RegionControls';
 
 export const Food: React.FC = () => {
-  const [activeRegion, setActiveRegion] = useState<Region>('洛杉磯/橙縣');
+  const [activeRegion, setActiveRegion] = useState<Region>('洛杉磯');
   const [activeType, setActiveType] = useState<'All' | 'Food' | 'Coffee'>('All');
   // App 的主捲動區是在 <main>，不是 window，所以這裡針對 main 監聽
   const showFloatingSidebar = useScrollThreshold(400, { target: { selector: 'main' } });

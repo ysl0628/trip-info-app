@@ -266,7 +266,7 @@ export const ATTRACTIONS: Attraction[] = [
   // LA / Orange County
   {
     name: '好萊塢星光大道 (Hollywood Walk of Fame)',
-    image: '/images/attractions/HollywoodWalkOfFame.jpg',
+    image: '/images/attractions/hollywood-walk-fame.webp',
     location: 'Hollywood Blvd, Hollywood',
     region: '洛杉磯',
     description: '尋找喜愛明星的手印與星星，感受好萊塢的星光熠熠。',
@@ -278,7 +278,7 @@ export const ATTRACTIONS: Attraction[] = [
   },
   {
     name: '中國戲院 (TCL Chinese Theatre)',
-    image: '/images/attractions/TCLChineseTheatre.jpg',
+    image: '/images/attractions/TCL-Chinese-Theatre.jpg',
     location: '6925 Hollywood Blvd, Hollywood',
     region: '洛杉磯',
     description: '好萊塢的地標性電影院，以門前名人的手足印聞名。',
@@ -290,7 +290,7 @@ export const ATTRACTIONS: Attraction[] = [
   },
   {
     name: '好萊塢環球影城 (Universal Studios Hollywood)',
-    image: '/images/attractions/UniversalStudiosHollywood.jpg',
+    image: '/images/attractions/uni_studios_hollywood.jpg',
     location: '100 Universal City Plaza, Universal City',
     region: '洛杉磯',
     description: '結合電影主題樂園與製片廠，體驗哈利波特、超級任天堂世界等刺激設施。',
@@ -302,7 +302,7 @@ export const ATTRACTIONS: Attraction[] = [
   },
   {
     name: '好萊塢標誌 (Hollywood Sign)',
-    image: '/images/attractions/HollywoodSign.jpg',
+    image: '/images/attractions/Hollywood_Sign.jpg',
     location: 'Griffith Park',
     region: '洛杉磯',
     description: '世界知名的文化地標，可從格里斐斯天文台或 Lake Hollywood Park 觀賞。',
@@ -314,7 +314,7 @@ export const ATTRACTIONS: Attraction[] = [
   },
   {
     name: '聖莫尼卡碼頭海灘 (Santa Monica)',
-    image: '/images/attractions/SantaMonica.jpg',
+    image: '/images/attractions/santa-monica-pier.webp',
     location: '200 Santa Monica Pier, Santa Monica',
     region: '洛杉磯',
     description: '加州最著名的海灘地標，66號公路的終點，擁有太平洋遊樂園的摩天輪。',
@@ -326,7 +326,7 @@ export const ATTRACTIONS: Attraction[] = [
   },
   {
     name: '格里斐斯天文台 (Griffith Observatory)',
-    image: '/images/attractions/GriffithObservatory.jpg',
+    image: '/images/attractions/griffithpark-observatory.webp',
     location: '2800 E Observatory Rd, LA',
     region: '洛杉磯',
     description: '《樂來樂愛你》拍攝場景，可近距離觀看好萊塢標誌與絕美夜景。',
@@ -338,7 +338,7 @@ export const ATTRACTIONS: Attraction[] = [
   },
   {
     name: '中央市場 (Grand Central Market)',
-    image: '/images/attractions/GrandCentralMarket.jpg',
+    image: '/images/attractions/grand-central-market.jpg',
     location: '317 S Broadway, Downtown LA',
     region: '洛杉磯',
     description: '超過百年的美食市集，匯集洛杉磯的多元美食，從墨西哥塔可到美式漢堡應有盡有。',
@@ -350,7 +350,7 @@ export const ATTRACTIONS: Attraction[] = [
   },
   {
     name: '蓋蒂博物館 (The Getty Center)',
-    image: '/images/attractions/TheGettyCenter.jpg',
+    image: '/images/attractions/The_Getty.webp',
     location: '1200 Getty Center Dr, LA',
     region: '洛杉磯',
     description: '洛杉磯首屈一指的藝術博物館，建築與花園本身就是藝術品，可俯瞰整個LA盆地。需預約入場時間。',
@@ -362,7 +362,7 @@ export const ATTRACTIONS: Attraction[] = [
   },
   {
     name: '洛杉磯郡立美術館 (LACMA)',
-    image: '/images/attractions/LACMA.jpg',
+    image: '/images/attractions/lacma.jpg',
     location: '5905 Wilshire Blvd, LA',
     region: '洛杉磯',
     description: '西岸最大的藝術博物館，以戶外的《Urban Light》裝置藝術聞名。',
@@ -374,7 +374,7 @@ export const ATTRACTIONS: Attraction[] = [
   },
   {
     name: '天使鐵路 (Angels Flight Railway)',
-    image: '/images/attractions/AngelsFlightRailway.jpg',
+    image: '/images/attractions/angelflight.webp',
     location: '351 S Hill St, Downtown LA',
     region: '洛杉磯',
     description: '世界最短的纜索鐵路，也是《樂來樂愛你》的場景之一，連接山頂與中央市場。',
@@ -386,7 +386,7 @@ export const ATTRACTIONS: Attraction[] = [
   },
   {
     name: '比佛利山莊 (Beverly Hills)',
-    image: '/images/attractions/BeverlyHills.jpg',
+    image: '/images/attractions/Beverly-Hills.jpg',
     location: 'Rodeo Drive, Beverly Hills',
     region: '洛杉磯',
     description: '世界知名的奢華購物區，羅迪歐大道充滿精品旗艦店，適合逛街感受氣氛。',
@@ -398,7 +398,7 @@ export const ATTRACTIONS: Attraction[] = [
   },
   {
     name: '農夫市場 (The Original Farmers Market)',
-    image: '/images/attractions/TheOriginalFarmersMarket.jpg',
+    image: '/images/attractions/original-farmers-market.jpg',
     location: '6333 W 3rd St, LA',
     region: '洛杉磯',
     description: '歷史悠久的戶外市集，鄰近 The Grove 購物中心，充滿美食攤位與商店。',
@@ -410,7 +410,7 @@ export const ATTRACTIONS: Attraction[] = [
   },
   {
     name: '史坦波中心 (Crypto.com Arena)',
-    image: '/images/attractions/CryptoComArena.jpg',
+    image: '/images/attractions/crypto-com-arena-completes-phase.webp',
     location: '1111 S Figueroa St, LA',
     region: '洛杉磯',
     description: '前身為史坦波中心，是湖人隊、快艇隊的主場，也是舉辦大型演唱會的場地。',
@@ -422,7 +422,7 @@ export const ATTRACTIONS: Attraction[] = [
   },
   {
     name: '華特迪士尼音樂廳 (Walt Disney Concert Hall)',
-    image: '/images/attractions/WaltDisneyConcertHall.jpg',
+    image: '/images/attractions/Walt_Disney_Concert_Hall.jpg',
     location: '111 S Grand Ave, Downtown LA',
     region: '洛杉磯',
     description: '由建築大師 Frank Gehry 設計的解構主義建築，是洛杉磯愛樂的家。',
@@ -434,7 +434,7 @@ export const ATTRACTIONS: Attraction[] = [
   },
   {
     name: '中央圖書館 (Central Library)',
-    image: '/images/attractions/CentralLibrary.jpg',
+    image: '/images/attractions/la-central-library-.webp',
     location: '630 W 5th St, Downtown LA',
     region: '洛杉磯',
     description: '融合埃及復興與裝飾藝術風格的歷史建築，內部壁畫與中庭非常值得一看。',
@@ -446,7 +446,7 @@ export const ATTRACTIONS: Attraction[] = [
   },
   {
     name: '奥维拉街 (Olvera Street)',
-    image: '/images/attractions/OlveraStreet.jpg',
+    image: '/images/attractions/olvera-st-3.jpg',
     location: 'Downtown LA',
     region: '洛杉磯',
     description: '被稱為「洛杉磯的發源地」，充滿墨西哥風情的市集，可以體驗墨西哥文化與美食。',
@@ -458,7 +458,7 @@ export const ATTRACTIONS: Attraction[] = [
   },
   {
     name: '安大略米爾斯購物中心 (Ontario Mills)',
-    image: '/images/attractions/OntarioMills.jpg',
+    image: '/images/attractions/Ontario_Mills.jpg',
     location: '1 Mills Cir, Ontario',
     region: '洛杉磯',
     description: '南加州最大的室內 Outlet 之一，品牌眾多，適合天氣炎熱或下雨時的購物行程。',
@@ -468,23 +468,10 @@ export const ATTRACTIONS: Attraction[] = [
     mapLink: 'https://www.google.com/maps/search/?api=1&query=Ontario+Mills',
     tags: ['購物', 'Outlet', '室內']
   },
-  {
-    name: '加州迪士尼樂園 (Disneyland Park)',
-    image: '/images/attractions/DisneylandPark.jpg',
-    location: '1313 Disneyland Dr, Anaheim',
-    region: '洛杉磯',
-    description: '世界上第一座迪士尼樂園，充滿經典童話與夢幻氛圍。',
-    category: 'Entertainment',
-    cost: '$109+',
-    openHours: '09:00 - 21:00 (建議查官網)',
-    mapLink: 'https://www.google.com/maps/search/?api=1&query=Disneyland+Park',
-    tags: ['主題樂園', '親子', '必玩']
-  },
-
   // Las Vegas / Grand Canyon
   {
     name: '大峽谷國家公園 (Grand Canyon)',
-    image: '/images/attractions/GrandCanyon.jpg',
+    image: '/images/attractions/Cape_Royal_Sunset.jpg',
     location: 'Arizona',
     region: '拉斯維加斯/大峽谷',
     description: '世界七大奇景之一，經歷億萬年切割出的壯麗峽谷，南緣設施最完善。',
@@ -496,7 +483,7 @@ export const ATTRACTIONS: Attraction[] = [
   },
   {
     name: '羚羊峽谷 (Lower Antelope Canyon)',
-    image: '/images/attractions/LowerAntelopeCanyon.jpg',
+    image: '/images/attractions/Antelope-Canyon-Tours-from-Phoenix-DETOURS-LP.jpg',
     location: 'Page, AZ',
     region: '拉斯維加斯/大峽谷',
     description: '光影交織的狹縫型峽谷，正午時分光線最佳，需參加導覽團。',
@@ -508,7 +495,7 @@ export const ATTRACTIONS: Attraction[] = [
   },
   {
     name: '馬蹄灣 (Horseshoe Bend)',
-    image: '/images/attractions/HorseshoeBend.jpg',
+    image: '/images/attractions/Horseshoe_Bend_13_February_2023.jpg',
     location: 'Page, AZ',
     region: '拉斯維加斯/大峽谷',
     description: '科羅拉多河在此做出270度大迴轉，站在懸崖邊俯瞰極為震撼。',
@@ -520,7 +507,7 @@ export const ATTRACTIONS: Attraction[] = [
   },
   {
     name: 'Sphere (拉斯維加斯球體)',
-    image: '/images/attractions/Sphere.jpg',
+    image: '/images/attractions/Sphere-exosphere.jpg',
     location: '255 Sands Ave, Las Vegas',
     region: '拉斯維加斯/大峽谷',
     description: '2023年新地標，世界最大的球體建築，外部LED螢幕千變萬化。',
@@ -532,7 +519,7 @@ export const ATTRACTIONS: Attraction[] = [
   },
   {
     name: '百樂宮噴泉 (Bellagio Fountains)',
-    image: '/images/attractions/BellagioFountains.jpg',
+    image: '/images/attractions/Bellagio-Fountains.webp',
     location: '3600 S Las Vegas Blvd',
     region: '拉斯維加斯/大峽谷',
     description: '賭城大道上最經典的免費秀，水舞配合音樂與燈光翩翩起舞。',
@@ -546,7 +533,7 @@ export const ATTRACTIONS: Attraction[] = [
   // San Diego
   {
     name: '中途島號博物館 (USS Midway)',
-    image: '/images/attractions/USSMidway.jpg',
+    image: '/images/attractions/USS-Midway.avif',
     location: '910 N Harbor Dr, San Diego',
     region: '聖地牙哥',
     description: '退役航空母艦改建的軍事博物館，可參觀飛行甲板與眾多戰機。',
@@ -558,7 +545,7 @@ export const ATTRACTIONS: Attraction[] = [
   },
   {
     name: '巴爾波亞公園 (Balboa Park)',
-    image: '/images/attractions/BalboaPark.jpg',
+    image: '/images/attractions/spotlightbalboapark.webp',
     location: 'San Diego',
     region: '聖地牙哥',
     description: '美國最大的城市文化公園，擁有西班牙殖民復興風格建築與十多座博物館。',
@@ -570,7 +557,7 @@ export const ATTRACTIONS: Attraction[] = [
   },
   {
     name: '拉霍亞海灣 (La Jolla Cove)',
-    image: '/images/attractions/LaJollaCove.jpg',
+    image: '/images/attractions/la-jolla-cove-san-diego-beach.webp',
     location: 'La Jolla, San Diego',
     region: '聖地牙哥',
     description: '風景如畫的海灣，可以看到野生海獅與海豹在沙灘上曬太陽。',
@@ -582,7 +569,7 @@ export const ATTRACTIONS: Attraction[] = [
   },
   {
     name: '瓦斯燈街區 (Gaslamp Quarter)',
-    image: '/images/attractions/GaslampQuarter.jpg',
+    image: '/images/attractions/san-diegos-gaslamp-quarter.webp',
     location: 'Downtown San Diego',
     region: '聖地牙哥',
     description: '充滿維多利亞式建築的歷史街區，現為餐廳與夜生活的聚集地。',
@@ -594,7 +581,7 @@ export const ATTRACTIONS: Attraction[] = [
   },
   {
     name: '勝利之吻雕像 (Unconditional Surrender)',
-    image: '/images/attractions/UnconditionalSurrender.jpg',
+    image: '/images/attractions/Unconditional-Surrender.webp',
     location: 'Tuna Harbor Park',
     region: '聖地牙哥',
     description: '位於中途島號旁，著名的巨型雕像，重現二戰結束時的經典一吻。',
@@ -608,7 +595,7 @@ export const ATTRACTIONS: Attraction[] = [
   // Palm Springs
   {
     name: '約書亞樹國家公園 (Joshua Tree)',
-    image: '/images/attractions/JoshuaTree.jpg',
+    image: '/images/attractions/JoshuaTreeNationalPark.jpeg.webp',
     location: 'California',
     region: '棕櫚泉',
     description: '奇特的約書亞樹與巨石堆疊的沙漠景觀，是攀岩與觀星勝地。',
@@ -620,7 +607,7 @@ export const ATTRACTIONS: Attraction[] = [
   },
   {
     name: '棕櫚泉空中纜車 (Aerial Tramway)',
-    image: '/images/attractions/AerialTramway.jpg',
+    image: '/images/attractions/palm-springs-aerial-tramway.jpg',
     location: '1 Tram Way, Palm Springs',
     region: '棕櫚泉',
     description: '世界最大的旋轉纜車，10分鐘內從沙漠爬升至高山森林，溫差極大。',
@@ -644,7 +631,7 @@ export const ATTRACTIONS: Attraction[] = [
   },
   {
     name: 'Desert Hills Premium Outlets',
-    image: '/images/attractions/DesertHillsPremiumOutlets.jpg',
+    image: '/images/attractions/desert-hills-premium-outlets.webp',
     location: 'Cabazon, CA',
     region: '棕櫚泉',
     description: '加州最好逛的 Outlet 之一，品牌齊全，距離棕櫚泉約20分鐘。',
