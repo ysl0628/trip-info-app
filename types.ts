@@ -32,14 +32,15 @@ export interface DayItinerary {
   description: string;
 }
 
-export type Region = '洛杉磯/橙縣' | '拉斯維加斯/大峽谷' | '聖地牙哥' | '棕櫚泉';
+export type Region = '洛杉磯' | '拉斯維加斯/大峽谷' | '聖地牙哥' | '棕櫚泉';
 
 export interface Attraction {
   name: string;
   location: string;
   region: Region;
   description: string;
-  category: 'Nature' | 'City' | 'Entertainment' | 'Shopping' | 'Culture';
+  image?: string; // Add image property
+  category: 'Nature' | 'City' | 'Entertainment' | 'Shopping' | 'Culture' | 'Food';
   cost: string;
   openHours: string;
   mapLink: string;

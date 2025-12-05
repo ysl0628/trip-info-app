@@ -265,20 +265,58 @@ export const ITINERARY: DayItinerary[] = [
 export const ATTRACTIONS: Attraction[] = [
   // LA / Orange County
   {
-    name: '蓋蒂中心 (The Getty)',
-    location: '1200 Getty Center Dr, LA',
-    region: '洛杉磯/橙縣',
-    description: '洛杉磯首屈一指的藝術博物館，建築與花園本身就是藝術品，可俯瞰整個LA盆地。需預約入場時間。',
-    category: 'Culture',
-    cost: '免費入場 (停車 $20)',
-    openHours: '10:00 - 17:30 (週一休館)',
-    mapLink: 'https://www.google.com/maps/search/?api=1&query=The+Getty+Center+Los+Angeles',
-    tags: ['博物館', '風景', '必訪']
+    name: '好萊塢星光大道 (Hollywood Walk of Fame)',
+    image: '/images/attractions/HollywoodWalkOfFame.jpg',
+    location: 'Hollywood Blvd, Hollywood',
+    region: '洛杉磯',
+    description: '尋找喜愛明星的手印與星星，感受好萊塢的星光熠熠。',
+    category: 'City',
+    cost: '免費',
+    openHours: '全天開放',
+    mapLink: 'https://www.google.com/maps/search/?api=1&query=Hollywood+Walk+of+Fame',
+    tags: ['地標', '拍照', '好萊塢']
   },
   {
-    name: '聖塔莫尼卡碼頭 (Santa Monica Pier)',
+    name: '中國戲院 (TCL Chinese Theatre)',
+    image: '/images/attractions/TCLChineseTheatre.jpg',
+    location: '6925 Hollywood Blvd, Hollywood',
+    region: '洛杉磯',
+    description: '好萊塢的地標性電影院，以門前名人的手足印聞名。',
+    category: 'Entertainment',
+    cost: '外觀免費',
+    openHours: '依電影場次',
+    mapLink: 'https://www.google.com/maps/search/?api=1&query=TCL+Chinese+Theatre',
+    tags: ['電影', '歷史', '地標']
+  },
+  {
+    name: '好萊塢環球影城 (Universal Studios Hollywood)',
+    image: '/images/attractions/UniversalStudiosHollywood.jpg',
+    location: '100 Universal City Plaza, Universal City',
+    region: '洛杉磯',
+    description: '結合電影主題樂園與製片廠，體驗哈利波特、超級任天堂世界等刺激設施。',
+    category: 'Entertainment',
+    cost: '$109+',
+    openHours: '09:00 - 21:00 (建議查官網)',
+    mapLink: 'https://www.google.com/maps/search/?api=1&query=Universal+Studios+Hollywood',
+    tags: ['主題樂園', '親子', '必玩']
+  },
+  {
+    name: '好萊塢標誌 (Hollywood Sign)',
+    image: '/images/attractions/HollywoodSign.jpg',
+    location: 'Griffith Park',
+    region: '洛杉磯',
+    description: '世界知名的文化地標，可從格里斐斯天文台或 Lake Hollywood Park 觀賞。',
+    category: 'Nature',
+    cost: '免費',
+    openHours: '全天開放',
+    mapLink: 'https://www.google.com/maps/search/?api=1&query=Lake+Hollywood+Park',
+    tags: ['地標', '健行', '拍照']
+  },
+  {
+    name: '聖莫尼卡碼頭海灘 (Santa Monica)',
+    image: '/images/attractions/SantaMonica.jpg',
     location: '200 Santa Monica Pier, Santa Monica',
-    region: '洛杉磯/橙縣',
+    region: '洛杉磯',
     description: '加州最著名的海灘地標，66號公路的終點，擁有太平洋遊樂園的摩天輪。',
     category: 'Entertainment',
     cost: '免費進入 (遊樂設施另計)',
@@ -287,20 +325,10 @@ export const ATTRACTIONS: Attraction[] = [
     tags: ['海灘', '親子', '夕陽']
   },
   {
-    name: '比佛利山莊 (Beverly Hills)',
-    location: 'Rodeo Drive, Beverly Hills',
-    region: '洛杉磯/橙縣',
-    description: '世界知名的奢華購物區，羅迪歐大道充滿精品旗艦店，適合逛街感受氣氛。',
-    category: 'City',
-    cost: '免費',
-    openHours: '全天開放 (店家約 10-18)',
-    mapLink: 'https://www.google.com/maps/search/?api=1&query=Rodeo+Drive+Beverly+Hills',
-    tags: ['購物', '奢華', '拍照']
-  },
-  {
-    name: 'Griffith Observatory (格里斐斯天文台)',
+    name: '格里斐斯天文台 (Griffith Observatory)',
+    image: '/images/attractions/GriffithObservatory.jpg',
     location: '2800 E Observatory Rd, LA',
-    region: '洛杉磯/橙縣',
+    region: '洛杉磯',
     description: '《樂來樂愛你》拍攝場景，可近距離觀看好萊塢標誌與絕美夜景。',
     category: 'Nature',
     cost: '免費入場 (天文劇場收費)',
@@ -309,20 +337,154 @@ export const ATTRACTIONS: Attraction[] = [
     tags: ['夜景', '電影場景', '天文']
   },
   {
-    name: 'The Broad',
-    location: '221 S Grand Ave, LA',
-    region: '洛杉磯/橙縣',
-    description: '當代藝術博物館，收藏草間彌生的無限鏡屋 (需排隊)。',
+    name: '中央市場 (Grand Central Market)',
+    image: '/images/attractions/GrandCentralMarket.jpg',
+    location: '317 S Broadway, Downtown LA',
+    region: '洛杉磯',
+    description: '超過百年的美食市集，匯集洛杉磯的多元美食，從墨西哥塔可到美式漢堡應有盡有。',
+    category: 'Food',
+    cost: '依店家',
+    openHours: '08:00 - 21:00',
+    mapLink: 'https://www.google.com/maps/search/?api=1&query=Grand+Central+Market+Los+Angeles',
+    tags: ['美食', '市場', '歷史']
+  },
+  {
+    name: '蓋蒂博物館 (The Getty Center)',
+    image: '/images/attractions/TheGettyCenter.jpg',
+    location: '1200 Getty Center Dr, LA',
+    region: '洛杉磯',
+    description: '洛杉磯首屈一指的藝術博物館，建築與花園本身就是藝術品，可俯瞰整個LA盆地。需預約入場時間。',
     category: 'Culture',
-    cost: '免費入場 (需預約)',
-    openHours: '11:00 - 17:00 (週一休館)',
-    mapLink: 'https://www.google.com/maps/search/?api=1&query=The+Broad+Los+Angeles',
-    tags: ['現代藝術', '網美點']
+    cost: '免費入場 (停車 $20)',
+    openHours: '10:00 - 17:30 (週一休館)',
+    mapLink: 'https://www.google.com/maps/search/?api=1&query=The+Getty+Center+Los+Angeles',
+    tags: ['博物館', '風景', '必訪']
+  },
+  {
+    name: '洛杉磯郡立美術館 (LACMA)',
+    image: '/images/attractions/LACMA.jpg',
+    location: '5905 Wilshire Blvd, LA',
+    region: '洛杉磯',
+    description: '西岸最大的藝術博物館，以戶外的《Urban Light》裝置藝術聞名。',
+    category: 'Culture',
+    cost: '$25/人',
+    openHours: '11:00 - 18:00 (週三休館)',
+    mapLink: 'https://www.google.com/maps/search/?api=1&query=LACMA',
+    tags: ['藝術', '博物館', '網美點']
+  },
+  {
+    name: '天使鐵路 (Angels Flight Railway)',
+    image: '/images/attractions/AngelsFlightRailway.jpg',
+    location: '351 S Hill St, Downtown LA',
+    region: '洛杉磯',
+    description: '世界最短的纜索鐵路，也是《樂來樂愛你》的場景之一，連接山頂與中央市場。',
+    category: 'City',
+    cost: '$1/單程',
+    openHours: '06:45 - 22:00',
+    mapLink: 'https://www.google.com/maps/search/?api=1&query=Angels+Flight+Railway',
+    tags: ['電影場景', '歷史', '交通']
+  },
+  {
+    name: '比佛利山莊 (Beverly Hills)',
+    image: '/images/attractions/BeverlyHills.jpg',
+    location: 'Rodeo Drive, Beverly Hills',
+    region: '洛杉磯',
+    description: '世界知名的奢華購物區，羅迪歐大道充滿精品旗艦店，適合逛街感受氣氛。',
+    category: 'City',
+    cost: '免費',
+    openHours: '全天開放 (店家約 10-18)',
+    mapLink: 'https://www.google.com/maps/search/?api=1&query=Rodeo+Drive+Beverly+Hills',
+    tags: ['購物', '奢華', '拍照']
+  },
+  {
+    name: '農夫市場 (The Original Farmers Market)',
+    image: '/images/attractions/TheOriginalFarmersMarket.jpg',
+    location: '6333 W 3rd St, LA',
+    region: '洛杉磯',
+    description: '歷史悠久的戶外市集，鄰近 The Grove 購物中心，充滿美食攤位與商店。',
+    category: 'Food',
+    cost: '依店家',
+    openHours: '10:00 - 20:00',
+    mapLink: 'https://www.google.com/maps/search/?api=1&query=The+Original+Farmers+Market',
+    tags: ['美食', '市場', '購物']
+  },
+  {
+    name: '史坦波中心 (Crypto.com Arena)',
+    image: '/images/attractions/CryptoComArena.jpg',
+    location: '1111 S Figueroa St, LA',
+    region: '洛杉磯',
+    description: '前身為史坦波中心，是湖人隊、快艇隊的主場，也是舉辦大型演唱會的場地。',
+    category: 'Entertainment',
+    cost: '依活動',
+    openHours: '依活動時間',
+    mapLink: 'https://www.google.com/maps/search/?api=1&query=Crypto.com+Arena',
+    tags: ['NBA', '演唱會', '運動']
+  },
+  {
+    name: '華特迪士尼音樂廳 (Walt Disney Concert Hall)',
+    image: '/images/attractions/WaltDisneyConcertHall.jpg',
+    location: '111 S Grand Ave, Downtown LA',
+    region: '洛杉磯',
+    description: '由建築大師 Frank Gehry 設計的解構主義建築，是洛杉磯愛樂的家。',
+    category: 'Culture',
+    cost: '外觀免費',
+    openHours: '導覽時間請查官網',
+    mapLink: 'https://www.google.com/maps/search/?api=1&query=Walt+Disney+Concert+Hall',
+    tags: ['建築', '藝術', '音樂']
+  },
+  {
+    name: '中央圖書館 (Central Library)',
+    image: '/images/attractions/CentralLibrary.jpg',
+    location: '630 W 5th St, Downtown LA',
+    region: '洛杉磯',
+    description: '融合埃及復興與裝飾藝術風格的歷史建築，內部壁畫與中庭非常值得一看。',
+    category: 'Culture',
+    cost: '免費',
+    openHours: '10:00 - 20:00 (週末至18:00)',
+    mapLink: 'https://www.google.com/maps/search/?api=1&query=Central+Library+Los+Angeles',
+    tags: ['建築', '歷史', '圖書館']
+  },
+  {
+    name: '奥维拉街 (Olvera Street)',
+    image: '/images/attractions/OlveraStreet.jpg',
+    location: 'Downtown LA',
+    region: '洛杉磯',
+    description: '被稱為「洛杉磯的發源地」，充滿墨西哥風情的市集，可以體驗墨西哥文化與美食。',
+    category: 'City',
+    cost: '免費',
+    openHours: '10:00 - 19:00',
+    mapLink: 'https://www.google.com/maps/search/?api=1&query=Olvera+Street',
+    tags: ['歷史', '墨西哥', '市集']
+  },
+  {
+    name: '安大略米爾斯購物中心 (Ontario Mills)',
+    image: '/images/attractions/OntarioMills.jpg',
+    location: '1 Mills Cir, Ontario',
+    region: '洛杉磯',
+    description: '南加州最大的室內 Outlet 之一，品牌眾多，適合天氣炎熱或下雨時的購物行程。',
+    category: 'Shopping',
+    cost: '免費',
+    openHours: '10:00 - 21:00',
+    mapLink: 'https://www.google.com/maps/search/?api=1&query=Ontario+Mills',
+    tags: ['購物', 'Outlet', '室內']
+  },
+  {
+    name: '加州迪士尼樂園 (Disneyland Park)',
+    image: '/images/attractions/DisneylandPark.jpg',
+    location: '1313 Disneyland Dr, Anaheim',
+    region: '洛杉磯',
+    description: '世界上第一座迪士尼樂園，充滿經典童話與夢幻氛圍。',
+    category: 'Entertainment',
+    cost: '$109+',
+    openHours: '09:00 - 21:00 (建議查官網)',
+    mapLink: 'https://www.google.com/maps/search/?api=1&query=Disneyland+Park',
+    tags: ['主題樂園', '親子', '必玩']
   },
 
   // Las Vegas / Grand Canyon
   {
     name: '大峽谷國家公園 (Grand Canyon)',
+    image: '/images/attractions/GrandCanyon.jpg',
     location: 'Arizona',
     region: '拉斯維加斯/大峽谷',
     description: '世界七大奇景之一，經歷億萬年切割出的壯麗峽谷，南緣設施最完善。',
@@ -334,6 +496,7 @@ export const ATTRACTIONS: Attraction[] = [
   },
   {
     name: '羚羊峽谷 (Lower Antelope Canyon)',
+    image: '/images/attractions/LowerAntelopeCanyon.jpg',
     location: 'Page, AZ',
     region: '拉斯維加斯/大峽谷',
     description: '光影交織的狹縫型峽谷，正午時分光線最佳，需參加導覽團。',
@@ -345,6 +508,7 @@ export const ATTRACTIONS: Attraction[] = [
   },
   {
     name: '馬蹄灣 (Horseshoe Bend)',
+    image: '/images/attractions/HorseshoeBend.jpg',
     location: 'Page, AZ',
     region: '拉斯維加斯/大峽谷',
     description: '科羅拉多河在此做出270度大迴轉，站在懸崖邊俯瞰極為震撼。',
@@ -356,6 +520,7 @@ export const ATTRACTIONS: Attraction[] = [
   },
   {
     name: 'Sphere (拉斯維加斯球體)',
+    image: '/images/attractions/Sphere.jpg',
     location: '255 Sands Ave, Las Vegas',
     region: '拉斯維加斯/大峽谷',
     description: '2023年新地標，世界最大的球體建築，外部LED螢幕千變萬化。',
@@ -367,6 +532,7 @@ export const ATTRACTIONS: Attraction[] = [
   },
   {
     name: '百樂宮噴泉 (Bellagio Fountains)',
+    image: '/images/attractions/BellagioFountains.jpg',
     location: '3600 S Las Vegas Blvd',
     region: '拉斯維加斯/大峽谷',
     description: '賭城大道上最經典的免費秀，水舞配合音樂與燈光翩翩起舞。',
@@ -380,17 +546,19 @@ export const ATTRACTIONS: Attraction[] = [
   // San Diego
   {
     name: '中途島號博物館 (USS Midway)',
+    image: '/images/attractions/USSMidway.jpg',
     location: '910 N Harbor Dr, San Diego',
     region: '聖地牙哥',
     description: '退役航空母艦改建的軍事博物館，可參觀飛行甲板與眾多戰機。',
     category: 'Culture',
-    cost: '約 $34/人',
+    cost: '約 $39/人',
     openHours: '10:00 - 17:00',
     mapLink: 'https://www.google.com/maps/search/?api=1&query=USS+Midway+Museum',
     tags: ['軍事', '歷史', '必訪']
   },
   {
     name: '巴爾波亞公園 (Balboa Park)',
+    image: '/images/attractions/BalboaPark.jpg',
     location: 'San Diego',
     region: '聖地牙哥',
     description: '美國最大的城市文化公園，擁有西班牙殖民復興風格建築與十多座博物館。',
@@ -402,6 +570,7 @@ export const ATTRACTIONS: Attraction[] = [
   },
   {
     name: '拉霍亞海灣 (La Jolla Cove)',
+    image: '/images/attractions/LaJollaCove.jpg',
     location: 'La Jolla, San Diego',
     region: '聖地牙哥',
     description: '風景如畫的海灣，可以看到野生海獅與海豹在沙灘上曬太陽。',
@@ -413,6 +582,7 @@ export const ATTRACTIONS: Attraction[] = [
   },
   {
     name: '瓦斯燈街區 (Gaslamp Quarter)',
+    image: '/images/attractions/GaslampQuarter.jpg',
     location: 'Downtown San Diego',
     region: '聖地牙哥',
     description: '充滿維多利亞式建築的歷史街區，現為餐廳與夜生活的聚集地。',
@@ -424,6 +594,7 @@ export const ATTRACTIONS: Attraction[] = [
   },
   {
     name: '勝利之吻雕像 (Unconditional Surrender)',
+    image: '/images/attractions/UnconditionalSurrender.jpg',
     location: 'Tuna Harbor Park',
     region: '聖地牙哥',
     description: '位於中途島號旁，著名的巨型雕像，重現二戰結束時的經典一吻。',
@@ -437,6 +608,7 @@ export const ATTRACTIONS: Attraction[] = [
   // Palm Springs
   {
     name: '約書亞樹國家公園 (Joshua Tree)',
+    image: '/images/attractions/JoshuaTree.jpg',
     location: 'California',
     region: '棕櫚泉',
     description: '奇特的約書亞樹與巨石堆疊的沙漠景觀，是攀岩與觀星勝地。',
@@ -448,17 +620,19 @@ export const ATTRACTIONS: Attraction[] = [
   },
   {
     name: '棕櫚泉空中纜車 (Aerial Tramway)',
+    image: '/images/attractions/AerialTramway.jpg',
     location: '1 Tram Way, Palm Springs',
     region: '棕櫚泉',
     description: '世界最大的旋轉纜車，10分鐘內從沙漠爬升至高山森林，溫差極大。',
     category: 'Nature',
-    cost: '約 $34/人',
+    cost: '約 $36.95/人',
     openHours: '週一-五 10:00起',
     mapLink: 'https://www.google.com/maps/search/?api=1&query=Palm+Springs+Aerial+Tramway',
     tags: ['纜車', '風景', '避暑']
   },
   {
     name: 'Cabazon Dinosaurs',
+    image: '/images/attractions/CabazonDinosaur.jpg',
     location: 'Cabazon, CA',
     region: '棕櫚泉',
     description: '著名的巨型恐龍雕像，就在Outlet旁邊，經典公路電影場景。',
@@ -470,6 +644,7 @@ export const ATTRACTIONS: Attraction[] = [
   },
   {
     name: 'Desert Hills Premium Outlets',
+    image: '/images/attractions/DesertHillsPremiumOutlets.jpg',
     location: 'Cabazon, CA',
     region: '棕櫚泉',
     description: '加州最好逛的 Outlet 之一，品牌齊全，距離棕櫚泉約20分鐘。',
@@ -486,7 +661,7 @@ export const FOOD_SPOTS: FoodSpot[] = [
   {
     name: '半畝園 (Half & Half)',
     location: 'Rowland Heights',
-    region: '洛杉磯/橙縣',
+    region: '洛杉磯',
     type: 'Food',
     cuisine: '台式/飲料',
     cost: '$10-20',
@@ -499,7 +674,7 @@ export const FOOD_SPOTS: FoodSpot[] = [
   {
     name: '鼎泰豐 (Din Tai Fung)',
     location: 'Century City / Arcadia',
-    region: '洛杉磯/橙縣',
+    region: '洛杉磯',
     type: 'Food',
     cuisine: '中式點心',
     cost: '$30-50',
@@ -512,7 +687,7 @@ export const FOOD_SPOTS: FoodSpot[] = [
   {
     name: 'In-N-Out Burger',
     location: '加州各地',
-    region: '洛杉磯/橙縣',
+    region: '洛杉磯',
     type: 'Food',
     cuisine: '美式速食',
     cost: '$5-10',
@@ -525,7 +700,7 @@ export const FOOD_SPOTS: FoodSpot[] = [
   {
     name: 'Republique',
     location: '624 S La Brea Ave, LA',
-    region: '洛杉磯/橙縣',
+    region: '洛杉磯',
     type: 'Coffee',
     cuisine: '法式早午餐/咖啡',
     cost: '$20-40',
@@ -538,7 +713,7 @@ export const FOOD_SPOTS: FoodSpot[] = [
   {
     name: 'Blue Bottle Coffee',
     location: 'Beverly Hills / Santa Monica',
-    region: '洛杉磯/橙縣',
+    region: '洛杉磯',
     type: 'Coffee',
     cuisine: '咖啡',
     cost: '$6-12',
@@ -551,7 +726,7 @@ export const FOOD_SPOTS: FoodSpot[] = [
   {
     name: 'Intelligentsia Coffee',
     location: 'Silver Lake / Venice',
-    region: '洛杉磯/橙縣',
+    region: '洛杉磯',
     type: 'Coffee',
     cuisine: '咖啡',
     cost: '$6-15',
