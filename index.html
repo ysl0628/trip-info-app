@@ -43,6 +43,11 @@
       .pb-safe {
         padding-bottom: calc(80px + var(--safe-bottom));
       }
+      /* 手機瀏覽器工具列適應：使用 dynamic viewport height */
+      .h-screen-dynamic {
+        height: 100vh;
+        height: 100dvh; /* 優先使用 dvh，會自動適應工具列顯示/隱藏 */
+      }
     </style>
   <script type="importmap">
 {

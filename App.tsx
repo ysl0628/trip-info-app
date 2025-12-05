@@ -79,7 +79,7 @@ const App: React.FC = () => {
   ];
 
   return (
-    <div className="bg-[#FDFCF8] text-stone-800 font-sans-tc h-screen-safe flex flex-col">
+    <div className="bg-[#FDFCF8] text-stone-800 font-sans-tc h-screen-dynamic flex flex-col">
       {/* Universal Header 
           Mobile: Relative (Scrolls away) -> Maximize space
           Desktop: Sticky (Stays visible) -> Ease of navigation
