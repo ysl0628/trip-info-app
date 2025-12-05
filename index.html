@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/trip-info-app/assets/favicon-sz7zFTY-.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <meta name="description" content="2026年4月南加州13天深度家庭之旅行程規劃" />
+    <meta name="theme-color" content="#FDFCF8" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="SoCal Trip" />
+    <link rel="apple-touch-icon" href="/trip-info-app/assets/favicon-sz7zFTY-.svg" />
+    <title>2026南加州深度家庭之旅</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+TC:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --safe-bottom: env(safe-area-inset-bottom, 20px);
+      }
+      body {
+        font-family: 'Inter', 'Noto Sans TC', sans-serif;
+        background-color: #f5f5f4; /* stone-100 */
+        color: #1c1917; /* stone-900 */
+      }
+      h1, h2, h3, .font-serif {
+        font-family: 'Playfair Display', 'Noto Sans TC', serif;
+      }
+      .font-sans-tc {
+        font-family: 'Inter', 'Noto Sans TC', sans-serif;
+      }
+      .hide-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .hide-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+      .glass {
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.5);
+      }
+      .glass-card {
+        background: rgba(255, 255, 255, 0.85);
+        backdrop-filter: blur(8px);
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+      }
+      .pb-safe {
+        padding-bottom: calc(80px + var(--safe-bottom));
+      }
+      /* 手機瀏覽器工具列適應：使用 dynamic viewport height */
+      .h-screen-dynamic {
+        height: 100vh;
+        height: 100dvh; /* 優先使用 dvh，會自動適應工具列顯示/隱藏 */
+      }
+    </style>
+
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0"
+  }
+}
+</script>
+  <script type="module" crossorigin src="/trip-info-app/assets/index-DF5FoNjo.js"></script>
+<link rel="manifest" href="/trip-info-app/manifest.webmanifest"><script id="vite-plugin-pwa:register-sw" src="/trip-info-app/registerSW.js"></script></head>
+  <body class="antialiased selection:bg-amber-200 selection:text-amber-900">
+    <div id="root"></div>
+  </body>
+</html>
