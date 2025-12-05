@@ -56,7 +56,7 @@ export const Attractions: React.FC = () => {
                 ) : (
                   <>
                     <img
-                      src={spot.image}
+                      src={spot.image ? `${import.meta.env.BASE_URL}${spot.image.startsWith('/') ? spot.image.slice(1) : spot.image}` : ''}
                       alt={spot.name}
                       loading="lazy"
                       onError={() => handleImageError(spot.name)}
