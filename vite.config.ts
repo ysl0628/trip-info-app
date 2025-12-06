@@ -6,9 +6,10 @@ import { VitePWA } from 'vite-plugin-pwa';
 export default defineConfig(({ mode }) => {
     const env = loadEnv(mode, '.', '');
   const repoBase = env.VITE_BASE_PATH || '/trip-info-app/';
+  const base = mode === 'development' ? '/' : repoBase;
 
     return {
-      base: mode === 'development' ? '/' : repoBase,
+      base,
       server: {
         port: 3000,
         host: '0.0.0.0',
@@ -26,17 +27,17 @@ export default defineConfig(({ mode }) => {
             background_color: '#FDFCF8',
             display: 'standalone',
             orientation: 'portrait',
-            scope: '/',
-            start_url: '/',
+            scope: base,
+            start_url: base,
             icons: [
               {
-                src: '/favicon.svg',
+                src: `${base}favicon.svg`.replace(/\/\//g, '/'),
                 sizes: 'any',
                 type: 'image/svg+xml',
                 purpose: 'any maskable'
               },
               {
-                src: '/favicon.ico',
+                src: `${base}favicon.ico`.replace(/\/\//g, '/'),
                 sizes: '48x48',
                 type: 'image/x-icon'
               }
