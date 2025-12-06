@@ -31,15 +31,20 @@ export default defineConfig(({ mode }) => {
             start_url: base,
             icons: [
               {
+                src: `${base}icon-192.png`.replace(/\/\//g, '/'),
+                sizes: '192x192',
+                type: 'image/png'
+              },
+              {
+                src: `${base}icon-512.png`.replace(/\/\//g, '/'),
+                sizes: '512x512',
+                type: 'image/png'
+              },
+              {
                 src: `${base}favicon.svg`.replace(/\/\//g, '/'),
                 sizes: 'any',
                 type: 'image/svg+xml',
                 purpose: 'any maskable'
-              },
-              {
-                src: `${base}favicon.ico`.replace(/\/\//g, '/'),
-                sizes: '48x48',
-                type: 'image/x-icon'
               }
             ]
           },
