@@ -51,7 +51,7 @@ export interface DayItinerary {
   transport: string[];
   mapLink?: string;
   description: string | string[];
-  feeNote?: string;
+  feeNote?: string | string[];
   departureTime?: string;
   departureLocation?: string;
   timeline?: TimelineItem[];

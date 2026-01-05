@@ -321,9 +321,20 @@ export const Itinerary: React.FC = () => {
             {item.feeNote && (
                 <div className="p-4 rounded-xl bg-amber-50 border border-amber-200 shadow-sm">
                     <h4 className="text-xs font-bold text-amber-700 uppercase tracking-wider mb-2">大約費用</h4>
-                    <p className="text-sm text-amber-800 leading-relaxed">
-                        {item.feeNote}
-                    </p>
+                    {Array.isArray(item.feeNote) ? (
+                        <ul className="text-sm text-amber-800 leading-relaxed space-y-2 list-none">
+                            {item.feeNote.map((fee, idx) => (
+                                <li key={idx} className="flex items-start gap-2">
+                                    <span className="text-amber-600 font-semibold shrink-0 mt-0.5">{fee.match(/^\d+\./)?.[0] || `${idx + 1}.`}</span>
+                                    <span className="flex-1">{fee.replace(/^\d+\.\s*/, '')}</span>
+                                </li>
+                            ))}
+                        </ul>
+                    ) : (
+                        <p className="text-sm text-amber-800 leading-relaxed">
+                            {item.feeNote}
+                        </p>
+                    )}
                 </div>
             )}
 

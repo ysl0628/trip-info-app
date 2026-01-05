@@ -266,21 +266,100 @@ export const ITINERARY: DayItinerary[] = [
   {
     day: 7,
     date: '4/7 (週二)',
-    title: '【跟團】羚羊峽谷 & 鮑威爾湖',
-    description: '深入羚羊峽谷體驗光影魔術，隨後前往鮑威爾湖，傍晚返回拉斯維加斯。',
-    highlights: ['下羚羊峽谷 (Lower Antelope Canyon)', '鮑威爾湖 (Lake Powell)'],
+    title: '【跟團】羚羊峽谷 & 大峽谷國家公園',
+    description: '今天我們將從佩吉出發，前往羚羊彩穴和馬蹄灣，開啓一段自然奇景之旅。今天的旅程中，您還將有機會去到大峽谷的起源點 - 包偉湖，或者在大峽谷國家公園欣賞科羅拉多河蜿蜒谷底的壯麗景色。最後，我們將帶着滿滿的自然回憶，返回拉斯維加斯。',
+    highlights: ['下羚羊峽谷', '馬蹄灣', '大峽谷國家公園'],
+    timeline: [
+      {
+        time: '上午',
+        period: '上午',
+        title: '早餐',
+        description: '導遊會根據實際情況為您推薦餐食'
+      },
+      {
+        time: '上午',
+        period: '上午',
+        title: '景點/場館',
+        location: '下羚羊峽谷',
+        activityDuration: '約2小時',
+        description: ['門票', '包含門票、當地接送及嚮導服務費', '參考價格：USD 105']
+      },
+      {
+        time: '上午',
+        period: '上午',
+        title: '交通',
+        from: '下羚羊峽谷',
+        to: '馬蹄灣',
+        distance: '約12公里',
+        duration: '約15分鐘'
+      },
+      {
+        time: '上午',
+        period: '上午',
+        title: '景點/場館',
+        location: '馬蹄灣',
+        activityDuration: '約1小時'
+      },
+      {
+        time: '下午',
+        period: '下午',
+        title: '交通',
+        from: '馬蹄灣',
+        to: '大峽谷國家公園',
+        distance: '約177公里',
+        duration: '約120分鐘'
+      },
+      {
+        time: '下午',
+        period: '下午',
+        title: '午餐',
+        description: '導遊會根據實際情況為您推薦餐食'
+      },
+      {
+        time: '下午',
+        period: '下午',
+        title: '景點/場館',
+        location: '大峽谷國家公園',
+        activityDuration: '約2小時30分鐘',
+        description: ['參考價格：USD 190']
+      },
+      {
+        time: '晚上',
+        period: '晚上',
+        title: '晚餐',
+        description: '導遊會根據實際情況為您推薦餐食'
+      },
+      {
+        time: '晚上',
+        period: '晚上',
+        title: '飯店',
+        description: ['拉斯維加斯楓丹白露', '飯店僅供參考，最終入住飯店請以實際預訂為準。']
+      }
+    ],
     accommodation: {
       location: 'Las Vegas',
-      hotels: ['STRAT酒店-娛樂場-塔樓']
+      hotels: [{
+        name: '拉斯維加斯楓丹白露',
+        link: 'https://www.fontainebleaulasvegas.com/'
+      }],
+      roomAssignment: ['爸爸、媽媽、文馨', '宏翔、小藍']
     },
     meals: {
-      breakfast: '自理',
-      lunch: '自理',
-      dinner: '返回拉斯維加斯後自理'
+      breakfast: '導遊會根據實際情況為您推薦餐食',
+      lunch: '導遊會根據實際情況為您推薦餐食',
+      dinner: '導遊會根據實際情況為您推薦餐食'
     },
-    transport: ['旅行團巴士 (返程約 4.5 小時)'],
-    mapLink: 'https://www.google.com/maps/dir/Page/Lower+Antelope+Canyon/Lake+Powell/Las+Vegas',
-    feeNote: '本產品有必付項目費用190美金每人，包含：錫安國家公園、布萊斯國家公園、馬蹄灣、大峽谷國家公園、拉斯網紅歡迎招牌打卡&M豆巧克力世界&可口可樂主題店費用，可預訂時選擇對應的可選項，也可在團上將此費用支付給導遊，感謝您的配合~'
+    transport: [
+      '從下羚羊峽谷驅車前往馬蹄灣；行駛：約12公里/約15分鐘',
+      '從馬蹄灣驅車前往大峽谷國家公園；行駛：約177公里/約120分鐘',
+      '從大峽谷國家公園返回拉斯維加斯'
+    ],
+    mapLink: 'https://www.google.com/maps/dir/Page/Lower+Antelope+Canyon/Horseshoe+Bend/Grand+Canyon+National+Park/Las+Vegas',
+    feeNote: [
+      '1. 必付費用 USD 190 / 人 (已於購買行程時支付，包含錫安國家公園、布萊斯國家公園、馬蹄灣、大峽谷國家公園、拉斯網紅歡迎招牌打卡&M豆巧克力世界&可口可樂主題店費用)',
+      '2. 國家公園費 USD 100 × 3 / 人 (視當場的情況看需不需要支付，現金)',
+      '3. 下羚羊谷門票 USD 150 / 人 (已於購買行程時支付)'
+    ]
   },
   {
     day: 8,
