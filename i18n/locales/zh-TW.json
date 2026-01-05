@@ -1,0 +1,58 @@
+{
+  "common": {
+    "daysToGo": "天",
+    "familyTrip2026": "Family Trip 2026",
+    "scrollToTop": "回到頂部"
+  },
+  "navigation": {
+    "itinerary": "行程",
+    "itineraryFull": "行程規劃",
+    "flights": "航班",
+    "flightsFull": "航班資訊",
+    "attractions": "景點",
+    "attractionsFull": "精選景點",
+    "food": "美食",
+    "foodFull": "在地美食",
+    "info": "資訊",
+    "infoFull": "旅遊資訊"
+  },
+  "hero": {
+    "southernCalifornia2026": "Southern California 2026",
+    "exploreSouthernCalifornia": "探索南加州",
+    "flyToOntario": "飛往安大略",
+    "westCoastAttractions": "美西精選景點",
+    "californiaFood": "加州在地美食",
+    "travelInfo": "行前準備資訊",
+    "tripDescription": "2026/4/1 (三) - 4/13 (一) · 陽光、海灘、沙漠與不夜城，為期 13 天的深度家庭之旅。",
+    "flightDescription": "星宇航空 直飛安大略 (ONT)，享受舒適的雲端時光。",
+    "attractionsDescription": "從世界級博物館到壯麗的國家公園，盡收眼底。",
+    "foodDescription": "享受多元飲食文化，從米其林餐廳到經典公路漢堡。",
+    "infoDescription": "整理護照、簽證與行李清單，享受無憂無慮的假期。"
+  },
+  "itinerary": {
+    "overview": "總覽",
+    "overviewTitle": "行程總覽",
+    "overviewDescription": "從洛杉磯出發，搭配拉斯維加斯大峽谷跟團、海岸線自駕與聖地牙哥城市探訪，這裡快速總結 13 天行程，點選任一天可查看詳細安排與路線圖。",
+    "day": "Day",
+    "groupTour": "跟團行程",
+    "selectDay": "請選擇一天來查看行程。",
+    "departureLocation": "集合出發地點",
+    "departureTime": "出發時間：",
+    "timeline": "行程時間表",
+    "highlights": "本日重點",
+    "accommodation": "住宿",
+    "meals": "餐食",
+    "breakfast": "早餐",
+    "lunch": "午餐",
+    "dinner": "晚餐",
+    "transport": "交通方式",
+    "routeMap": "本日路線圖",
+    "estimatedCost": "大約費用",
+    "activityTime": "活動時間：",
+    "mealTime": "用餐時間：",
+    "travelDistance": "行駛距離：",
+    "travelDuration": "行駛時間：",
+    "hotelNote": "飯店僅供參考，最終入住飯店請以實際預訂為準。",
+    "roomAssignment": "分房表"
+  }
+}

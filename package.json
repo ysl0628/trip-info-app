@@ -12,9 +12,11 @@
     "deploy": "node node_modules/gh-pages/bin/gh-pages.js -d dist"
   },
   "dependencies": {
+    "i18next": "^25.7.3",
     "lucide-react": "^0.554.0",
     "react": "^19.2.0",
-    "react-dom": "^19.2.0"
+    "react-dom": "^19.2.0",
+    "react-i18next": "^16.5.1"
   },
   "devDependencies": {
     "@types/node": "^22.14.0",

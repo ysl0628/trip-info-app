@@ -1,10 +1,14 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { createPortal } from 'react-dom';
-import { ITINERARY } from '../constants';
+import { useItinerary } from '../hooks/useItinerary';
+import { ITINERARY as ORIGINAL_ITINERARY } from '../constants';
 import { Map, BedDouble, Utensils, Bus, Car, X, ExternalLink, Navigation, Clock, Link as LinkIcon } from 'lucide-react';
 import { DayItinerary } from '../types';
 
 export const Itinerary: React.FC = () => {
+  const { t } = useTranslation();
+  const ITINERARY = useItinerary();
   const [selectedMap, setSelectedMap] = useState<DayItinerary | null>(null);
   const [selectedDay, setSelectedDay] = useState<number | 'overview'>('overview');
 
@@ -30,7 +34,11 @@ export const Itinerary: React.FC = () => {
     ? null
     : ITINERARY.find(d => d.day === selectedDay);
 
-  const isGroupTour = item ? item.title.includes('跟團') : false;
+  // 使用原始 ITINERARY 来检查是否是 group tour，因为翻译后的 title 可能不包含标识
+  const originalItem = selectedDay === 'overview'
+    ? null
+    : ORIGINAL_ITINERARY.find(d => d.day === selectedDay);
+  const isGroupTour = originalItem ? originalItem.title.includes('跟團') : false;
 
   return (
     <div className="pb-20">
@@ -48,7 +56,7 @@ export const Itinerary: React.FC = () => {
               }
             `}
           >
-            總覽
+            {t("itinerary.overview")}
           </button>
           {ITINERARY.map(tabItem => (
             <button
@@ -63,7 +71,7 @@ export const Itinerary: React.FC = () => {
                 }
               `}
             >
-              <span className="opacity-60 mr-1.5">Day</span>{tabItem.day}
+              <span className="opacity-60 mr-1.5">{t("itinerary.day")}</span>{tabItem.day}
             </button>
           ))}
         </div>
@@ -74,17 +82,18 @@ export const Itinerary: React.FC = () => {
         <div className="mt-6 space-y-6">
           <div>
             <h3 className="text-2xl md:text-3xl font-bold font-serif text-stone-800 mb-2">
-              行程總覽
+              {t("itinerary.overviewTitle")}
             </h3>
             <p className="text-stone-600 text-base md:text-lg max-w-3xl">
-              從洛杉磯出發，搭配拉斯維加斯大峽谷跟團、海岸線自駕與聖地牙哥城市探訪，
-              這裡快速總結 13 天行程，點選任一天可查看詳細安排與路線圖。
+              {t("itinerary.overviewDescription")}
             </p>
           </div>
 
           <div className="space-y-3">
             {ITINERARY.map(day => {
-              const dayIsGroup = day.title.includes('跟團');
+              // 使用原始 ITINERARY 来检查是否是 group tour，因为翻译后的 title 可能不包含标识
+              const originalDay = ORIGINAL_ITINERARY.find(d => d.day === day.day);
+              const dayIsGroup = originalDay ? originalDay.title.includes('跟團') : false;
               return (
                 <button
                   key={day.day}
@@ -106,7 +115,7 @@ export const Itinerary: React.FC = () => {
                       </span>
                       {dayIsGroup && (
                         <span className="px-2 py-0.5 rounded text-[10px] font-bold border bg-amber-50 text-amber-700 border-amber-200">
-                          跟團行程
+                          {t("itinerary.groupTour")}
                         </span>
                       )}
                     </div>
@@ -132,7 +141,7 @@ export const Itinerary: React.FC = () => {
                     <span className="text-xs font-bold text-stone-400 uppercase tracking-wider">{item.date}</span>
                     {isGroupTour && (
                         <span className={`px-2 py-0.5 rounded text-[10px] font-bold border ${isGroupTour ? 'bg-amber-100 text-amber-700 border-amber-200' : ''}`}>
-                            跟團行程
+                            {t("itinerary.groupTour")}
                         </span>
                     )}
                 </div>
@@ -146,7 +155,7 @@ export const Itinerary: React.FC = () => {
                 className="flex-shrink-0 w-full md:w-auto self-start md:self-center flex items-center justify-center gap-2 text-sm font-bold px-4 py-3 rounded-xl bg-white border border-stone-200 text-stone-700 hover:text-stone-900 hover:border-stone-300 transition-colors shadow-sm"
               >
                 <Map size={16} />
-                <span>本日路線圖</span>
+                <span>{t("itinerary.routeMap")}</span>
               </button>
             )}
         </div>
@@ -176,10 +185,10 @@ export const Itinerary: React.FC = () => {
                             <Clock size={20} />
                         </div>
                         <div className="flex-1 min-w-0">
-                            <h4 className="text-xs font-bold text-stone-500 uppercase tracking-wider mb-2">集合出發地點</h4>
+                            <h4 className="text-xs font-bold text-stone-500 uppercase tracking-wider mb-2">{t("itinerary.departureLocation")}</h4>
                             {item.departureTime && (
                                 <div className="text-base font-bold text-stone-800 mb-1">
-                                    出發時間：{item.departureTime}
+                                    {t("itinerary.departureTime")}{item.departureTime}
                                 </div>
                             )}
                             {item.departureLocation && (
@@ -195,7 +204,7 @@ export const Itinerary: React.FC = () => {
             {/* 3. Timeline */}
             {item.timeline && item.timeline.length > 0 && (
                 <div>
-                    <h4 className="text-sm font-bold text-stone-500 uppercase tracking-wider mb-4">行程時間表</h4>
+                    <h4 className="text-sm font-bold text-stone-500 uppercase tracking-wider mb-4">{t("itinerary.timeline")}</h4>
                     <div className="relative">
                         {/* Timeline line */}
                         <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-stone-200"></div>
@@ -240,13 +249,13 @@ export const Itinerary: React.FC = () => {
                                                     <div className="flex items-center gap-4 text-xs text-stone-500">
                                                         {timelineItem.distance && (
                                                             <span className="flex items-center gap-1">
-                                                                <span className="font-medium">行駛距離：</span>
+                                                                <span className="font-medium">{t("itinerary.travelDistance")}</span>
                                                                 <span>{timelineItem.distance}</span>
                                                             </span>
                                                         )}
                                                         {timelineItem.duration && (
                                                             <span className="flex items-center gap-1">
-                                                                <span className="font-medium">行駛時間：</span>
+                                                                <span className="font-medium">{t("itinerary.travelDuration")}</span>
                                                                 <span>{timelineItem.duration}</span>
                                                             </span>
                                                         )}
@@ -278,7 +287,7 @@ export const Itinerary: React.FC = () => {
                                                         <span className={`text-xs font-bold ${
                                                             isGroupTour ? 'text-amber-700' : 'text-stone-600'
                                                         }`}>
-                                                            活動時間：<span className="font-semibold">{timelineItem.activityDuration}</span>
+                                                            {t("itinerary.activityTime")}<span className="font-semibold">{timelineItem.activityDuration}</span>
                                                         </span>
                                                     </div>
                                                 )}
@@ -317,7 +326,7 @@ export const Itinerary: React.FC = () => {
                                                         <span className={`text-xs font-bold ${
                                                             isGroupTour ? 'text-amber-700' : 'text-stone-600'
                                                         }`}>
-                                                            {(timelineItem.title === '早餐' || timelineItem.title === '午餐' || timelineItem.title === '晚餐') ? '用餐時間' : '活動時間'}：<span className="font-semibold">{timelineItem.activityDuration}</span>
+                                                            {(timelineItem.title === '早餐' || timelineItem.title === '午餐' || timelineItem.title === '晚餐') ? t("itinerary.mealTime") : t("itinerary.activityTime")}<span className="font-semibold">{timelineItem.activityDuration}</span>
                                                         </span>
                                                     </div>
                                                 )}
@@ -334,7 +343,7 @@ export const Itinerary: React.FC = () => {
             {/* Fee Note (if exists, show after timeline) */}
             {item.feeNote && (
                 <div className="p-4 rounded-xl bg-amber-50 border border-amber-200 shadow-sm">
-                    <h4 className="text-xs font-bold text-amber-700 uppercase tracking-wider mb-2">大約費用</h4>
+                    <h4 className="text-xs font-bold text-amber-700 uppercase tracking-wider mb-2">{t("itinerary.estimatedCost")}</h4>
                     {Array.isArray(item.feeNote) ? (
                         <ul className="text-sm text-amber-800 leading-relaxed space-y-2 list-none">
                             {item.feeNote.map((fee, idx) => (
@@ -354,7 +363,7 @@ export const Itinerary: React.FC = () => {
 
             {/* Highlights */}
             <div>
-                <h4 className="text-sm font-bold text-stone-500 uppercase tracking-wider mb-3">本日重點</h4>
+                <h4 className="text-sm font-bold text-stone-500 uppercase tracking-wider mb-3">{t("itinerary.highlights")}</h4>
                 <div className="flex flex-wrap gap-2">
                   {item.highlights.map((highlight, idx) => (
                     <span key={idx} className={`text-xs font-bold px-3 py-1.5 rounded-full border ${
@@ -377,7 +386,7 @@ export const Itinerary: React.FC = () => {
                     </div>
                     <div className="min-w-0 flex-1 flex flex-row gap-4 h-full justify-between" style={{ flexDirection: 'row' }}>
                         <div className="flex-1">
-                            <h4 className="text-xs font-bold text-stone-400 uppercase tracking-wider mb-3">住宿</h4>
+                            <h4 className="text-xs font-bold text-stone-400 uppercase tracking-wider mb-3">{t("itinerary.accommodation")}</h4>
                             <p className="text-base font-bold text-stone-800 mb-2">{item.accommodation.location}</p>
                             <div className="text-sm text-stone-500 space-y-1.5">
                                 {item.accommodation.hotels.map((h, i) => {
@@ -411,7 +420,7 @@ export const Itinerary: React.FC = () => {
                         </div>
                         {item.accommodation.roomAssignment && item.accommodation.roomAssignment.length > 0 && (
                             <div className="flex-shrink-0 pl-4 border-l border-stone-200">
-                                <h5 className="text-xs font-bold text-stone-500 uppercase tracking-wider mb-2">分房表</h5>
+                                <h5 className="text-xs font-bold text-stone-500 uppercase tracking-wider mb-2">{t("itinerary.roomAssignment")}</h5>
                                 <div className="space-y-1.5">
                                     {item.accommodation.roomAssignment.map((room, idx) => (
                                         <div key={idx} className="flex items-center gap-2 text-sm text-stone-600">
@@ -432,18 +441,18 @@ export const Itinerary: React.FC = () => {
                     </div>
                     <div className="min-w-0 flex-1 flex flex-col h-full">
                         <div className="pb-4">
-                            <h4 className="text-xs font-bold text-stone-400 uppercase tracking-wider mb-3">餐食</h4>
+                            <h4 className="text-xs font-bold text-stone-400 uppercase tracking-wider mb-3">{t("itinerary.meals")}</h4>
                             <div className="space-y-2.5 text-sm text-stone-600">
                                 <div className="flex gap-2 items-start">
-                                    <span className="w-10 text-xs font-bold text-stone-400 shrink-0 pt-0.5">早餐</span>
+                                    <span className="min-w-[3rem] text-xs font-bold text-stone-400 shrink-0 pt-0.5 whitespace-nowrap">{t("itinerary.breakfast")}</span>
                                     <span className="flex-1 leading-relaxed">{item.meals.breakfast}</span>
                                 </div>
                                 <div className="flex gap-2 items-start">
-                                    <span className="w-10 text-xs font-bold text-stone-400 shrink-0 pt-0.5">午餐</span>
+                                    <span className="min-w-[3rem] text-xs font-bold text-stone-400 shrink-0 pt-0.5 whitespace-nowrap">{t("itinerary.lunch")}</span>
                                     <span className="flex-1 leading-relaxed">{item.meals.lunch}</span>
                                 </div>
                                 <div className="flex gap-2 items-start">
-                                    <span className="w-10 text-xs font-bold text-stone-400 shrink-0 pt-0.5">晚餐</span>
+                                    <span className="min-w-[3rem] text-xs font-bold text-stone-400 shrink-0 pt-0.5 whitespace-nowrap">{t("itinerary.dinner")}</span>
                                     <span className="flex-1 leading-relaxed">{item.meals.dinner}</span>
                                 </div>
                             </div>
@@ -455,7 +464,7 @@ export const Itinerary: React.FC = () => {
             {/* Transport */}
             {item.transport && item.transport.length > 0 && (
                 <div className="pt-6 border-t border-stone-200">
-                    <h4 className="text-sm font-bold text-stone-500 uppercase tracking-wider mb-3">交通方式</h4>
+                    <h4 className="text-sm font-bold text-stone-500 uppercase tracking-wider mb-3">{t("itinerary.transport")}</h4>
                     <div className="flex items-start gap-3">
                         <div className="text-stone-500 shrink-0 pt-0.5">
                             {item.transport.some(t => t.includes('巴士')) ? <Bus size={20} /> : <Car size={20} />}
@@ -479,7 +488,7 @@ export const Itinerary: React.FC = () => {
         </div>
       </div>
       ) : (
-        <div className="p-4 text-center text-stone-500">請選擇一天來查看行程。</div>
+        <div className="p-4 text-center text-stone-500">{t("itinerary.selectDay")}</div>
       )}
 
       {/* Map Dialog - rendered via portal for full-page mask */}

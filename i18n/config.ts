@@ -1,0 +1,24 @@
+import i18n from 'i18next';
+import { initReactI18next } from 'react-i18next';
+import zhTW from './locales/zh-TW.json';
+import en from './locales/en.json';
+
+i18n
+  .use(initReactI18next)
+  .init({
+    resources: {
+      'zh-TW': {
+        translation: zhTW
+      },
+      'en': {
+        translation: en
+      }
+    },
+    lng: localStorage.getItem('language') || 'zh-TW', // 默认语言
+    fallbackLng: 'zh-TW',
+    interpolation: {
+      escapeValue: false // React 已经转义了
+    }
+  });
+
+export default i18n;

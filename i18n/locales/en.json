@@ -1,0 +1,169 @@
+{
+  "common": {
+    "daysToGo": "days",
+    "familyTrip2026": "Family Trip 2026",
+    "scrollToTop": "Scroll to Top"
+  },
+  "navigation": {
+    "itinerary": "Itinerary",
+    "itineraryFull": "Trip Planning",
+    "flights": "Flights",
+    "flightsFull": "Flight Information",
+    "attractions": "Attractions",
+    "attractionsFull": "Featured Attractions",
+    "food": "Food",
+    "foodFull": "Local Food",
+    "info": "Info",
+    "infoFull": "Travel Information"
+  },
+  "hero": {
+    "southernCalifornia2026": "Southern California 2026",
+    "exploreSouthernCalifornia": "Explore Southern California",
+    "flyToOntario": "Fly to Ontario",
+    "westCoastAttractions": "West Coast Attractions",
+    "californiaFood": "California Local Food",
+    "travelInfo": "Travel Information",
+    "tripDescription": "Apr 1 (Wed) - Apr 13 (Mon), 2026 · A 13-day in-depth family trip featuring sunshine, beaches, desert, and the city that never sleeps.",
+    "flightDescription": "STARLUX Airlines direct flight to Ontario (ONT), enjoy comfortable time in the clouds.",
+    "attractionsDescription": "From world-class museums to magnificent national parks, all in one view.",
+    "foodDescription": "Enjoy diverse culinary culture, from Michelin restaurants to classic road burgers.",
+    "infoDescription": "Organize passports, visas, and luggage lists for a worry-free vacation."
+  },
+  "itinerary": {
+    "overview": "Overview",
+    "overviewTitle": "Trip Overview",
+    "overviewDescription": "Starting from Los Angeles, combining Las Vegas Grand Canyon group tour, coastal self-driving, and San Diego city exploration. Here's a quick summary of the 13-day itinerary. Click on any day to view detailed arrangements and route maps.",
+    "day": "Day",
+    "groupTour": "Group Tour",
+    "selectDay": "Please select a day to view the itinerary.",
+    "departureLocation": "Departure Location",
+    "departureTime": "Departure Time:",
+    "timeline": "Timeline",
+    "highlights": "Highlights",
+    "accommodation": "Accommodation",
+    "meals": "Meals",
+    "breakfast": "Breakfast",
+    "lunch": "Lunch",
+    "dinner": "Dinner",
+    "transport": "Transportation",
+    "routeMap": "Route Map",
+    "estimatedCost": "Estimated Cost",
+    "activityTime": "Activity Time:",
+    "mealTime": "Meal Time:",
+    "travelDistance": "Travel Distance:",
+    "travelDuration": "Travel Duration:",
+    "hotelNote": "Hotels are for reference only. Final accommodation is subject to actual booking.",
+    "roomAssignment": "Room Assignment",
+    "days": {
+      "day1": {
+        "title": "Arrival and Settling In",
+        "description": "Arrive at Ontario Airport in the evening, complete customs procedures, then head to Rowland Heights for rest and time zone adjustment.",
+        "highlights": ["Ontario International Airport (ONT)", "Rowland Heights"],
+        "accommodation": {
+          "location": "Rowland Heights",
+          "hotels": ["Best Western Plus Executive Inn", "Courtyard by Marriott Hacienda Heights"]
+        },
+        "meals": {
+          "breakfast": "On the plane",
+          "lunch": "On the plane",
+          "dinner": "Taiwanese cuisine in Rowland Heights (e.g., Half & Half)"
+        },
+        "transport": ["Shuttle/Uber to accommodation (approx. 30 minutes)"],
+        "departureLocation": ""
+      },
+      "day2": {
+        "title": "Coastal Vibes Santa Monica",
+        "description": "Pick up rental car and head to vibrant Santa Monica Beach and Pier, enjoy California sunshine and Pacific ocean breeze.",
+        "highlights": ["Santa Monica Pier", "Route 66 End"],
+        "accommodation": {
+          "location": "Rowland Heights",
+          "hotels": ["Same accommodation"]
+        },
+        "meals": {
+          "breakfast": "Taiwanese breakfast in Rowland Heights",
+          "lunch": "Around Santa Monica Pier",
+          "dinner": "Din Tai Fung or other restaurants"
+        },
+        "transport": ["Self-drive (approx. 1 hour one way)"]
+      },
+      "day3": {
+        "title": "Art and Luxury",
+        "description": "Visit Getty Center in the morning to appreciate art collections, then stroll through luxurious Beverly Hills and Rodeo Drive in the afternoon.",
+        "highlights": ["The Getty Center", "Beverly Hills"],
+        "accommodation": {
+          "location": "Rowland Heights",
+          "hotels": ["Same accommodation"]
+        },
+        "meals": {
+          "breakfast": "On your own",
+          "lunch": "Light meal at Getty Center",
+          "dinner": "Beverly Hills or return to Rowland Heights"
+        },
+        "transport": ["Self-drive (approx. 50-60 minutes one way)"]
+      },
+      "day4": {
+        "title": "NBA Game Experience Night",
+        "description": "Relaxed shopping during the day, then head to Crypto.com Arena in the evening to experience NBA atmosphere.",
+        "highlights": ["Crypto.com Arena (Lakers/Clippers home)", "L.A. Live"],
+        "accommodation": {
+          "location": "Rowland Heights",
+          "hotels": ["Same accommodation"]
+        },
+        "meals": {
+          "breakfast": "On your own",
+          "lunch": "On your own",
+          "dinner": "L.A. Live area"
+        },
+        "transport": ["Self-drive (approx. 45 minutes one way)"]
+      },
+      "day5": {
+        "title": "[Group Tour] To Las Vegas",
+        "description": "Depart in the morning for the gambling capital, passing through desert scenery. Free time in the evening, visit Bellagio Fountains or Old Town light show.",
+        "highlights": ["Las Vegas Strip", "Bellagio Fountains", "Fremont Street Experience"],
+        "accommodation": {
+          "location": "Las Vegas",
+          "hotels": [{
+            "name": "Fontainebleau Las Vegas",
+            "link": "https://www.fontainebleaulasvegas.com/"
+          }]
+        },
+        "meals": {
+          "breakfast": "On your own",
+          "lunch": "Guide will recommend based on actual situation",
+          "dinner": "Guide will recommend based on actual situation"
+        },
+        "transport": ["From Los Angeles to Las Vegas; Travel: approx. 430 km / approx. 300 minutes"],
+        "departureLocation": "Island Restaurant (next to De Cheng Market in Rowland Heights); 1463 Nogales St, Rowland Heights, CA 91748",
+        "timeline": [
+          {
+            "title": "Departure",
+            "description": "Island Restaurant (next to De Cheng Market in Rowland Heights); 1463 Nogales St, Rowland Heights, CA 91748"
+          },
+          {
+            "title": "Breakfast",
+            "description": "Can be purchased the day before"
+          },
+          {
+            "title": "Transportation",
+            "from": "Los Angeles",
+            "to": "Las Vegas",
+            "distance": "approx. 430 km",
+            "duration": "approx. 300 minutes"
+          },
+          {
+            "title": "Lunch",
+            "description": "Guide will recommend based on actual situation"
+          },
+          {
+            "title": "Dinner",
+            "description": "Guide will recommend based on actual situation"
+          },
+          {
+            "title": "Hotel",
+            "description": ["Fontainebleau Las Vegas", "Hotels are for reference only. Final accommodation is subject to actual booking."]
+          }
+        ]
+      }
+    }
+  }
+}

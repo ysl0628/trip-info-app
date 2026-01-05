@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import { useTranslation } from "react-i18next";
 import { Navigation } from "./components/Navigation";
 import { Itinerary } from "./components/Itinerary";
 import { Flights } from "./components/Flights";
@@ -7,8 +8,10 @@ import { Food } from "./components/Food";
 import { GeneralInfo } from "./components/GeneralInfo";
 import { ArrowUp, CalendarDays, Plane, MapPin, Utensils, Info, Sun, Sparkles } from "lucide-react";
 import { Logo } from "./components/Logo";
+import { LanguageSwitcher } from "./components/LanguageSwitcher";
 
 const App: React.FC = () => {
+  const { t } = useTranslation();
   const [activeTab, setActiveTab] = useState("itinerary");
   const [showScrollTop, setShowScrollTop] = useState(false);
   const mainRef = useRef<HTMLDivElement | null>(null);
@@ -71,11 +74,11 @@ const App: React.FC = () => {
   };
 
   const navItems = [
-    { id: "itinerary", label: "行程", fullLabel: "行程規劃", icon: CalendarDays },
-    { id: "flights", label: "航班", fullLabel: "航班資訊", icon: Plane },
-    { id: "attractions", label: "景點", fullLabel: "精選景點", icon: MapPin },
-    { id: "food", label: "美食", fullLabel: "在地美食", icon: Utensils },
-    { id: "info", label: "資訊", fullLabel: "旅遊資訊", icon: Info },
+    { id: "itinerary", label: t("navigation.itinerary"), fullLabel: t("navigation.itineraryFull"), icon: CalendarDays },
+    { id: "flights", label: t("navigation.flights"), fullLabel: t("navigation.flightsFull"), icon: Plane },
+    { id: "attractions", label: t("navigation.attractions"), fullLabel: t("navigation.attractionsFull"), icon: MapPin },
+    { id: "food", label: t("navigation.food"), fullLabel: t("navigation.foodFull"), icon: Utensils },
+    { id: "info", label: t("navigation.info"), fullLabel: t("navigation.infoFull"), icon: Info },
   ];
 
   return (
@@ -86,14 +89,15 @@ const App: React.FC = () => {
       */}
       <header className="relative md:sticky md:top-0 z-40 bg-white/95 backdrop-blur-md border-b border-stone-100 shadow-sm transition-all duration-300 flex-none">
         <div className="max-w-6xl mx-auto px-4 md:px-8">
-          <div className="flex items-center justify-between h-16 md:h-20">
+          <div className="flex items-center justify-between h-16 md:h-20 relative">
             {/* Logo Area */}
             <Logo />
-            <div className="flex items-center gap-3">
-              <div className="hidden md:block w-px h-6 bg-stone-300 mx-1"></div>
-              <span className="hidden md:block text-[11px] font-bold tracking-[0.2em] text-stone-500 uppercase pt-1">
-                Family Trip 2026
+            <div className="hidden md:flex items-center gap-3">
+              <div className="w-px h-6 bg-stone-300 mx-1"></div>
+              <span className="text-[11px] font-bold tracking-[0.2em] text-stone-500 uppercase pt-1">
+                {t("common.familyTrip2026")}
               </span>
+              <LanguageSwitcher />
             </div>
 
             {/* Desktop Navigation */}
@@ -126,20 +130,21 @@ const App: React.FC = () => {
                   Days to Go
                 </span>
                 <div className="font-serif font-bold text-xl text-stone-800 leading-none">
-                  {daysToGo} <span className="font-sans text-xs text-stone-400 font-medium">天</span>
+                  {daysToGo} <span className="font-sans text-xs text-stone-400 font-medium">{t("common.daysToGo")}</span>
                 </div>
               </div>
             </div>
 
-            {/* Mobile Year Badge */}
-            <div className="md:hidden">
+            {/* Mobile: Days to Go + Language Switcher */}
+            <div className="md:hidden flex items-center gap-3">
+              <LanguageSwitcher />
               <div className="flex flex-col items-end">
                 <span className="text-[10px] font-bold text-stone-400 uppercase tracking-wider flex items-center gap-1">
                   <Sun size={12} className="text-amber-500" />
                   Days to Go
                 </span>
                 <div className="font-serif font-bold text-xl text-stone-800 leading-none">
-                  {daysToGo} <span className="font-sans text-xs text-stone-400 font-medium">天</span>
+                  {daysToGo} <span className="font-sans text-xs text-stone-400 font-medium">{t("common.daysToGo")}</span>
                 </div>
               </div>
             </div>
@@ -165,20 +170,19 @@ const App: React.FC = () => {
             </div>
 
             <h2 className="text-3xl md:text-7xl font-serif font-bold text-stone-900 leading-tight mb-4 tracking-tight">
-              {activeTab === "itinerary" && "探索南加州"}
-              {activeTab === "flights" && "飛往安大略"}
-              {activeTab === "attractions" && "美西精選景點"}
-              {activeTab === "food" && "加州在地美食"}
-              {activeTab === "info" && "行前準備資訊"}
+              {activeTab === "itinerary" && t("hero.exploreSouthernCalifornia")}
+              {activeTab === "flights" && t("hero.flyToOntario")}
+              {activeTab === "attractions" && t("hero.westCoastAttractions")}
+              {activeTab === "food" && t("hero.californiaFood")}
+              {activeTab === "info" && t("hero.travelInfo")}
             </h2>
 
             <p className="text-stone-500 font-medium max-w-xl mx-auto text-sm md:text-xl leading-relaxed px-4">
-              {activeTab === "itinerary" &&
-                "2026/4/1 (三) - 4/13 (一) · 陽光、海灘、沙漠與不夜城，為期 13 天的深度家庭之旅。"}
-              {activeTab === "flights" && "星宇航空 直飛安大略 (ONT)，享受舒適的雲端時光。"}
-              {activeTab === "attractions" && "從世界級博物館到壯麗的國家公園，盡收眼底。"}
-              {activeTab === "food" && "享受多元飲食文化，從米其林餐廳到經典公路漢堡。"}
-              {activeTab === "info" && "整理護照、簽證與行李清單，享受無憂無慮的假期。"}
+              {activeTab === "itinerary" && t("hero.tripDescription")}
+              {activeTab === "flights" && t("hero.flightDescription")}
+              {activeTab === "attractions" && t("hero.attractionsDescription")}
+              {activeTab === "food" && t("hero.foodDescription")}
+              {activeTab === "info" && t("hero.infoDescription")}
             </p>
           </div>
         </div>
@@ -197,7 +201,7 @@ const App: React.FC = () => {
           className={`fixed bottom-24 right-4 md:bottom-10 md:right-10 z-[60] p-3 rounded-full bg-stone-900 text-white shadow-xl shadow-stone-900/20 hover:bg-stone-700 transition-all duration-500 transform ${
             showScrollTop ? "translate-y-0 opacity-100 scale-100" : "translate-y-10 opacity-0 scale-90"
           }`}
-          aria-label="Scroll to top"
+          aria-label={t("common.scrollToTop")}
         >
           <ArrowUp size={20} />
         </button>

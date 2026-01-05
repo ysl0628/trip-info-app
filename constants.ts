@@ -926,6 +926,19 @@ export const ATTRACTIONS: Attraction[] = [
 export const FOOD_SPOTS: FoodSpot[] = [
   // LA / Rowland Heights
   {
+    name: 'Porto\'s Bakery and Cafe',
+    location: '洛杉磯',
+    region: '洛杉磯',
+    type: 'Food',
+    cuisine: '古巴/拉丁風味麵包店',
+    cost: '$5-15',
+    openHours: '06:30 - 20:00',
+    mustOrder: 'Potato Ball, Cheese Roll, Guava & Cheese Strudel',
+    note: '洛杉磯最受歡迎的古巴麵包店，價格實惠，排隊名店',
+    mapLink: 'https://maps.app.goo.gl/iQUfp4PZJWaNkLnV9?g_st=il',
+    tags: ['洛杉磯', '麵包店', '平價', '必吃']
+  },
+  {
     name: '半畝園 (Half & Half)',
     location: 'Rowland Heights',
     region: '洛杉磯',
