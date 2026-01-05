@@ -53,7 +53,10 @@ export const useItinerary = (): DayItinerary[] => {
             title: t(`${timelineKey}.title`, { defaultValue: item.title }),
             from: item.from ? t(`${timelineKey}.from`, { defaultValue: item.from }) : item.from,
             to: item.to ? t(`${timelineKey}.to`, { defaultValue: item.to }) : item.to,
-            location: item.location ? t(`${timelineKey}.location`, { defaultValue: item.location }) : item.location
+            location: item.location ? t(`${timelineKey}.location`, { defaultValue: item.location }) : item.location,
+            activityDuration: item.activityDuration ? t(`${timelineKey}.activityDuration`, { defaultValue: item.activityDuration }) : item.activityDuration,
+            distance: item.distance ? t(`${timelineKey}.distance`, { defaultValue: item.distance }) : item.distance,
+            duration: item.duration ? t(`${timelineKey}.duration`, { defaultValue: item.duration }) : item.duration
           };
           
           // 处理 description

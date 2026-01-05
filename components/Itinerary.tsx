@@ -240,7 +240,7 @@ export const Itinerary: React.FC = () => {
                                             </span>
                                         </div>
                                         {/* 交通類型：標題和內容合併顯示 */}
-                                        {timelineItem.title === '交通' && timelineItem.from && timelineItem.to ? (
+                                        {(timelineItem.title === '交通' || timelineItem.title === 'Transportation') && timelineItem.from && timelineItem.to ? (
                                             <div className="space-y-2">
                                                 <h5 className="text-base font-bold text-stone-800">
                                                     {timelineItem.title} : <span className="font-normal text-stone-700">{timelineItem.from} → {timelineItem.to}</span>
@@ -271,7 +271,7 @@ export const Itinerary: React.FC = () => {
                                                     </p>
                                                 )}
                                             </div>
-                                        ) : timelineItem.title === '景點/場館' ? (
+                                        ) : (timelineItem.title === '景點/場館' || timelineItem.title === 'Attractions') ? (
                                             /* 景點類型：標題和地點合併顯示 */
                                             <div className="space-y-2">
                                                 <h5 className="text-base font-bold text-stone-800">

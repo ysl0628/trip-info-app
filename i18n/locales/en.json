@@ -163,6 +163,253 @@
             "description": ["Fontainebleau Las Vegas", "Hotels are for reference only. Final accommodation is subject to actual booking."]
           }
         ]
+      },
+      "day6": {
+        "title": "[Group Tour] Zion National Park & Bryce Canyon",
+        "description": "Las Vegas → Zion National Park (45 min) → Bryce Canyon National Park (60 min) → Glen Canyon Dam (pass by) → Lake Powell (pass by) → Page",
+        "highlights": ["Zion National Park", "Bryce Canyon National Park", "Glen Canyon Dam", "Lake Powell"],
+        "accommodation": {
+          "location": "Page / Lake Powell",
+          "hotels": ["Days Inn Page/Lake Powell"]
+        },
+        "meals": {
+          "breakfast": "Guide will recommend based on actual situation",
+          "lunch": "Guide will recommend based on actual situation",
+          "dinner": "Guide will recommend based on actual situation"
+        },
+        "transport": [
+          "Drive from hotel to Zion National Park; Travel: approx. 256 km / approx. 210 minutes",
+          "Drive from Zion National Park to Bryce Canyon National Park; Travel: approx. 135 km / approx. 120 minutes",
+          "Drive from Bryce Canyon National Park to hotel (pass by Glen Canyon Dam, Lake Powell); Travel: approx. 243 km / approx. 180 minutes"
+        ],
+        "timeline": [
+          {
+            "title": "Breakfast",
+            "description": "Guide will recommend based on actual situation"
+          },
+          {
+            "title": "Transportation",
+            "from": "Hotel",
+            "to": "Zion National Park",
+            "distance": "approx. 256 km",
+            "duration": "approx. 210 minutes"
+          },
+          {
+            "title": "Attractions",
+            "location": "Zion National Park",
+            "activityDuration": "approx. 45 minutes"
+          },
+          {
+            "title": "Lunch",
+            "description": "Guide will recommend based on actual situation"
+          },
+          {
+            "title": "Transportation",
+            "from": "Zion National Park",
+            "to": "Bryce Canyon National Park",
+            "distance": "approx. 135 km",
+            "duration": "approx. 120 minutes"
+          },
+          {
+            "title": "Attractions",
+            "location": "Bryce Canyon National Park",
+            "activityDuration": "approx. 1 hour"
+          },
+          {
+            "title": "Transportation",
+            "from": "Bryce Canyon National Park",
+            "to": "Hotel",
+            "distance": "approx. 243 km",
+            "duration": "approx. 180 minutes",
+            "description": "Pass by Glen Canyon Dam, Lake Powell"
+          },
+          {
+            "title": "Attractions",
+            "location": "Glen Canyon Dam (exterior), Lake Powell (exterior)",
+            "activityDuration": "approx. 1 minute"
+          },
+          {
+            "title": "Dinner",
+            "description": "Guide will recommend based on actual situation"
+          },
+          {
+            "title": "Hotel",
+            "description": ["Days Inn Page/Lake Powell", "Hotels are for reference only. Final accommodation is subject to actual booking."]
+          }
+        ]
+      },
+      "day7": {
+        "title": "[Group Tour] Antelope Canyon & Grand Canyon National Park",
+        "description": "Today we will depart from Page, heading to Antelope Canyon and Horseshoe Bend, starting a journey of natural wonders. During today's trip, you will also have the opportunity to visit the origin point of the Grand Canyon - Lake Powell, or admire the magnificent scenery of the Colorado River winding through the canyon floor at Grand Canyon National Park. Finally, we will return to Las Vegas with wonderful natural memories.",
+        "highlights": ["Lower Antelope Canyon", "Horseshoe Bend", "Grand Canyon National Park"],
+        "accommodation": {
+          "location": "Las Vegas",
+          "hotels": [{
+            "name": "Fontainebleau Las Vegas",
+            "link": "https://www.fontainebleaulasvegas.com/"
+          }]
+        },
+        "meals": {
+          "breakfast": "Guide will recommend based on actual situation",
+          "lunch": "Guide will recommend based on actual situation",
+          "dinner": "Guide will recommend based on actual situation"
+        },
+        "transport": [
+          "Drive from Lower Antelope Canyon to Horseshoe Bend; Travel: approx. 12 km / approx. 15 minutes",
+          "Drive from Horseshoe Bend to Grand Canyon National Park; Travel: approx. 177 km / approx. 120 minutes",
+          "Return from Grand Canyon National Park to Las Vegas"
+        ],
+        "timeline": [
+          {
+            "title": "Breakfast",
+            "description": "Guide will recommend based on actual situation"
+          },
+          {
+            "title": "Attractions",
+            "location": "Lower Antelope Canyon",
+            "activityDuration": "approx. 2 hours",
+            "description": ["Ticket", "Includes ticket, local transfer and guide service fee", "Reference price: USD 105"]
+          },
+          {
+            "title": "Transportation",
+            "from": "Lower Antelope Canyon",
+            "to": "Horseshoe Bend",
+            "distance": "approx. 12 km",
+            "duration": "approx. 15 minutes"
+          },
+          {
+            "title": "Attractions",
+            "location": "Horseshoe Bend",
+            "activityDuration": "approx. 1 hour"
+          },
+          {
+            "title": "Transportation",
+            "from": "Horseshoe Bend",
+            "to": "Grand Canyon National Park",
+            "distance": "approx. 177 km",
+            "duration": "approx. 120 minutes"
+          },
+          {
+            "title": "Lunch",
+            "description": "Guide will recommend based on actual situation"
+          },
+          {
+            "title": "Attractions",
+            "location": "Grand Canyon National Park",
+            "activityDuration": "approx. 2 hours 30 minutes",
+            "description": ["Reference price: USD 190"]
+          },
+          {
+            "title": "Dinner",
+            "description": "Guide will recommend based on actual situation"
+          },
+          {
+            "title": "Hotel",
+            "description": ["Fontainebleau Las Vegas", "Hotels are for reference only. Final accommodation is subject to actual booking."]
+          }
+        ],
+        "feeNote": [
+          "1. Required fee USD 190 / person (paid when purchasing the tour, includes Zion National Park, Bryce National Park, Horseshoe Bend, Grand Canyon National Park, Las Vegas Welcome Sign & M&M's World & Coca-Cola Store fees)",
+          "2. National Park fee USD 100 × 3 / person (pay on-site if needed, cash)",
+          "3. Lower Antelope Canyon ticket USD 150 / person (paid when purchasing the tour)"
+        ]
+      },
+      "day8": {
+        "title": "[Group Tour End] Las Vegas Sign & Seven Magic Mountains",
+        "description": "Las Vegas Welcome Sign & M&M's World & Coca-Cola Store (required, 60 min) → FlyOver Las Vegas (optional, 25 min) → Seven Magic Mountains (30 min) → Barstow Outlets (120 min) → Los Angeles",
+        "highlights": ["Welcome to Fabulous Las Vegas Sign", "M&M's World", "Coca-Cola Store", "Seven Magic Mountains", "Barstow Outlets"],
+        "accommodation": {
+          "location": "Rowland Heights",
+          "hotels": ["Return to original accommodation"]
+        },
+        "meals": {
+          "breakfast": "Guide will recommend based on actual situation",
+          "lunch": "Guide will recommend based on actual situation",
+          "dinner": "Guide will recommend based on actual situation"
+        },
+        "transport": [
+          "Drive from Las Vegas Sign to Seven Magic Mountains; Travel: approx. 33 km / approx. 30 minutes",
+          "Drive from Seven Magic Mountains to Barstow Outlets; Travel: approx. 220 km / approx. 150 minutes",
+          "After the tour ends, you can leave the group at: Island Restaurant (next to De Cheng Market in Rowland Heights); 1463 Nogales St, Rowland Heights, CA 91748"
+        ],
+        "timeline": [
+          {
+            "title": "Breakfast",
+            "description": "Guide will recommend based on actual situation",
+            "activityDuration": "approx. 30 minutes"
+          },
+          {
+            "title": "Attractions",
+            "location": "Welcome to Fabulous Las Vegas Sign (exterior), M&M's World (Las Vegas) (exterior), Coca-Cola Store (Las Vegas) (exterior)",
+            "activityDuration": "approx. 1 hour"
+          },
+          {
+            "title": "Transportation",
+            "from": "Las Vegas Sign",
+            "to": "Seven Magic Mountains",
+            "distance": "approx. 33 km",
+            "duration": "approx. 30 minutes"
+          },
+          {
+            "title": "Attractions",
+            "location": "Seven Magic Mountains (exterior)",
+            "activityDuration": "approx. 30 minutes"
+          },
+          {
+            "title": "Lunch",
+            "description": "Guide will recommend based on actual situation"
+          },
+          {
+            "title": "Transportation",
+            "from": "Seven Magic Mountains",
+            "to": "Barstow Outlets",
+            "distance": "approx. 220 km",
+            "duration": "approx. 150 minutes"
+          },
+          {
+            "title": "Attractions",
+            "location": "Barstow Outlets",
+            "activityDuration": "approx. 2 hours"
+          },
+          {
+            "title": "Dinner",
+            "description": "Guide will recommend based on actual situation"
+          },
+          {
+            "title": "Transportation",
+            "description": "After the tour ends, you can leave the group at: Island Restaurant (next to De Cheng Market in Rowland Heights); 1463 Nogales St, Rowland Heights, CA 91748"
+          }
+        ]
+      },
+      "day9": {
+        "title": "Leisurely Coastline Malibu",
+        "description": "Drive along Pacific Coast Highway (PCH) to Malibu, enjoy the tranquility of a private beach, and explore Los Angeles area towns on the way back.",
+        "highlights": ["Pacific Coast Highway (PCH)", "Malibu"],
+        "accommodation": {
+          "location": "Rowland Heights",
+          "hotels": ["Same accommodation"]
+        },
+        "meals": {
+          "breakfast": "On your own",
+          "lunch": "Malibu oceanfront restaurant",
+          "dinner": "Return to Rowland Heights"
+        },
+        "transport": ["Self-drive (approx. 1.5 hours one way)"]
+      },
+      "day10": {
+        "title": "To the Desert, Stay in Palm Springs",
+        "description": "Check out and head to Joshua Tree National Park to admire unique desert vegetation, then stay overnight at the resort destination Palm Springs.",
+        "highlights": ["Joshua Tree National Park", "Palm Springs"],
+        "accommodation": {
+          "location": "Palm Springs",
+          "hotels": ["Hyatt Regency Indian Wells Resort & Spa", "Hilton Palm Springs"]
+        },
+        "meals": {
+          "breakfast": "Rowland Heights",
+          "lunch": "Town before the national park",
+          "dinner": "Palm Springs downtown"
+        },
+        "transport": ["Self-drive (approx. 2 hours to the park)"]
       }
     }
   }
