@@ -123,7 +123,10 @@ export const ITINERARY: DayItinerary[] = [
         time: '全天',
         period: '全天',
         title: '交通',
-        description: ['從洛杉磯出發前往拉斯維加斯', '行駛：約430公里/約300分鐘']
+        from: '洛杉磯',
+        to: '拉斯維加斯',
+        distance: '約430公里',
+        duration: '約300分鐘'
       },
       {
         time: '下午',
@@ -140,8 +143,8 @@ export const ITINERARY: DayItinerary[] = [
       {
         time: '晚上',
         period: '晚上',
-        title: '酒店',
-        description: ['拉斯維加斯楓丹白露', '酒店僅供參考，最終入住酒店請以實際預訂為準。']
+        title: '飯店',
+        description: ['拉斯維加斯楓丹白露', '飯店僅供參考，最終入住飯店請以實際預訂為準。']
       }
     ],
     accommodation: {
@@ -164,20 +167,100 @@ export const ITINERARY: DayItinerary[] = [
   {
     day: 6,
     date: '4/6 (週一)',
-    title: '【跟團】大峽谷 & 馬蹄灣',
-    description: '壯麗的大峽谷國家公園之旅，下午前往馬蹄灣欣賞科羅拉多河大迴轉。',
-    highlights: ['大峽谷國家公園', '南大峽谷', '東大峽谷', '馬蹄灣'],
+    title: '【跟團】錫安國家公園 & 布萊斯峽谷',
+    description: '拉斯維加斯 → 錫安國家公園（45分鐘）→ 布萊斯峽谷國家公園（60分鐘）→ 葛蘭峽谷大壩（途徑）→ 鮑威爾湖（途徑）→ 佩吉',
+    highlights: ['錫安國家公園', '布萊斯峽谷國家公園', '格倫峽谷大壩', '鮑威爾湖'],
+    timeline: [
+      {
+        time: '上午',
+        period: '上午',
+        title: '早餐',
+        description: '導遊會根據實際情況為您推薦餐食'
+      },
+      {
+        time: '上午',
+        period: '上午',
+        title: '交通',
+        from: '飯店',
+        to: '錫安國家公園',
+        distance: '約256公里',
+        duration: '約210分鐘'
+      },
+      {
+        time: '上午',
+        period: '上午',
+        title: '景點/場館',
+        location: '錫安國家公園',
+        activityDuration: '約45分鐘'
+      },
+      {
+        time: '下午',
+        period: '下午',
+        title: '午餐',
+        description: '導遊會根據實際情況為您推薦餐食'
+      },
+      {
+        time: '下午',
+        period: '下午',
+        title: '交通',
+        from: '錫安國家公園',
+        to: '布萊斯峽谷國家公園',
+        distance: '約135公里',
+        duration: '約120分鐘'
+      },
+      {
+        time: '下午',
+        period: '下午',
+        title: '景點/場館',
+        location: '布萊斯峽谷國家公園',
+        activityDuration: '約1小時'
+      },
+      {
+        time: '下午',
+        period: '下午',
+        title: '交通',
+        from: '布萊斯峽谷國家公園',
+        to: '飯店',
+        distance: '約243公里',
+        duration: '約180分鐘',
+        description: '途徑格倫峽谷大壩、鮑威爾湖'
+      },
+      {
+        time: '下午',
+        period: '下午',
+        title: '景點/場館',
+        location: '格倫峽谷大壩 (外觀)、鮑威爾湖 (外觀)',
+        activityDuration: '約1分鐘'
+      },
+      {
+        time: '晚上',
+        period: '晚上',
+        title: '晚餐',
+        description: '導遊會根據實際情況為您推薦餐食'
+      },
+      {
+        time: '晚上',
+        period: '晚上',
+        title: '飯店',
+        description: ['佩奇/鮑威爾湖戴斯套房酒店', '飯店僅供參考，最終入住飯店請以實際預訂為準。']
+      }
+    ],
     accommodation: {
-      location: 'Page / Lake Powell',
-      hotels: ['佩奇/鮑威爾湖戴斯套房酒店 (Days Inn)']
+      location: '佩吉 / 鮑威爾湖',
+      hotels: ['佩奇/鮑威爾湖戴斯套房酒店'],
+      roomAssignment: ['爸爸、媽媽、文馨', '宏翔、小藍']
     },
     meals: {
-      breakfast: '拉斯維加斯自理',
-      lunch: '大峽谷西緣景區自理',
-      dinner: '返回拉斯維加斯後自理'
+      breakfast: '導遊會根據實際情況為您推薦餐食',
+      lunch: '導遊會根據實際情況為您推薦餐食',
+      dinner: '導遊會根據實際情況為您推薦餐食'
     },
-    transport: ['旅行團巴士 (單程約 4.5 小時)'],
-    mapLink: 'https://www.google.com/maps/dir/Las+Vegas/Grand+Canyon+National+Park/Horseshoe+Bend',
+    transport: [
+      '從飯店驅車前往錫安國家公園；行駛：約256公里/約210分鐘',
+      '從錫安國家公園驅車前往布萊斯峽谷國家公園；行駛：約135公里/約120分鐘',
+      '從布萊斯峽谷國家公園驅車前往飯店（途徑格倫峽谷大壩、鮑威爾湖）；行駛：約243公里/約180分鐘'
+    ],
+    mapLink: 'https://www.google.com/maps/dir/Las+Vegas/Zion+National+Park/Bryce+Canyon+National+Park/Glen+Canyon+Dam/Lake+Powell/Page',
     feeNote: '本產品有必付項目費用190美金每人，包含：錫安國家公園、布萊斯國家公園、馬蹄灣、大峽谷國家公園、拉斯網紅歡迎招牌打卡&M豆巧克力世界&可口可樂主題店費用，可預訂時選擇對應的可選項，也可在團上將此費用支付給導遊，感謝您的配合~'
   },
   {

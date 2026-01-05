@@ -26,7 +26,15 @@ export interface TimelineItem {
   time: string;
   period?: string; // 上午、下午、晚上等
   title: string;
-  description: string | string[];
+  description?: string | string[]; // 改為可選
+  // 交通相關
+  from?: string; // 出發地
+  to?: string; // 目的地
+  distance?: string; // 行駛距離
+  duration?: string; // 行駛時間
+  // 景點相關
+  location?: string; // 景點地點
+  activityDuration?: string; // 活動時間
 }
 
 export interface DayItinerary {

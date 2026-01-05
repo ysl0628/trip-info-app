@@ -230,16 +230,85 @@ export const Itinerary: React.FC = () => {
                                                 {timelineItem.time}
                                             </span>
                                         </div>
-                                        <h5 className="text-base font-bold text-stone-800 mb-1">
-                                            {timelineItem.title}
-                                        </h5>
-                                        <p className="text-sm text-stone-600 leading-relaxed">
-                                            {Array.isArray(timelineItem.description) ? timelineItem.description.map((line, idx) => (
-                                                <div key={idx} className={idx > 0 ? 'mt-2' : ''}>
-                                                    {line}
-                                                </div>
-                                            )) : timelineItem.description}
-                                        </p>
+                                        {/* 交通類型：標題和內容合併顯示 */}
+                                        {timelineItem.title === '交通' && timelineItem.from && timelineItem.to ? (
+                                            <div className="space-y-2">
+                                                <h5 className="text-base font-bold text-stone-800">
+                                                    {timelineItem.title} : <span className="font-normal text-stone-700">{timelineItem.from} → {timelineItem.to}</span>
+                                                </h5>
+                                                {(timelineItem.distance || timelineItem.duration) && (
+                                                    <div className="flex items-center gap-4 text-xs text-stone-500">
+                                                        {timelineItem.distance && (
+                                                            <span className="flex items-center gap-1">
+                                                                <span className="font-medium">行駛距離：</span>
+                                                                <span>{timelineItem.distance}</span>
+                                                            </span>
+                                                        )}
+                                                        {timelineItem.duration && (
+                                                            <span className="flex items-center gap-1">
+                                                                <span className="font-medium">行駛時間：</span>
+                                                                <span>{timelineItem.duration}</span>
+                                                            </span>
+                                                        )}
+                                                    </div>
+                                                )}
+                                                {timelineItem.description && (
+                                                    <p className="text-sm text-stone-600 leading-relaxed">
+                                                        {Array.isArray(timelineItem.description) ? timelineItem.description.map((line, idx) => (
+                                                            <div key={idx} className={idx > 0 ? 'mt-1' : ''}>
+                                                                {line}
+                                                            </div>
+                                                        )) : timelineItem.description}
+                                                    </p>
+                                                )}
+                                            </div>
+                                        ) : timelineItem.title === '景點/場館' ? (
+                                            /* 景點類型：標題和地點合併顯示 */
+                                            <div className="space-y-2">
+                                                <h5 className="text-base font-bold text-stone-800">
+                                                    {timelineItem.title} : <span className="font-normal text-stone-700">{timelineItem.location || (timelineItem.description && (Array.isArray(timelineItem.description) ? timelineItem.description[0] : timelineItem.description))}</span>
+                                                </h5>
+                                                {timelineItem.activityDuration && (
+                                                    <div className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-lg ${
+                                                        isGroupTour 
+                                                        ? 'bg-amber-50 border border-amber-200' 
+                                                        : 'bg-stone-50 border border-stone-200'
+                                                    }`}>
+                                                        <Clock size={14} className={isGroupTour ? 'text-amber-600' : 'text-stone-500'} />
+                                                        <span className={`text-xs font-bold ${
+                                                            isGroupTour ? 'text-amber-700' : 'text-stone-600'
+                                                        }`}>
+                                                            活動時間：<span className="font-semibold">{timelineItem.activityDuration}</span>
+                                                        </span>
+                                                    </div>
+                                                )}
+                                                {timelineItem.description && Array.isArray(timelineItem.description) && timelineItem.description.length > 1 && (
+                                                    <div className="text-sm text-stone-600 leading-relaxed mt-2">
+                                                        {timelineItem.description.slice(1).map((line, idx) => (
+                                                            <div key={idx} className={idx > 0 ? 'mt-1' : ''}>
+                                                                {line}
+                                                            </div>
+                                                        ))}
+                                                    </div>
+                                                )}
+                                            </div>
+                                        ) : (
+                                            /* 其他類型：保持原有顯示方式 */
+                                            <>
+                                                <h5 className="text-base font-bold text-stone-800 mb-1">
+                                                    {timelineItem.title}
+                                                </h5>
+                                                {timelineItem.description && (
+                                                    <p className="text-sm text-stone-600 leading-relaxed">
+                                                        {Array.isArray(timelineItem.description) ? timelineItem.description.map((line, idx) => (
+                                                            <div key={idx} className={idx > 0 ? 'mt-2' : ''}>
+                                                                {line}
+                                                            </div>
+                                                        )) : timelineItem.description}
+                                                    </p>
+                                                )}
+                                            </>
+                                        )}
                                     </div>
                                 </div>
                             ))}
