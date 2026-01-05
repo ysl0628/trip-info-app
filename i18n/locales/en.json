@@ -410,6 +410,51 @@
           "dinner": "Palm Springs downtown"
         },
         "transport": ["Self-drive (approx. 2 hours to the park)"]
+      },
+      "day11": {
+        "title": "Desert Oasis & To San Diego",
+        "description": "Experience Palm Springs Aerial Tramway, then drive south in the afternoon to the beautiful port city of San Diego.",
+        "highlights": ["Palm Springs Aerial Tramway", "San Diego", "Gaslamp Quarter"],
+        "accommodation": {
+          "location": "San Diego",
+          "hotels": ["La Valencia Hotel", "Manchester Grand Hyatt San Diego"]
+        },
+        "meals": {
+          "breakfast": "Palm Springs",
+          "lunch": "On your own during the journey",
+          "dinner": "Gaslamp Quarter"
+        },
+        "transport": ["Self-drive (approx. 2.5 hours)"]
+      },
+      "day12": {
+        "title": "San Diego Highlights",
+        "description": "Visit La Jolla to see sea lions in the morning, then visit Balboa Park or USS Midway Museum in the afternoon.",
+        "highlights": ["La Jolla Cove", "Balboa Park", "USS Midway Museum", "Little Italy"],
+        "accommodation": {
+          "location": "San Diego",
+          "hotels": ["Same accommodation"]
+        },
+        "meals": {
+          "breakfast": "On your own",
+          "lunch": "Near attractions",
+          "dinner": "Little Italy"
+        },
+        "transport": ["Self-drive (approx. 20 minutes in city)"]
+      },
+      "day13": {
+        "title": "Final Leisurely Time & Prepare to Return Home",
+        "description": "Visit Coronado Island and Seaport Village, then head to Ontario Airport in the evening to prepare for the return flight to Taiwan.",
+        "highlights": ["Coronado Island", "Seaport Village", "Ontario International Airport (ONT)"],
+        "accommodation": {
+          "location": "On the plane",
+          "hotels": ["None"]
+        },
+        "meals": {
+          "breakfast": "San Diego",
+          "lunch": "Seaport Village",
+          "dinner": "At airport, on your own"
+        },
+        "transport": ["Self-drive to airport (approx. 2 hours)"]
       }
     }
   }
