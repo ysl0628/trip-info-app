@@ -104,17 +104,62 @@ export const ITINERARY: DayItinerary[] = [
     title: '【跟團】前往拉斯維加斯',
     description: '早晨集合出發前往賭城，途經沙漠風光。晚上自由活動，可參觀百樂宮噴泉或舊城區燈光秀。',
     highlights: ['拉斯維加斯大道', '百樂宮噴泉', 'Fremont Street Experience'],
+    departureTime: '08:30',
+    departureLocation: '上島大酒樓（羅蘭崗德成行隔壁）；1463 Nogales St, Rowland Heights, CA 91748',
+    timeline: [
+      {
+        time: '08:30',
+        period: '上午',
+        title: '出發',
+        description: '上島大酒樓（羅蘭崗德成行隔壁）；1463 Nogales St, Rowland Heights, CA 91748'
+      },
+      {
+        time: '上午',
+        period: '上午',
+        title: '早餐',
+        description: '可以前一天購買'
+      },
+      {
+        time: '全天',
+        period: '全天',
+        title: '交通',
+        description: ['從洛杉磯出發前往拉斯維加斯', '行駛：約430公里/約300分鐘']
+      },
+      {
+        time: '下午',
+        period: '下午',
+        title: '午餐',
+        description: '導遊會根據實際情況為您推薦餐食'
+      },
+      {
+        time: '晚上',
+        period: '晚上',
+        title: '晚餐',
+        description: '導遊會根據實際情況為您推薦餐食'
+      },
+      {
+        time: '晚上',
+        period: '晚上',
+        title: '酒店',
+        description: ['拉斯維加斯楓丹白露', '酒店僅供參考，最終入住酒店請以實際預訂為準。']
+      }
+    ],
     accommodation: {
       location: 'Las Vegas',
-      hotels: ['STRAT酒店', '拉斯維加斯楓丹白露']
+      hotels: [{
+        name: '拉斯維加斯楓丹白露',
+        link: 'https://www.fontainebleaulasvegas.com/'
+      }],
+      roomAssignment: ['爸爸、媽媽、文馨', '宏翔、小藍']
     },
     meals: {
-      breakfast: '羅蘭岡自理',
-      lunch: '途中自理 (如 Barstow Outlets)',
-      dinner: '拉斯維加斯自理'
+      breakfast: '自理',
+      lunch: '導遊會根據實際情況為您推薦餐食',
+      dinner: '導遊會根據實際情況為您推薦餐食'
     },
-    transport: ['旅行團巴士 (約 4-5 小時)'],
-    mapLink: 'https://www.google.com/maps/dir/Rowland+Heights/Las+Vegas'
+    transport: ['從洛杉磯出發前往拉斯維加斯；行駛：約430公里/約300分鐘'],
+    mapLink: 'https://www.google.com/maps/dir/1463+Nogales+St,+Rowland+Heights,+CA+91748/Las+Vegas',
+    feeNote: '本產品有必付項目費用190美金每人，包含：錫安國家公園、布萊斯國家公園、馬蹄灣、大峽谷國家公園、拉斯網紅歡迎招牌打卡&M豆巧克力世界&可口可樂主題店費用，可預訂時選擇對應的可選項，也可在團上將此費用支付給導遊，感謝您的配合~'
   },
   {
     day: 6,
@@ -132,7 +177,8 @@ export const ITINERARY: DayItinerary[] = [
       dinner: '返回拉斯維加斯後自理'
     },
     transport: ['旅行團巴士 (單程約 4.5 小時)'],
-    mapLink: 'https://www.google.com/maps/dir/Las+Vegas/Grand+Canyon+National+Park/Horseshoe+Bend'
+    mapLink: 'https://www.google.com/maps/dir/Las+Vegas/Grand+Canyon+National+Park/Horseshoe+Bend',
+    feeNote: '本產品有必付項目費用190美金每人，包含：錫安國家公園、布萊斯國家公園、馬蹄灣、大峽谷國家公園、拉斯網紅歡迎招牌打卡&M豆巧克力世界&可口可樂主題店費用，可預訂時選擇對應的可選項，也可在團上將此費用支付給導遊，感謝您的配合~'
   },
   {
     day: 7,
@@ -150,7 +196,8 @@ export const ITINERARY: DayItinerary[] = [
       dinner: '返回拉斯維加斯後自理'
     },
     transport: ['旅行團巴士 (返程約 4.5 小時)'],
-    mapLink: 'https://www.google.com/maps/dir/Page/Lower+Antelope+Canyon/Lake+Powell/Las+Vegas'
+    mapLink: 'https://www.google.com/maps/dir/Page/Lower+Antelope+Canyon/Lake+Powell/Las+Vegas',
+    feeNote: '本產品有必付項目費用190美金每人，包含：錫安國家公園、布萊斯國家公園、馬蹄灣、大峽谷國家公園、拉斯網紅歡迎招牌打卡&M豆巧克力世界&可口可樂主題店費用，可預訂時選擇對應的可選項，也可在團上將此費用支付給導遊，感謝您的配合~'
   },
   {
     day: 8,
@@ -168,7 +215,8 @@ export const ITINERARY: DayItinerary[] = [
       dinner: '羅蘭岡自理'
     },
     transport: ['旅行團巴士 (約 4-5 小時)', '自行搭車返回住宿'],
-    mapLink: 'https://www.google.com/maps/dir/Las+Vegas/Seven+Magic+Mountains/Barstow/Rowland+Heights'
+    mapLink: 'https://www.google.com/maps/dir/Las+Vegas/Seven+Magic+Mountains/Barstow/Rowland+Heights',
+    feeNote: '本產品有必付項目費用190美金每人，包含：錫安國家公園、布萊斯國家公園、馬蹄灣、大峽谷國家公園、拉斯網紅歡迎招牌打卡&M豆巧克力世界&可口可樂主題店費用，可預訂時選擇對應的可選項，也可在團上將此費用支付給導遊，感謝您的配合~'
   },
   {
     day: 9,

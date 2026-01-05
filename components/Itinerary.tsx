@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { createPortal } from 'react-dom';
 import { ITINERARY } from '../constants';
-import { Map, BedDouble, Utensils, Bus, Car, X, ExternalLink, Navigation, Clock } from 'lucide-react';
+import { Map, BedDouble, Utensils, Bus, Car, X, ExternalLink, Navigation, Clock, Link as LinkIcon } from 'lucide-react';
 import { DayItinerary } from '../types';
 
 export const Itinerary: React.FC = () => {
@@ -153,11 +153,111 @@ export const Itinerary: React.FC = () => {
 
         {/* Page Content */}
         <div className="space-y-8">
-            {/* Description */}
-            <p className="text-stone-700 leading-relaxed text-base md:text-lg text-justify max-w-4xl">
-              {item.description}
-            </p>
-            
+            {/* 1. Description */}
+            <div>
+                <p className="text-stone-700 leading-relaxed text-base md:text-lg text-justify max-w-4xl">
+                    {item.description}
+                </p>
+            </div>
+
+            {/* 2. Departure Info */}
+            {(item.departureTime || item.departureLocation) && (
+                <div className={`p-5 rounded-xl border shadow-sm ${
+                    isGroupTour 
+                    ? 'bg-amber-50 border-amber-200' 
+                    : 'bg-white border-stone-200'
+                }`}>
+                    <div className="flex items-start gap-3">
+                        <div className={`p-2.5 rounded-lg shrink-0 ${
+                            isGroupTour 
+                            ? 'bg-amber-100 text-amber-700' 
+                            : 'bg-stone-100 text-stone-700'
+                        }`}>
+                            <Clock size={20} />
+                        </div>
+                        <div className="flex-1 min-w-0">
+                            <h4 className="text-xs font-bold text-stone-500 uppercase tracking-wider mb-2">集合出發地點</h4>
+                            {item.departureTime && (
+                                <div className="text-base font-bold text-stone-800 mb-1">
+                                    出發時間：{item.departureTime}
+                                </div>
+                            )}
+                            {item.departureLocation && (
+                                <div className="text-sm text-stone-700 leading-relaxed">
+                                    {item.departureLocation}
+                                </div>
+                            )}
+                        </div>
+                    </div>
+                </div>
+            )}
+
+            {/* 3. Timeline */}
+            {item.timeline && item.timeline.length > 0 && (
+                <div>
+                    <h4 className="text-sm font-bold text-stone-500 uppercase tracking-wider mb-4">行程時間表</h4>
+                    <div className="relative">
+                        {/* Timeline line */}
+                        <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-stone-200"></div>
+                        
+                        <div className="space-y-6">
+                            {item.timeline.map((timelineItem, idx) => (
+                                <div key={idx} className="relative flex items-start gap-4">
+                                    {/* Timeline dot */}
+                                    <div className={`relative z-10 shrink-0 w-12 h-12 rounded-full flex items-center justify-center border-2 ${
+                                        isGroupTour 
+                                        ? 'bg-amber-50 border-amber-300' 
+                                        : 'bg-white border-stone-300'
+                                    }`}>
+                                        <div className={`w-3 h-3 rounded-full ${
+                                            isGroupTour ? 'bg-amber-500' : 'bg-stone-500'
+                                        }`}></div>
+                                    </div>
+                                    
+                                    {/* Timeline content */}
+                                    <div className="flex-1 pb-6">
+                                        <div className="flex items-center gap-2 mb-1">
+                                            {timelineItem.period && (
+                                                <span className={`text-xs font-bold px-2 py-0.5 rounded ${
+                                                    isGroupTour 
+                                                    ? 'bg-amber-100 text-amber-700' 
+                                                    : 'bg-stone-100 text-stone-600'
+                                                }`}>
+                                                    {timelineItem.period}
+                                                </span>
+                                            )}
+                                            <span className="text-sm font-bold text-stone-500">
+                                                {timelineItem.time}
+                                            </span>
+                                        </div>
+                                        <h5 className="text-base font-bold text-stone-800 mb-1">
+                                            {timelineItem.title}
+                                        </h5>
+                                        <p className="text-sm text-stone-600 leading-relaxed">
+                                            {Array.isArray(timelineItem.description) ? timelineItem.description.map((line, idx) => (
+                                                <div key={idx} className={idx > 0 ? 'mt-2' : ''}>
+                                                    {line}
+                                                </div>
+                                            )) : timelineItem.description}
+                                        </p>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            )}
+
+            {/* Fee Note (if exists, show after timeline) */}
+            {item.feeNote && (
+                <div className="p-4 rounded-xl bg-amber-50 border border-amber-200 shadow-sm">
+                    <h4 className="text-xs font-bold text-amber-700 uppercase tracking-wider mb-2">大約費用</h4>
+                    <p className="text-sm text-amber-800 leading-relaxed">
+                        {item.feeNote}
+                    </p>
+                </div>
+            )}
+
             {/* Highlights */}
             <div>
                 <h4 className="text-sm font-bold text-stone-500 uppercase tracking-wider mb-3">本日重點</h4>
@@ -174,33 +274,85 @@ export const Itinerary: React.FC = () => {
                 </div>
             </div>
 
-            {/* Info Blocks (Accommodation & Food) */}
+            {/* 4. Info Blocks (Accommodation & Food) - Side by Side */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {/* Hotel */}
-                <div className="flex items-start gap-4 p-4 rounded-xl bg-white border border-stone-100 shadow-sm">
+                <div className="flex items-start gap-4 p-4 rounded-xl bg-white border border-stone-100 shadow-sm h-full">
                     <div className="p-2.5 bg-stone-100 rounded-lg text-stone-700 shrink-0">
                         <BedDouble size={20} />
                     </div>
-                    <div className="min-w-0">
-                        <h4 className="text-xs font-bold text-stone-400 uppercase tracking-wider mb-1">住宿</h4>
-                        <p className="text-base font-bold text-stone-800 truncate">{item.accommodation.location}</p>
-                        <div className="text-sm text-stone-500 mt-1.5 space-y-1">
-                            {item.accommodation.hotels.map((h, i) => <div key={i} className="truncate">{h}</div>)}
+                    <div className="min-w-0 flex-1 flex flex-row gap-4 h-full justify-between" style={{ flexDirection: 'row' }}>
+                        <div className="flex-1">
+                            <h4 className="text-xs font-bold text-stone-400 uppercase tracking-wider mb-3">住宿</h4>
+                            <p className="text-base font-bold text-stone-800 mb-2">{item.accommodation.location}</p>
+                            <div className="text-sm text-stone-500 space-y-1.5">
+                                {item.accommodation.hotels.map((h, i) => {
+                                    const hotelName = typeof h === 'string' ? h : h.name;
+                                    const hotelLink = typeof h === 'object' ? h.link : undefined;
+                                    
+                                    return (
+                                        <div key={i} className="flex items-center gap-2">
+                                            {hotelLink ? (
+                                                <a 
+                                                    href={hotelLink} 
+                                                    target="_blank" 
+                                                    rel="noopener noreferrer"
+                                                    className="flex items-center gap-1.5 text-stone-600 hover:text-stone-900 hover:underline transition-colors"
+                                                >
+                                                    <span>{hotelName}</span>
+                                                    <LinkIcon size={14} className="shrink-0" />
+                                                </a>
+                                            ) : (
+                                                <span>{hotelName}</span>
+                                            )}
+                                        </div>
+                                    );
+                                })}
+                            </div>
+                            {item.accommodation.note && (
+                                <div className="text-xs text-stone-500 mt-3 leading-relaxed">
+                                    {item.accommodation.note}
+                                </div>
+                            )}
                         </div>
+                        {item.accommodation.roomAssignment && item.accommodation.roomAssignment.length > 0 && (
+                            <div className="flex-shrink-0 pl-4 border-l border-stone-200">
+                                <h5 className="text-xs font-bold text-stone-500 uppercase tracking-wider mb-2">分房表</h5>
+                                <div className="space-y-1.5">
+                                    {item.accommodation.roomAssignment.map((room, idx) => (
+                                        <div key={idx} className="flex items-center gap-2 text-sm text-stone-600">
+                                            <span className="text-stone-400 shrink-0">🏨</span>
+                                            <span>{room}</span>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        )}
                     </div>
                 </div>
 
                 {/* Food */}
-                <div className="flex items-start gap-4 p-4 rounded-xl bg-white border border-stone-100 shadow-sm">
+                <div className="flex items-start gap-4 p-4 rounded-xl bg-white border border-stone-100 shadow-sm h-full">
                     <div className="p-2.5 bg-stone-100 rounded-lg text-stone-700 shrink-0">
                         <Utensils size={20} />
                     </div>
-                    <div className="flex-1 min-w-0">
-                        <h4 className="text-xs font-bold text-stone-400 uppercase tracking-wider mb-1">餐食</h4>
-                        <div className="space-y-1.5 text-sm text-stone-600">
-                            <div className="flex gap-2 items-center"><span className="w-10 text-xs font-bold text-stone-400 shrink-0">早餐</span> <span className="truncate">{item.meals.breakfast}</span></div>
-                            <div className="flex gap-2 items-center"><span className="w-10 text-xs font-bold text-stone-400 shrink-0">午餐</span> <span className="truncate">{item.meals.lunch}</span></div>
-                            <div className="flex gap-2 items-center"><span className="w-10 text-xs font-bold text-stone-400 shrink-0">晚餐</span> <span className="truncate">{item.meals.dinner}</span></div>
+                    <div className="min-w-0 flex-1 flex flex-col h-full">
+                        <div className="pb-4">
+                            <h4 className="text-xs font-bold text-stone-400 uppercase tracking-wider mb-3">餐食</h4>
+                            <div className="space-y-2.5 text-sm text-stone-600">
+                                <div className="flex gap-2 items-start">
+                                    <span className="w-10 text-xs font-bold text-stone-400 shrink-0 pt-0.5">早餐</span>
+                                    <span className="flex-1 leading-relaxed">{item.meals.breakfast}</span>
+                                </div>
+                                <div className="flex gap-2 items-start">
+                                    <span className="w-10 text-xs font-bold text-stone-400 shrink-0 pt-0.5">午餐</span>
+                                    <span className="flex-1 leading-relaxed">{item.meals.lunch}</span>
+                                </div>
+                                <div className="flex gap-2 items-start">
+                                    <span className="w-10 text-xs font-bold text-stone-400 shrink-0 pt-0.5">晚餐</span>
+                                    <span className="flex-1 leading-relaxed">{item.meals.dinner}</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -210,12 +362,22 @@ export const Itinerary: React.FC = () => {
             {item.transport && item.transport.length > 0 && (
                 <div className="pt-6 border-t border-stone-200">
                     <h4 className="text-sm font-bold text-stone-500 uppercase tracking-wider mb-3">交通方式</h4>
-                    <div className="flex items-center gap-3">
-                        <div className="text-stone-500 shrink-0">
+                    <div className="flex items-start gap-3">
+                        <div className="text-stone-500 shrink-0 pt-0.5">
                             {item.transport.some(t => t.includes('巴士')) ? <Bus size={20} /> : <Car size={20} />}
                         </div>
                         <div className="flex-1 text-base text-stone-700">
-                            {item.transport.join(' · ')}
+                            {item.transport.map((transport, idx) => {
+                                // 如果包含分號，則分行顯示
+                                if (Array.isArray(transport)) {
+                                    return transport.map((t, i) => (
+                                        <div key={i} className={i > 0 ? 'mt-2' : ''}>
+                                            {t}
+                                        </div>
+                                    ));
+                                }
+                                return transport;
+                            })}
                         </div>
                     </div>
                 </div>

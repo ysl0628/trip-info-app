@@ -10,10 +10,23 @@ export interface Flight {
   seats?: string;
 }
 
+export interface Hotel {
+  name: string;
+  link?: string;
+}
+
 export interface Accommodation {
   location: string;
-  hotels: string[];
+  hotels: (string | Hotel)[];
   note?: string;
+  roomAssignment?: string[]; // 分房表，每個字串代表一房的成員
+}
+
+export interface TimelineItem {
+  time: string;
+  period?: string; // 上午、下午、晚上等
+  title: string;
+  description: string | string[];
 }
 
 export interface DayItinerary {
@@ -29,7 +42,11 @@ export interface DayItinerary {
   };
   transport: string[];
   mapLink?: string;
-  description: string;
+  description: string | string[];
+  feeNote?: string;
+  departureTime?: string;
+  departureLocation?: string;
+  timeline?: TimelineItem[];
 }
 
 export type Region = '洛杉磯' | '拉斯維加斯/大峽谷' | '聖地牙哥' | '棕櫚泉';
