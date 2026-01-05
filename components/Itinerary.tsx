@@ -294,8 +294,8 @@ export const Itinerary: React.FC = () => {
                                             </div>
                                         ) : (
                                             /* 其他類型：保持原有顯示方式 */
-                                            <>
-                                                <h5 className="text-base font-bold text-stone-800 mb-1">
+                                            <div className="space-y-2">
+                                                <h5 className="text-base font-bold text-stone-800">
                                                     {timelineItem.title}
                                                 </h5>
                                                 {timelineItem.description && (
@@ -307,7 +307,21 @@ export const Itinerary: React.FC = () => {
                                                         )) : timelineItem.description}
                                                     </p>
                                                 )}
-                                            </>
+                                                {timelineItem.activityDuration && (
+                                                    <div className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-lg ${
+                                                        isGroupTour 
+                                                        ? 'bg-amber-50 border border-amber-200' 
+                                                        : 'bg-stone-50 border border-stone-200'
+                                                    }`}>
+                                                        <Clock size={14} className={isGroupTour ? 'text-amber-600' : 'text-stone-500'} />
+                                                        <span className={`text-xs font-bold ${
+                                                            isGroupTour ? 'text-amber-700' : 'text-stone-600'
+                                                        }`}>
+                                                            {(timelineItem.title === '早餐' || timelineItem.title === '午餐' || timelineItem.title === '晚餐') ? '用餐時間' : '活動時間'}：<span className="font-semibold">{timelineItem.activityDuration}</span>
+                                                        </span>
+                                                    </div>
+                                                )}
+                                            </div>
                                         )}
                                     </div>
                                 </div>

@@ -364,19 +364,89 @@ export const ITINERARY: DayItinerary[] = [
   {
     day: 8,
     date: '4/8 (週三)',
-    title: '【跟團結束】七彩石 & 巧克力工廠',
-    description: '參觀網紅景點七彩石，回程停留Barstow Outlets購物，傍晚返回羅蘭岡。',
-    highlights: ['Welcome to Fabulous Las Vegas Sign', '七彩石 (Seven Magic Mountains)', 'Barstow Outlets'],
+    title: '【跟團結束】拉斯維加斯招牌 & 七彩石',
+    description: '拉斯網紅歡迎招牌打卡&M豆巧克力世界&可口可樂主題店（必付項目，60分鐘）→ 飛躍拉斯維加斯（自費，25分鐘）→ 七彩巨石陣（30分鐘）→ 巴斯托 Outlets （120分鐘）→ 洛杉磯',
+    highlights: ['歡迎來到絢麗的拉斯維加斯招牌', 'M&M\'s World', '可口可樂主題專賣店', '七彩石', '巴斯托 Outlets'],
+    timeline: [
+      {
+        time: '上午',
+        period: '上午',
+        title: '早餐',
+        description: '導遊會根據實際情況為您推薦餐食',
+        activityDuration: '約30分鐘'
+      },
+      {
+        time: '全天',
+        period: '全天',
+        title: '景點/場館',
+        location: '歡迎來到絢麗的拉斯維加斯招牌 (外觀)、M&M\'s World（拉斯維加斯店） (外觀)、可口可樂主題專賣店（拉斯維加斯店） (外觀)',
+        activityDuration: '約1小時'
+      },
+      {
+        time: '上午',
+        period: '上午',
+        title: '交通',
+        from: '拉斯維加斯招牌',
+        to: '七彩石',
+        distance: '約33公里',
+        duration: '約30分鐘'
+      },
+      {
+        time: '上午',
+        period: '上午',
+        title: '景點/場館',
+        location: '七彩石 (外觀)',
+        activityDuration: '約30分鐘'
+      },
+      {
+        time: '下午',
+        period: '下午',
+        title: '午餐',
+        description: '導遊會根據實際情況為您推薦餐食'
+      },
+      {
+        time: '下午',
+        period: '下午',
+        title: '交通',
+        from: '七彩石',
+        to: '巴斯托 Outlets',
+        distance: '約220公里',
+        duration: '約150分鐘'
+      },
+      {
+        time: '下午',
+        period: '下午',
+        title: '景點/場館',
+        location: '巴斯托 Outlets',
+        activityDuration: '約2小時'
+      },
+      {
+        time: '晚上',
+        period: '晚上',
+        title: '晚餐',
+        description: '導遊會根據實際情況為您推薦餐食'
+      },
+      {
+        time: '全天',
+        period: '全天',
+        title: '交通',
+        description: '行程結束後，可在以下地點離團：上島大酒樓（羅蘭崗德成行隔壁）；1463 Nogales St, Rowland Heights, CA 91748'
+      }
+    ],
     accommodation: {
       location: '羅蘭岡 (Rowland Heights)',
       hotels: ['返回原住宿點']
     },
     meals: {
-      breakfast: '拉斯維加斯自理',
-      lunch: '自理',
-      dinner: '羅蘭岡自理'
+      breakfast: '導遊會根據實際情況為您推薦餐食',
+      lunch: '導遊會根據實際情況為您推薦餐食',
+      dinner: '導遊會根據實際情況為您推薦餐食'
     },
-    transport: ['旅行團巴士 (約 4-5 小時)', '自行搭車返回住宿'],
+    transport: [
+      '從拉斯維加斯招牌出發前往七彩石；行駛：約33公里/約30分鐘',
+      '從七彩石出發前往巴斯托 Outlets；行駛：約220公里/約150分鐘',
+      '行程結束後，可在以下地點離團：上島大酒樓（羅蘭崗德成行隔壁）；1463 Nogales St, Rowland Heights, CA 91748'
+    ],
     mapLink: 'https://www.google.com/maps/dir/Las+Vegas/Seven+Magic+Mountains/Barstow/Rowland+Heights',
     feeNote: '本產品有必付項目費用190美金每人，包含：錫安國家公園、布萊斯國家公園、馬蹄灣、大峽谷國家公園、拉斯網紅歡迎招牌打卡&M豆巧克力世界&可口可樂主題店費用，可預訂時選擇對應的可選項，也可在團上將此費用支付給導遊，感謝您的配合~'
   },
