@@ -271,7 +271,7 @@ export const Itinerary: React.FC = () => {
                                                     </p>
                                                 )}
                                             </div>
-                                        ) : (timelineItem.title === '景點/場館' || timelineItem.title === 'Attractions') ? (
+                                        ) : ((timelineItem.title === '景點/場館' || timelineItem.title === '景點' || timelineItem.title === 'Attractions') && !timelineItem.option) ? (
                                             /* 景點類型：標題和地點合併顯示 */
                                             <div className="space-y-2">
                                                 <h5 className="text-base font-bold text-stone-800">
@@ -302,20 +302,27 @@ export const Itinerary: React.FC = () => {
                                                 )}
                                             </div>
                                         ) : (
-                                            /* 其他類型：保持原有顯示方式 */
+                                            /* 其他類型：一般區塊；若有 option，視為擇一選項，用顏色與標籤區分 */
                                             <div className="space-y-2">
-                                                <h5 className="text-base font-bold text-stone-800">
-                                                    {timelineItem.title}
-                                                </h5>
-                                                {timelineItem.description && (
-                                                    <p className="text-sm text-stone-600 leading-relaxed">
-                                                        {Array.isArray(timelineItem.description) ? timelineItem.description.map((line, idx) => (
-                                                            <div key={idx} className={idx > 0 ? 'mt-2' : ''}>
-                                                                {line}
-                                                            </div>
-                                                        )) : timelineItem.description}
-                                                    </p>
-                                                )}
+                                                <div className="flex items-center gap-2 mb-1">
+                                                    <h5
+                                                        className={`text-base font-bold ${
+                                                            timelineItem.option
+                                                                ? 'text-sky-700'
+                                                                : 'text-stone-800'
+                                                        }`}
+                                                    >
+                                                        {timelineItem.option
+                                                            ? `${timelineItem.title}選項${timelineItem.option}`
+                                                            : timelineItem.title}
+                                                        {timelineItem.location && ` : ${timelineItem.location}`}
+                                                    </h5>
+                                                    {timelineItem.option && (
+                                                        <span className="text-[11px] font-bold px-2 py-0.5 rounded-full bg-sky-50 text-sky-700 border border-sky-200">
+                                                            擇一
+                                                        </span>
+                                                    )}
+                                                </div>
                                                 {timelineItem.activityDuration && (
                                                     <div className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-lg ${
                                                         isGroupTour 
@@ -329,6 +336,15 @@ export const Itinerary: React.FC = () => {
                                                             {(timelineItem.title === '早餐' || timelineItem.title === '午餐' || timelineItem.title === '晚餐') ? t("itinerary.mealTime") : t("itinerary.activityTime")}<span className="font-semibold">{timelineItem.activityDuration}</span>
                                                         </span>
                                                     </div>
+                                                )}
+                                                {timelineItem.description && (
+                                                    <p className="text-sm text-stone-600 leading-relaxed">
+                                                        {Array.isArray(timelineItem.description) ? timelineItem.description.map((line, idx) => (
+                                                            <div key={idx} className={idx > 0 ? 'mt-1' : ''}>
+                                                                {line}
+                                                            </div>
+                                                        )) : timelineItem.description}
+                                                    </p>
                                                 )}
                                             </div>
                                         )}

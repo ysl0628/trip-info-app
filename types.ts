@@ -27,6 +27,8 @@ export interface TimelineItem {
   period?: string; // 上午、下午、晚上等
   title: string;
   description?: string | string[]; // 改為可選
+  // 選項類型（例如「1」「2」用來標記選項一/二）
+  option?: string;
   // 交通相關
   from?: string; // 出發地
   to?: string; // 目的地

@@ -382,34 +382,173 @@
         ]
       },
       "day9": {
-        "title": "Leisurely Coastline Malibu",
-        "description": "Drive along Pacific Coast Highway (PCH) to Malibu, enjoy the tranquility of a private beach, and explore Los Angeles area towns on the way back.",
-        "highlights": ["Pacific Coast Highway (PCH)", "Malibu"],
-        "accommodation": {
-          "location": "Rowland Heights",
-          "hotels": ["Same accommodation"]
-        },
-        "meals": {
-          "breakfast": "On your own",
-          "lunch": "Malibu oceanfront restaurant",
-          "dinner": "Return to Rowland Heights"
-        },
-        "transport": ["Self-drive (approx. 1.5 hours one way)"]
-      },
-      "day10": {
-        "title": "To the Desert, Stay in Palm Springs",
-        "description": "Check out and head to Joshua Tree National Park to admire unique desert vegetation, then stay overnight at the resort destination Palm Springs.",
-        "highlights": ["Joshua Tree National Park", "Palm Springs"],
+        "title": "Brea / Hsi Lai & Palm Springs VillageFest",
+        "description": "In the morning, depart from Rowland Heights and choose between a stroll and shopping at Brea Downtown or a self-guided visit with vegetarian buffet lunch at Hsi Lai Temple; after lunch, drive to Palm Springs for the aerial tramway, then end the day at the VillageFest Thursday night street fair.",
+        "highlights": ["Brea Downtown", "Hsi Lai Temple", "Palm Springs Aerial Tramway", "VillageFest Night Market"],
         "accommodation": {
           "location": "Palm Springs",
-          "hotels": ["Hyatt Regency Indian Wells Resort & Spa", "Hilton Palm Springs"]
+          "hotels": ["Palm Springs Airbnb"]
         },
         "meals": {
-          "breakfast": "Rowland Heights",
-          "lunch": "Town before the national park",
-          "dinner": "Palm Springs downtown"
+          "breakfast": "Breakfast in Rowland Heights",
+          "lunch": "Brea Downtown / Hsi Lai Temple vegetarian buffet",
+          "dinner": "Palm Springs VillageFest night market"
         },
-        "transport": ["Self-drive (approx. 2 hours to the park)"]
+        "transport": ["Self-drive (approx. 1.5 hours one way)"],
+        "timeline": [
+          {
+            "time": "9:00 AM",
+            "period": "Morning",
+            "title": "Transport",
+            "from": "Rowland Heights",
+            "to": "Brea / Hsi Lai Temple",
+            "duration": "Approx 30 min",
+            "description": "Depart from Rowland Heights and drive to either Brea Downtown or Hsi Lai Temple."
+          },
+          {
+            "time": "9:30-11:00 AM",
+            "period": "Morning",
+            "title": "Attractions",
+            "location": "Brea Downtown (Option 1) / Hsi Lai Temple (Option 2)",
+            "activityDuration": "Approx 2 hrs",
+            "description": [
+              "Option 1: 9:30 AM arrive at Brea Downtown, stroll and shopping until 11:00 AM.",
+              "Option 2: 9:30 AM arrive at Hsi Lai Temple parking lot, self-guided tour (photos, garden) until 11:00 AM."
+            ]
+          },
+          {
+            "time": "11:00 AM-12:15 PM",
+            "period": "Midday",
+            "title": "Lunch",
+            "description": [
+              "Option 1: 11:00 AM-12:15 PM · Lunch at Bruxie / Ruby’s / Cha Cha’s in Brea Downtown.",
+              "Option 2: 11:30 AM-12:15 PM · Vegetarian buffet lunch at Hsi Lai Temple (around USD 10 per person)."
+            ]
+          },
+          {
+            "time": "12:15-2:45 PM",
+            "period": "Afternoon",
+            "title": "Transport",
+            "from": "Los Angeles",
+            "to": "Palm Springs",
+            "distance": "Approx 220 km",
+            "duration": "Approx 150 min"
+          },
+          {
+            "time": "2:45-4:00 PM",
+            "period": "Afternoon",
+            "title": "Accommodation",
+            "location": "Palm Springs airbnb (check-in & rest)",
+            "activityDuration": "Approx 1 hr 15 min",
+            "description": "Check in, drop off luggage and rest."
+          },
+          {
+            "time": "4:00-4:15 PM",
+            "period": "Afternoon",
+            "title": "Transport",
+            "from": "airbnb",
+            "to": "Palm Springs Aerial Tramway station",
+            "duration": "Approx 15 min"
+          },
+          {
+            "time": "4:15-6:45 PM",
+            "period": "Afternoon",
+            "title": "Attractions",
+            "location": "Palm Springs Aerial Tramway",
+            "activityDuration": "Approx 2.5 hrs",
+            "description": "Afternoon tram ride and enjoy the mountain view and sunset."
+          },
+          {
+            "time": "6:00-10:00 PM",
+            "period": "Evening",
+            "title": "Attractions",
+            "location": "Palm Springs VillageFest (downtown street fair, every Thursday)",
+            "activityDuration": "6:00 pm–10:00 pm",
+            "description": [
+              "Weekly street fair held every Thursday evening on Downtown Palm Canyon Drive.",
+              "Highlights: food vendors, live performances, handicrafts, street art displays.",
+              "Palm Springs Art Museum offers free admission on Thursdays.",
+              "Packed with people and full of energy; perfect time for dinner and night stroll."
+            ]
+          }
+        ]
+      },
+      "day10": {
+        "title": "Joshua Tree & To San Diego",
+        "description": "Enjoy a relaxed breakfast at the Palm Springs hotel, then drive to Joshua Tree National Park for a short visit and photos. In the afternoon, drive south to San Diego and check into your Airbnb.",
+        "highlights": ["Joshua Tree National Park", "San Diego"],
+        "accommodation": {
+          "location": "San Diego",
+          "hotels": ["Airbnb"]
+        },
+        "meals": {
+          "breakfast": "Palm Springs hotel breakfast",
+          "lunch": "Crossroads Cafe / In-N-Out Burger (Cabazon) / Natural Sisters Cafe",
+          "dinner": "On your own in San Diego"
+        },
+        "transport": [
+          "Self-drive from Palm Springs to Joshua Tree West Entrance (approx. 1 hour)",
+          "Self-drive from Joshua Tree to San Diego (approx. 2.75–3 hours)"
+        ],
+        "timeline": [
+          {
+            "time": "8:30-9:30 AM",
+            "period": "Morning",
+            "title": "Breakfast",
+            "description": "Hotel breakfast and a relaxed start to the day."
+          },
+          {
+            "time": "9:30-10:30 AM",
+            "period": "Morning",
+            "title": "Transport",
+            "from": "Palm Springs",
+            "to": "Joshua Tree West Entrance",
+            "duration": "Approx 1 hour"
+          },
+          {
+            "time": "10:30-12:30 PM",
+            "period": "Morning",
+            "title": "Attractions",
+            "location": "Joshua Tree National Park",
+            "activityDuration": "Approx 2 hours",
+            "description": [
+              "Short visit and photos in Joshua Tree National Park.",
+              "Suggested stops: Keys View, Skull Rock, Cholla Cactus Garden."
+            ]
+          },
+          {
+            "time": "12:30-1:00 PM",
+            "period": "Afternoon",
+            "title": "Transport",
+            "description": "Leave the park and drive towards the lunch spot."
+          },
+          {
+            "time": "12:45-1:15 PM",
+            "period": "Afternoon",
+            "title": "Lunch",
+            "description": [
+              "Crossroads Cafe (Western-style cafe, famous banana bread, approx. USD 10–20).",
+              "Or In-N-Out Burger (quick burger stop in Cabazon area).",
+              "Or Natural Sisters Cafe (healthy vegetarian options in Joshua Tree town)."
+            ]
+          },
+          {
+            "time": "1:15-4:00/4:15 PM",
+            "period": "Afternoon",
+            "title": "Transport",
+            "from": "Joshua Tree",
+            "to": "San Diego",
+            "duration": "Approx 2.75–3 hours"
+          },
+          {
+            "time": "4:00-4:15 PM",
+            "period": "Afternoon",
+            "title": "Accommodation",
+            "location": "San Diego Airbnb",
+            "activityDuration": "Approx 15 min",
+            "description": "Arrive at your Airbnb, drop off luggage, and take a short rest."
+          }
+        ]
       },
       "day11": {
         "title": "Desert Oasis & To San Diego",

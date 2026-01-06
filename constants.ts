@@ -453,38 +453,185 @@ export const ITINERARY: DayItinerary[] = [
   {
     day: 9,
     date: '4/9 (週四)',
-    title: '悠閒海岸線 Malibu',
-    description: '沿著太平洋海岸公路 (PCH) 駕駛，前往馬里布享受私人海灘般的寧靜，回程可順道探索洛杉磯周邊小鎮。',
-    highlights: ['太平洋海岸公路 (PCH)', '馬里布 (Malibu)'],
+    title: 'Brea / 西來寺 & 棕櫚泉 VillageFest',
+    description: '上午從羅蘭岡出發，可擇一前往 Brea Downtown 逛街購物或到西來寺散散步、享用素食自助午餐；中午過後自駕前往棕櫚泉，下午搭乘空中纜車欣賞沙漠山景，晚上在市中心 VillageFest 夜市散步與用餐。',
+    highlights: ['Brea Downtown', '西來寺 (Hsi Lai Temple)', '棕櫚泉空中纜車', 'VillageFest 夜市'],
     accommodation: {
-      location: '羅蘭岡 (Rowland Heights)',
-      hotels: ['原住宿點']
+      location: '棕櫚泉 (Palm Springs)',
+      hotels: ['棕櫚泉 airbnb 住宿'],
+      roomAssignment: ['爸爸、媽媽', '文馨', '宏翔、小藍']
     },
     meals: {
-      breakfast: '自理',
-      lunch: '馬里布海景餐廳',
-      dinner: '返回羅蘭岡'
+      breakfast: '羅蘭岡自理',
+      lunch: 'Brea Downtown / 西來寺素食自助',
+      dinner: '棕櫚泉 VillageFest 夜市'
     },
     transport: ['自駕 (單程約 1.5 小時)'],
-    mapLink: 'https://www.google.com/maps/dir/Rowland+Heights/Malibu'
+    timeline: [
+      {
+        time: '09:00 AM',
+        period: '上午',
+        title: '交通',
+        from: '羅蘭岡',
+        to: 'Brea / 西來寺',
+        duration: '約30分鐘',
+        description: '從羅蘭岡出發，前往 Brea Downtown 或西來寺'
+      },
+      {
+        time: '09:30-11:00 AM',
+        period: '上午',
+        title: '景點',
+        option: '一',
+        location: 'Brea Downtown',
+        activityDuration: '約2小時',
+        description: [
+          '9:30 AM 抵達 Brea Downtown',
+          '9:30-11:00 AM Brea Downtown 散步、購物',
+          '11:00-12:15 PM 午餐（Bruxie / Ruby’s / Cha Cha’s）'
+        ]
+      },
+      {
+        time: '09:30-11:00 AM',
+        period: '上午',
+        title: '景點',
+        option: '二',
+        location: '西來寺',
+        activityDuration: '約2小時30分鐘',
+        description: [
+          '9:30 AM 抵達西來寺停車場（15-20 分鐘）',
+          '9:30-11:00 AM 西來寺自導遊覽（拍照、花園）',
+          '11:30-12:15 PM 素食自助午餐（約 USD 10 / 人）'
+        ]
+      },
+      {
+        time: '12:15-2:45 PM',
+        period: '下午',
+        title: '交通',
+        from: '洛杉磯',
+        to: '棕櫚泉',
+        distance: '約220公里',
+        duration: '約150分鐘'
+      },
+      {
+        time: '2:45-4:00 PM',
+        period: '下午',
+        title: '住宿',
+        location: '棕櫚泉 airbnb Check-in',
+        activityDuration: '約1小時15分鐘',
+        description: '放行李、休息'
+      },
+      {
+        time: '4:00-4:15 PM',
+        period: '下午',
+        title: '交通',
+        from: 'airbnb',
+        to: '棕櫚泉空中纜車站',
+        duration: '約15分鐘'
+      },
+      {
+        time: '4:15-6:45 PM',
+        period: '下午',
+        title: '景點',
+        location: '棕櫚泉空中纜車',
+        activityDuration: '約2小時30分鐘',
+        description: '下午搭乘空中纜車，欣賞傍晚山景'
+      },
+      {
+        time: '6:00-10:00 PM',
+        period: '晚上',
+        title: '景點',
+        location: 'Palm Springs VillageFest',
+        activityDuration: '18:00–22:00',
+        description: [
+          '每週四晚上在 Downtown Palm Canyon Drive 舉辦，是棕櫚泉最熱鬧的活動。',
+          '特色：食品攤販、現場表演、手工藝品、街頭藝術展示',
+          '美術館週四免費開放',
+          '充滿人潮，熱鬧氛圍'
+        ]
+      }
+    ],
+    mapLink: 'https://www.google.com/maps/dir/Rowland+Heights/Brea+Downtown/Hsi+Lai+Temple/Palm+Springs'
   },
   {
     day: 10,
     date: '4/10 (週五)',
-    title: '前往沙漠，入住棕櫚泉',
-    description: '退房後前往約書亞樹國家公園，欣賞獨特的沙漠植被，晚間入住度假勝地棕櫚泉。',
-    highlights: ['約書亞樹國家公園 (Joshua Tree National Park)', '棕櫚泉 (Palm Springs)'],
+    title: '約書亞樹淺遊 & 前往聖地牙哥',
+    description: '早上在棕櫚泉飯店悠閒享用早餐，前往約書亞樹國家公園淺遊拍照，下午南下自駕前往聖地牙哥並入住 airbnb。',
+    highlights: ['約書亞樹國家公園 (Joshua Tree National Park)', '聖地牙哥 (San Diego)'],
     accommodation: {
-      location: '棕櫚泉 (Palm Springs)',
-      hotels: ['Hyatt Regency Indian Wells Resort & Spa', 'Hilton Palm Springs']
+      location: '聖地牙哥 (San Diego)',
+      hotels: ['airbnb 住宿'],
+      roomAssignment: ['爸爸、媽媽', '文馨', '宏翔、小藍']
     },
     meals: {
-      breakfast: '羅蘭岡',
-      lunch: '國家公園前小鎮',
-      dinner: '棕櫚泉市中心'
+      breakfast: '棕櫚泉飯店早餐',
+      lunch: 'Crossroads Cafe / In-N-Out Burger（Cabazon）/ Natural Sisters Cafe',
+      dinner: '聖地牙哥自理'
     },
-    transport: ['自駕 (前往公園約 2 小時)'],
-    mapLink: 'https://www.google.com/maps/dir/Rowland+Heights/Joshua+Tree+National+Park/Palm+Springs'
+    transport: [
+      '自駕前往約書亞樹國家公園西入口（約 1 小時）',
+      '自駕前往聖地牙哥（約 2.5–3 小時）'
+    ],
+    timeline: [
+      {
+        time: '8:30-9:30 AM',
+        period: '上午',
+        title: '早餐',
+        description: '飯店早餐、悠閒起床'
+      },
+      {
+        time: '9:30-10:30 AM',
+        period: '上午',
+        title: '交通',
+        from: '棕櫚泉',
+        to: '約書亞樹西入口',
+        duration: '約1小時'
+      },
+      {
+        time: '10:30-12:30 PM',
+        period: '上午',
+        title: '景點',
+        location: '約書亞樹國家公園',
+        activityDuration: '約2小時',
+        description: [
+          '約書亞樹淺遊拍照（2 小時）',
+          '建議點：Keys View、Skull Rock、Cholla Cactus Garden'
+        ]
+      },
+      {
+        time: '12:30-1:00 PM',
+        period: '下午',
+        title: '交通',
+        description: '離開公園、開往餐廳'
+      },
+      {
+        time: '12:45-1:15 PM',
+        period: '下午',
+        title: '午餐',
+        description: [
+          'Crossroads Cafe（西餐沙龍風，香蕉麵包必點，約 USD 10–20）',
+          '或 In-N-Out Burger（Cabazon 區快速漢堡）',
+          '或 Natural Sisters Cafe（約書亞樹小鎮健康素食）'
+        ]
+      },
+      {
+        time: '1:15-4:00/4:15 PM',
+        period: '下午',
+        title: '交通',
+        from: '約書亞樹',
+        to: '聖地牙哥',
+        duration: '約 2.75–3 小時'
+      },
+      {
+        time: '4:00-4:15 PM',
+        period: '下午',
+        title: '住宿',
+        location: '聖地牙哥 airbnb',
+        activityDuration: '約15分鐘',
+        description: '抵達後放行李、短暫休息'
+      }
+    ],
+    mapLink: 'https://www.google.com/maps/dir/Palm+Springs/Joshua+Tree+National+Park/San+Diego'
   },
   {
     day: 11,
@@ -1138,5 +1285,57 @@ export const FOOD_SPOTS: FoodSpot[] = [
     note: '當地評價很高的獨立咖啡店',
     mapLink: 'https://www.google.com/maps/search/?api=1&query=Kartchner\'s+Coffees+Palm+Springs',
     tags: ['Downtown', '獨立咖啡', '冷萃']
+  },
+  {
+    name: 'Ernest Coffee',
+    location: 'Palm Springs',
+    region: '棕櫚泉',
+    type: 'Coffee',
+    cuisine: '精品咖啡',
+    cost: '$5-10',
+    openHours: '07:00 - 18:00',
+    mustOrder: 'Pour-over, Espresso drinks',
+    note: '本地精品咖啡店，氣氛輕鬆',
+    mapLink: 'https://maps.app.goo.gl/dmt2ySSQwCgLmjnBA',
+    tags: ['Palm Springs', '精品咖啡', '在地']
+  },
+  {
+    name: 'Cafe La Jefa',
+    location: 'Palm Springs',
+    region: '棕櫚泉',
+    type: 'Food',
+    cuisine: '永續咖啡 / 健康餐點',
+    cost: '$10-25',
+    openHours: '07:00 - 15:00',
+    mustOrder: '咖啡飲品, 早餐碗, 三明治',
+    note: '主打永續咖啡與健康餐點的早午餐咖啡店',
+    mapLink: 'https://www.google.com/maps/search/?api=1&query=Cafe+La+Jefa+Palm+Springs',
+    tags: ['Palm Springs', '永續', '健康餐']
+  },
+  {
+    name: 'Ice Cream & Shoppe',
+    location: 'Palm Springs',
+    region: '棕櫚泉',
+    type: 'Dessert',
+    cuisine: '冰淇淋',
+    cost: '$5-10',
+    openHours: '12:00 - 21:00',
+    mustOrder: '自製冰淇淋, 特調口味',
+    note: '結合選物店的冰淇淋小店',
+    mapLink: 'https://www.google.com/maps/search/?api=1&query=Ice+Cream+%26+Shoppe+Palm+Springs',
+    tags: ['Palm Springs', '冰淇淋', '甜點']
+  },
+  {
+    name: 'Carmela Ice Cream',
+    location: 'Palm Springs',
+    region: '棕櫚泉',
+    type: 'Dessert',
+    cuisine: '冰淇淋 / 甜點',
+    cost: '$5-10',
+    openHours: '12:00 - 21:00',
+    mustOrder: '季節口味冰淇淋',
+    note: '主打天然食材與香草風味的冰淇淋品牌',
+    mapLink: 'https://www.google.com/maps/search/?api=1&query=Carmela+Ice+Cream+Palm+Springs',
+    tags: ['Palm Springs', '冰淇淋', '甜點']
   }
 ];
