@@ -420,6 +420,7 @@
             "location": "Brea Downtown",
             "activityDuration": "Approx 2 hrs",
             "mapLink": "https://www.google.com/maps/search/?api=1&query=Brea+Downtown+CA",
+            "luggage": "Luggage in car",
             "description": [
               "9:30 AM arrive at Brea Downtown, stroll and shopping until 11:00 AM.",
               "11:00 AM-12:15 PM Lunch at Bruxie / Ruby's / Cha Cha's in Brea Downtown."
@@ -433,6 +434,7 @@
             "location": "Hsi Lai Temple",
             "activityDuration": "Approx 2 hrs 30 min",
             "mapLink": "https://www.google.com/maps/search/?api=1&query=Hsi+Lai+Temple",
+            "luggage": "Luggage in car",
             "description": [
               "9:30 AM arrive at Hsi Lai Temple parking lot (15-20 min).",
               "9:30-11:00 AM Hsi Lai Temple self-guided tour (photos, garden).",
@@ -444,7 +446,7 @@
             "period": "Midday",
             "title": "Lunch",
             "description": [
-              "Option 1: 11:00 AM-12:15 PM · Lunch at Bruxie / Ruby’s / Cha Cha’s in Brea Downtown.",
+              "Option 1: 11:00 AM-12:15 PM · Lunch at Bruxie / Ruby's / Cha Cha's in Brea Downtown.",
               "Option 2: 11:30 AM-12:15 PM · Vegetarian buffet lunch at Hsi Lai Temple (around USD 10 per person)."
             ]
           },
@@ -455,7 +457,8 @@
             "from": "Los Angeles",
             "to": "Palm Springs",
             "distance": "Approx 220 km",
-            "duration": "Approx 150 min"
+            "duration": "Approx 150 min",
+            "luggage": "Take luggage"
           },
           {
             "time": "2:45-4:00 PM",
@@ -538,6 +541,7 @@
             "title": "Attractions",
             "location": "Joshua Tree National Park",
             "activityDuration": "Approx 2 hours",
+            "luggage": "Luggage in car",
             "description": [
               "Short visit and photos in Joshua Tree National Park.",
               "Suggested stops: Keys View, Skull Rock, Cholla Cactus Garden."
@@ -547,12 +551,14 @@
             "time": "12:30-1:00 PM",
             "period": "Afternoon",
             "title": "Transport",
+            "luggage": "Luggage in car",
             "description": "Leave the park and drive towards the lunch spot."
           },
           {
             "time": "12:45-1:15 PM",
             "period": "Afternoon",
             "title": "Lunch",
+            "luggage": "Luggage in car",
             "description": [
               "Crossroads Cafe (Western-style cafe, famous banana bread, approx. USD 10–20).",
               "Or In-N-Out Burger (quick burger stop in Cabazon area).",
@@ -565,7 +571,8 @@
             "title": "Transport",
             "from": "Joshua Tree",
             "to": "San Diego",
-            "duration": "Approx 2.75–3 hours"
+            "duration": "Approx 2.75–3 hours",
+            "luggage": "Take luggage"
           },
           {
             "time": "4:00-4:30 PM",

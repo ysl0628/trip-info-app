@@ -488,10 +488,11 @@ export const ITINERARY: DayItinerary[] = [
         location: 'Brea Downtown',
         activityDuration: '約2小時',
         mapLink: 'https://www.google.com/maps/search/?api=1&query=Brea+Downtown+CA',
+        luggage: '行李在車內',
         description: [
           '9:30 AM 抵達 Brea Downtown',
           '9:30-11:00 AM Brea Downtown 散步、購物',
-          '11:00-12:15 PM 午餐（Bruxie / Ruby’s / Cha Cha’s）'
+          '11:00-12:15 PM 午餐（Bruxie / Ruby\'s / Cha Cha\'s）'
         ]
       },
       {
@@ -502,6 +503,7 @@ export const ITINERARY: DayItinerary[] = [
         location: '西來寺',
         activityDuration: '約2小時30分鐘',
         mapLink: 'https://www.google.com/maps/search/?api=1&query=Hsi+Lai+Temple',
+        luggage: '行李在車內',
         description: [
           '9:30 AM 抵達西來寺停車場（15-20 分鐘）',
           '9:30-11:00 AM 西來寺自導遊覽（拍照、花園）',
@@ -515,7 +517,8 @@ export const ITINERARY: DayItinerary[] = [
         from: '洛杉磯',
         to: '棕櫚泉',
         distance: '約220公里',
-        duration: '約150分鐘'
+        duration: '約150分鐘',
+        luggage: '帶著行李'
       },
       {
         time: '2:45-4:00 PM',
@@ -602,6 +605,7 @@ export const ITINERARY: DayItinerary[] = [
         title: '景點',
         location: '約書亞樹國家公園',
         activityDuration: '約2小時',
+        luggage: '行李在車內',
         description: [
           '約書亞樹淺遊拍照（2 小時）',
           '建議點：Keys View、Skull Rock、Cholla Cactus Garden'
@@ -611,12 +615,14 @@ export const ITINERARY: DayItinerary[] = [
         time: '12:30-1:00 PM',
         period: '下午',
         title: '交通',
+        luggage: '行李在車內',
         description: '離開公園、開往餐廳'
       },
       {
         time: '12:45-1:15 PM',
         period: '下午',
         title: '午餐',
+        luggage: '行李在車內',
         description: [
           'Crossroads Cafe（西餐沙龍風，香蕉麵包必點，約 USD 10–20）',
           '或 In-N-Out Burger（Cabazon 區快速漢堡）',
@@ -629,7 +635,8 @@ export const ITINERARY: DayItinerary[] = [
         title: '交通',
         from: '約書亞樹',
         to: '聖地牙哥',
-        duration: '約 2.75–3 小時'
+        duration: '約 2.75–3 小時',
+        luggage: '帶著行李'
       },
       {
         time: '4:00-4:30 PM',
