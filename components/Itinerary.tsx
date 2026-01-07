@@ -10,10 +10,11 @@ import {
   Bus,
   Car,
   X,
-  ExternalLink,
   Navigation,
   Clock,
   Link as LinkIcon,
+  ChevronLeft,
+  ChevronRight,
 } from "lucide-react";
 import { DayItinerary } from "../types";
 
@@ -762,6 +763,42 @@ export const Itinerary: React.FC = () => {
                 </div>
               </div>
             )}
+
+            {/* Day Navigation */}
+            <div className="mt-8 pt-6 border-t border-stone-200 flex items-center justify-between gap-4">
+              {item.day > 1 ? (
+                <button
+                  onClick={() => {
+                    setSelectedDay(item.day - 1);
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                  }}
+                  className="flex items-center gap-2 px-4 py-2 rounded-lg bg-white border border-stone-200 text-stone-700 hover:text-stone-900 hover:border-stone-300 transition-colors shadow-sm"
+                >
+                  <ChevronLeft size={18} />
+                  <span className="font-medium">
+                    {t("itinerary.previousDay") || "前一天"}
+                  </span>
+                </button>
+              ) : (
+                <div></div>
+              )}
+              {item.day < ITINERARY.length ? (
+                <button
+                  onClick={() => {
+                    setSelectedDay(item.day + 1);
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                  }}
+                  className="flex items-center gap-2 px-4 py-2 rounded-lg bg-white border border-stone-200 text-stone-700 hover:text-stone-900 hover:border-stone-300 transition-colors shadow-sm ml-auto"
+                >
+                  <span className="font-medium">
+                    {t("itinerary.nextDay") || "後一天"}
+                  </span>
+                  <ChevronRight size={18} />
+                </button>
+              ) : (
+                <div></div>
+              )}
+            </div>
           </div>
         </div>
       ) : (

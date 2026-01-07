@@ -55,6 +55,8 @@
     "hotelNote": "飯店僅供參考，最終入住飯店請以實際預訂為準。",
     "roomAssignment": "分房表",
     "map": "地圖",
-    "viewOnMap": "查看地圖"
+    "viewOnMap": "查看地圖",
+    "previousDay": "前一天",
+    "nextDay": "後一天"
   }
 }

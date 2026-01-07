@@ -56,6 +56,8 @@
     "roomAssignment": "Room Assignment",
     "map": "Map",
     "viewOnMap": "View on Map",
+    "previousDay": "Previous Day",
+    "nextDay": "Next Day",
     "days": {
       "day1": {
         "title": "Arrival and Settling In",
