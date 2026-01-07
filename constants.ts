@@ -1207,7 +1207,12 @@ export const ITINERARY: DayItinerary[] = [
         location: '棕櫚泉空中纜車',
         activityDuration: '約2小時30分鐘',
         mapLink: 'https://www.google.com/maps/search/?api=1&query=Palm+Springs+Aerial+Tramway',
-        description: '下午搭乘空中纜車，欣賞傍晚山景'
+        ticketLink: 'https://activity.eztravel.com.tw/detail/TKNKL-92957',
+        ticketCost: '門票 $30-35/人',
+        description: [
+          '[購票]（USD 30-35/人）',
+          '下午搭乘空中纜車，欣賞傍晚山景'
+        ]
       },
       {
         time: '6:00-10:00 PM',
@@ -1274,6 +1279,7 @@ export const ITINERARY: DayItinerary[] = [
         type: 'attraction',
         location: '約書亞樹國家公園',
         activityDuration: '約2小時',
+        ticketCost: '門票 $30/車',
         description: [
           '約書亞樹淺遊拍照（2 小時）',
           '建議點：Keys View、Skull Rock、Cholla Cactus Garden'
@@ -1480,6 +1486,7 @@ export const ITINERARY: DayItinerary[] = [
         activityDuration: '約1小時',
         mapLink: 'https://www.google.com/maps/search/?api=1&query=San+Diego+Zoo',
         ticketLink: 'https://activity.eztravel.com.tw/detail/TKNKL-6698',
+        ticketCost: '門票 $60-70/人',
         description: [
           '[購票]（USD 60-70/人）',
           '乘坐遊園車',
@@ -1518,9 +1525,10 @@ export const ITINERARY: DayItinerary[] = [
         location: 'Torrey Pines State Park（托里松州立公園）',
         activityDuration: '約1小時40分鐘',
         mapLink: 'https://www.google.com/maps/search/?api=1&query=Torrey+Pines+State+Park',
+        parkingCost: '停車 $20/日',
+        isFreeAdmission: true,
         description: [
           'Guy Fleming Trail（0.7 英里簡易步道，20-30 分鐘），俯瞰海景',
-          '停車費 USD 20/日',
           '可租借拐杖',
           '5:30-6:00 PM 自駕前往 Old Town（約25-30分鐘）',
           '6:00-7:30 PM Old Town 晚餐'
@@ -1618,6 +1626,7 @@ export const ITINERARY: DayItinerary[] = [
         activityDuration: '約2小時45分鐘',
         mapLink: 'https://www.google.com/maps/search/?api=1&query=USS+Midway+Museum',
         ticketLink: 'https://activity.eztravel.com.tw/detail/TKNKL-6525',
+        ticketCost: '門票 $39-41/人',
         description: [
           '[購票]（USD 39-41/人）',
           '參觀真實戰艦、駕駛艙、飛機展示',
