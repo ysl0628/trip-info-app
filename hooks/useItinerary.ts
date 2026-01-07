@@ -59,6 +59,8 @@ export const useItinerary = (): DayItinerary[] => {
             duration: item.duration ? t(`${timelineKey}.duration`, { defaultValue: item.duration }) : item.duration,
             option: item.option ? t(`${timelineKey}.option`, { defaultValue: item.option }) : item.option,
             luggage: item.luggage ? t(`${timelineKey}.luggage`, { defaultValue: item.luggage }) : item.luggage,
+            parkingCost: item.parkingCost ? t(`${timelineKey}.parkingCost`, { defaultValue: item.parkingCost }) : item.parkingCost,
+            ticketCost: item.ticketCost ? t(`${timelineKey}.ticketCost`, { defaultValue: item.ticketCost }) : item.ticketCost,
             mapLink: item.mapLink, // mapLink 不需要翻譯，直接保留
             ticketLink: item.ticketLink // ticketLink 不需要翻譯，直接保留
           };

@@ -58,6 +58,10 @@
     "viewOnMap": "View on Map",
     "previousDay": "Previous Day",
     "nextDay": "Next Day",
+    "budgetSummary": "Budget Summary",
+    "parkingFees": "Parking Fees",
+    "ticketFees": "Ticket Fees",
+    "freeAdmission": "Free Admission",
     "days": {
       "day1": {
         "title": "Arrival and Settling In",
@@ -65,30 +69,298 @@
         "highlights": ["Ontario International Airport (ONT)", "Rowland Heights"],
         "accommodation": {
           "location": "Rowland Heights",
-          "hotels": ["Best Western Plus Executive Inn", "Courtyard by Marriott Hacienda Heights"]
+          "hotels": ["Airbnb"]
         },
         "meals": {
           "breakfast": "On the plane",
           "lunch": "On the plane",
-          "dinner": "Taiwanese cuisine in Rowland Heights (e.g., Half & Half)"
+          "dinner": "Convenience store or restaurant takeout"
         },
-        "transport": ["Shuttle/Uber to accommodation (approx. 30 minutes)"],
-        "departureLocation": ""
+        "transport": [
+          "Self-drive to Rowland Heights Airbnb (approx. 25-30 min)",
+          "Route: I-10 East"
+        ],
+        "timeline": [
+          {
+            "time": "17:05",
+            "period": "Afternoon",
+            "title": "Other",
+            "location": "Flight arrives at Ontario Airport (ONT)"
+          },
+          {
+            "time": "17:05-18:30",
+            "period": "Afternoon",
+            "title": "Other",
+            "location": "Disembark + Retrieve luggage + Customs",
+            "activityDuration": "Approx 85 min",
+            "description": [
+              "Disembark, retrieve luggage, go through customs, walk to car rental area"
+            ]
+          },
+          {
+            "time": "18:30-19:45",
+            "period": "Evening",
+            "title": "Other",
+            "location": "Car rental procedures + Vehicle inspection",
+            "activityDuration": "Approx 75 min",
+            "description": [
+              "Queue, sign contract, explain insurance, inspect vehicle condition, receive keys"
+            ]
+          },
+          {
+            "time": "19:45-20:15",
+            "period": "Evening",
+            "title": "Transport",
+            "from": "ONT",
+            "to": "Rowland Heights Airbnb",
+            "duration": "Approx 25-30 min",
+            "luggage": "Take luggage",
+            "description": [
+              "Route: I-10 East"
+            ]
+          },
+          {
+            "time": "20:15-21:00",
+            "period": "Evening",
+            "title": "Accommodation",
+            "location": "Airbnb Check-in + Drop off luggage, organize",
+            "activityDuration": "Approx 45 min"
+          },
+          {
+            "time": "21:00-21:30",
+            "period": "Evening",
+            "title": "Transport",
+            "from": "Airbnb",
+            "to": "Convenience store or restaurant",
+            "duration": "Approx 10-15 min",
+            "description": [
+              "Convenience stores: 7-Eleven, In-N-Out",
+              "Bento shops: Chinese, Japanese bento"
+            ]
+          },
+          {
+            "time": "21:30-22:30",
+            "period": "Evening",
+            "title": "Dinner",
+            "location": "Airbnb",
+            "activityDuration": "Approx 1 hour",
+            "description": [
+              "Return to Airbnb for dinner and rest",
+              "Simple meal to fill up"
+            ]
+          },
+          {
+            "time": "22:30",
+            "period": "Evening",
+            "title": "Accommodation",
+            "location": "Airbnb",
+            "description": [
+              "Rest",
+              "Adjust to time difference, sleep early to prepare for tomorrow"
+            ]
+          }
+        ]
       },
       "day2": {
-        "title": "Coastal Vibes Santa Monica",
-        "description": "Pick up rental car and head to vibrant Santa Monica Beach and Pier, enjoy California sunshine and Pacific ocean breeze.",
-        "highlights": ["Santa Monica Pier", "Route 66 End"],
+        "title": "Getty → UCLA (optional) → Santa Monica → LACMA → Farmers Market",
+        "description": "Visit Getty Center and UCLA campus in the morning, stroll and dine at Santa Monica beach at noon, visit LACMA for photos in the afternoon, shop at Farmers Market in the evening, then return to Airbnb to cook dinner.",
+        "highlights": ["Getty Center", "UCLA Campus (Optional)", "Santa Monica Pier", "LACMA Urban Light", "The Original Farmers Market"],
         "accommodation": {
           "location": "Rowland Heights",
-          "hotels": ["Same accommodation"]
+          "hotels": ["Airbnb"]
         },
         "meals": {
-          "breakfast": "Taiwanese breakfast in Rowland Heights",
-          "lunch": "Around Santa Monica Pier",
-          "dinner": "Din Tai Fung or other restaurants"
+          "breakfast": "Airbnb breakfast",
+          "lunch": "Santa Monica beach restaurants",
+          "dinner": "Cook at Airbnb (Farmers Market ingredients)"
         },
-        "transport": ["Self-drive (approx. 1 hour one way)"]
+        "transport": [
+          "Self-drive to Getty Center (approx. 40-50 min)",
+          "Self-drive to UCLA (approx. 10-15 min, optional)",
+          "Self-drive to Santa Monica (approx. 10-15 min)",
+          "Self-drive to LACMA (approx. 12-15 min)",
+          "Self-drive to Farmers Market (approx. 5-10 min)",
+          "Self-drive back to Airbnb (approx. 45-60 min)"
+        ],
+        "timeline": [
+          {
+            "time": "8:30-9:30 AM",
+            "period": "Morning",
+            "title": "Breakfast",
+            "location": "Airbnb",
+            "activityDuration": "Approx 1 hour",
+            "description": [
+              "Breakfast, prepare to go out"
+            ]
+          },
+          {
+            "time": "9:30-10:20 AM",
+            "period": "Morning",
+            "title": "Transport",
+            "from": "Rowland Heights Airbnb",
+            "to": "Getty Center",
+            "duration": "Approx 40-50 min",
+            "description": [
+              "Drive west from Rowland Heights"
+            ]
+          },
+          {
+            "time": "10:20-10:55 AM",
+            "period": "Morning",
+            "title": "Attractions",
+            "location": "Getty Center",
+            "activityDuration": "Approx 35 min",
+            "mapLink": "https://www.google.com/maps/search/?api=1&query=The+Getty+Center+Los+Angeles",
+            "parkingCost": "Parking $20",
+            "description": [
+              "Architecture, gardens, views",
+              "Free admission"
+            ]
+          },
+          {
+            "time": "10:55-11:20 AM",
+            "period": "Morning",
+            "title": "Transport",
+            "option": "1",
+            "from": "Getty Center",
+            "to": "UCLA Campus",
+            "duration": "Approx 10-15 min",
+            "description": [
+              "Optional: Go to UCLA Campus"
+            ]
+          },
+          {
+            "time": "11:20-11:35 AM",
+            "period": "Morning",
+            "title": "Attractions",
+            "option": "1",
+            "location": "UCLA Campus",
+            "activityDuration": "Approx 15-20 min",
+            "mapLink": "https://www.google.com/maps/search/?api=1&query=UCLA+Campus",
+            "description": [
+              "Beautiful UCLA campus",
+              "Free admission",
+              "Free parking"
+            ]
+          },
+          {
+            "time": "11:20-11:35 AM",
+            "period": "Morning",
+            "title": "Transport",
+            "option": "1",
+            "from": "UCLA Campus",
+            "to": "Santa Monica",
+            "duration": "Approx 10-15 min"
+          },
+          {
+            "time": "10:55-11:35 AM",
+            "period": "Morning",
+            "title": "Transport",
+            "option": "2",
+            "from": "Getty Center",
+            "to": "Santa Monica",
+            "duration": "Approx 40 min",
+            "description": [
+              "Skip UCLA, go directly to Santa Monica"
+            ]
+          },
+          {
+            "time": "11:35 AM-2:15 PM",
+            "period": "Afternoon",
+            "title": "Attractions",
+            "location": "Santa Monica Pier + Beach stroll + Shopping + Lunch",
+            "activityDuration": "Approx 2 hrs 40 min",
+            "mapLink": "https://www.google.com/maps/search/?api=1&query=Santa+Monica+Pier",
+            "description": [
+              "Pier amusement park, beach photos",
+              "Third Street Promenade shopping",
+              "Beachside restaurant dining",
+              "Free admission",
+              "Parking fee applies"
+            ]
+          },
+          {
+            "time": "2:15-2:30 PM",
+            "period": "Afternoon",
+            "title": "Transport",
+            "from": "Santa Monica",
+            "to": "LACMA",
+            "duration": "Approx 12-15 min",
+            "description": [
+              "Fairfax area"
+            ]
+          },
+          {
+            "time": "2:30-3:15 PM",
+            "period": "Afternoon",
+            "title": "Attractions",
+            "location": "LACMA Urban Light",
+            "activityDuration": "Approx 45 min",
+            "mapLink": "https://www.google.com/maps/search/?api=1&query=LACMA",
+            "parkingCost": "Parking $20",
+            "description": [
+              "Famous installation art",
+              "Free admission"
+            ]
+          },
+          {
+            "time": "3:15-3:30 PM",
+            "period": "Afternoon",
+            "title": "Transport",
+            "from": "LACMA",
+            "to": "Farmers Market",
+            "duration": "Approx 5-10 min",
+            "description": [
+              "Very close, same Fairfax area"
+            ]
+          },
+          {
+            "time": "3:30-5:15 PM",
+            "period": "Afternoon",
+            "title": "Other",
+            "location": "The Original Farmers Market - Buy ingredients",
+            "activityDuration": "Approx 1 hr 45 min",
+            "mapLink": "https://www.google.com/maps/search/?api=1&query=The+Original+Farmers+Market",
+            "description": [
+              "Location: 6333 W 3rd St, Los Angeles, CA 90036",
+              "Fresh produce, bread, cheese, food",
+              "Prepare for dinner",
+              "Parking validation free (90 min-2 hours)"
+            ]
+          },
+          {
+            "time": "5:15-6:15 PM",
+            "period": "Evening",
+            "title": "Transport",
+            "from": "Farmers Market",
+            "to": "Rowland Heights Airbnb",
+            "duration": "Approx 45-60 min",
+            "description": [
+              "Afternoon traffic"
+            ]
+          },
+          {
+            "time": "6:15-7:15 PM",
+            "period": "Evening",
+            "title": "Other",
+            "location": "Cook dinner",
+            "activityDuration": "Approx 1 hour",
+            "description": [
+              "Use ingredients from Farmers Market",
+              "Airbnb kitchen"
+            ]
+          },
+          {
+            "time": "7:15-8:30 PM",
+            "period": "Evening",
+            "title": "Dinner",
+            "location": "Airbnb",
+            "activityDuration": "Approx 1 hr 15 min",
+            "description": [
+              "Dinner and rest"
+            ]
+          }
+        ]
       },
       "day3": {
         "title": "Art and Luxury",
@@ -420,7 +692,6 @@
             "location": "Brea Downtown",
             "activityDuration": "Approx 2 hrs",
             "mapLink": "https://www.google.com/maps/search/?api=1&query=Brea+Downtown+CA",
-            "luggage": "Luggage in car",
             "description": [
               "9:30 AM arrive at Brea Downtown, stroll and shopping until 11:00 AM.",
               "11:00 AM-12:15 PM Lunch at Bruxie / Ruby's / Cha Cha's in Brea Downtown."
@@ -434,7 +705,6 @@
             "location": "Hsi Lai Temple",
             "activityDuration": "Approx 2 hrs 30 min",
             "mapLink": "https://www.google.com/maps/search/?api=1&query=Hsi+Lai+Temple",
-            "luggage": "Luggage in car",
             "description": [
               "9:30 AM arrive at Hsi Lai Temple parking lot (15-20 min).",
               "9:30-11:00 AM Hsi Lai Temple self-guided tour (photos, garden).",
@@ -541,7 +811,6 @@
             "title": "Attractions",
             "location": "Joshua Tree National Park",
             "activityDuration": "Approx 2 hours",
-            "luggage": "Luggage in car",
             "description": [
               "Short visit and photos in Joshua Tree National Park.",
               "Suggested stops: Keys View, Skull Rock, Cholla Cactus Garden."
@@ -551,14 +820,12 @@
             "time": "12:30-1:00 PM",
             "period": "Afternoon",
             "title": "Transport",
-            "luggage": "Luggage in car",
             "description": "Leave the park and drive towards the lunch spot."
           },
           {
             "time": "12:45-1:15 PM",
             "period": "Afternoon",
             "title": "Lunch",
-            "luggage": "Luggage in car",
             "description": [
               "Crossroads Cafe (Western-style cafe, famous banana bread, approx. USD 10–20).",
               "Or In-N-Out Burger (quick burger stop in Cabazon area).",
@@ -1008,7 +1275,6 @@
             "location": "Ocean Beach",
             "activityDuration": "Approx 1 hour 40 min",
             "mapLink": "https://www.google.com/maps/search/?api=1&query=Ocean+Beach+San+Diego",
-            "luggage": "Luggage in car",
             "description": [
               "Beach stroll, photos",
               "Walk on Oceanside Pier"
@@ -1021,7 +1287,6 @@
             "location": "Ocean Beach beach restaurants",
             "activityDuration": "Approx 1 hour 30 min",
             "mapLink": "https://www.google.com/maps/search/?api=1&query=Ocean+Beach+San+Diego+restaurants",
-            "luggage": "Luggage in car",
             "description": [
               "The Taco Stand (Mexican tacos)",
               "The Cottage (American brunch)",

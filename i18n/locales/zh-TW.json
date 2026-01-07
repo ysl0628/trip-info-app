@@ -57,6 +57,10 @@
     "map": "地圖",
     "viewOnMap": "查看地圖",
     "previousDay": "前一天",
-    "nextDay": "後一天"
+    "nextDay": "後一天",
+    "budgetSummary": "預算費用",
+    "parkingFees": "停車費用",
+    "ticketFees": "門票費用",
+    "freeAdmission": "免費進入"
   }
 }

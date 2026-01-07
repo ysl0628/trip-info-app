@@ -34,33 +34,337 @@ export const ITINERARY: DayItinerary[] = [
     highlights: ['安大略國際機場(ONT)', '羅蘭岡(Rowland Heights)'],
     accommodation: {
       location: '羅蘭岡 (Rowland Heights)',
-      hotels: ['Best Western Plus Executive Inn', 'Courtyard by Marriott Hacienda Heights']
+      hotels: ['airbnb 住宿']
     },
     meals: {
       breakfast: '飛機上',
       lunch: '飛機上',
-      dinner: '羅蘭岡台式料理 (如: 半畝園)'
+      dinner: '便利店或餐廳外帶'
     },
-    transport: ['接駁車/Uber 前往住宿 (約 30 分鐘)'],
+    transport: [
+      '自駕前往 Rowland Heights Airbnb（約 25-30 分鐘）',
+      '路線：I-10 East'
+    ],
+    timeline: [
+      {
+        time: '17:05',
+        period: '下午',
+        title: '其他類型',
+        type: 'other',
+        location: '班機抵達安大略機場（ONT）'
+      },
+      {
+        time: '17:05-18:30',
+        period: '下午',
+        title: '其他類型',
+        type: 'other',
+        location: '下飛機 + 領行李 + 出關',
+        activityDuration: '約 85 分鐘',
+        description: [
+          '下飛機、領行李、出海關、走到租車區'
+        ]
+      },
+      {
+        time: '18:30-19:45',
+        period: '晚上',
+        title: '其他類型',
+        type: 'other',
+        location: '租車手續 + 驗車',
+        activityDuration: '約 75 分鐘',
+        description: [
+          '排隊、簽約、講解保險、驗車狀況、領鑰匙'
+        ]
+      },
+      {
+        time: '19:45-20:15',
+        period: '晚上',
+        title: '交通',
+        type: 'transportation',
+        from: 'ONT',
+        to: 'Rowland Heights Airbnb',
+        duration: '約 25-30 分鐘',
+        luggage: '帶著行李',
+        mapLink: 'https://www.google.com/maps/dir/Ontario+International+Airport/Rowland+Heights',
+        description: [
+          '路線：I-10 East'
+        ]
+      },
+      {
+        time: '20:15-21:00',
+        period: '晚上',
+        title: '住宿',
+        type: 'accommodation',
+        location: 'Airbnb Check-in + 放行李、整理',
+        activityDuration: '約45分鐘'
+      },
+      {
+        time: '21:00-21:30',
+        period: '晚上',
+        title: '交通',
+        type: 'transportation',
+        from: 'Airbnb',
+        to: '便利店或餐廳',
+        duration: '約 10-15 分鐘',
+        mapLink: 'https://www.google.com/maps/dir/Rowland+Heights/7-Eleven',
+        description: [
+          '便利店：7-Eleven、In-N-Out',
+          '便當店：中式、日式便當'
+        ]
+      },
+      {
+        time: '21:30-22:30',
+        period: '晚上',
+        title: '晚餐',
+        type: 'meal',
+        location: 'airbnb',
+        activityDuration: '約1小時',
+        description: [
+          '回 Airbnb 用晚餐、休息',
+          '簡單吃飽就好'
+        ]
+      },
+      {
+        time: '22:30',
+        period: '晚上',
+        title: '住宿',
+        type: 'accommodation',
+        location: 'airbnb',
+        description: [
+          '休息',
+          '適應時差，早睡準備明天'
+        ]
+      }
+    ],
     mapLink: 'https://www.google.com/maps/dir/Ontario+International+Airport/Rowland+Heights'
   },
   {
     day: 2,
     date: '4/2 (週四)',
-    title: '海岸風情 Santa Monica',
-    description: '領取租車，前往充滿活力的聖塔莫尼卡海灘與碼頭，享受加州陽光與太平洋海風。',
-    highlights: ['聖塔莫尼卡碼頭 (Santa Monica Pier)', '66號公路終點'],
+    title: 'Getty → UCLA（optional）→ Santa Monica → LACMA → 農夫市場',
+    description: '上午參觀 Getty Center 和 UCLA 校園，中午在 Santa Monica 海灘散步用餐，下午前往 LACMA 拍照，傍晚到農夫市場採買食材，晚上回 Airbnb 自煮晚餐。',
+    highlights: ['蓋蒂中心 (Getty Center)', 'UCLA 校園（可選）', 'Santa Monica Pier', 'LACMA Urban Light', '農夫市場 (The Original Farmers Market)'],
     accommodation: {
       location: '羅蘭岡 (Rowland Heights)',
-      hotels: ['原住宿點']
+      hotels: ['airbnb 住宿']
     },
     meals: {
-      breakfast: '羅蘭岡台式早餐',
-      lunch: '聖塔莫尼卡碼頭周邊',
-      dinner: '鼎泰豐 (Din Tai Fung) 或其他餐廳'
+      breakfast: 'airbnb 早餐',
+      lunch: 'Santa Monica 海邊餐廳',
+      dinner: 'airbnb 自煮（農夫市場食材）'
     },
-    transport: ['自駕 (單程約 1 小時)'],
-    mapLink: 'https://www.google.com/maps/dir/Rowland+Heights/Santa+Monica'
+    transport: [
+      '自駕前往 Getty Center（約 40-50 分鐘）',
+      '自駕前往 UCLA（約 10-15 分鐘，可選）',
+      '自駕前往 Santa Monica（約 10-15 分鐘）',
+      '自駕前往 LACMA（約 12-15 分鐘）',
+      '自駕前往農夫市場（約 5-10 分鐘）',
+      '自駕回 Airbnb（約 45-60 分鐘）'
+    ],
+    timeline: [
+      {
+        time: '8:30-9:30 AM',
+        period: '上午',
+        title: '早餐',
+        type: 'meal',
+        location: 'airbnb',
+        activityDuration: '約1小時',
+        description: [
+          '早餐、準備出門'
+        ]
+      },
+      {
+        time: '9:30-10:20 AM',
+        period: '上午',
+        title: '交通',
+        type: 'transportation',
+        from: 'Rowland Heights Airbnb',
+        to: 'Getty Center',
+        duration: '約 40-50 分鐘',
+        mapLink: 'https://www.google.com/maps/dir/Rowland+Heights/The+Getty+Center',
+        description: [
+          '直接從 Rowland Heights 往西'
+        ]
+      },
+      {
+        time: '10:20-10:55 AM',
+        period: '上午',
+        title: '景點',
+        type: 'attraction',
+        location: 'Getty Center',
+        activityDuration: '約35分鐘',
+        mapLink: 'https://www.google.com/maps/search/?api=1&query=The+Getty+Center+Los+Angeles',
+        parkingCost: '停車 $20',
+        isFreeAdmission: true,
+        description: [
+          '建築、花園、景觀',
+          '免費進入'
+        ]
+      },
+      {
+        time: '10:55-11:20 AM',
+        period: '上午',
+        title: '交通',
+        type: 'transportation',
+        option: '一',
+        from: 'Getty Center',
+        to: 'UCLA 校園',
+        duration: '約 10-15 分鐘',
+        mapLink: 'https://www.google.com/maps/dir/The+Getty+Center/UCLA+Campus',
+        description: [
+          '可選：前往 UCLA 校園'
+        ]
+      },
+      {
+        time: '11:20-11:35 AM',
+        period: '上午',
+        title: '景點',
+        type: 'attraction',
+        option: '一',
+        location: 'UCLA 校園',
+        activityDuration: '約15-20分鐘',
+        mapLink: 'https://www.google.com/maps/search/?api=1&query=UCLA+Campus',
+        isFreeAdmission: true,
+        description: [
+          '加州大學洛杉磯分校美麗校園',
+          '免費進入',
+          '停車免費'
+        ]
+      },
+      {
+        time: '11:20-11:35 AM',
+        period: '上午',
+        title: '交通',
+        type: 'transportation',
+        option: '一',
+        from: 'UCLA 校園',
+        to: 'Santa Monica',
+        duration: '約 10-15 分鐘'
+      },
+      {
+        time: '10:55-11:35 AM',
+        period: '上午',
+        title: '交通',
+        type: 'transportation',
+        option: '二',
+        from: 'Getty Center',
+        to: 'Santa Monica',
+        duration: '約 40 分鐘',
+        mapLink: 'https://www.google.com/maps/dir/The+Getty+Center/Santa+Monica+Pier',
+        description: [
+          '跳過 UCLA，直接前往 Santa Monica'
+        ]
+      },
+      {
+        time: '11:35 AM-2:15 PM',
+        period: '下午',
+        title: '景點',
+        type: 'attraction',
+        location: 'Santa Monica Pier + 海灘散步 + 逛街 + 午餐',
+        activityDuration: '約2小時40分鐘',
+        mapLink: 'https://www.google.com/maps/search/?api=1&query=Santa+Monica+Pier',
+        isFreeAdmission: true,
+        description: [
+          'Pier 遊樂園、海灘拍照',
+          'Third Street Promenade 逛街',
+          '海邊餐廳用餐',
+          '免費進入',
+          '停車費另計'
+        ]
+      },
+      {
+        time: '2:15-2:30 PM',
+        period: '下午',
+        title: '交通',
+        type: 'transportation',
+        from: 'Santa Monica',
+        to: 'LACMA',
+        duration: '約 12-15 分鐘',
+        mapLink: 'https://www.google.com/maps/dir/Santa+Monica+Pier/LACMA',
+        description: [
+          'Fairfax 區域'
+        ]
+      },
+      {
+        time: '2:30-3:15 PM',
+        period: '下午',
+        title: '景點',
+        type: 'attraction',
+        location: 'LACMA Urban Light',
+        activityDuration: '約45分鐘',
+        mapLink: 'https://www.google.com/maps/search/?api=1&query=LACMA',
+        parkingCost: '停車 $20',
+        isFreeAdmission: true,
+        description: [
+          '著名裝置藝術',
+          '免費進入'
+        ]
+      },
+      {
+        time: '3:15-3:30 PM',
+        period: '下午',
+        title: '交通',
+        type: 'transportation',
+        from: 'LACMA',
+        to: '農夫市場',
+        duration: '約 5-10 分鐘',
+        mapLink: 'https://www.google.com/maps/dir/LACMA/The+Original+Farmers+Market',
+        description: [
+          '很近，同 Fairfax 區域'
+        ]
+      },
+      {
+        time: '3:30-5:15 PM',
+        period: '下午',
+        title: '其他類型',
+        type: 'other',
+        location: '農夫市場 (The Original Farmers Market) 採買食材',
+        activityDuration: '約1小時45分鐘',
+        mapLink: 'https://www.google.com/maps/search/?api=1&query=The+Original+Farmers+Market',
+        description: [
+          '地點：6333 W 3rd St, Los Angeles, CA 90036',
+          '新鮮農產品、麵包、起司、食品',
+          '準備晚餐',
+          '停車驗證免費（90 分鐘-2 小時）'
+        ]
+      },
+      {
+        time: '5:15-6:15 PM',
+        period: '晚上',
+        title: '交通',
+        type: 'transportation',
+        from: '農夫市場',
+        to: 'Rowland Heights Airbnb',
+        duration: '約 45-60 分鐘',
+        mapLink: 'https://www.google.com/maps/dir/The+Original+Farmers+Market/Rowland+Heights',
+        description: [
+          '下午塞車'
+        ]
+      },
+      {
+        time: '6:15-7:15 PM',
+        period: '晚上',
+        title: '其他類型',
+        type: 'other',
+        location: '煮晚餐',
+        activityDuration: '約1小時',
+        description: [
+          '使用農夫市場採買的食材',
+          'Airbnb 廚房'
+        ]
+      },
+      {
+        time: '7:15-8:30 PM',
+        period: '晚上',
+        title: '晚餐',
+        type: 'meal',
+        location: 'airbnb',
+        activityDuration: '約1小時15分鐘',
+        description: [
+          '用餐、休息'
+        ]
+      }
+    ],
+    mapLink: 'https://www.google.com/maps/dir/Rowland+Heights/The+Getty+Center/UCLA+Campus/Santa+Monica+Pier/LACMA/The+Original+Farmers+Market'
   },
   {
     day: 3,
@@ -117,27 +421,32 @@ export const ITINERARY: DayItinerary[] = [
         time: '上午',
         period: '上午',
         title: '早餐',
+        type: 'meal',
         description: '可以前一天購買'
       },
       {
         time: '全天',
         period: '全天',
         title: '交通',
+        type: 'transportation',
         from: '洛杉磯',
         to: '拉斯維加斯',
         distance: '約430公里',
-        duration: '約300分鐘'
+        duration: '約300分鐘',
+        mapLink: 'https://www.google.com/maps/dir/Los+Angeles/Las+Vegas'
       },
       {
         time: '下午',
         period: '下午',
         title: '午餐',
+        type: 'meal',
         description: '導遊會根據實際情況為您推薦餐食'
       },
       {
         time: '晚上',
         period: '晚上',
         title: '晚餐',
+        type: 'meal',
         description: '導遊會根據實際情況為您推薦餐食'
       },
       {
@@ -175,21 +484,25 @@ export const ITINERARY: DayItinerary[] = [
         time: '上午',
         period: '上午',
         title: '早餐',
+        type: 'meal',
         description: '導遊會根據實際情況為您推薦餐食'
       },
       {
         time: '上午',
         period: '上午',
         title: '交通',
+        type: 'transportation',
         from: '飯店',
         to: '錫安國家公園',
         distance: '約256公里',
-        duration: '約210分鐘'
+        duration: '約210分鐘',
+        mapLink: 'https://www.google.com/maps/dir/Las+Vegas/Zion+National+Park'
       },
       {
         time: '上午',
         period: '上午',
         title: '景點/場館',
+        type: 'attraction',
         location: '錫安國家公園',
         activityDuration: '約45分鐘'
       },
@@ -197,21 +510,25 @@ export const ITINERARY: DayItinerary[] = [
         time: '下午',
         period: '下午',
         title: '午餐',
+        type: 'meal',
         description: '導遊會根據實際情況為您推薦餐食'
       },
       {
         time: '下午',
         period: '下午',
         title: '交通',
+        type: 'transportation',
         from: '錫安國家公園',
         to: '布萊斯峽谷國家公園',
         distance: '約135公里',
-        duration: '約120分鐘'
+        duration: '約120分鐘',
+        mapLink: 'https://www.google.com/maps/dir/Zion+National+Park/Bryce+Canyon+National+Park'
       },
       {
         time: '下午',
         period: '下午',
         title: '景點/場館',
+        type: 'attraction',
         location: '布萊斯峽谷國家公園',
         activityDuration: '約1小時'
       },
@@ -219,9 +536,11 @@ export const ITINERARY: DayItinerary[] = [
         time: '下午',
         period: '下午',
         title: '交通',
+        type: 'transportation',
         from: '布萊斯峽谷國家公園',
         to: '飯店',
         distance: '約243公里',
+        mapLink: 'https://www.google.com/maps/dir/Bryce+Canyon+National+Park/Page+AZ',
         duration: '約180分鐘',
         description: '途徑格倫峽谷大壩、鮑威爾湖'
       },
@@ -229,6 +548,7 @@ export const ITINERARY: DayItinerary[] = [
         time: '下午',
         period: '下午',
         title: '景點/場館',
+        type: 'attraction',
         location: '格倫峽谷大壩 (外觀)、鮑威爾湖 (外觀)',
         activityDuration: '約1分鐘'
       },
@@ -236,6 +556,7 @@ export const ITINERARY: DayItinerary[] = [
         time: '晚上',
         period: '晚上',
         title: '晚餐',
+        type: 'meal',
         description: '導遊會根據實際情況為您推薦餐食'
       },
       {
@@ -274,12 +595,14 @@ export const ITINERARY: DayItinerary[] = [
         time: '上午',
         period: '上午',
         title: '早餐',
+        type: 'meal',
         description: '導遊會根據實際情況為您推薦餐食'
       },
       {
         time: '上午',
         period: '上午',
         title: '景點/場館',
+        type: 'attraction',
         location: '下羚羊峽谷',
         activityDuration: '約2小時',
         description: ['門票', '包含門票、當地接送及嚮導服務費', '參考價格：USD 105']
@@ -288,15 +611,18 @@ export const ITINERARY: DayItinerary[] = [
         time: '上午',
         period: '上午',
         title: '交通',
+        type: 'transportation',
         from: '下羚羊峽谷',
         to: '馬蹄灣',
         distance: '約12公里',
-        duration: '約15分鐘'
+        duration: '約15分鐘',
+        mapLink: 'https://www.google.com/maps/dir/Lower+Antelope+Canyon/Horseshoe+Bend'
       },
       {
         time: '上午',
         period: '上午',
         title: '景點/場館',
+        type: 'attraction',
         location: '馬蹄灣',
         activityDuration: '約1小時'
       },
@@ -304,21 +630,25 @@ export const ITINERARY: DayItinerary[] = [
         time: '下午',
         period: '下午',
         title: '交通',
+        type: 'transportation',
         from: '馬蹄灣',
         to: '大峽谷國家公園',
         distance: '約177公里',
-        duration: '約120分鐘'
+        duration: '約120分鐘',
+        mapLink: 'https://www.google.com/maps/dir/Horseshoe+Bend/Grand+Canyon+National+Park'
       },
       {
         time: '下午',
         period: '下午',
         title: '午餐',
+        type: 'meal',
         description: '導遊會根據實際情況為您推薦餐食'
       },
       {
         time: '下午',
         period: '下午',
         title: '景點/場館',
+        type: 'attraction',
         location: '大峽谷國家公園',
         activityDuration: '約2小時30分鐘',
         description: ['參考價格：USD 190']
@@ -327,6 +657,7 @@ export const ITINERARY: DayItinerary[] = [
         time: '晚上',
         period: '晚上',
         title: '晚餐',
+        type: 'meal',
         description: '導遊會根據實際情況為您推薦餐食'
       },
       {
@@ -372,6 +703,7 @@ export const ITINERARY: DayItinerary[] = [
         time: '上午',
         period: '上午',
         title: '早餐',
+        type: 'meal',
         description: '導遊會根據實際情況為您推薦餐食',
         activityDuration: '約30分鐘'
       },
@@ -379,6 +711,7 @@ export const ITINERARY: DayItinerary[] = [
         time: '全天',
         period: '全天',
         title: '景點/場館',
+        type: 'attraction',
         location: '歡迎來到絢麗的拉斯維加斯招牌 (外觀)、M&M\'s World（拉斯維加斯店） (外觀)、可口可樂主題專賣店（拉斯維加斯店） (外觀)',
         activityDuration: '約1小時',
         mapLink: 'https://www.google.com/maps/search/?api=1&query=Welcome+to+Las+Vegas+Sign'
@@ -387,15 +720,18 @@ export const ITINERARY: DayItinerary[] = [
         time: '上午',
         period: '上午',
         title: '交通',
+        type: 'transportation',
         from: '拉斯維加斯招牌',
         to: '七彩石',
         distance: '約33公里',
-        duration: '約30分鐘'
+        duration: '約30分鐘',
+        mapLink: 'https://www.google.com/maps/dir/Welcome+to+Las+Vegas+Sign/Seven+Magic+Mountains'
       },
       {
         time: '上午',
         period: '上午',
         title: '景點/場館',
+        type: 'attraction',
         location: '七彩石 (外觀)',
         activityDuration: '約30分鐘',
         mapLink: 'https://www.google.com/maps/search/?api=1&query=Seven+Magic+Mountains'
@@ -404,21 +740,25 @@ export const ITINERARY: DayItinerary[] = [
         time: '下午',
         period: '下午',
         title: '午餐',
+        type: 'meal',
         description: '導遊會根據實際情況為您推薦餐食'
       },
       {
         time: '下午',
         period: '下午',
         title: '交通',
+        type: 'transportation',
         from: '七彩石',
         to: '巴斯托 Outlets',
         distance: '約220公里',
-        duration: '約150分鐘'
+        duration: '約150分鐘',
+        mapLink: 'https://www.google.com/maps/dir/Seven+Magic+Mountains/Barstow+Outlets'
       },
       {
         time: '下午',
         period: '下午',
         title: '景點/場館',
+        type: 'attraction',
         location: '巴斯托 Outlets',
         activityDuration: '約2小時',
         mapLink: 'https://www.google.com/maps/search/?api=1&query=Barstow+Outlets'
@@ -427,12 +767,14 @@ export const ITINERARY: DayItinerary[] = [
         time: '晚上',
         period: '晚上',
         title: '晚餐',
+        type: 'meal',
         description: '導遊會根據實際情況為您推薦餐食'
       },
       {
         time: '全天',
         period: '全天',
         title: '交通',
+        type: 'transportation',
         description: '行程結束後，可在以下地點離團：上島大酒樓（羅蘭崗德成行隔壁）；1463 Nogales St, Rowland Heights, CA 91748'
       }
     ],
@@ -475,20 +817,22 @@ export const ITINERARY: DayItinerary[] = [
         time: '09:00 AM',
         period: '上午',
         title: '交通',
+        type: 'transportation',
         from: '羅蘭岡',
         to: 'Brea / 西來寺',
         duration: '約30分鐘',
+        mapLink: 'https://www.google.com/maps/dir/Rowland+Heights/Brea+CA',
         description: '從羅蘭岡出發，前往 Brea Downtown 或西來寺'
       },
       {
         time: '09:30-11:00 AM',
         period: '上午',
         title: '景點',
+        type: 'attraction',
         option: '一',
         location: 'Brea Downtown',
         activityDuration: '約2小時',
         mapLink: 'https://www.google.com/maps/search/?api=1&query=Brea+Downtown+CA',
-        luggage: '行李在車內',
         description: [
           '9:30 AM 抵達 Brea Downtown',
           '9:30-11:00 AM Brea Downtown 散步、購物',
@@ -499,11 +843,11 @@ export const ITINERARY: DayItinerary[] = [
         time: '09:30-11:00 AM',
         period: '上午',
         title: '景點',
+        type: 'attraction',
         option: '二',
         location: '西來寺',
         activityDuration: '約2小時30分鐘',
         mapLink: 'https://www.google.com/maps/search/?api=1&query=Hsi+Lai+Temple',
-        luggage: '行李在車內',
         description: [
           '9:30 AM 抵達西來寺停車場（15-20 分鐘）',
           '9:30-11:00 AM 西來寺自導遊覽（拍照、花園）',
@@ -514,16 +858,19 @@ export const ITINERARY: DayItinerary[] = [
         time: '12:15-2:45 PM',
         period: '下午',
         title: '交通',
+        type: 'transportation',
         from: '洛杉磯',
         to: '棕櫚泉',
         distance: '約220公里',
         duration: '約150分鐘',
-        luggage: '帶著行李'
+        luggage: '帶著行李',
+        mapLink: 'https://www.google.com/maps/dir/Los+Angeles/Palm+Springs'
       },
       {
         time: '2:45-4:00 PM',
         period: '下午',
         title: '住宿',
+        type: 'accommodation',
         location: '棕櫚泉 airbnb Check-in',
         activityDuration: '約1小時15分鐘',
         description: '放行李、休息'
@@ -532,14 +879,17 @@ export const ITINERARY: DayItinerary[] = [
         time: '4:00-4:15 PM',
         period: '下午',
         title: '交通',
+        type: 'transportation',
         from: 'airbnb',
         to: '棕櫚泉空中纜車站',
-        duration: '約15分鐘'
+        duration: '約15分鐘',
+        mapLink: 'https://www.google.com/maps/dir/Palm+Springs/Palm+Springs+Aerial+Tramway'
       },
       {
         time: '4:15-6:45 PM',
         period: '下午',
         title: '景點',
+        type: 'attraction',
         location: '棕櫚泉空中纜車',
         activityDuration: '約2小時30分鐘',
         mapLink: 'https://www.google.com/maps/search/?api=1&query=Palm+Springs+Aerial+Tramway',
@@ -549,6 +899,7 @@ export const ITINERARY: DayItinerary[] = [
         time: '6:00-10:00 PM',
         period: '晚上',
         title: '景點',
+        type: 'attraction',
         location: 'Palm Springs VillageFest',
         activityDuration: '18:00–22:00',
         mapLink: 'https://www.google.com/maps/search/?api=1&query=Villagefest+Main+Office+Palm+Springs',
@@ -589,23 +940,26 @@ export const ITINERARY: DayItinerary[] = [
         time: '8:30-9:30 AM',
         period: '上午',
         title: '早餐',
+        type: 'meal',
         description: '飯店早餐、悠閒起床'
       },
       {
         time: '9:30-10:30 AM',
         period: '上午',
         title: '交通',
+        type: 'transportation',
         from: '棕櫚泉',
         to: '約書亞樹西入口',
-        duration: '約1小時'
+        duration: '約1小時',
+        mapLink: 'https://www.google.com/maps/dir/Palm+Springs/Joshua+Tree+National+Park'
       },
       {
         time: '10:30-12:30 PM',
         period: '上午',
         title: '景點',
+        type: 'attraction',
         location: '約書亞樹國家公園',
         activityDuration: '約2小時',
-        luggage: '行李在車內',
         description: [
           '約書亞樹淺遊拍照（2 小時）',
           '建議點：Keys View、Skull Rock、Cholla Cactus Garden'
@@ -615,14 +969,14 @@ export const ITINERARY: DayItinerary[] = [
         time: '12:30-1:00 PM',
         period: '下午',
         title: '交通',
-        luggage: '行李在車內',
+        type: 'transportation',
         description: '離開公園、開往餐廳'
       },
       {
         time: '12:45-1:15 PM',
         period: '下午',
         title: '午餐',
-        luggage: '行李在車內',
+        type: 'meal',
         description: [
           'Crossroads Cafe（西餐沙龍風，香蕉麵包必點，約 USD 10–20）',
           '或 In-N-Out Burger（Cabazon 區快速漢堡）',
@@ -633,15 +987,18 @@ export const ITINERARY: DayItinerary[] = [
         time: '1:15-4:00 PM',
         period: '下午',
         title: '交通',
+        type: 'transportation',
         from: '約書亞樹',
         to: '聖地牙哥',
         duration: '約 2.75–3 小時',
-        luggage: '帶著行李'
+        luggage: '帶著行李',
+        mapLink: 'https://www.google.com/maps/dir/Joshua+Tree+National+Park/San+Diego'
       },
       {
         time: '4:00-4:30 PM',
         period: '下午',
         title: '住宿',
+        type: 'accommodation',
         location: '聖地牙哥 airbnb',
         activityDuration: '約30分鐘',
         description: 'Check-in、放行李、休息'
@@ -650,15 +1007,18 @@ export const ITINERARY: DayItinerary[] = [
         time: '4:30-4:50 PM',
         period: '下午',
         title: '交通',
+        type: 'transportation',
         from: 'airbnb',
         to: 'La Jolla Cove / 超市',
         duration: '約15-20分鐘',
+        mapLink: 'https://www.google.com/maps/dir/San+Diego/La+Jolla+Cove',
         description: '前往選項一或選項二'
       },
       {
         time: '4:50-6:00 PM',
         period: '下午',
         title: '景點',
+        type: 'attraction',
         option: '一',
         location: 'La Jolla Cove（拉荷亞灣）',
         activityDuration: '約1小時10分鐘',
@@ -672,6 +1032,7 @@ export const ITINERARY: DayItinerary[] = [
         time: '4:30-5:30 PM',
         period: '下午',
         title: '晚餐',
+        type: 'meal',
         option: '二',
         location: '超市買菜回 airbnb 煮',
         activityDuration: '約1小時',
@@ -684,15 +1045,18 @@ export const ITINERARY: DayItinerary[] = [
         time: '6:15-6:30 PM',
         period: '晚上',
         title: '交通',
+        type: 'transportation',
         option: '一',
         from: 'La Jolla',
         to: 'Little Italy',
-        duration: '約20分鐘'
+        duration: '約20分鐘',
+        mapLink: 'https://www.google.com/maps/dir/La+Jolla+Cove/Little+Italy+San+Diego'
       },
       {
         time: '6:30-8:00 PM',
         period: '晚上',
         title: '晚餐',
+        type: 'meal',
         option: '一',
         location: 'Little Italy',
         activityDuration: '約1小時30分鐘',
@@ -708,15 +1072,18 @@ export const ITINERARY: DayItinerary[] = [
         time: '8:00-8:30 PM',
         period: '晚上',
         title: '交通',
+        type: 'transportation',
         from: 'Little Italy',
         to: 'airbnb',
         duration: '約20-25分鐘',
+        mapLink: 'https://www.google.com/maps/dir/Little+Italy+San+Diego/San+Diego',
         description: '選項一：從 Little Italy 返回 airbnb'
       },
       {
         time: '8:45 PM',
         period: '晚上',
         title: '住宿',
+        type: 'accommodation',
         location: 'airbnb',
         description: '抵達 airbnb，休息'
       }
@@ -750,6 +1117,7 @@ export const ITINERARY: DayItinerary[] = [
         time: '9:00-10:00 AM',
         period: '上午',
         title: '早餐',
+        type: 'meal',
         location: 'airbnb',
         activityDuration: '約1小時',
         description: 'airbnb 早餐、悠閒起床'
@@ -758,14 +1126,17 @@ export const ITINERARY: DayItinerary[] = [
         time: '10:00-10:20 AM',
         period: '上午',
         title: '交通',
+        type: 'transportation',
         from: 'airbnb',
         to: 'Balboa Park',
-        duration: '約15-20分鐘'
+        duration: '約15-20分鐘',
+        mapLink: 'https://www.google.com/maps/dir/San+Diego/Balboa+Park+San+Diego'
       },
       {
         time: '10:20 AM-1:00 PM',
         period: '上午',
         title: '景點',
+        type: 'attraction',
         location: 'Balboa Park（巴爾波亞公園）',
         activityDuration: '約2小時40分鐘',
         mapLink: 'https://www.google.com/maps/search/?api=1&query=Balboa+Park+San+Diego',
@@ -779,15 +1150,18 @@ export const ITINERARY: DayItinerary[] = [
         time: '12:50-1:00 PM',
         period: '下午',
         title: '交通',
+        type: 'transportation',
         from: 'Balboa Park',
         to: '聖地牙哥動物園',
         duration: '約5-10分鐘',
+        mapLink: 'https://www.google.com/maps/dir/Balboa+Park+San+Diego/San+Diego+Zoo',
         description: 'Balboa Park 內移動'
       },
       {
         time: '1:00-2:00 PM',
         period: '下午',
         title: '景點',
+        type: 'attraction',
         location: '聖地牙哥動物園 (可選)',
         activityDuration: '約1小時',
         mapLink: 'https://www.google.com/maps/search/?api=1&query=San+Diego+Zoo',
@@ -802,6 +1176,7 @@ export const ITINERARY: DayItinerary[] = [
         time: '2:00-3:30 PM',
         period: '下午',
         title: '午餐',
+        type: 'meal',
         location: 'Balboa Park',
         activityDuration: '約1小時30分鐘',
         description: [
@@ -813,15 +1188,18 @@ export const ITINERARY: DayItinerary[] = [
         time: '3:30-3:50 PM',
         period: '下午',
         title: '交通',
+        type: 'transportation',
         from: 'Balboa Park',
         to: 'Torrey Pines / Old Town',
         duration: '約20-30分鐘 / 約25-30分鐘',
+        mapLink: 'https://www.google.com/maps/dir/Balboa+Park+San+Diego/Torrey+Pines+State+Park',
         description: '前往選項一或選項二'
       },
       {
         time: '3:50-5:30 PM',
         period: '下午',
         title: '景點',
+        type: 'attraction',
         option: '一',
         location: 'Torrey Pines State Park（托里松州立公園）',
         activityDuration: '約1小時40分鐘',
@@ -838,6 +1216,7 @@ export const ITINERARY: DayItinerary[] = [
         time: '4:00-6:00 PM',
         period: '下午',
         title: '景點',
+        type: 'attraction',
         option: '二',
         location: 'Old Town San Diego',
         activityDuration: '約2小時',
@@ -854,15 +1233,18 @@ export const ITINERARY: DayItinerary[] = [
         time: '6:00-8:00 PM',
         period: '晚上',
         title: '交通',
+        type: 'transportation',
         from: 'Old Town / Torrey Pines',
         to: 'airbnb',
         duration: '約25-35分鐘',
+        mapLink: 'https://www.google.com/maps/dir/Old+Town+San+Diego/San+Diego',
         description: '從選項一或選項二返回 airbnb（選項一約 7:30 PM 出發，選項二約 6:00 PM 出發）'
       },
       {
         time: '8:45 PM',
         period: '晚上',
         title: '住宿',
+        type: 'accommodation',
         location: 'airbnb',
         description: '抵達 airbnb，休息'
       }
@@ -898,6 +1280,7 @@ export const ITINERARY: DayItinerary[] = [
         time: '8:30-9:30 AM',
         period: '上午',
         title: '早餐',
+        type: 'meal',
         location: 'airbnb',
         activityDuration: '約1小時',
         description: 'airbnb 早餐、悠閒起床'
@@ -906,14 +1289,17 @@ export const ITINERARY: DayItinerary[] = [
         time: '9:30-9:45 AM',
         period: '上午',
         title: '交通',
+        type: 'transportation',
         from: 'airbnb',
         to: 'USS Midway（Seaport Village）',
-        duration: '約15-20分鐘'
+        duration: '約15-20分鐘',
+        mapLink: 'https://www.google.com/maps/dir/San+Diego/USS+Midway+Museum'
       },
       {
         time: '9:45 AM-12:30 PM',
         period: '上午',
         title: '景點',
+        type: 'attraction',
         location: 'USS Midway 航母博物館',
         activityDuration: '約2小時45分鐘',
         mapLink: 'https://www.google.com/maps/search/?api=1&query=USS+Midway+Museum',
@@ -929,15 +1315,18 @@ export const ITINERARY: DayItinerary[] = [
         time: '12:30-12:35 PM',
         period: '下午',
         title: '交通',
+        type: 'transportation',
         from: 'USS Midway',
         to: 'Seaport Village',
         duration: '約5分鐘',
+        mapLink: 'https://www.google.com/maps/dir/USS+Midway+Museum/Seaport+Village+San+Diego',
         description: '步行'
       },
       {
         time: '12:35-2:05 PM',
         period: '下午',
         title: '午餐',
+        type: 'meal',
         location: 'Seaport Village',
         activityDuration: '約1小時30分鐘',
         mapLink: 'https://www.google.com/maps/search/?api=1&query=Seaport+Village+San+Diego',
@@ -952,6 +1341,7 @@ export const ITINERARY: DayItinerary[] = [
         time: '2:05-2:25 PM',
         period: '下午',
         title: '交通',
+        type: 'transportation',
         from: 'Seaport Village',
         to: 'Coronado Bridge',
         duration: '約15-20分鐘'
@@ -960,6 +1350,7 @@ export const ITINERARY: DayItinerary[] = [
         time: '2:25-4:35 PM',
         period: '下午',
         title: '景點',
+        type: 'attraction',
         location: 'Coronado Island（科羅納多島）',
         activityDuration: '約2小時10分鐘',
         mapLink: 'https://www.google.com/maps/search/?api=1&query=Coronado+Island+San+Diego',
@@ -975,6 +1366,7 @@ export const ITINERARY: DayItinerary[] = [
         time: '4:35-5:35 PM',
         period: '晚上',
         title: '交通',
+        type: 'transportation',
         from: 'Coronado',
         to: 'Downtown',
         duration: '約30分鐘',
@@ -989,6 +1381,7 @@ export const ITINERARY: DayItinerary[] = [
         time: '5:35-5:50 PM',
         period: '晚上',
         title: '交通',
+        type: 'transportation',
         from: 'Downtown',
         to: '煤氣燈街區 (可選)',
         duration: '約15分鐘'
@@ -997,6 +1390,7 @@ export const ITINERARY: DayItinerary[] = [
         time: '5:50-6:35 PM',
         period: '晚上',
         title: '景點',
+        type: 'attraction',
         location: '煤氣燈街區 (Gaslamp Quarter) (可選)',
         activityDuration: '約45分鐘',
         mapLink: 'https://www.google.com/maps/search/?api=1&query=Gaslamp+Quarter+San+Diego',
@@ -1009,6 +1403,7 @@ export const ITINERARY: DayItinerary[] = [
         time: '6:35-7:05 PM',
         period: '晚上',
         title: '交通',
+        type: 'transportation',
         from: '煤氣燈街區',
         to: '超市',
         duration: '約15-20分鐘',
@@ -1018,6 +1413,7 @@ export const ITINERARY: DayItinerary[] = [
         time: '7:05 PM',
         period: '晚上',
         title: '住宿',
+        type: 'accommodation',
         location: 'airbnb',
         description: [
           '返回 airbnb',
@@ -1052,6 +1448,7 @@ export const ITINERARY: DayItinerary[] = [
         time: '9:00-10:00 AM',
         period: '上午',
         title: '早餐',
+        type: 'meal',
         location: 'airbnb',
         activityDuration: '約1小時',
         description: [
@@ -1062,6 +1459,7 @@ export const ITINERARY: DayItinerary[] = [
         time: '10:00-10:30 AM',
         period: '上午',
         title: '其他類型',
+        type: 'other',
         location: 'airbnb',
         activityDuration: '約30分鐘',
         description: [
@@ -1072,6 +1470,7 @@ export const ITINERARY: DayItinerary[] = [
         time: '10:30-10:50 AM',
         period: '上午',
         title: '交通',
+        type: 'transportation',
         from: 'airbnb',
         to: 'Ocean Beach',
         duration: '約20分鐘'
@@ -1080,10 +1479,10 @@ export const ITINERARY: DayItinerary[] = [
         time: '10:50 AM-12:30 PM',
         period: '上午',
         title: '景點',
+        type: 'attraction',
         location: 'Ocean Beach',
         activityDuration: '約1小時40分鐘',
         mapLink: 'https://www.google.com/maps/search/?api=1&query=Ocean+Beach+San+Diego',
-        luggage: '行李在車內',
         description: [
           '沙灘漫步、拍照',
           'Oceanside Pier 走走'
@@ -1093,10 +1492,10 @@ export const ITINERARY: DayItinerary[] = [
         time: '12:30-2:00 PM',
         period: '下午',
         title: '午餐',
+        type: 'meal',
         location: 'Ocean Beach 海灘餐廳',
         activityDuration: '約1小時30分鐘',
         mapLink: 'https://www.google.com/maps/search/?api=1&query=Ocean+Beach+San+Diego+restaurants',
-        luggage: '行李在車內',
         description: [
           'The Taco Stand（墨西哥塔可）',
           'The Cottage（美式早午餐）',
@@ -1121,6 +1520,7 @@ export const ITINERARY: DayItinerary[] = [
         time: '4:00-6:00 PM',
         period: '下午',
         title: '交通',
+        type: 'transportation',
         from: '聖地牙哥',
         to: '安大略機場 (ONT)',
         duration: '約2小時',
@@ -1134,6 +1534,7 @@ export const ITINERARY: DayItinerary[] = [
         time: '6:00-6:30 PM',
         period: '晚上',
         title: '其他類型',
+        type: 'other',
         location: '安大略機場 (ONT)',
         activityDuration: '約30分鐘',
         description: [
@@ -1145,6 +1546,7 @@ export const ITINERARY: DayItinerary[] = [
         time: '23:10 PM',
         period: '晚上',
         title: '其他類型',
+        type: 'other',
         location: '班機起飛',
         description: [
           '祝旅途愉快！'

@@ -26,6 +26,7 @@ export interface TimelineItem {
   time: string;
   period?: string; // 上午、下午、晚上等
   title: string;
+  type?: 'transportation' | 'attraction' | 'meal' | 'accommodation' | 'other'; // 類型：交通、景點、餐食、住宿、其他
   description?: string | string[]; // 改為可選
   // 選項類型（例如「1」「2」用來標記選項一/二）
   option?: string;
@@ -40,6 +41,9 @@ export interface TimelineItem {
   mapLink?: string; // 地圖連結
   ticketLink?: string; // 購票連結
   luggage?: string; // 行李注意事項
+  parkingCost?: string; // 停車費用
+  ticketCost?: string; // 門票費用
+  isFreeAdmission?: boolean; // 是否免費進入
 }
 
 export interface DayItinerary {
