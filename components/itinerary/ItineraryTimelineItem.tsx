@@ -76,7 +76,7 @@ export const ItineraryTimelineItem: React.FC<ItineraryTimelineItemProps> = ({
             </span>
           </div>
         )}
-        <div className="flex flex-col md:flex-row flex-wrap items-center gap-2">
+        <div className="flex flex-row flex-wrap items-center gap-2">
           {item.duration && (
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-stone-50 border border-stone-200">
               <Clock size={14} className="text-stone-500" />
