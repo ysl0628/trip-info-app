@@ -949,18 +949,126 @@
       },
       "day13": {
         "title": "Final Leisurely Time & Prepare to Return Home",
-        "description": "Visit Coronado Island and Seaport Village, then head to Ontario Airport in the evening to prepare for the return flight to Taiwan.",
-        "highlights": ["Coronado Island", "Seaport Village", "Ontario International Airport (ONT)"],
+        "description": "Enjoy the final beach time at Ocean Beach in the morning, choose shopping or free activities in the afternoon, then head to Ontario Airport in the evening to prepare for the return flight to Taiwan.",
+        "highlights": ["Ocean Beach", "Free Activities (Shopping/Stroll)", "Ontario International Airport (ONT)"],
         "accommodation": {
           "location": "On the plane",
           "hotels": ["None"]
         },
         "meals": {
-          "breakfast": "San Diego",
-          "lunch": "Seaport Village",
+          "breakfast": "Airbnb breakfast",
+          "lunch": "Ocean Beach beach restaurants",
           "dinner": "At airport, on your own"
         },
-        "transport": ["Self-drive to airport (approx. 2 hours)"]
+        "transport": [
+          "Self-drive to Ocean Beach (approx. 20 min)",
+          "Self-drive to Ontario Airport (approx. 115 miles, 2 hours drive)",
+          "Route: I-15 North → I-10 East → I-215 North → ONT"
+        ],
+        "timeline": [
+          {
+            "time": "9:00-10:00 AM",
+            "period": "Morning",
+            "title": "Breakfast",
+            "location": "Airbnb",
+            "activityDuration": "Approx 1 hour",
+            "description": [
+              "Airbnb breakfast, leisurely wake up"
+            ]
+          },
+          {
+            "time": "10:00-10:30 AM",
+            "period": "Morning",
+            "title": "Other",
+            "location": "Airbnb",
+            "activityDuration": "Approx 30 min",
+            "description": [
+              "Pack luggage, Airbnb Check-out"
+            ]
+          },
+          {
+            "time": "10:30-10:50 AM",
+            "period": "Morning",
+            "title": "Transport",
+            "from": "Airbnb",
+            "to": "Ocean Beach",
+            "duration": "Approx 20 min"
+          },
+          {
+            "time": "10:50 AM-12:30 PM",
+            "period": "Morning",
+            "title": "Attractions",
+            "location": "Ocean Beach",
+            "activityDuration": "Approx 1 hour 40 min",
+            "mapLink": "https://www.google.com/maps/search/?api=1&query=Ocean+Beach+San+Diego",
+            "luggage": "Luggage in car",
+            "description": [
+              "Beach stroll, photos",
+              "Walk on Oceanside Pier"
+            ]
+          },
+          {
+            "time": "12:30-2:00 PM",
+            "period": "Afternoon",
+            "title": "Lunch",
+            "location": "Ocean Beach beach restaurants",
+            "activityDuration": "Approx 1 hour 30 min",
+            "mapLink": "https://www.google.com/maps/search/?api=1&query=Ocean+Beach+San+Diego+restaurants",
+            "luggage": "Luggage in car",
+            "description": [
+              "The Taco Stand (Mexican tacos)",
+              "The Cottage (American brunch)",
+              "Hodad's (Classic burgers)",
+              "Puesto (Mexican cuisine)"
+            ]
+          },
+          {
+            "time": "2:00-4:00 PM",
+            "period": "Afternoon",
+            "title": "Free Activities",
+            "location": "Choose one of three",
+            "activityDuration": "Approx 2 hours",
+            "luggage": "Take luggage",
+            "description": [
+              "① Fashion Valley Mall shopping (approx. 20 min drive)",
+              "② Seaport Village stroll (approx. 25 min drive)",
+              "③ Go directly to airport"
+            ]
+          },
+          {
+            "time": "4:00-6:00 PM",
+            "period": "Afternoon",
+            "title": "Transport",
+            "from": "San Diego",
+            "to": "Ontario Airport (ONT)",
+            "duration": "Approx 2 hours",
+            "distance": "Approx 115 miles",
+            "luggage": "Take luggage",
+            "description": [
+              "Route: I-15 North → I-10 East → I-215 North → ONT"
+            ]
+          },
+          {
+            "time": "6:00-6:30 PM",
+            "period": "Evening",
+            "title": "Other",
+            "location": "Ontario Airport (ONT)",
+            "activityDuration": "Approx 30 min",
+            "description": [
+              "Parking, retrieve luggage, Check-in",
+              "International flights recommend arriving 3 hours early (before 20:10)"
+            ]
+          },
+          {
+            "time": "23:10 PM",
+            "period": "Evening",
+            "title": "Other",
+            "location": "Flight departure",
+            "description": [
+              "Have a pleasant journey!"
+            ]
+          }
+        ]
       }
     }
   }

@@ -15,6 +15,7 @@ import {
   Link as LinkIcon,
   ChevronLeft,
   ChevronRight,
+  Luggage,
 } from "lucide-react";
 import { DayItinerary } from "../types";
 
@@ -361,6 +362,14 @@ export const Itinerary: React.FC = () => {
                                   )}
                                 </div>
                               )}
+                              {timelineItem.luggage && (
+                                <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-blue-50 border border-blue-200">
+                                  <Luggage size={14} className="text-blue-600" />
+                                  <span className="text-xs font-bold text-blue-700">
+                                    {timelineItem.luggage}
+                                  </span>
+                                </div>
+                              )}
                               {timelineItem.description && (
                                 <p className="text-sm text-stone-600 leading-relaxed">
                                   {Array.isArray(timelineItem.description)
@@ -412,58 +421,69 @@ export const Itinerary: React.FC = () => {
                                   </a>
                                 )}
                               </div>
-                              {timelineItem.activityDuration && (
-                                <div
-                                  className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-lg ${
-                                    isGroupTour
-                                      ? "bg-amber-50 border border-amber-200"
-                                      : "bg-stone-50 border border-stone-200"
-                                  }`}
-                                >
-                                  <Clock
-                                    size={14}
-                                    className={
+                              <div className="flex flex-wrap items-center gap-2">
+                                {timelineItem.activityDuration && (
+                                  <div
+                                    className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-lg ${
                                       isGroupTour
-                                        ? "text-amber-600"
-                                        : "text-stone-500"
-                                    }
-                                  />
-                                  <span
-                                    className={`text-xs font-bold ${
-                                      isGroupTour
-                                        ? "text-amber-700"
-                                        : "text-stone-600"
+                                        ? "bg-amber-50 border border-amber-200"
+                                        : "bg-stone-50 border border-stone-200"
                                     }`}
                                   >
-                                    {t("itinerary.activityTime")}
-                                    <span className="font-semibold">
-                                      {timelineItem.activityDuration}
+                                    <Clock
+                                      size={14}
+                                      className={
+                                        isGroupTour
+                                          ? "text-amber-600"
+                                          : "text-stone-500"
+                                      }
+                                    />
+                                    <span
+                                      className={`text-xs font-bold ${
+                                        isGroupTour
+                                          ? "text-amber-700"
+                                          : "text-stone-600"
+                                      }`}
+                                    >
+                                      {t("itinerary.activityTime")}
+                                      <span className="font-semibold">
+                                        {timelineItem.activityDuration}
+                                      </span>
                                     </span>
-                                  </span>
-                                </div>
-                              )}
+                                  </div>
+                                )}
+                                {timelineItem.luggage && (
+                                  <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-blue-50 border border-blue-200">
+                                    <Luggage size={14} className="text-blue-600" />
+                                    <span className="text-xs font-bold text-blue-700">
+                                      {timelineItem.luggage}
+                                    </span>
+                                  </div>
+                                )}
+                              </div>
                               {timelineItem.description &&
                                 Array.isArray(timelineItem.description) && (
                                   <div className="text-sm text-stone-600 leading-relaxed mt-2">
-                                    {timelineItem.description.map(
-                                      (line, idx) => (
-                                        <div
-                                          key={idx}
-                                          className={idx > 0 ? "mt-1" : ""}
-                                        >
-                                          {renderDescriptionWithLinks(
-                                            line,
-                                            timelineItem.ticketLink
-                                          )}
-                                        </div>
-                                      )
-                                    )}
+                                    {timelineItem.description.map((line, idx) => (
+                                      <div
+                                        key={idx}
+                                        className={idx > 0 ? "mt-1" : ""}
+                                      >
+                                        {renderDescriptionWithLinks(
+                                          line,
+                                          timelineItem.ticketLink
+                                        )}
+                                      </div>
+                                    ))}
                                   </div>
                                 )}
                               {timelineItem.description &&
                                 !Array.isArray(timelineItem.description) && (
                                   <p className="text-sm text-stone-600 leading-relaxed mt-2">
-                                    {timelineItem.description}
+                                    {renderDescriptionWithLinks(
+                                      timelineItem.description,
+                                      timelineItem.ticketLink
+                                    )}
                                   </p>
                                 )}
                             </div>
@@ -508,56 +528,64 @@ export const Itinerary: React.FC = () => {
                                   </a>
                                 )}
                               </div>
-                              {timelineItem.activityDuration && (
-                                <div
-                                  className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-lg ${
-                                    isGroupTour
-                                      ? "bg-amber-50 border border-amber-200"
-                                      : "bg-stone-50 border border-stone-200"
-                                  }`}
-                                >
-                                  <Clock
-                                    size={14}
-                                    className={
+                              <div className="flex flex-wrap items-center gap-2">
+                                {timelineItem.activityDuration && (
+                                  <div
+                                    className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-lg ${
                                       isGroupTour
-                                        ? "text-amber-600"
-                                        : "text-stone-500"
-                                    }
-                                  />
-                                  <span
-                                    className={`text-xs font-bold ${
-                                      isGroupTour
-                                        ? "text-amber-700"
-                                        : "text-stone-600"
+                                        ? "bg-amber-50 border border-amber-200"
+                                        : "bg-stone-50 border border-stone-200"
                                     }`}
                                   >
-                                    {timelineItem.title === "早餐" ||
-                                    timelineItem.title === "午餐" ||
-                                    timelineItem.title === "晚餐"
-                                      ? t("itinerary.mealTime")
-                                      : t("itinerary.activityTime")}
-                                    <span className="font-semibold">
-                                      {timelineItem.activityDuration}
+                                    <Clock
+                                      size={14}
+                                      className={
+                                        isGroupTour
+                                          ? "text-amber-600"
+                                          : "text-stone-500"
+                                      }
+                                    />
+                                    <span
+                                      className={`text-xs font-bold ${
+                                        isGroupTour
+                                          ? "text-amber-700"
+                                          : "text-stone-600"
+                                      }`}
+                                    >
+                                      {timelineItem.title === "早餐" ||
+                                      timelineItem.title === "午餐" ||
+                                      timelineItem.title === "晚餐"
+                                        ? t("itinerary.mealTime")
+                                        : t("itinerary.activityTime")}
+                                      <span className="font-semibold">
+                                        {timelineItem.activityDuration}
+                                      </span>
                                     </span>
-                                  </span>
-                                </div>
-                              )}
+                                  </div>
+                                )}
+                                {timelineItem.luggage && (
+                                  <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-blue-50 border border-blue-200">
+                                    <Luggage size={14} className="text-blue-600" />
+                                    <span className="text-xs font-bold text-blue-700">
+                                      {timelineItem.luggage}
+                                    </span>
+                                  </div>
+                                )}
+                              </div>
                               {timelineItem.description && (
-                                <p className="text-sm text-stone-600 leading-relaxed">
+                                <p className="text-sm text-stone-600 leading-relaxed mt-2">
                                   {Array.isArray(timelineItem.description)
-                                    ? timelineItem.description.map(
-                                        (line, idx) => (
-                                          <div
-                                            key={idx}
-                                            className={idx > 0 ? "mt-1" : ""}
-                                          >
-                                            {renderDescriptionWithLinks(
-                                              line,
-                                              timelineItem.ticketLink
-                                            )}
-                                          </div>
-                                        )
-                                      )
+                                    ? timelineItem.description.map((line, idx) => (
+                                        <div
+                                          key={idx}
+                                          className={idx > 0 ? "mt-1" : ""}
+                                        >
+                                          {renderDescriptionWithLinks(
+                                            line,
+                                            timelineItem.ticketLink
+                                          )}
+                                        </div>
+                                      ))
                                     : renderDescriptionWithLinks(
                                         timelineItem.description,
                                         timelineItem.ticketLink

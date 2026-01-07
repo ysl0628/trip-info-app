@@ -1024,19 +1024,127 @@ export const ITINERARY: DayItinerary[] = [
     day: 13,
     date: '4/13 (週一)',
     title: '最後悠閒時光 & 準備返家',
-    description: '遊覽科羅納多島與海港村，傍晚前往安大略機場，準備搭機返台。',
-    highlights: ['科羅納多島 (Coronado)', '海港村 (Seaport Village)', '安大略機場 (ONT)'],
+    description: '上午在 Ocean Beach 享受最後的海灘時光，下午可選擇購物或自由活動，傍晚前往安大略機場，準備搭機返台。',
+    highlights: ['Ocean Beach', '自由活動（購物/散步）', '安大略機場 (ONT)'],
     accommodation: {
       location: '飛機上',
       hotels: ['無']
     },
     meals: {
-      breakfast: '聖地牙哥',
-      lunch: '海港村',
+      breakfast: 'airbnb 早餐',
+      lunch: 'Ocean Beach 海灘餐廳',
       dinner: '機場自理'
     },
-    transport: ['自駕前往機場 (約 2 小時)'],
-    mapLink: 'https://www.google.com/maps/dir/San+Diego/Seaport+Village/Ontario+International+Airport'
+    transport: [
+      '自駕前往 Ocean Beach（約 20 分鐘）',
+      '自駕前往安大略機場（約 115 英里，2 小時車程）',
+      '路線：I-15 North → I-10 East → I-215 North → ONT'
+    ],
+    timeline: [
+      {
+        time: '9:00-10:00 AM',
+        period: '上午',
+        title: '早餐',
+        location: 'airbnb',
+        activityDuration: '約1小時',
+        description: [
+          'airbnb 早餐、悠閒起床'
+        ]
+      },
+      {
+        time: '10:00-10:30 AM',
+        period: '上午',
+        title: '其他類型',
+        location: 'airbnb',
+        activityDuration: '約30分鐘',
+        description: [
+          '整理行李、Airbnb Check-out'
+        ]
+      },
+      {
+        time: '10:30-10:50 AM',
+        period: '上午',
+        title: '交通',
+        from: 'airbnb',
+        to: 'Ocean Beach',
+        duration: '約20分鐘'
+      },
+      {
+        time: '10:50 AM-12:30 PM',
+        period: '上午',
+        title: '景點',
+        location: 'Ocean Beach',
+        activityDuration: '約1小時40分鐘',
+        mapLink: 'https://www.google.com/maps/search/?api=1&query=Ocean+Beach+San+Diego',
+        luggage: '行李在車內',
+        description: [
+          '沙灘漫步、拍照',
+          'Oceanside Pier 走走'
+        ]
+      },
+      {
+        time: '12:30-2:00 PM',
+        period: '下午',
+        title: '午餐',
+        location: 'Ocean Beach 海灘餐廳',
+        activityDuration: '約1小時30分鐘',
+        mapLink: 'https://www.google.com/maps/search/?api=1&query=Ocean+Beach+San+Diego+restaurants',
+        luggage: '行李在車內',
+        description: [
+          'The Taco Stand（墨西哥塔可）',
+          'The Cottage（美式早午餐）',
+          'Hodad\'s（經典漢堡）',
+          'Puesto（墨西哥菜）'
+        ]
+      },
+      {
+        time: '2:00-4:00 PM',
+        period: '下午',
+        title: '自由活動',
+        location: '三選一',
+        activityDuration: '約2小時',
+        luggage: '帶著行李',
+        description: [
+          '① Fashion Valley Mall 購物（約 20 分鐘車程）',
+          '② Seaport Village 散步（約 25 分鐘車程）',
+          '③ 直接前往機場'
+        ]
+      },
+      {
+        time: '4:00-6:00 PM',
+        period: '下午',
+        title: '交通',
+        from: '聖地牙哥',
+        to: '安大略機場 (ONT)',
+        duration: '約2小時',
+        distance: '約 115 英里',
+        luggage: '帶著行李',
+        description: [
+          '路線：I-15 North → I-10 East → I-215 North → ONT'
+        ]
+      },
+      {
+        time: '6:00-6:30 PM',
+        period: '晚上',
+        title: '其他類型',
+        location: '安大略機場 (ONT)',
+        activityDuration: '約30分鐘',
+        description: [
+          '停車、取行李、Check-in',
+          '國際航班建議 3 小時前到達（20:10 前）'
+        ]
+      },
+      {
+        time: '23:10 PM',
+        period: '晚上',
+        title: '其他類型',
+        location: '班機起飛',
+        description: [
+          '祝旅途愉快！'
+        ]
+      }
+    ],
+    mapLink: 'https://www.google.com/maps/dir/San+Diego/Ocean+Beach+San+Diego/Ontario+International+Airport'
   }
 ];
 

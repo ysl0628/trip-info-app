@@ -58,6 +58,7 @@ export const useItinerary = (): DayItinerary[] => {
             distance: item.distance ? t(`${timelineKey}.distance`, { defaultValue: item.distance }) : item.distance,
             duration: item.duration ? t(`${timelineKey}.duration`, { defaultValue: item.duration }) : item.duration,
             option: item.option ? t(`${timelineKey}.option`, { defaultValue: item.option }) : item.option,
+            luggage: item.luggage ? t(`${timelineKey}.luggage`, { defaultValue: item.luggage }) : item.luggage,
             mapLink: item.mapLink, // mapLink 不需要翻譯，直接保留
             ticketLink: item.ticketLink // ticketLink 不需要翻譯，直接保留
           };
