@@ -54,9 +54,9 @@ export const ItineraryBudgetSummary: React.FC<ItineraryBudgetSummaryProps> = ({
               {parkingCosts.map((t, idx) => (
                 <li
                   key={idx}
-                  className="flex items-center justify-between text-sm text-blue-800 bg-white/60 px-3 py-2 rounded-lg"
+                  className="flex items-center gap-4 justify-between text-sm text-blue-800 bg-white/60 px-3 py-2 rounded-lg"
                 >
-                  <span className="font-medium">{t.location || t.title}</span>
+                  <span className="font-medium flex-1">{t.location || t.title}</span>
                   <span className="font-bold text-blue-900">
                     {t.parkingCost}
                   </span>
@@ -75,9 +75,9 @@ export const ItineraryBudgetSummary: React.FC<ItineraryBudgetSummaryProps> = ({
               {ticketCosts.map((t, idx) => (
                 <li
                   key={idx}
-                  className="flex items-center justify-between text-sm text-purple-800 bg-white/60 px-3 py-2 rounded-lg"
+                  className="flex items-center gap-4 justify-between text-sm text-purple-800 bg-white/60 px-3 py-2 rounded-lg"
                 >
-                  <span className="font-medium">{t.location || t.title}</span>
+                  <span className="font-medium flex-1">{t.location || t.title}</span>
                   <span className="font-bold text-purple-900">
                     {t.ticketCost}
                   </span>
@@ -86,9 +86,9 @@ export const ItineraryBudgetSummary: React.FC<ItineraryBudgetSummaryProps> = ({
               {freeAdmissionItems.map((tItem, idx) => (
                 <li
                   key={`free-${idx}`}
-                  className="flex items-center justify-between text-sm text-purple-800 bg-white/60 px-3 py-2 rounded-lg"
+                  className="flex items-center gap-4 justify-between text-sm text-purple-800 bg-white/60 px-3 py-2 rounded-lg"
                 >
-                  <span className="font-medium">
+                  <span className="font-medium flex-1">
                     {tItem.location || tItem.title}
                   </span>
                   <span className="font-bold text-purple-900">
