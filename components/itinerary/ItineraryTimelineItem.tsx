@@ -103,17 +103,17 @@ export const ItineraryTimelineItem: React.FC<ItineraryTimelineItemProps> = ({
             </div>
           )}
           {item.ticketCost && (
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-purple-50 border border-purple-200">
-              <DollarSign size={14} className="text-purple-600" />
-              <span className="text-xs font-bold text-purple-700">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-orange-50 border border-orange-200">
+              <DollarSign size={14} className="text-orange-600" />
+              <span className="text-xs font-bold text-orange-700">
                 {item.ticketCost}
               </span>
             </div>
           )}
           {item.isFreeAdmission && !item.ticketCost && (
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-purple-50 border border-purple-200">
-              <DollarSign size={14} className="text-purple-600" />
-              <span className="text-xs font-bold text-purple-700">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-orange-50 border border-orange-200">
+              <DollarSign size={14} className="text-orange-600" />
+              <span className="text-xs font-bold text-orange-700">
                 {t("itinerary.freeAdmission") || "免費進入"}
               </span>
             </div>
@@ -123,17 +123,13 @@ export const ItineraryTimelineItem: React.FC<ItineraryTimelineItemProps> = ({
           <p className="text-sm text-stone-600 leading-relaxed">
             {Array.isArray(item.description)
               ? item.description
-                  .filter((line) => !line.includes("免費進入") && !line.includes("Free Admission"))
                   .map((line, idx) => (
                     <div key={idx} className={idx > 0 ? "mt-1" : ""}>
                       {line}
                     </div>
                   ))
-              : typeof item.description === "string" &&
-                !item.description.includes("免費進入") &&
-                !item.description.includes("Free Admission")
-              ? item.description
-              : null}
+              : typeof item.description === "string" ? item.description : null
+            }
           </p>
         )}
       </div>
@@ -212,17 +208,17 @@ export const ItineraryTimelineItem: React.FC<ItineraryTimelineItemProps> = ({
             </div>
           )}
           {item.ticketCost && (
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-purple-50 border border-purple-200">
-              <DollarSign size={14} className="text-purple-600" />
-              <span className="text-xs font-bold text-purple-700">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-orange-50 border border-orange-200">
+              <DollarSign size={14} className="text-orange-600" />
+              <span className="text-xs font-bold text-orange-700">
                 {item.ticketCost}
               </span>
             </div>
           )}
           {item.isFreeAdmission && !item.ticketCost && (
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-purple-50 border border-purple-200">
-              <DollarSign size={14} className="text-purple-600" />
-              <span className="text-xs font-bold text-purple-700">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-orange-50 border border-orange-200">
+              <DollarSign size={14} className="text-orange-600" />
+              <span className="text-xs font-bold text-orange-700">
                 {t("itinerary.freeAdmission") || "免費進入"}
               </span>
             </div>
@@ -231,7 +227,6 @@ export const ItineraryTimelineItem: React.FC<ItineraryTimelineItemProps> = ({
         {item.description && Array.isArray(item.description) && (
           <div className="text-sm text-stone-600 leading-relaxed mt-2">
             {item.description
-              .filter((line) => !line.includes("免費進入") && !line.includes("Free Admission"))
               .map((line, idx) => (
                 <div key={idx} className={idx > 0 ? "mt-1" : ""}>
                   {renderDescriptionWithLinks(line, item.ticketLink)}
@@ -241,10 +236,7 @@ export const ItineraryTimelineItem: React.FC<ItineraryTimelineItemProps> = ({
         )}
         {item.description && !Array.isArray(item.description) && (
           <p className="text-sm text-stone-600 leading-relaxed mt-2">
-            {!item.description.includes("免費進入") &&
-            !item.description.includes("Free Admission")
-              ? renderDescriptionWithLinks(item.description, item.ticketLink)
-              : null}
+            {renderDescriptionWithLinks(item.description, item.ticketLink)}
           </p>
         )}
       </div>
@@ -329,17 +321,17 @@ export const ItineraryTimelineItem: React.FC<ItineraryTimelineItemProps> = ({
           </div>
         )}
         {item.ticketCost && (
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-purple-50 border border-purple-200">
-            <DollarSign size={14} className="text-purple-600" />
-            <span className="text-xs font-bold text-purple-700">
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-orange-50 border border-orange-200">
+            <DollarSign size={14} className="text-orange-600" />
+            <span className="text-xs font-bold text-orange-700">
               {item.ticketCost}
             </span>
           </div>
         )}
         {item.isFreeAdmission && !item.ticketCost && (
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-purple-50 border border-purple-200">
-            <DollarSign size={14} className="text-purple-600" />
-            <span className="text-xs font-bold text-purple-700">
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-orange-50 border border-orange-200">
+            <DollarSign size={14} className="text-orange-600" />
+            <span className="text-xs font-bold text-orange-700">
               {t("itinerary.freeAdmission") || "免費進入"}
             </span>
           </div>

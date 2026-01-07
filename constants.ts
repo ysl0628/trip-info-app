@@ -368,21 +368,214 @@ export const ITINERARY: DayItinerary[] = [
   },
   {
     day: 3,
-    date: '4/3 (週五)',
-    title: '藝術與奢華',
-    description: '上午參觀蓋蒂中心欣賞藝術收藏，下午漫步於奢華的比佛利山莊與羅迪歐大道。',
-    highlights: ['蓋蒂中心 (The Getty Center)', '比佛利山莊 (Beverly Hills)'],
+    date: '4/3 (週四)',
+    title: '好萊塢經典景點之旅',
+    description: '上午參觀好萊塢星光大道和 Hollywood Sign，中午前往格里斐斯天文台俯瞰 LA，下午到 Porto\'s Bakery 享用午餐，傍晚在 Pasadena Old Town 逛街購物。',
+    highlights: ['好萊塢星光大道 (Hollywood Walk of Fame)', 'Hollywood Sign', '格里斐斯天文台 (Griffith Observatory)', 'Porto\'s Bakery', 'Pasadena Old Town'],
     accommodation: {
       location: '羅蘭岡 (Rowland Heights)',
-      hotels: ['原住宿點']
+      hotels: ['airbnb 住宿']
     },
     meals: {
-      breakfast: '自理',
-      lunch: '蓋蒂中心內簡餐',
-      dinner: '比佛利山莊或返回羅蘭岡'
+      breakfast: 'airbnb 早餐',
+      lunch: 'Porto\'s Bakery',
+      dinner: 'airbnb 自煮晚餐'
     },
-    transport: ['自駕 (單程約 50-60 分鐘)'],
-    mapLink: 'https://www.google.com/maps/dir/Rowland+Heights/The+Getty/Beverly+Hills'
+    transport: [
+      '自駕到 Hollywood Walk of Fame（約 30-40 分鐘）',
+      '自駕到 Hollywood Sign（約 5 分鐘）',
+      '自駕到 Griffith Observatory（約 12 分鐘）',
+      '自駕到 Porto\'s Bakery（約 25-30 分鐘）',
+      '自駕到 Pasadena（約 15-20 分鐘）',
+      '自駕回 Rowland Heights Airbnb（約 30-40 分鐘）'
+    ],
+    mapLink: 'https://www.google.com/maps/dir//Hollywood+Walk+of+Fame/Hollywood+Sign/Griffith+Observatory/Porto\'s+Bakery/Pasadena+Old+Town',
+    timeline: [
+      {
+        time: '8:30-9:30 AM',
+        period: '上午',
+        title: '早餐',
+        type: 'meal',
+        location: 'airbnb',
+        activityDuration: '約1小時',
+        description: [
+          '早餐、準備出門'
+        ]
+      },
+      {
+        time: '9:30-10:00 AM',
+        period: '上午',
+        title: '交通',
+        type: 'transportation',
+        from: 'Rowland Heights Airbnb',
+        to: 'Hollywood Walk of Fame',
+        duration: '約 30-40 分鐘',
+        mapLink: 'https://www.google.com/maps/dir//Hollywood+Walk+of+Fame',
+        description: [
+          '自駕到 Hollywood Blvd'
+        ]
+      },
+      {
+        time: '10:00-10:30 AM',
+        period: '上午',
+        title: '景點',
+        type: 'attraction',
+        location: '好萊塢星光大道 (Hollywood Walk of Fame)',
+        activityDuration: '約30分鐘',
+        mapLink: 'https://www.google.com/maps/search/?api=1&query=Hollywood+Walk+of+Fame',
+        parkingCost: '停車 $5-15',
+        isFreeAdmission: true,
+        description: [
+          '看明星名字、拍照',
+          '停留 30 分鐘',
+        ]
+      },
+      {
+        time: '10:30-10:35 AM',
+        period: '上午',
+        title: '交通',
+        type: 'transportation',
+        from: 'Hollywood Walk of Fame',
+        to: 'Hollywood Sign',
+        duration: '約5分鐘',
+        mapLink: 'https://www.google.com/maps/dir//Lake+Hollywood+Park',
+        description: [
+          '自駕到 Lake Hollywood Park'
+        ]
+      },
+      {
+        time: '10:35-11:00 AM',
+        period: '上午',
+        title: '景點',
+        type: 'attraction',
+        location: 'Hollywood Sign',
+        activityDuration: '約25分鐘',
+        mapLink: 'https://www.google.com/maps/search/?api=1&query=Hollywood+Sign',
+        isFreeAdmission: true,
+        description: [
+          '停留 25 分鐘拍照',
+        ]
+      },
+      {
+        time: '11:00-11:15 AM',
+        period: '上午',
+        title: '交通',
+        type: 'transportation',
+        from: 'Hollywood Sign',
+        to: 'Griffith Observatory',
+        duration: '約12分鐘',
+        mapLink: 'https://www.google.com/maps/dir//Griffith+Observatory',
+        description: [
+          '自駕到山上天文台'
+        ]
+      },
+      {
+        time: '11:15 AM-12:00 PM',
+        period: '上午',
+        title: '景點',
+        type: 'attraction',
+        location: 'Griffith Observatory（格里斐斯天文台）',
+        activityDuration: '約45分鐘',
+        mapLink: 'https://www.google.com/maps/search/?api=1&query=Griffith+Observatory',
+        parkingCost: '停車 $10',
+        isFreeAdmission: true,
+        description: [
+          '選項 A（推薦）：只看室外景觀、城市景觀、俯瞰 LA',
+          '停留 45 分鐘',
+        ]
+      },
+      {
+        time: '12:00-12:30 PM',
+        period: '下午',
+        title: '交通',
+        type: 'transportation',
+        from: 'Griffith Observatory',
+        to: 'Porto\'s Bakery',
+        duration: '約 25-30 分鐘',
+        mapLink: 'https://www.google.com/maps/dir//Porto\'s+Bakery+Downey',
+        description: [
+          '往南到 Downey'
+        ]
+      },
+      {
+        time: '12:30-1:30 PM',
+        period: '下午',
+        title: '午餐',
+        type: 'meal',
+        location: 'Porto\'s Bakery',
+        activityDuration: '約1小時',
+        mapLink: 'https://www.google.com/maps/search/?api=1&query=Porto\'s+Bakery+Downey',
+        description: [
+          '地址：8233 Firestone Blvd, Downey',
+          '排隊 15-30 分鐘',
+          '推薦：Cubano 三明治、Guava Strudel、Potato Ball',
+        ]
+      },
+      {
+        time: '1:30-2:00 PM',
+        period: '下午',
+        title: '交通',
+        type: 'transportation',
+        from: 'Porto\'s Bakery',
+        to: 'Pasadena Old Town',
+        duration: '約 15-20 分鐘',
+        mapLink: 'https://www.google.com/maps/dir//Pasadena+Old+Town',
+        description: [
+          '往東'
+        ]
+      },
+      {
+        time: '2:00-4:30 PM',
+        period: '下午',
+        title: '景點',
+        type: 'attraction',
+        location: 'Pasadena Old Town',
+        activityDuration: '約2.5小時',
+        mapLink: 'https://www.google.com/maps/search/?api=1&query=Pasadena+Old+Town',
+        parkingCost: '停車 $2-5',
+        isFreeAdmission: true,
+        description: [
+          '精品街、咖啡廳、手工藝、拍照',
+          '停留 2.5 小時',
+        ]
+      },
+      {
+        time: '4:30-5:15 PM',
+        period: '下午',
+        title: '交通',
+        type: 'transportation',
+        from: 'Pasadena Old Town',
+        to: 'Rowland Heights Airbnb',
+        duration: '約 30-40 分鐘',
+        mapLink: 'https://www.google.com/maps/dir//Rowland+Heights',
+        description: [
+          '自駕回 Airbnb'
+        ]
+      },
+      {
+        time: '5:15-6:30 PM',
+        period: '晚上',
+        title: '其他類型',
+        type: 'other',
+        location: 'airbnb',
+        activityDuration: '約1小時15分鐘',
+        description: [
+          '採買晚餐食材、煮晚餐',
+          '使用 Day 2 農夫市場採買的食材'
+        ]
+      },
+      {
+        time: '6:30-8:00 PM',
+        period: '晚上',
+        title: '晚餐',
+        type: 'meal',
+        location: 'airbnb',
+        activityDuration: '約1小時30分鐘',
+        description: [
+          '用餐、休息'
+        ]
+      }
+    ]
   },
   {
     day: 4,
