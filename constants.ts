@@ -30,11 +30,14 @@ export const ITINERARY: DayItinerary[] = [
     day: 1,
     date: '4/1 (週三)',
     title: '抵達與安頓',
-    description: '傍晚抵達安大略機場，辦理出關手續後前往羅蘭岡住宿點休息，調整時差。',
-    highlights: ['安大略國際機場(ONT)', '羅蘭岡(Rowland Heights)'],
+    description: '傍晚抵達安大略機場，辦理出關手續後前往 Hacienda Heights 住宿點休息，調整時差。',
+    highlights: ['安大略國際機場(ONT)', 'Hacienda Heights'],
     accommodation: {
-      location: '羅蘭岡 (Rowland Heights)',
-      hotels: ['airbnb 住宿'],
+      location: '哈仙達崗住宿',
+      hotels: [{
+        name: 'airbnb 住宿',
+        link: 'https://www.airbnb.com.tw/rooms/1299494295130525390'
+      }],
       roomAssignment: ['爸爸、媽媽', '文馨', '宏翔、小藍']
     },
     meals: {
@@ -43,7 +46,7 @@ export const ITINERARY: DayItinerary[] = [
       dinner: '便利店或餐廳外帶'
     },
     transport: [
-      '自駕前往 Rowland Heights Airbnb（約 25-30 分鐘）',
+      '自駕前往 Hacienda Heights Airbnb（約 25-30 分鐘）',
       '路線：I-10 East'
     ],
     timeline: [
@@ -82,7 +85,7 @@ export const ITINERARY: DayItinerary[] = [
         title: '交通',
         type: 'transportation',
         from: 'ONT',
-        to: 'Rowland Heights Airbnb',
+        to: '哈仙達崗住宿',
         duration: '約 25-30 分鐘',
         luggage: '行李在車上',
         mapLink: 'https://www.google.com/maps/dir/Ontario+International+Airport/Rowland+Heights',
@@ -95,7 +98,7 @@ export const ITINERARY: DayItinerary[] = [
         period: '晚上',
         title: '住宿',
         type: 'accommodation',
-        location: 'Airbnb Check-in + 放行李、整理',
+        location: '住宿 Check-in + 放行李、整理',
         activityDuration: '約45分鐘'
       },
       {
@@ -103,7 +106,7 @@ export const ITINERARY: DayItinerary[] = [
         period: '晚上',
         title: '交通',
         type: 'transportation',
-        from: 'Airbnb',
+        from: '住宿',
         to: '便利店或餐廳',
         duration: '約 10-15 分鐘',
         mapLink: 'https://www.google.com/maps/dir/Rowland+Heights/7-Eleven',
@@ -145,8 +148,11 @@ export const ITINERARY: DayItinerary[] = [
     description: '上午參觀 Getty Center 和 UCLA 校園，中午在 Santa Monica 海灘散步用餐，下午前往 LACMA 拍照，傍晚到農夫市場採買食材，晚上回 Airbnb 自煮晚餐。',
     highlights: ['蓋蒂中心 (Getty Center)', 'UCLA 校園（可選）', 'Santa Monica Pier', 'LACMA Urban Light', '農夫市場 (The Original Farmers Market)'],
     accommodation: {
-      location: '羅蘭岡 (Rowland Heights)',
-      hotels: ['airbnb 住宿'],
+      location: '哈仙達崗住宿',
+      hotels: [{
+        name: 'airbnb 住宿',
+        link: 'https://www.airbnb.com.tw/rooms/1299494295130525390'
+      }],
       roomAssignment: ['爸爸、媽媽', '文馨', '宏翔、小藍']
     },
     meals: {
@@ -179,12 +185,12 @@ export const ITINERARY: DayItinerary[] = [
         period: '上午',
         title: '交通',
         type: 'transportation',
-        from: 'Rowland Heights Airbnb',
-        to: 'Getty Center',
+        from: '哈仙達崗住宿',
+        to: '蓋蒂中心 (Getty Center)',
         duration: '約 40-50 分鐘',
         mapLink: 'https://www.google.com/maps/dir/Rowland+Heights/The+Getty+Center',
         description: [
-          '直接從 Rowland Heights 往西'
+          '直接從 Hacienda Heights 往西'
         ]
       },
       {
@@ -192,7 +198,7 @@ export const ITINERARY: DayItinerary[] = [
         period: '上午',
         title: '景點',
         type: 'attraction',
-        location: 'Getty Center',
+        location: '蓋蒂中心 (Getty Center)',
         activityDuration: '約35分鐘',
         mapLink: 'https://www.google.com/maps/search/?api=1&query=The+Getty+Center+Los+Angeles',
         parkingCost: '停車 $20',
@@ -207,7 +213,7 @@ export const ITINERARY: DayItinerary[] = [
         title: '交通',
         type: 'transportation',
         option: '一',
-        from: 'Getty Center',
+        from: '蓋蒂中心',
         to: 'UCLA 校園',
         duration: '約 10-15 分鐘',
         mapLink: 'https://www.google.com/maps/dir/The+Getty+Center/UCLA+Campus',
@@ -236,7 +242,7 @@ export const ITINERARY: DayItinerary[] = [
         type: 'transportation',
         option: '一',
         from: 'UCLA 校園',
-        to: 'Santa Monica',
+        to: '聖莫尼卡 (Santa Monica)',
         duration: '約 10-15 分鐘'
       },
       {
@@ -245,8 +251,8 @@ export const ITINERARY: DayItinerary[] = [
         title: '交通',
         type: 'transportation',
         option: '二',
-        from: 'Getty Center',
-        to: 'Santa Monica',
+        from: '蓋蒂中心',
+        to: '聖莫尼卡 (Santa Monica)',
         duration: '約 40 分鐘',
         mapLink: 'https://www.google.com/maps/dir/The+Getty+Center/Santa+Monica+Pier',
         description: [
@@ -258,7 +264,7 @@ export const ITINERARY: DayItinerary[] = [
         period: '下午',
         title: '景點',
         type: 'attraction',
-        location: 'Santa Monica Pier + 海灘散步 + 逛街 + 午餐',
+        location: '聖莫尼卡碼頭 (Santa Monica Pier) + 海灘散步 + 逛街 + 午餐',
         activityDuration: '約2小時40分鐘',
         mapLink: 'https://www.google.com/maps/search/?api=1&query=Santa+Monica+Pier',
         isFreeAdmission: true,
@@ -275,8 +281,8 @@ export const ITINERARY: DayItinerary[] = [
         period: '下午',
         title: '交通',
         type: 'transportation',
-        from: 'Santa Monica',
-        to: 'LACMA',
+        from: '聖莫尼卡',
+        to: '洛杉磯郡立美術館 (LACMA)',
         duration: '約 12-15 分鐘',
         mapLink: 'https://www.google.com/maps/dir/Santa+Monica+Pier/LACMA',
         description: [
@@ -288,7 +294,7 @@ export const ITINERARY: DayItinerary[] = [
         period: '下午',
         title: '景點',
         type: 'attraction',
-        location: 'LACMA Urban Light',
+        location: '洛杉磯郡立美術館 (LACMA) Urban Light',
         activityDuration: '約45分鐘',
         mapLink: 'https://www.google.com/maps/search/?api=1&query=LACMA',
         parkingCost: '停車 $20',
@@ -302,7 +308,7 @@ export const ITINERARY: DayItinerary[] = [
         period: '下午',
         title: '交通',
         type: 'transportation',
-        from: 'LACMA',
+        from: '洛杉磯郡立美術館',
         to: '農夫市場',
         duration: '約 5-10 分鐘',
         mapLink: 'https://www.google.com/maps/dir/LACMA/The+Original+Farmers+Market',
@@ -313,15 +319,15 @@ export const ITINERARY: DayItinerary[] = [
       {
         time: '3:30-5:15 PM',
         period: '下午',
-        title: '其他類型',
-        type: 'other',
-        location: '農夫市場 (The Original Farmers Market) 採買食材',
+        title: '景點',
+        type: 'attraction',
+        location: '農夫市場 (The Original Farmers Market)',
         activityDuration: '約1小時45分鐘',
         mapLink: 'https://www.google.com/maps/search/?api=1&query=The+Original+Farmers+Market',
         description: [
           '地點：6333 W 3rd St, Los Angeles, CA 90036',
           '新鮮農產品、麵包、起司、食品',
-          '準備晚餐',
+          '直接吃晚餐或買食材回家煮',
           '停車驗證免費（90 分鐘-2 小時）'
         ]
       },
@@ -331,9 +337,9 @@ export const ITINERARY: DayItinerary[] = [
         title: '交通',
         type: 'transportation',
         from: '農夫市場',
-        to: 'Rowland Heights Airbnb',
+        to: '哈仙達崗住宿',
         duration: '約 45-60 分鐘',
-        mapLink: 'https://www.google.com/maps/dir/The+Original+Farmers+Market/Rowland+Heights',
+        mapLink: 'https://www.google.com/maps/dir/The+Original+Farmers+Market/1251+Marchmont+Avenue,+Hacienda+Heights,+CA+91745',
         description: [
           '下午塞車'
         ]
@@ -371,8 +377,11 @@ export const ITINERARY: DayItinerary[] = [
     description: '上午參觀好萊塢星光大道和 Hollywood Sign，中午前往格里斐斯天文台俯瞰 LA，下午到 Porto\'s Bakery 享用午餐，傍晚在 Pasadena Old Town 逛街購物。',
     highlights: ['好萊塢星光大道 (Hollywood Walk of Fame)', 'Hollywood Sign', '格里斐斯天文台 (Griffith Observatory)', 'Porto\'s Bakery', 'Pasadena Old Town'],
     accommodation: {
-      location: '羅蘭岡 (Rowland Heights)',
-      hotels: ['airbnb 住宿']
+      location: '哈仙達崗住宿',
+      hotels: [{
+        name: 'airbnb 住宿',
+        link: 'https://www.airbnb.com.tw/rooms/1299494295130525390'
+      }]
     },
     meals: {
       breakfast: 'airbnb 早餐',
@@ -385,7 +394,7 @@ export const ITINERARY: DayItinerary[] = [
       '自駕到 Griffith Observatory（約 12 分鐘）',
       '自駕到 Porto\'s Bakery（約 25-30 分鐘）',
       '自駕到 Pasadena（約 15-20 分鐘）',
-      '自駕回 Rowland Heights Airbnb（約 30-40 分鐘）'
+      '自駕回 Hacienda Heights Airbnb（約 30-40 分鐘）'
     ],
     mapLink: 'https://www.google.com/maps/dir//Hollywood+Walk+of+Fame/Hollywood+Sign/Griffith+Observatory/Porto\'s+Bakery/Pasadena+Old+Town',
     timeline: [
@@ -405,10 +414,10 @@ export const ITINERARY: DayItinerary[] = [
         period: '上午',
         title: '交通',
         type: 'transportation',
-        from: 'Rowland Heights Airbnb',
-        to: 'Hollywood Walk of Fame',
+        from: '哈仙達崗住宿',
+        to: '好萊塢星光大道 (Hollywood Walk of Fame)',
         duration: '約 30-40 分鐘',
-        mapLink: 'https://www.google.com/maps/dir//Hollywood+Walk+of+Fame',
+        mapLink: 'https://www.google.com/maps/dir/1251+Marchmont+Avenue,+Hacienda+Heights,+CA+91745/Hollywood+Walk+of+Fame',
         description: [
           '自駕到 Hollywood Blvd'
         ]
@@ -432,8 +441,8 @@ export const ITINERARY: DayItinerary[] = [
         period: '上午',
         title: '交通',
         type: 'transportation',
-        from: 'Hollywood Walk of Fame',
-        to: 'Hollywood Sign',
+        from: '好萊塢星光大道',
+        to: '好萊塢標誌 (Hollywood Sign)',
         duration: '約5分鐘',
         mapLink: 'https://www.google.com/maps/dir//Lake+Hollywood+Park',
         description: [
@@ -445,7 +454,7 @@ export const ITINERARY: DayItinerary[] = [
         period: '上午',
         title: '景點',
         type: 'attraction',
-        location: 'Hollywood Sign',
+        location: '好萊塢標誌 (Hollywood Sign)',
         activityDuration: '約25分鐘',
         mapLink: 'https://www.google.com/maps/search/?api=1&query=Hollywood+Sign',
         isFreeAdmission: true,
@@ -458,8 +467,8 @@ export const ITINERARY: DayItinerary[] = [
         period: '上午',
         title: '交通',
         type: 'transportation',
-        from: 'Hollywood Sign',
-        to: 'Griffith Observatory',
+        from: '好萊塢標誌',
+        to: '格里斐斯天文台 (Griffith Observatory)',
         duration: '約12分鐘',
         mapLink: 'https://www.google.com/maps/dir//Griffith+Observatory',
         description: [
@@ -485,8 +494,8 @@ export const ITINERARY: DayItinerary[] = [
         period: '下午',
         title: '交通',
         type: 'transportation',
-        from: 'Griffith Observatory',
-        to: 'Porto\'s Bakery',
+        from: '格里斐斯天文台',
+        to: '波托麵包店 (Porto\'s Bakery)',
         duration: '約 25-30 分鐘',
         mapLink: 'https://www.google.com/maps/dir//Porto\'s+Bakery+Downey',
         description: [
@@ -498,7 +507,7 @@ export const ITINERARY: DayItinerary[] = [
         period: '下午',
         title: '午餐',
         type: 'meal',
-        location: 'Porto\'s Bakery',
+        location: '波托麵包店 (Porto\'s Bakery)',
         activityDuration: '約1小時',
         mapLink: 'https://www.google.com/maps/search/?api=1&query=Porto\'s+Bakery+Downey',
         description: [
@@ -511,8 +520,8 @@ export const ITINERARY: DayItinerary[] = [
         period: '下午',
         title: '交通',
         type: 'transportation',
-        from: 'Porto\'s Bakery',
-        to: 'Pasadena Old Town',
+        from: '波托麵包店',
+        to: '帕薩迪納老城 (Pasadena Old Town)',
         duration: '約 15-20 分鐘',
         mapLink: 'https://www.google.com/maps/dir//Pasadena+Old+Town',
         description: [
@@ -524,7 +533,7 @@ export const ITINERARY: DayItinerary[] = [
         period: '下午',
         title: '景點',
         type: 'attraction',
-        location: 'Pasadena Old Town',
+        location: '帕薩迪納老城 (Pasadena Old Town)',
         activityDuration: '約2.5小時',
         mapLink: 'https://www.google.com/maps/search/?api=1&query=Pasadena+Old+Town',
         parkingCost: '停車 $2-5',
@@ -538,10 +547,10 @@ export const ITINERARY: DayItinerary[] = [
         period: '下午',
         title: '交通',
         type: 'transportation',
-        from: 'Pasadena Old Town',
-        to: 'Rowland Heights Airbnb',
+        from: '帕薩迪納老城',
+        to: '哈仙達崗住宿',
         duration: '約 30-40 分鐘',
-        mapLink: 'https://www.google.com/maps/dir//Rowland+Heights',
+        mapLink: 'https://www.google.com/maps/dir//1251+Marchmont+Avenue,+Hacienda+Heights,+CA+91745',
         description: [
           '自駕回 Airbnb'
         ]
@@ -574,12 +583,15 @@ export const ITINERARY: DayItinerary[] = [
   {
     day: 4,
     date: '4/4 (週五)',
-    title: 'Downtown LA 歷史探索',
-    description: '上午前往 Downtown LA，參觀 Olvera Street 歷史街區、搭乘 Angels Flight Railway 百年電車，逛 Grand Central Market 百年老市場，下午返回 Airbnb 休息。',
-    highlights: ['Olvera Street（LA 歷史發源地）', 'Angels Flight Railway（百年電車）', 'Grand Central Market（百年老市場）'],
+    title: 'Downtown LA 歷史探索 & 海灘',
+    description: '上午前往 Downtown LA，參觀 Olvera Street 歷史街區、搭乘 Angels Flight Railway 百年電車，逛 Grand Central Market 百年老市場，下午可擇一前往 Huntington Beach 或 Malibu Beach 海灘散步，晚上返回 Airbnb 休息。',
+    highlights: ['Olvera Street（LA 歷史發源地）', 'Angels Flight Railway（百年電車）', 'Grand Central Market（百年老市場）', 'Huntington Beach / Malibu Beach'],
     accommodation: {
-      location: '羅蘭岡 (Rowland Heights)',
-      hotels: ['airbnb 住宿']
+      location: '哈仙達崗住宿',
+      hotels: [{
+        name: 'airbnb 住宿',
+        link: 'https://www.airbnb.com.tw/rooms/1299494295130525390'
+      }]
     },
     meals: {
       breakfast: 'airbnb 早餐',
@@ -589,9 +601,10 @@ export const ITINERARY: DayItinerary[] = [
     transport: [
       '自駕到 Downtown LA（約 30-40 分鐘）',
       'Union Station 停車（$10 all day）',
-      '自駕回 Rowland Heights Airbnb（約 45-60 分鐘）'
+      '自駕到 Huntington Beach（約 45-60 分鐘）或 Malibu Beach（約 40-50 分鐘）',
+      '自駕回 Hacienda Heights Airbnb（約 45-60 分鐘）'
     ],
-    mapLink: 'https://www.google.com/maps/dir//Olvera+Street+Los+Angeles/Angels+Flight+Railway/Grand+Central+Market',
+    mapLink: 'https://www.google.com/maps/dir/Olvera+Street+Los+Angeles/Angels+Flight+Railway/Grand+Central+Market/Huntington+Beach+CA/Malibu+Beach+CA',
     timeline: [
       {
         time: '8:30-9:30 AM',
@@ -609,12 +622,12 @@ export const ITINERARY: DayItinerary[] = [
         period: '上午',
         title: '交通',
         type: 'transportation',
-        from: 'Rowland Heights Airbnb',
-        to: 'Downtown LA',
+        from: '哈仙達崗住宿',
+        to: '洛杉磯市中心 (Downtown LA)',
         duration: '約 30-40 分鐘',
         mapLink: 'https://www.google.com/maps/dir//Downtown+Los+Angeles',
         description: [
-          '自駕到 Downtown LA'
+          '自駕到洛杉磯市中心'
         ]
       },
       {
@@ -622,7 +635,7 @@ export const ITINERARY: DayItinerary[] = [
         period: '上午',
         title: '其他類型',
         type: 'other',
-        location: 'Union Station 停車',
+        location: '聯合車站 (Union Station) 停車',
         parkingCost: '停車 $10',
         description: [
           '位置：Chavez & Vignes（後出入）',
@@ -648,7 +661,7 @@ export const ITINERARY: DayItinerary[] = [
         period: '上午',
         title: '景點',
         type: 'attraction',
-        location: 'Angels Flight Railway',
+        location: '天使鐵路 (Angels Flight Railway)',
         activityDuration: '約40分鐘',
         mapLink: 'https://www.google.com/maps/search/?api=1&query=Angels+Flight+Railway',
         ticketCost: '門票 $3',
@@ -663,7 +676,7 @@ export const ITINERARY: DayItinerary[] = [
         period: '下午',
         title: '景點',
         type: 'attraction',
-        location: 'Grand Central Market',
+        location: '中央市場 (Grand Central Market)',
         activityDuration: '約30分鐘',
         mapLink: 'https://www.google.com/maps/search/?api=1&query=Grand+Central+Market+Los+Angeles',
         isFreeAdmission: true,
@@ -673,36 +686,106 @@ export const ITINERARY: DayItinerary[] = [
         ]
       },
       {
-        time: '12:30-1:00 PM',
-        period: '下午',
-        title: '其他類型',
-        type: 'other',
-        location: 'Union Station',
-        activityDuration: '約30分鐘',
-        description: [
-          '休息或逛街'
-        ]
-      },
-      {
-        time: '1:00-2:30 PM',
+        time: '12:30-1:30 PM',
         period: '下午',
         title: '交通',
         type: 'transportation',
-        from: 'Union Station',
-        to: 'Rowland Heights Airbnb',
+        option: '一',
+        from: '中央市場',
+        to: '杭廷頓海灘 (Huntington Beach)',
         duration: '約 45-60 分鐘',
-        mapLink: 'https://www.google.com/maps/dir//Rowland+Heights',
+        mapLink: 'https://www.google.com/maps/dir/Grand+Central+Market+Los+Angeles/Huntington+Beach+CA',
+        description: [
+          '自駕前往杭廷頓海灘'
+        ]
+      },
+      {
+        time: '12:30-1:20 PM',
+        period: '下午',
+        title: '交通',
+        type: 'transportation',
+        option: '二',
+        from: '中央市場',
+        to: '馬里布海灘 (Malibu Beach)',
+        duration: '約 40-50 分鐘',
+        mapLink: 'https://www.google.com/maps/dir/Grand+Central+Market+Los+Angeles/Malibu+Beach+CA',
+        description: [
+          '自駕前往馬里布海灘'
+        ]
+      },
+      {
+        time: '1:30-4:00 PM',
+        period: '下午',
+        title: '景點',
+        type: 'attraction',
+        option: '一',
+        location: '杭廷頓海灘 (Huntington Beach)',
+        activityDuration: '約2.5小時',
+        mapLink: 'https://www.google.com/maps/search/?api=1&query=Huntington+Beach+CA',
+        isFreeAdmission: true,
+        parkingCost: '停車 $2-5/小時',
+        description: [
+          '海灘散步、拍照',
+          'Huntington Beach Pier 走走',
+          '欣賞太平洋海景',
+          '可選擇在海邊餐廳用餐'
+        ]
+      },
+      {
+        time: '1:20-3:50 PM',
+        period: '下午',
+        title: '景點',
+        type: 'attraction',
+        option: '二',
+        location: '馬里布海灘 (Malibu Beach)',
+        activityDuration: '約2.5小時',
+        mapLink: 'https://www.google.com/maps/search/?api=1&query=Malibu+Beach+CA',
+        isFreeAdmission: true,
+        parkingCost: '停車 $2-5/小時',
+        description: [
+          '海灘散步、拍照',
+          'Malibu Pier 走走',
+          '欣賞太平洋海景',
+          '周邊餐廳推薦：',
+          '• Moonshadows',
+          '• Malibu Farm Pier Café'
+        ]
+      },
+      {
+        time: '4:00-5:00 PM',
+        period: '下午',
+        title: '交通',
+        type: 'transportation',
+        option: '一',
+        from: '杭廷頓海灘',
+        to: '哈仙達崗住宿',
+        duration: '約 45-60 分鐘',
+        mapLink: 'https://www.google.com/maps/dir/Huntington+Beach+CA/1251+Marchmont+Avenue,+Hacienda+Heights,+CA+91745',
         description: [
           '自駕回 Airbnb'
         ]
       },
       {
-        time: '2:30-8:00 PM',
+        time: '3:50-4:50 PM',
         period: '下午',
+        title: '交通',
+        type: 'transportation',
+        option: '二',
+        from: '馬里布海灘',
+        to: '哈仙達崗住宿',
+        duration: '約 45-60 分鐘',
+        mapLink: 'https://www.google.com/maps/dir/Malibu+Beach+CA/1251+Marchmont+Avenue,+Hacienda+Heights,+CA+91745',
+        description: [
+          '自駕回 Airbnb'
+        ]
+      },
+      {
+        time: '5:00-8:00 PM',
+        period: '晚上',
         title: '其他類型',
         type: 'other',
         location: 'airbnb',
-        activityDuration: '約5.5小時',
+        activityDuration: '約2.5小時',
         description: [
           'Airbnb 休息、整理',
           '晚上可選擇出門或在家休息',
@@ -1057,7 +1140,7 @@ export const ITINERARY: DayItinerary[] = [
         title: '交通',
         type: 'transportation',
         from: '七彩石',
-        to: '巴斯托 Outlets',
+        to: '巴斯托 Outlets (Barstow Outlets)',
         distance: '約220公里',
         duration: '約150分鐘',
         mapLink: 'https://www.google.com/maps/dir/Seven+Magic+Mountains/Barstow+Outlets'
@@ -1067,7 +1150,7 @@ export const ITINERARY: DayItinerary[] = [
         period: '下午',
         title: '景點/場館',
         type: 'attraction',
-        location: '巴斯托 Outlets',
+        location: '巴斯托 Outlets (Barstow Outlets)',
         activityDuration: '約2小時',
         mapLink: 'https://www.google.com/maps/search/?api=1&query=Barstow+Outlets'
       },
@@ -1087,8 +1170,11 @@ export const ITINERARY: DayItinerary[] = [
       }
     ],
     accommodation: {
-      location: '羅蘭岡 (Rowland Heights)',
-      hotels: ['返回原住宿點']
+      location: '哈仙達崗住宿',
+      hotels: [{
+        name: 'airbnb 住宿',
+        link: 'https://www.airbnb.com.tw/rooms/1299494295130525390'
+      }]
     },
     meals: {
       breakfast: '導遊會根據實際情況為您推薦餐食',
@@ -1106,64 +1192,60 @@ export const ITINERARY: DayItinerary[] = [
   {
     day: 9,
     date: '4/9 (週四)',
-    title: 'Brea / 西來寺 & 棕櫚泉 VillageFest',
-    description: '上午從羅蘭岡出發，可擇一前往 Brea Downtown 逛街購物或到西來寺散散步、享用素食自助午餐；中午過後自駕前往棕櫚泉，下午搭乘空中纜車欣賞沙漠山景，晚上在市中心 VillageFest 夜市散步與用餐。',
-    highlights: ['Brea Downtown', '西來寺 (Hsi Lai Temple)', '棕櫚泉空中纜車', 'VillageFest 夜市'],
+    title: 'Brea & 棕櫚泉 VillageFest',
+    description: '早上前往銀行辦事及取車，上午從 Hacienda Heights 出發前往 Brea Downtown 逛街購物；中午過後自駕前往棕櫚泉，下午搭乘空中纜車欣賞沙漠山景，晚上在市中心 VillageFest 夜市散步與用餐。',
+    highlights: ['Brea Downtown', '棕櫚泉空中纜車', 'VillageFest 夜市'],
     accommodation: {
       location: '棕櫚泉 (Palm Springs)',
       hotels: ['棕櫚泉 airbnb 住宿'],
       roomAssignment: ['爸爸、媽媽', '文馨', '宏翔、小藍']
     },
     meals: {
-      breakfast: '羅蘭岡自理',
-      lunch: 'Brea Downtown / 西來寺素食自助',
+      breakfast: 'Hacienda Heights 自理',
+      lunch: 'Brea Downtown',
       dinner: '棕櫚泉 VillageFest 夜市'
     },
     transport: ['自駕 (單程約 1.5 小時)'],
     timeline: [
       {
-        time: '09:00 AM',
+        time: '08:00-09:00 AM',
+        period: '上午',
+        title: '其他類型',
+        type: 'other',
+        location: '銀行辦事及取車',
+        activityDuration: '約1小時',
+        description: [
+          '前往銀行辦理相關事務',
+          '取車'
+        ]
+      },
+      {
+        time: '09:00-09:30 AM',
         period: '上午',
         title: '交通',
         type: 'transportation',
-        from: '羅蘭岡',
-        to: 'Brea / 西來寺',
+        from: 'Hacienda Heights',
+        to: '布雷亞市中心 (Brea Downtown)',
         duration: '約30分鐘',
-        mapLink: 'https://www.google.com/maps/dir/Rowland+Heights/Brea+CA',
-        description: '從羅蘭岡出發，前往 Brea Downtown 或西來寺'
+        mapLink: 'https://www.google.com/maps/dir/1251+Marchmont+Avenue,+Hacienda+Heights,+CA+91745/Brea+CA',
+        description: '從 Hacienda Heights 出發，前往 Brea Downtown'
       },
       {
-        time: '09:30-11:00 AM',
+        time: '09:30-12:00 PM',
         period: '上午',
         title: '景點',
         type: 'attraction',
-        option: '一',
-        location: 'Brea Downtown',
-        activityDuration: '約2小時',
+        location: '布雷亞市中心 (Brea Downtown)',
+        activityDuration: '約2.5小時',
         mapLink: 'https://www.google.com/maps/search/?api=1&query=Brea+Downtown+CA',
         description: [
           '9:30 AM 抵達 Brea Downtown',
-          '9:30-11:00 AM Brea Downtown 散步、購物',
-          '11:00-12:15 PM 午餐（Bruxie / Ruby\'s / Cha Cha\'s）'
+          '9:30-12:00 PM Brea Downtown 散步、購物',
+          '12:00-12:30 PM 午餐（Bruxie / Ruby\'s / Cha Cha\'s）'
         ]
       },
       {
-        time: '09:30-11:00 AM',
-        period: '上午',
-        title: '景點',
-        type: 'attraction',
-        option: '二',
-        location: '西來寺',
-        activityDuration: '約2小時30分鐘',
-        mapLink: 'https://www.google.com/maps/search/?api=1&query=Hsi+Lai+Temple',
-        description: [
-          '9:30 AM 抵達西來寺停車場（15-20 分鐘）',
-          '9:30-11:00 AM 西來寺自導遊覽（拍照、花園）',
-          '11:30-12:15 PM 素食自助午餐（約 USD 10 / 人）'
-        ]
-      },
-      {
-        time: '12:15-2:45 PM',
+        time: '12:30-3:00 PM',
         period: '下午',
         title: '交通',
         type: 'transportation',
@@ -1175,7 +1257,7 @@ export const ITINERARY: DayItinerary[] = [
         mapLink: 'https://www.google.com/maps/dir/Los+Angeles/Palm+Springs'
       },
       {
-        time: '2:45-4:00 PM',
+        time: '3:00-4:15 PM',
         period: '下午',
         title: '住宿',
         type: 'accommodation',
@@ -1213,7 +1295,7 @@ export const ITINERARY: DayItinerary[] = [
         period: '晚上',
         title: '景點',
         type: 'attraction',
-        location: 'Palm Springs VillageFest',
+        location: '棕櫚泉 VillageFest 夜市 (Palm Springs VillageFest)',
         activityDuration: '18:00–22:00',
         mapLink: 'https://www.google.com/maps/search/?api=1&query=Villagefest+Main+Office+Palm+Springs',
         description: [
@@ -1224,7 +1306,7 @@ export const ITINERARY: DayItinerary[] = [
         ]
       }
     ],
-    mapLink: 'https://www.google.com/maps/dir/Rowland+Heights/Brea+Downtown/Hsi+Lai+Temple/Palm+Springs'
+    mapLink: 'https://www.google.com/maps/dir/1251+Marchmont+Avenue,+Hacienda+Heights,+CA+91745/Brea+Downtown/Palm+Springs'
   },
   {
     day: 10,
@@ -1327,7 +1409,7 @@ export const ITINERARY: DayItinerary[] = [
         title: '交通',
         type: 'transportation',
         from: 'airbnb',
-        to: 'La Jolla Cove / 超市',
+        to: '拉荷亞灣 (La Jolla Cove) / 超市',
         duration: '約15-20分鐘',
         mapLink: 'https://www.google.com/maps/dir/San+Diego/La+Jolla+Cove',
         description: '前往選項一或選項二'
@@ -1365,8 +1447,8 @@ export const ITINERARY: DayItinerary[] = [
         title: '交通',
         type: 'transportation',
         option: '一',
-        from: 'La Jolla',
-        to: 'Little Italy',
+        from: '拉荷亞灣',
+        to: '小義大利 (Little Italy)',
         duration: '約20分鐘',
         mapLink: 'https://www.google.com/maps/dir/La+Jolla+Cove/Little+Italy+San+Diego'
       },
@@ -1376,7 +1458,7 @@ export const ITINERARY: DayItinerary[] = [
         title: '晚餐',
         type: 'meal',
         option: '一',
-        location: 'Little Italy',
+        location: '小義大利 (Little Italy)',
         activityDuration: '約1小時30分鐘',
         mapLink: 'https://www.google.com/maps/search/?api=1&query=Little+Italy+San+Diego',
         description: [
@@ -1391,7 +1473,7 @@ export const ITINERARY: DayItinerary[] = [
         period: '晚上',
         title: '交通',
         type: 'transportation',
-        from: 'Little Italy',
+        from: '小義大利',
         to: 'airbnb',
         duration: '約20-25分鐘',
         mapLink: 'https://www.google.com/maps/dir/Little+Italy+San+Diego/San+Diego',
@@ -1421,14 +1503,14 @@ export const ITINERARY: DayItinerary[] = [
     },
     meals: {
       breakfast: 'airbnb 早餐',
-      lunch: 'Balboa Park：Panama 66 / The Prado Restaurant',
-      dinner: 'Old Town：Casa Guadalajara / Cafe Coyote / Harrah\'s Cocina'
+      lunch: '巴爾波亞公園：Panama 66 / The Prado Restaurant',
+      dinner: '老城聖地牙哥：Casa Guadalajara / Cafe Coyote / Harrah\'s Cocina'
     },
     transport: [
-      '自駕前往 Balboa Park（約 15-20 分鐘）',
-      'Balboa Park 內移動（約 5-10 分鐘）',
-      '自駕前往 Torrey Pines（約 20-30 分鐘）',
-      '自駕前往 Old Town（約 25-30 分鐘）'
+      '自駕前往巴爾波亞公園 (Balboa Park)（約 15-20 分鐘）',
+      '巴爾波亞公園內移動（約 5-10 分鐘）',
+      '自駕前往托里松州立公園 (Torrey Pines State Park)（約 20-30 分鐘）',
+      '自駕前往老城聖地牙哥 (Old Town San Diego)（約 25-30 分鐘）'
     ],
     timeline: [
       {
@@ -1445,8 +1527,8 @@ export const ITINERARY: DayItinerary[] = [
         period: '上午',
         title: '交通',
         type: 'transportation',
-        from: 'airbnb',
-        to: 'Balboa Park',
+        from: '住宿',
+        to: '巴爾波亞公園 (Balboa Park)',
         duration: '約15-20分鐘',
         mapLink: 'https://www.google.com/maps/dir/San+Diego/Balboa+Park+San+Diego'
       },
@@ -1455,7 +1537,7 @@ export const ITINERARY: DayItinerary[] = [
         period: '上午',
         title: '景點',
         type: 'attraction',
-        location: 'Balboa Park（巴爾波亞公園）',
+        location: '巴爾波亞公園 (Balboa Park)',
         activityDuration: '約2小時40分鐘',
         mapLink: 'https://www.google.com/maps/search/?api=1&query=Balboa+Park+San+Diego',
         description: [
@@ -1469,11 +1551,11 @@ export const ITINERARY: DayItinerary[] = [
         period: '下午',
         title: '交通',
         type: 'transportation',
-        from: 'Balboa Park',
+        from: '巴爾波亞公園',
         to: '聖地牙哥動物園',
         duration: '約5-10分鐘',
         mapLink: 'https://www.google.com/maps/dir/Balboa+Park+San+Diego/San+Diego+Zoo',
-        description: 'Balboa Park 內移動'
+        description: '巴爾波亞公園內移動'
       },
       {
         time: '1:00-2:00 PM',
@@ -1496,7 +1578,7 @@ export const ITINERARY: DayItinerary[] = [
         period: '下午',
         title: '午餐',
         type: 'meal',
-        location: 'Balboa Park',
+        location: '巴爾波亞公園 (Balboa Park)',
         activityDuration: '約1小時30分鐘',
         description: [
           'Panama 66（露天咖啡館）',
@@ -1508,8 +1590,8 @@ export const ITINERARY: DayItinerary[] = [
         period: '下午',
         title: '交通',
         type: 'transportation',
-        from: 'Balboa Park',
-        to: 'Torrey Pines / Old Town',
+        from: '巴爾波亞公園',
+        to: '托里松州立公園 (Torrey Pines) / 老城聖地牙哥 (Old Town)',
         duration: '約20-30分鐘 / 約25-30分鐘',
         mapLink: 'https://www.google.com/maps/dir/Balboa+Park+San+Diego/Torrey+Pines+State+Park',
         description: '前往選項一或選項二'
@@ -1520,15 +1602,15 @@ export const ITINERARY: DayItinerary[] = [
         title: '景點',
         type: 'attraction',
         option: '一',
-        location: 'Torrey Pines State Park（托里松州立公園）',
+        location: '托里松州立公園 (Torrey Pines State Park)',
         activityDuration: '約1小時40分鐘',
         mapLink: 'https://www.google.com/maps/search/?api=1&query=Torrey+Pines+State+Park',
         parkingCost: '停車 $20/日',
         isFreeAdmission: true,
         description: [
           'Guy Fleming Trail（0.7 英里簡易步道，20-30 分鐘），俯瞰海景',
-          '5:30-6:00 PM 自駕前往 Old Town（約25-30分鐘）',
-          '6:00-7:30 PM Old Town 晚餐'
+          '5:30-6:00 PM 自駕前往老城聖地牙哥（約25-30分鐘）',
+          '6:00-7:30 PM 老城聖地牙哥晚餐'
         ]
       },
       {
@@ -1537,11 +1619,11 @@ export const ITINERARY: DayItinerary[] = [
         title: '景點',
         type: 'attraction',
         option: '二',
-        location: 'Old Town San Diego',
+        location: '老城聖地牙哥 (Old Town San Diego)',
         activityDuration: '約2小時',
         mapLink: 'https://www.google.com/maps/search/?api=1&query=Old+Town+San+Diego',
         description: [
-          '參觀 Old Town 歷史街區',
+          '參觀老城聖地牙哥歷史街區',
           '可在此享用晚餐：',
           'Casa Guadalajara（傳統墨西哥菜，室外露台，USD 15-28/人）',
           'Cafe Coyote（美食家推薦墨西哥菜，USD 12-22/人）',
@@ -1553,11 +1635,11 @@ export const ITINERARY: DayItinerary[] = [
         period: '晚上',
         title: '交通',
         type: 'transportation',
-        from: 'Old Town / Torrey Pines',
-        to: 'airbnb',
+        from: '老城聖地牙哥 / 托里松州立公園',
+        to: '住宿',
         duration: '約25-35分鐘',
         mapLink: 'https://www.google.com/maps/dir/Old+Town+San+Diego/San+Diego',
-        description: '從選項一或選項二返回 airbnb（選項一約 7:30 PM 出發，選項二約 6:00 PM 出發）'
+        description: '從選項一或選項二返回住宿（選項一約 7:30 PM 出發，選項二約 6:00 PM 出發）'
       },
       {
         time: '8:45 PM',
@@ -1574,23 +1656,23 @@ export const ITINERARY: DayItinerary[] = [
     day: 12,
     date: '4/12 (週日)',
     title: '聖地牙哥精華遊',
-    description: '上午參觀 USS Midway 航母博物館，中午在 Seaport Village 享用午餐，下午前往科羅納多島參觀 Hotel del Coronado 並散步購物，傍晚搭乘渡輪返回市中心，晚上參觀煤氣燈街區後前往超市買菜回 airbnb 煮晚餐。',
-    highlights: ['USS Midway 航母博物館', 'Seaport Village', '科羅納多島 (Coronado Island)', '煤氣燈街區 (Gaslamp Quarter)'],
+    description: '上午參觀中途島號博物館，中午在海港村享用午餐，下午前往科羅納多島參觀 Hotel del Coronado 並散步購物，傍晚搭乘渡輪返回市中心，晚上參觀煤氣燈街區後前往超市買菜回住宿煮晚餐。',
+    highlights: ['中途島號博物館 (USS Midway)', '海港村 (Seaport Village)', '科羅納多島 (Coronado Island)', '煤氣燈街區 (Gaslamp Quarter)'],
     accommodation: {
       location: '聖地牙哥 (San Diego)',
       hotels: ['airbnb 住宿'],
       roomAssignment: ['爸爸、媽媽', '文馨', '宏翔、小藍']
     },
     meals: {
-      breakfast: 'airbnb 早餐',
-      lunch: 'Seaport Village：The Fish Market / Puesto / Ironside Fish & Oyster / Hard Rock Cafe',
-      dinner: '超市買菜回 airbnb 煮'
+      breakfast: '住宿早餐',
+      lunch: '海港村 (Seaport Village)：The Fish Market / Puesto / Ironside Fish & Oyster / Hard Rock Cafe',
+      dinner: '超市買菜回住宿煮'
     },
     transport: [
-      '自駕前往 USS Midway（約 15-20 分鐘）',
-      '步行前往 Seaport Village（約 5 分鐘）',
-      '自駕前往 Coronado Island（約 15-20 分鐘）',
-      'Coronado 渡輪返回 Downtown（約 30 分鐘）',
+      '自駕前往中途島號博物館 (USS Midway)（約 15-20 分鐘）',
+      '步行前往海港村 (Seaport Village)（約 5 分鐘）',
+      '自駕前往科羅納多島 (Coronado Island)（約 15-20 分鐘）',
+      '科羅納多島渡輪返回市中心（約 30 分鐘）',
       '自駕前往煤氣燈街區（約 15 分鐘）',
       '自駕前往超市（約 15-20 分鐘）'
     ],
@@ -1600,17 +1682,17 @@ export const ITINERARY: DayItinerary[] = [
         period: '上午',
         title: '早餐',
         type: 'meal',
-        location: 'airbnb',
+        location: '住宿',
         activityDuration: '約1小時',
-        description: 'airbnb 早餐、悠閒起床'
+        description: '住宿早餐、悠閒起床'
       },
       {
         time: '9:30-9:45 AM',
         period: '上午',
         title: '交通',
         type: 'transportation',
-        from: 'airbnb',
-        to: 'USS Midway（Seaport Village）',
+        from: '住宿',
+        to: '中途島號博物館 (USS Midway)',
         duration: '約15-20分鐘',
         mapLink: 'https://www.google.com/maps/dir/San+Diego/USS+Midway+Museum'
       },
@@ -1619,7 +1701,7 @@ export const ITINERARY: DayItinerary[] = [
         period: '上午',
         title: '景點',
         type: 'attraction',
-        location: 'USS Midway 航母博物館',
+        location: '中途島號博物館 (USS Midway)',
         activityDuration: '約2小時45分鐘',
         mapLink: 'https://www.google.com/maps/search/?api=1&query=USS+Midway+Museum',
         ticketLink: 'https://activity.eztravel.com.tw/detail/TKNKL-6525',
@@ -1635,8 +1717,8 @@ export const ITINERARY: DayItinerary[] = [
         period: '下午',
         title: '交通',
         type: 'transportation',
-        from: 'USS Midway',
-        to: 'Seaport Village',
+        from: '中途島號博物館',
+        to: '海港村 (Seaport Village)',
         duration: '約5分鐘',
         mapLink: 'https://www.google.com/maps/dir/USS+Midway+Museum/Seaport+Village+San+Diego',
         description: '步行'
@@ -1646,7 +1728,7 @@ export const ITINERARY: DayItinerary[] = [
         period: '下午',
         title: '午餐',
         type: 'meal',
-        location: 'Seaport Village',
+        location: '海港村 (Seaport Village)',
         activityDuration: '約1小時30分鐘',
         mapLink: 'https://www.google.com/maps/search/?api=1&query=Seaport+Village+San+Diego',
         description: [
@@ -1661,8 +1743,8 @@ export const ITINERARY: DayItinerary[] = [
         period: '下午',
         title: '交通',
         type: 'transportation',
-        from: 'Seaport Village',
-        to: 'Coronado Bridge',
+        from: '海港村',
+        to: '科羅納多大橋 (Coronado Bridge)',
         duration: '約15-20分鐘'
       },
       {
@@ -1670,7 +1752,7 @@ export const ITINERARY: DayItinerary[] = [
         period: '下午',
         title: '景點',
         type: 'attraction',
-        location: 'Coronado Island（科羅納多島）',
+        location: '科羅納多島 (Coronado Island)',
         activityDuration: '約2小時10分鐘',
         mapLink: 'https://www.google.com/maps/search/?api=1&query=Coronado+Island+San+Diego',
         description: [
@@ -1686,11 +1768,11 @@ export const ITINERARY: DayItinerary[] = [
         period: '晚上',
         title: '交通',
         type: 'transportation',
-        from: 'Coronado',
-        to: 'Downtown',
+        from: '科羅納多島',
+        to: '市中心 (Downtown)',
         duration: '約30分鐘',
         description: [
-          'Coronado 渡輪回市中心',
+          '科羅納多島渡輪回市中心',
           '看灣景和城市景觀',
           'USD 5/人',
         ]
@@ -1700,7 +1782,7 @@ export const ITINERARY: DayItinerary[] = [
         period: '晚上',
         title: '交通',
         type: 'transportation',
-        from: 'Downtown',
+        from: '市中心 (Downtown)',
         to: '煤氣燈街區 (可選)',
         duration: '約15分鐘'
       },
@@ -1732,9 +1814,9 @@ export const ITINERARY: DayItinerary[] = [
         period: '晚上',
         title: '住宿',
         type: 'accommodation',
-        location: 'airbnb',
+        location: '住宿',
         description: [
-          '返回 airbnb',
+          '返回住宿',
           '晚餐+休息'
         ]
       }
@@ -1790,7 +1872,7 @@ export const ITINERARY: DayItinerary[] = [
         title: '交通',
         type: 'transportation',
         from: 'airbnb',
-        to: 'Ocean Beach',
+        to: '海洋海灘 (Ocean Beach)',
         duration: '約20分鐘'
       },
       {
@@ -1798,7 +1880,7 @@ export const ITINERARY: DayItinerary[] = [
         period: '上午',
         title: '景點',
         type: 'attraction',
-        location: 'Ocean Beach',
+        location: '海洋海灘 (Ocean Beach)',
         activityDuration: '約1小時40分鐘',
         luggage: '行李在車上',
         mapLink: 'https://www.google.com/maps/search/?api=1&query=Ocean+Beach+San+Diego',
@@ -1812,7 +1894,7 @@ export const ITINERARY: DayItinerary[] = [
         period: '下午',
         title: '午餐',
         type: 'meal',
-        location: 'Ocean Beach 海灘餐廳',
+        location: '海洋海灘 (Ocean Beach) 海灘餐廳',
         activityDuration: '約1小時30分鐘',
         luggage: '行李在車上',
         mapLink: 'https://www.google.com/maps/search/?api=1&query=Ocean+Beach+San+Diego+restaurants',
