@@ -498,7 +498,7 @@
       },
       "day10": {
         "title": "Joshua Tree & To San Diego",
-        "description": "Enjoy a relaxed breakfast at the Palm Springs hotel, then drive to Joshua Tree National Park for a short visit and photos. In the afternoon, drive south to San Diego and check into your Airbnb. In the evening, visit La Jolla Cove to see sea lions, then enjoy dinner in Little Italy.",
+        "description": "Enjoy a relaxed breakfast at the Palm Springs hotel, then drive to Joshua Tree National Park for a short visit and photos. In the afternoon, drive south to San Diego and check into your Airbnb. Choose between visiting La Jolla Cove to see sea lions followed by dinner in Little Italy, or going directly to the supermarket to buy groceries and cook dinner at the Airbnb.",
         "highlights": ["Joshua Tree National Park", "San Diego", "La Jolla Cove", "Little Italy"],
         "accommodation": {
           "location": "San Diego",
@@ -507,7 +507,7 @@
         "meals": {
           "breakfast": "Palm Springs hotel breakfast",
           "lunch": "Crossroads Cafe / In-N-Out Burger (Cabazon) / Natural Sisters Cafe",
-          "dinner": "Little Italy: Filippi's Pizza Grotto / Vincenzo Cucina / Herb & Wood / Born and Raised"
+          "dinner": "Option 1: Little Italy / Option 2: Buy groceries and cook at Airbnb"
         },
         "transport": [
           "Self-drive from Palm Springs to Joshua Tree West Entrance (approx. 1 hour)",
@@ -578,13 +578,15 @@
             "period": "Afternoon",
             "title": "Transport",
             "from": "Airbnb",
-            "to": "La Jolla Cove",
-            "duration": "Approx 15–20 min"
+            "to": "La Jolla Cove / Supermarket",
+            "duration": "Approx 15–20 min",
+            "description": "Drive to Option 1 or Option 2"
           },
           {
             "time": "4:50-6:00 PM",
             "period": "Afternoon",
             "title": "Attractions",
+            "option": "1",
             "location": "La Jolla Cove",
             "activityDuration": "Approx 1 hr 10 min",
             "mapLink": "https://www.google.com/maps/search/?api=1&query=La+Jolla+Cove",
@@ -594,9 +596,22 @@
             ]
           },
           {
+            "time": "4:30-5:30 PM",
+            "period": "Afternoon",
+            "title": "Dinner",
+            "option": "2",
+            "location": "Buy groceries and cook at Airbnb",
+            "activityDuration": "Approx 1 hour",
+            "description": [
+              "Go to supermarket to buy ingredients.",
+              "Return to Airbnb and cook dinner."
+            ]
+          },
+          {
             "time": "6:15-6:30 PM",
             "period": "Evening",
             "title": "Transport",
+            "option": "1",
             "from": "La Jolla",
             "to": "Little Italy",
             "duration": "Approx 20 min"
@@ -605,6 +620,7 @@
             "time": "6:30-8:00 PM",
             "period": "Evening",
             "title": "Dinner",
+            "option": "1",
             "location": "Little Italy",
             "activityDuration": "Approx 1.5 hrs",
             "mapLink": "https://www.google.com/maps/search/?api=1&query=Little+Italy+San+Diego",
@@ -616,12 +632,13 @@
             ]
           },
           {
-            "time": "8:15-8:45 PM",
+            "time": "8:00-8:30 PM",
             "period": "Evening",
             "title": "Transport",
             "from": "Little Italy",
             "to": "Airbnb",
-            "duration": "Approx 20–25 min"
+            "duration": "Approx 20–25 min",
+            "description": "Option 1: Return to Airbnb from Little Italy"
           },
           {
             "time": "8:45 PM",
@@ -776,18 +793,157 @@
       },
       "day12": {
         "title": "San Diego Highlights",
-        "description": "Visit La Jolla to see sea lions in the morning, then visit Balboa Park or USS Midway Museum in the afternoon.",
-        "highlights": ["La Jolla Cove", "Balboa Park", "USS Midway Museum", "Little Italy"],
+        "description": "Visit USS Midway Aircraft Carrier Museum in the morning, enjoy lunch at Seaport Village, then explore Coronado Island in the afternoon to see Hotel del Coronado and shop. Take the ferry back to downtown in the evening, visit Gaslamp Quarter, then go to the supermarket to buy groceries and cook dinner at the Airbnb.",
+        "highlights": ["USS Midway Aircraft Carrier Museum", "Seaport Village", "Coronado Island", "Gaslamp Quarter"],
         "accommodation": {
           "location": "San Diego",
-          "hotels": ["Same accommodation"]
+          "hotels": ["Airbnb"]
         },
         "meals": {
-          "breakfast": "On your own",
-          "lunch": "Near attractions",
-          "dinner": "Little Italy"
+          "breakfast": "Airbnb breakfast",
+          "lunch": "Seaport Village: The Fish Market / Puesto / Ironside Fish & Oyster / Hard Rock Cafe",
+          "dinner": "Buy groceries and cook at Airbnb"
         },
-        "transport": ["Self-drive (approx. 20 minutes in city)"]
+        "transport": [
+          "Self-drive to USS Midway (approx. 15–20 min)",
+          "Walk to Seaport Village (approx. 5 min)",
+          "Self-drive to Coronado Island (approx. 15–20 min)",
+          "Coronado Ferry back to Downtown (approx. 30 min)",
+          "Self-drive to Gaslamp Quarter (approx. 15 min)",
+          "Self-drive to supermarket (approx. 15–20 min)"
+        ],
+        "timeline": [
+          {
+            "time": "8:30-9:30 AM",
+            "period": "Morning",
+            "title": "Breakfast",
+            "location": "Airbnb",
+            "activityDuration": "Approx 1 hour",
+            "description": "Airbnb breakfast and a relaxed start to the day."
+          },
+          {
+            "time": "9:30-9:45 AM",
+            "period": "Morning",
+            "title": "Transport",
+            "from": "Airbnb",
+            "to": "USS Midway (Seaport Village)",
+            "duration": "Approx 15–20 min"
+          },
+          {
+            "time": "9:45 AM-12:30 PM",
+            "period": "Morning",
+            "title": "Attractions",
+            "location": "USS Midway Aircraft Carrier Museum",
+            "activityDuration": "Approx 2 hrs 45 min",
+            "mapLink": "https://www.google.com/maps/search/?api=1&query=USS+Midway+Museum",
+            "ticketLink": "https://activity.eztravel.com.tw/detail/TKNKL-6525",
+            "description": [
+              "[tickets] (USD 39–41 per person).",
+              "Explore real warship, cockpit, and aircraft displays.",
+              "Approx 3–4 hours.",
+              "Chinese audio guide available."
+            ]
+          },
+          {
+            "time": "12:30-12:35 PM",
+            "period": "Afternoon",
+            "title": "Transport",
+            "from": "USS Midway",
+            "to": "Seaport Village",
+            "duration": "Approx 5 min",
+            "description": "Walk"
+          },
+          {
+            "time": "12:35-2:05 PM",
+            "period": "Afternoon",
+            "title": "Lunch",
+            "location": "Seaport Village",
+            "activityDuration": "Approx 1.5 hrs",
+            "mapLink": "https://www.google.com/maps/search/?api=1&query=Seaport+Village+San+Diego",
+            "description": [
+              "The Fish Market (seafood buffet, USD 18–35 per person).",
+              "Puesto (Mexican cuisine, USD 15–28 per person).",
+              "Ironside Fish & Oyster (seafood, USD 20–40 per person).",
+              "Hard Rock Cafe (American fast food, USD 15–25 per person)."
+            ]
+          },
+          {
+            "time": "2:05-2:25 PM",
+            "period": "Afternoon",
+            "title": "Transport",
+            "from": "Seaport Village",
+            "to": "Coronado Bridge",
+            "duration": "Approx 15–20 min"
+          },
+          {
+            "time": "2:25-4:35 PM",
+            "period": "Afternoon",
+            "title": "Attractions",
+            "location": "Coronado Island",
+            "activityDuration": "Approx 2 hrs 10 min",
+            "mapLink": "https://www.google.com/maps/search/?api=1&query=Coronado+Island+San+Diego",
+            "description": [
+              "Hotel del Coronado photo (famous pink palace hotel, free photos).",
+              "Orange Avenue stroll and shopping.",
+              "Centennial Park for San Diego skyline views.",
+              "Beach walk.",
+              "Bike rental available for island tour (requires stamina)."
+            ]
+          },
+          {
+            "time": "4:35-5:35 PM",
+            "period": "Evening",
+            "title": "Transport",
+            "from": "Coronado",
+            "to": "Downtown",
+            "duration": "Approx 30 min",
+            "description": [
+              "Coronado Ferry back to downtown.",
+              "Enjoy bay and city views.",
+              "USD 5 per person.",
+              "Great for elderly."
+            ]
+          },
+          {
+            "time": "5:35-5:50 PM",
+            "period": "Evening",
+            "title": "Transport",
+            "from": "Downtown",
+            "to": "Gaslamp Quarter (Optional)",
+            "duration": "Approx 15 min"
+          },
+          {
+            "time": "5:50-6:35 PM",
+            "period": "Evening",
+            "title": "Attractions",
+            "location": "Gaslamp Quarter (Optional)",
+            "activityDuration": "Approx 45 min",
+            "mapLink": "https://www.google.com/maps/search/?api=1&query=Gaslamp+Quarter+San+Diego",
+            "description": [
+              "Visit historic district.",
+              "Stroll and photos."
+            ]
+          },
+          {
+            "time": "6:35-7:05 PM",
+            "period": "Evening",
+            "title": "Transport",
+            "from": "Gaslamp Quarter",
+            "to": "Supermarket",
+            "duration": "Approx 15–20 min",
+            "description": "Go to supermarket to buy ingredients"
+          },
+          {
+            "time": "7:05 PM",
+            "period": "Evening",
+            "title": "Accommodation",
+            "location": "Airbnb",
+            "description": [
+              "Return to Airbnb.",
+              "Dinner + rest."
+            ]
+          }
+        ]
       },
       "day13": {
         "title": "Final Leisurely Time & Prepare to Return Home",

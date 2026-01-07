@@ -563,7 +563,7 @@ export const ITINERARY: DayItinerary[] = [
     day: 10,
     date: '4/10 (週五)',
     title: '約書亞樹淺遊 & 前往聖地牙哥',
-    description: '早上在棕櫚泉飯店悠閒享用早餐，前往約書亞樹國家公園淺遊拍照，下午南下自駕前往聖地牙哥並入住 airbnb，傍晚前往拉荷亞灣看海獅，晚上在小義大利區享用晚餐。',
+    description: '早上在棕櫚泉飯店悠閒享用早餐，前往約書亞樹國家公園淺遊拍照，下午南下自駕前往聖地牙哥並入住 airbnb。可擇一前往拉荷亞灣看海獅後在小義大利區享用晚餐，或直接前往超市買菜回 airbnb 煮晚餐。',
     highlights: ['約書亞樹國家公園 (Joshua Tree National Park)', '聖地牙哥 (San Diego)', '拉荷亞灣 (La Jolla Cove)', '小義大利 (Little Italy)'],
     accommodation: {
       location: '聖地牙哥 (San Diego)',
@@ -573,7 +573,7 @@ export const ITINERARY: DayItinerary[] = [
     meals: {
       breakfast: '棕櫚泉飯店早餐',
       lunch: 'Crossroads Cafe / In-N-Out Burger（Cabazon）/ Natural Sisters Cafe',
-      dinner: '小義大利區：Filippi\'s Pizza Grotto / Vincenzo Cucina / Herb & Wood / Born and Raised'
+      dinner: '選項一：小義大利區 / 選項二：超市買菜回 airbnb 煮'
     },
     transport: [
       '自駕前往約書亞樹國家公園西入口（約 1 小時）',
@@ -644,13 +644,15 @@ export const ITINERARY: DayItinerary[] = [
         period: '下午',
         title: '交通',
         from: 'airbnb',
-        to: 'La Jolla Cove',
-        duration: '約15-20分鐘'
+        to: 'La Jolla Cove / 超市',
+        duration: '約15-20分鐘',
+        description: '前往選項一或選項二'
       },
       {
         time: '4:50-6:00 PM',
         period: '下午',
         title: '景點',
+        option: '一',
         location: 'La Jolla Cove（拉荷亞灣）',
         activityDuration: '約1小時10分鐘',
         mapLink: 'https://www.google.com/maps/search/?api=1&query=La+Jolla+Cove',
@@ -660,9 +662,22 @@ export const ITINERARY: DayItinerary[] = [
         ]
       },
       {
+        time: '4:30-5:30 PM',
+        period: '下午',
+        title: '晚餐',
+        option: '二',
+        location: '超市買菜回 airbnb 煮',
+        activityDuration: '約1小時',
+        description: [
+          '前往超市採買食材',
+          '返回 airbnb 自行烹煮晚餐'
+        ]
+      },
+      {
         time: '6:15-6:30 PM',
         period: '晚上',
         title: '交通',
+        option: '一',
         from: 'La Jolla',
         to: 'Little Italy',
         duration: '約20分鐘'
@@ -671,6 +686,7 @@ export const ITINERARY: DayItinerary[] = [
         time: '6:30-8:00 PM',
         period: '晚上',
         title: '晚餐',
+        option: '一',
         location: 'Little Italy',
         activityDuration: '約1小時30分鐘',
         mapLink: 'https://www.google.com/maps/search/?api=1&query=Little+Italy+San+Diego',
@@ -682,12 +698,13 @@ export const ITINERARY: DayItinerary[] = [
         ]
       },
       {
-        time: '8:15-8:45 PM',
+        time: '8:00-8:30 PM',
         period: '晚上',
         title: '交通',
         from: 'Little Italy',
         to: 'airbnb',
-        duration: '約20-25分鐘'
+        duration: '約20-25分鐘',
+        description: '選項一：從 Little Italy 返回 airbnb'
       },
       {
         time: '8:45 PM',
@@ -849,19 +866,159 @@ export const ITINERARY: DayItinerary[] = [
     day: 12,
     date: '4/12 (週日)',
     title: '聖地牙哥精華遊',
-    description: '早晨前往拉霍亞看海獅，下午參觀巴爾波亞公園或中途島號航空母艦。',
-    highlights: ['拉霍亞 (La Jolla Cove)', '巴爾波亞公園 (Balboa Park)', '中途島號博物館 (USS Midway)', '小義大利 (Little Italy)'],
+    description: '上午參觀 USS Midway 航母博物館，中午在 Seaport Village 享用午餐，下午前往科羅納多島參觀 Hotel del Coronado 並散步購物，傍晚搭乘渡輪返回市中心，晚上參觀煤氣燈街區後前往超市買菜回 airbnb 煮晚餐。',
+    highlights: ['USS Midway 航母博物館', 'Seaport Village', '科羅納多島 (Coronado Island)', '煤氣燈街區 (Gaslamp Quarter)'],
     accommodation: {
       location: '聖地牙哥 (San Diego)',
-      hotels: ['原住宿點']
+      hotels: ['airbnb 住宿'],
+      roomAssignment: ['爸爸、媽媽', '文馨', '宏翔、小藍']
     },
     meals: {
-      breakfast: '自理',
-      lunch: '景點附近',
-      dinner: '小義大利區'
+      breakfast: 'airbnb 早餐',
+      lunch: 'Seaport Village：The Fish Market / Puesto / Ironside Fish & Oyster / Hard Rock Cafe',
+      dinner: '超市買菜回 airbnb 煮'
     },
-    transport: ['自駕 (市區移動約 20 分鐘)'],
-    mapLink: 'https://www.google.com/maps/dir/La+Jolla/Balboa+Park/USS+Midway+Museum'
+    transport: [
+      '自駕前往 USS Midway（約 15-20 分鐘）',
+      '步行前往 Seaport Village（約 5 分鐘）',
+      '自駕前往 Coronado Island（約 15-20 分鐘）',
+      'Coronado 渡輪返回 Downtown（約 30 分鐘）',
+      '自駕前往煤氣燈街區（約 15 分鐘）',
+      '自駕前往超市（約 15-20 分鐘）'
+    ],
+    timeline: [
+      {
+        time: '8:30-9:30 AM',
+        period: '上午',
+        title: '早餐',
+        location: 'airbnb',
+        activityDuration: '約1小時',
+        description: 'airbnb 早餐、悠閒起床'
+      },
+      {
+        time: '9:30-9:45 AM',
+        period: '上午',
+        title: '交通',
+        from: 'airbnb',
+        to: 'USS Midway（Seaport Village）',
+        duration: '約15-20分鐘'
+      },
+      {
+        time: '9:45 AM-12:30 PM',
+        period: '上午',
+        title: '景點',
+        location: 'USS Midway 航母博物館',
+        activityDuration: '約2小時45分鐘',
+        mapLink: 'https://www.google.com/maps/search/?api=1&query=USS+Midway+Museum',
+        ticketLink: 'https://activity.eztravel.com.tw/detail/TKNKL-6525',
+        description: [
+          '[購票]（USD 39-41/人）',
+          '參觀真實戰艦、駕駛艙、飛機展示',
+          '約 3-4 小時',
+          '有中文音頻導覽'
+        ]
+      },
+      {
+        time: '12:30-12:35 PM',
+        period: '下午',
+        title: '交通',
+        from: 'USS Midway',
+        to: 'Seaport Village',
+        duration: '約5分鐘',
+        description: '步行'
+      },
+      {
+        time: '12:35-2:05 PM',
+        period: '下午',
+        title: '午餐',
+        location: 'Seaport Village',
+        activityDuration: '約1小時30分鐘',
+        mapLink: 'https://www.google.com/maps/search/?api=1&query=Seaport+Village+San+Diego',
+        description: [
+          'The Fish Market（海鮮自助，USD 18-35/人）',
+          'Puesto（墨西哥菜，USD 15-28/人）',
+          'Ironside Fish & Oyster（海鮮，USD 20-40/人）',
+          'Hard Rock Cafe（美式速食，USD 15-25/人）'
+        ]
+      },
+      {
+        time: '2:05-2:25 PM',
+        period: '下午',
+        title: '交通',
+        from: 'Seaport Village',
+        to: 'Coronado Bridge',
+        duration: '約15-20分鐘'
+      },
+      {
+        time: '2:25-4:35 PM',
+        period: '下午',
+        title: '景點',
+        location: 'Coronado Island（科羅納多島）',
+        activityDuration: '約2小時10分鐘',
+        mapLink: 'https://www.google.com/maps/search/?api=1&query=Coronado+Island+San+Diego',
+        description: [
+          'Hotel del Coronado 拍照（著名粉紅宮殿飯店，免費拍照）',
+          'Orange Avenue 散步購物',
+          'Centennial Park 看聖地牙哥天際線',
+          '海灘散步',
+          '可租自行車環島（需體力）'
+        ]
+      },
+      {
+        time: '4:35-5:35 PM',
+        period: '晚上',
+        title: '交通',
+        from: 'Coronado',
+        to: 'Downtown',
+        duration: '約30分鐘',
+        description: [
+          'Coronado 渡輪回市中心',
+          '看灣景和城市景觀',
+          'USD 5/人',
+          '很適合老人家'
+        ]
+      },
+      {
+        time: '5:35-5:50 PM',
+        period: '晚上',
+        title: '交通',
+        from: 'Downtown',
+        to: '煤氣燈街區 (可選)',
+        duration: '約15分鐘'
+      },
+      {
+        time: '5:50-6:35 PM',
+        period: '晚上',
+        title: '景點',
+        location: '煤氣燈街區 (Gaslamp Quarter) (可選)',
+        activityDuration: '約45分鐘',
+        mapLink: 'https://www.google.com/maps/search/?api=1&query=Gaslamp+Quarter+San+Diego',
+        description: [
+          '參觀歷史街區',
+          '散步、拍照'
+        ]
+      },
+      {
+        time: '6:35-7:05 PM',
+        period: '晚上',
+        title: '交通',
+        from: '煤氣燈街區',
+        to: '超市',
+        duration: '約15-20分鐘',
+        description: '前往超市採買食材'
+      },
+      {
+        time: '7:05 PM',
+        period: '晚上',
+        title: '住宿',
+        location: 'airbnb',
+        description: [
+          '返回 airbnb',
+          '晚餐+休息'
+        ]
+      }
+    ],
+    mapLink: 'https://www.google.com/maps/dir/San+Diego/USS+Midway+Museum/Seaport+Village/Coronado+Island/Gaslamp+Quarter+San+Diego'
   },
   {
     day: 13,
