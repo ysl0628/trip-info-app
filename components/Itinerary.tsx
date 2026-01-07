@@ -274,9 +274,23 @@ export const Itinerary: React.FC = () => {
                                         ) : ((timelineItem.title === '景點/場館' || timelineItem.title === '景點' || timelineItem.title === 'Attractions') && !timelineItem.option) ? (
                                             /* 景點類型：標題和地點合併顯示 */
                                             <div className="space-y-2">
-                                                <h5 className="text-base font-bold text-stone-800">
-                                                    {timelineItem.title} : <span className="font-normal text-stone-700">{timelineItem.location || (timelineItem.description && (Array.isArray(timelineItem.description) ? timelineItem.description[0] : timelineItem.description))}</span>
-                                                </h5>
+                                                <div className="flex items-start justify-between gap-2">
+                                                    <h5 className="text-base font-bold text-stone-800">
+                                                        {timelineItem.title} : <span className="font-normal text-stone-700">{timelineItem.location || (timelineItem.description && (Array.isArray(timelineItem.description) ? timelineItem.description[0] : timelineItem.description))}</span>
+                                                    </h5>
+                                                    {timelineItem.mapLink && (
+                                                        <a
+                                                            href={timelineItem.mapLink}
+                                                            target="_blank"
+                                                            rel="noopener noreferrer"
+                                                            className="flex-shrink-0 flex items-center gap-1 text-xs font-medium text-stone-600 hover:text-stone-900 hover:bg-stone-100 px-2 py-1 rounded transition-colors"
+                                                            title={t("itinerary.viewOnMap") || "查看地圖"}
+                                                        >
+                                                            <Map size={14} />
+                                                            <span className="hidden sm:inline">{t("itinerary.map") || "地圖"}</span>
+                                                        </a>
+                                                    )}
+                                                </div>
                                                 {timelineItem.activityDuration && (
                                                     <div className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-lg ${
                                                         isGroupTour 
@@ -304,23 +318,37 @@ export const Itinerary: React.FC = () => {
                                         ) : (
                                             /* 其他類型：一般區塊；若有 option，視為擇一選項，用顏色與標籤區分 */
                                             <div className="space-y-2">
-                                                <div className="flex items-center gap-2 mb-1">
-                                                    <h5
-                                                        className={`text-base font-bold ${
-                                                            timelineItem.option
-                                                                ? 'text-sky-700'
-                                                                : 'text-stone-800'
-                                                        }`}
-                                                    >
-                                                        {timelineItem.option
-                                                            ? `${timelineItem.title}選項${timelineItem.option}`
-                                                            : timelineItem.title}
-                                                        {timelineItem.location && ` : ${timelineItem.location}`}
-                                                    </h5>
-                                                    {timelineItem.option && (
-                                                        <span className="text-[11px] font-bold px-2 py-0.5 rounded-full bg-sky-50 text-sky-700 border border-sky-200">
-                                                            擇一
-                                                        </span>
+                                                <div className="flex items-start justify-between gap-2 mb-1">
+                                                    <div className="flex items-center gap-2 flex-1">
+                                                        <h5
+                                                            className={`text-base font-bold ${
+                                                                timelineItem.option
+                                                                    ? 'text-sky-700'
+                                                                    : 'text-stone-800'
+                                                            }`}
+                                                        >
+                                                            {timelineItem.option
+                                                                ? `${timelineItem.title}選項${timelineItem.option}`
+                                                                : timelineItem.title}
+                                                            {timelineItem.location && ` : ${timelineItem.location}`}
+                                                        </h5>
+                                                        {timelineItem.option && (
+                                                            <span className="text-[11px] font-bold px-2 py-0.5 rounded-full bg-sky-50 text-sky-700 border border-sky-200">
+                                                                擇一
+                                                            </span>
+                                                        )}
+                                                    </div>
+                                                    {timelineItem.mapLink && (
+                                                        <a
+                                                            href={timelineItem.mapLink}
+                                                            target="_blank"
+                                                            rel="noopener noreferrer"
+                                                            className="flex-shrink-0 flex items-center gap-1 text-xs font-medium text-stone-600 hover:text-stone-900 hover:bg-stone-100 px-2 py-1 rounded transition-colors"
+                                                            title={t("itinerary.viewOnMap") || "查看地圖"}
+                                                        >
+                                                            <Map size={14} />
+                                                            <span className="hidden sm:inline">{t("itinerary.map") || "地圖"}</span>
+                                                        </a>
                                                     )}
                                                 </div>
                                                 {timelineItem.activityDuration && (

@@ -54,6 +54,8 @@
     "travelDuration": "Travel Duration:",
     "hotelNote": "Hotels are for reference only. Final accommodation is subject to actual booking.",
     "roomAssignment": "Room Assignment",
+    "map": "Map",
+    "viewOnMap": "View on Map",
     "days": {
       "day1": {
         "title": "Arrival and Settling In",
@@ -475,8 +477,8 @@
       },
       "day10": {
         "title": "Joshua Tree & To San Diego",
-        "description": "Enjoy a relaxed breakfast at the Palm Springs hotel, then drive to Joshua Tree National Park for a short visit and photos. In the afternoon, drive south to San Diego and check into your Airbnb.",
-        "highlights": ["Joshua Tree National Park", "San Diego"],
+        "description": "Enjoy a relaxed breakfast at the Palm Springs hotel, then drive to Joshua Tree National Park for a short visit and photos. In the afternoon, drive south to San Diego and check into your Airbnb. In the evening, visit La Jolla Cove to see sea lions, then enjoy dinner in Little Italy.",
+        "highlights": ["Joshua Tree National Park", "San Diego", "La Jolla Cove", "Little Italy"],
         "accommodation": {
           "location": "San Diego",
           "hotels": ["Airbnb"]
@@ -484,11 +486,13 @@
         "meals": {
           "breakfast": "Palm Springs hotel breakfast",
           "lunch": "Crossroads Cafe / In-N-Out Burger (Cabazon) / Natural Sisters Cafe",
-          "dinner": "On your own in San Diego"
+          "dinner": "Little Italy: Filippi's Pizza Grotto / Vincenzo Cucina / Herb & Wood / Born and Raised"
         },
         "transport": [
           "Self-drive from Palm Springs to Joshua Tree West Entrance (approx. 1 hour)",
-          "Self-drive from Joshua Tree to San Diego (approx. 2.75–3 hours)"
+          "Self-drive from Joshua Tree to San Diego (approx. 2.75–3 hours)",
+          "Self-drive from Airbnb to La Jolla Cove (approx. 15–20 min)",
+          "Self-drive from La Jolla to Little Italy (approx. 20 min)"
         ],
         "timeline": [
           {
@@ -533,7 +537,7 @@
             ]
           },
           {
-            "time": "1:15-4:00/4:15 PM",
+            "time": "1:15-4:00 PM",
             "period": "Afternoon",
             "title": "Transport",
             "from": "Joshua Tree",
@@ -541,12 +545,69 @@
             "duration": "Approx 2.75–3 hours"
           },
           {
-            "time": "4:00-4:15 PM",
+            "time": "4:00-4:30 PM",
             "period": "Afternoon",
             "title": "Accommodation",
             "location": "San Diego Airbnb",
-            "activityDuration": "Approx 15 min",
-            "description": "Arrive at your Airbnb, drop off luggage, and take a short rest."
+            "activityDuration": "Approx 30 min",
+            "description": "Check-in, drop off luggage, and rest."
+          },
+          {
+            "time": "4:30-4:50 PM",
+            "period": "Afternoon",
+            "title": "Transport",
+            "from": "Airbnb",
+            "to": "La Jolla Cove",
+            "duration": "Approx 15–20 min"
+          },
+          {
+            "time": "4:50-6:00 PM",
+            "period": "Afternoon",
+            "title": "Attractions",
+            "location": "La Jolla Cove",
+            "activityDuration": "Approx 1 hr 10 min",
+            "mapLink": "https://www.google.com/maps/search/?api=1&query=La+Jolla+Cove",
+            "description": [
+              "Watch sea lions, cliffside walk, and photos.",
+              "Sunny Jim Sea Cave (USD 10 per person)."
+            ]
+          },
+          {
+            "time": "6:15-6:30 PM",
+            "period": "Evening",
+            "title": "Transport",
+            "from": "La Jolla",
+            "to": "Little Italy",
+            "duration": "Approx 20 min"
+          },
+          {
+            "time": "6:30-8:00 PM",
+            "period": "Evening",
+            "title": "Dinner",
+            "location": "Little Italy",
+            "activityDuration": "Approx 1.5 hrs",
+            "mapLink": "https://www.google.com/maps/search/?api=1&query=Little+Italy+San+Diego",
+            "description": [
+              "Filippi's Pizza Grotto (60-year-old pizzeria and restaurant, USD 15–25 per person).",
+              "Vincenzo Cucina (upscale Italian, must-try cheese wheel pasta, USD 30–50 per person).",
+              "Herb & Wood (chef-driven restaurant, USD 35–45 per person).",
+              "Born and Raised (premium steakhouse, USD 40–60 per person)."
+            ]
+          },
+          {
+            "time": "8:15-8:45 PM",
+            "period": "Evening",
+            "title": "Transport",
+            "from": "Little Italy",
+            "to": "Airbnb",
+            "duration": "Approx 20–25 min"
+          },
+          {
+            "time": "8:45 PM",
+            "period": "Evening",
+            "title": "Accommodation",
+            "location": "Airbnb",
+            "description": "Arrive at Airbnb and rest."
           }
         ]
       },

@@ -57,7 +57,8 @@ export const useItinerary = (): DayItinerary[] => {
             activityDuration: item.activityDuration ? t(`${timelineKey}.activityDuration`, { defaultValue: item.activityDuration }) : item.activityDuration,
             distance: item.distance ? t(`${timelineKey}.distance`, { defaultValue: item.distance }) : item.distance,
             duration: item.duration ? t(`${timelineKey}.duration`, { defaultValue: item.duration }) : item.duration,
-            option: item.option ? t(`${timelineKey}.option`, { defaultValue: item.option }) : item.option
+            option: item.option ? t(`${timelineKey}.option`, { defaultValue: item.option }) : item.option,
+            mapLink: item.mapLink // mapLink 不需要翻譯，直接保留
           };
           
           // 处理 description

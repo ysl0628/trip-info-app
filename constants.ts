@@ -556,8 +556,8 @@ export const ITINERARY: DayItinerary[] = [
     day: 10,
     date: '4/10 (週五)',
     title: '約書亞樹淺遊 & 前往聖地牙哥',
-    description: '早上在棕櫚泉飯店悠閒享用早餐，前往約書亞樹國家公園淺遊拍照，下午南下自駕前往聖地牙哥並入住 airbnb。',
-    highlights: ['約書亞樹國家公園 (Joshua Tree National Park)', '聖地牙哥 (San Diego)'],
+    description: '早上在棕櫚泉飯店悠閒享用早餐，前往約書亞樹國家公園淺遊拍照，下午南下自駕前往聖地牙哥並入住 airbnb，傍晚前往拉荷亞灣看海獅，晚上在小義大利區享用晚餐。',
+    highlights: ['約書亞樹國家公園 (Joshua Tree National Park)', '聖地牙哥 (San Diego)', '拉荷亞灣 (La Jolla Cove)', '小義大利 (Little Italy)'],
     accommodation: {
       location: '聖地牙哥 (San Diego)',
       hotels: ['airbnb 住宿'],
@@ -566,11 +566,13 @@ export const ITINERARY: DayItinerary[] = [
     meals: {
       breakfast: '棕櫚泉飯店早餐',
       lunch: 'Crossroads Cafe / In-N-Out Burger（Cabazon）/ Natural Sisters Cafe',
-      dinner: '聖地牙哥自理'
+      dinner: '小義大利區：Filippi\'s Pizza Grotto / Vincenzo Cucina / Herb & Wood / Born and Raised'
     },
     transport: [
       '自駕前往約書亞樹國家公園西入口（約 1 小時）',
-      '自駕前往聖地牙哥（約 2.5–3 小時）'
+      '自駕前往聖地牙哥（約 2.5–3 小時）',
+      '自駕前往拉荷亞灣（約 15–20 分鐘）',
+      '自駕前往小義大利（約 20 分鐘）'
     ],
     timeline: [
       {
@@ -615,7 +617,7 @@ export const ITINERARY: DayItinerary[] = [
         ]
       },
       {
-        time: '1:15-4:00/4:15 PM',
+        time: '1:15-4:00 PM',
         period: '下午',
         title: '交通',
         from: '約書亞樹',
@@ -623,15 +625,72 @@ export const ITINERARY: DayItinerary[] = [
         duration: '約 2.75–3 小時'
       },
       {
-        time: '4:00-4:15 PM',
+        time: '4:00-4:30 PM',
         period: '下午',
         title: '住宿',
         location: '聖地牙哥 airbnb',
-        activityDuration: '約15分鐘',
-        description: '抵達後放行李、短暫休息'
+        activityDuration: '約30分鐘',
+        description: 'Check-in、放行李、休息'
+      },
+      {
+        time: '4:30-4:50 PM',
+        period: '下午',
+        title: '交通',
+        from: 'airbnb',
+        to: 'La Jolla Cove',
+        duration: '約15-20分鐘'
+      },
+      {
+        time: '4:50-6:00 PM',
+        period: '下午',
+        title: '景點',
+        location: 'La Jolla Cove（拉荷亞灣）',
+        activityDuration: '約1小時10分鐘',
+        mapLink: 'https://www.google.com/maps/search/?api=1&query=La+Jolla+Cove',
+        description: [
+          '看海獅、懸崖散步、拍照',
+          'Sunny Jim Sea Cave（USD 10/人）'
+        ]
+      },
+      {
+        time: '6:15-6:30 PM',
+        period: '晚上',
+        title: '交通',
+        from: 'La Jolla',
+        to: 'Little Italy',
+        duration: '約20分鐘'
+      },
+      {
+        time: '6:30-8:00 PM',
+        period: '晚上',
+        title: '晚餐',
+        location: 'Little Italy',
+        activityDuration: '約1小時30分鐘',
+        mapLink: 'https://www.google.com/maps/search/?api=1&query=Little+Italy+San+Diego',
+        description: [
+          'Filippi\'s Pizza Grotto（60年老字號披薩+餐廳，USD 15–25/人）',
+          'Vincenzo Cucina（高級義大利菜，起司輪麵包必試，USD 30–50/人）',
+          'Herb & Wood（主廚餐廳，USD 35–45/人）',
+          'Born and Raised（頂級牛排，USD 40–60/人）'
+        ]
+      },
+      {
+        time: '8:15-8:45 PM',
+        period: '晚上',
+        title: '交通',
+        from: 'Little Italy',
+        to: 'airbnb',
+        duration: '約20-25分鐘'
+      },
+      {
+        time: '8:45 PM',
+        period: '晚上',
+        title: '住宿',
+        location: 'airbnb',
+        description: '抵達 airbnb，休息'
       }
     ],
-    mapLink: 'https://www.google.com/maps/dir/Palm+Springs/Joshua+Tree+National+Park/San+Diego'
+    mapLink: 'https://www.google.com/maps/dir/Palm+Springs/Joshua+Tree+National+Park/San+Diego/La+Jolla+Cove/Little+Italy+San+Diego'
   },
   {
     day: 11,
