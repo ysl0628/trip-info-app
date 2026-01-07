@@ -56,10 +56,33 @@ const App: React.FC = () => {
     }
   };
 
+  const scrollToItineraryTabs = () => {
+    const main = mainRef.current;
+    if (!main) {
+      scrollToTop();
+      return;
+    }
+
+    const tabs = main.querySelector("[data-itinerary-tabs]") as HTMLElement | null;
+    if (!tabs) {
+      scrollToTop();
+      return;
+    }
+
+    const mainRect = main.getBoundingClientRect();
+    const tabsRect = tabs.getBoundingClientRect();
+    const offset = tabsRect.top - mainRect.top + main.scrollTop - 16;
+
+    main.scrollTo({
+      top: offset,
+      behavior: "smooth",
+    });
+  };
+
   const renderContent = () => {
     switch (activeTab) {
       case "itinerary":
-        return <Itinerary />;
+        return <Itinerary onScrollToTop={scrollToItineraryTabs} />;
       case "flights":
         return <Flights />;
       case "attractions":
@@ -69,7 +92,7 @@ const App: React.FC = () => {
       case "info":
         return <GeneralInfo />;
       default:
-        return <Itinerary />;
+        return <Itinerary onScrollToTop={scrollToItineraryTabs} />;
     }
   };
 

@@ -16,7 +16,10 @@ export const ItineraryTabs: React.FC<ItineraryTabsProps> = ({
   const { t } = useTranslation();
 
   return (
-    <div className="relative z-20 py-2 -mx-4 px-4 mb-8 md:mb-10">
+    <div
+      className="relative z-20 py-2 -mx-4 px-4 mb-8 md:mb-10"
+      data-itinerary-tabs
+    >
       <div className="flex overflow-x-auto p-1 gap-2 no-scrollbar md:justify-center md:flex-wrap">
         <button
           onClick={() => onDaySelect("overview")}

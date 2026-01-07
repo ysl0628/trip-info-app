@@ -8,7 +8,11 @@ import { ItineraryOverview } from "./itinerary/ItineraryOverview";
 import { ItineraryDayDetail } from "./itinerary/ItineraryDayDetail";
 import { ItineraryMapDialog } from "./itinerary/ItineraryMapDialog";
 
-export const Itinerary: React.FC = () => {
+interface ItineraryProps {
+  onScrollToTop?: () => void;
+}
+
+export const Itinerary: React.FC<ItineraryProps> = ({ onScrollToTop }) => {
   const { t } = useTranslation();
   const ITINERARY = useItinerary();
   const [selectedMap, setSelectedMap] = useState<DayItinerary | null>(null);
@@ -37,14 +41,22 @@ export const Itinerary: React.FC = () => {
   const handlePreviousDay = () => {
     if (item && item.day > 1) {
       setSelectedDay(item.day - 1);
-      window.scrollTo({ top: 0, behavior: "smooth" });
+      if (onScrollToTop) {
+        onScrollToTop();
+      } else {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
     }
   };
 
   const handleNextDay = () => {
     if (item && item.day < ITINERARY.length) {
       setSelectedDay(item.day + 1);
-      window.scrollTo({ top: 0, behavior: "smooth" });
+      if (onScrollToTop) {
+        onScrollToTop();
+      } else {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
     }
   };
 
