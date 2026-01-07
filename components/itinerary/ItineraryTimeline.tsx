@@ -26,21 +26,21 @@ export const ItineraryTimeline: React.FC<ItineraryTimelineProps> = ({
       </h4>
       <div className="relative">
         {/* Timeline line */}
-        <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-stone-200"></div>
+        <div className="absolute left-4 sm:left-6 top-0 bottom-0 w-0.5 bg-stone-200"></div>
 
         <div className="space-y-6">
           {timeline.map((timelineItem, idx) => (
-            <div key={idx} className="relative flex items-start gap-4">
+            <div key={idx} className="relative flex items-start gap-3 sm:gap-4">
               {/* Timeline dot */}
               <div
-                className={`relative z-10 shrink-0 w-12 h-12 rounded-full flex items-center justify-center border-2 ${
+                className={`relative z-10 shrink-0 w-8 h-8 sm:w-12 sm:h-12 rounded-full flex items-center justify-center border-2 ${
                   isGroupTour
                     ? "bg-amber-50 border-amber-300"
                     : "bg-white border-stone-300"
                 }`}
               >
                 <div
-                  className={`w-3 h-3 rounded-full ${
+                  className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full ${
                     isGroupTour ? "bg-amber-500" : "bg-stone-500"
                   }`}
                 ></div>
