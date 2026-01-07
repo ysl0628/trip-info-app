@@ -579,21 +579,142 @@ export const ITINERARY: DayItinerary[] = [
   },
   {
     day: 4,
-    date: '4/4 (週六)',
-    title: 'NBA 球賽體驗夜',
-    description: '白天輕鬆購物行程，晚上前往 Crypto.com Arena 感受 NBA 現場氣氛。',
-    highlights: ['Crypto.com Arena (Lakers/Clippers home)', 'L.A. Live'],
+    date: '4/4 (週五)',
+    title: 'Downtown LA 歷史探索',
+    description: '上午前往 Downtown LA，參觀 Olvera Street 歷史街區、搭乘 Angels Flight Railway 百年電車，逛 Grand Central Market 百年老市場，下午返回 Airbnb 休息。',
+    highlights: ['Olvera Street（LA 歷史發源地）', 'Angels Flight Railway（百年電車）', 'Grand Central Market（百年老市場）'],
     accommodation: {
       location: '羅蘭岡 (Rowland Heights)',
-      hotels: ['原住宿點']
+      hotels: ['airbnb 住宿']
     },
     meals: {
-      breakfast: '自理',
-      lunch: '自理',
-      dinner: 'L.A. Live 園區'
+      breakfast: 'airbnb 早餐',
+      lunch: 'Grand Central Market 或 Olvera Street',
+      dinner: 'airbnb 自煮晚餐'
     },
-    transport: ['自駕 (單程約 45 分鐘)'],
-    mapLink: 'https://www.google.com/maps/dir/Rowland+Heights/Crypto.com+Arena'
+    transport: [
+      '自駕到 Downtown LA（約 30-40 分鐘）',
+      'Union Station 停車（$10 all day）',
+      '自駕回 Rowland Heights Airbnb（約 45-60 分鐘）'
+    ],
+    mapLink: 'https://www.google.com/maps/dir//Olvera+Street+Los+Angeles/Angels+Flight+Railway/Grand+Central+Market',
+    timeline: [
+      {
+        time: '8:30-9:30 AM',
+        period: '上午',
+        title: '早餐',
+        type: 'meal',
+        location: 'airbnb',
+        activityDuration: '約1小時',
+        description: [
+          '早餐、準備出門'
+        ]
+      },
+      {
+        time: '9:30-10:10 AM',
+        period: '上午',
+        title: '交通',
+        type: 'transportation',
+        from: 'Rowland Heights Airbnb',
+        to: 'Downtown LA',
+        duration: '約 30-40 分鐘',
+        mapLink: 'https://www.google.com/maps/dir//Downtown+Los+Angeles',
+        description: [
+          '自駕到 Downtown LA'
+        ]
+      },
+      {
+        time: '10:10 AM',
+        period: '上午',
+        title: '其他類型',
+        type: 'other',
+        location: 'Union Station 停車',
+        parkingCost: '停車 $10',
+        description: [
+          '位置：Chavez & Vignes（後出入）',
+          '$10 all day（最划算）'
+        ]
+      },
+      {
+        time: '10:10-11:20 AM',
+        period: '上午',
+        title: '景點',
+        type: 'attraction',
+        location: 'Olvera Street（El Pueblo Historical Monument）',
+        activityDuration: '約1小時',
+        mapLink: 'https://www.google.com/maps/search/?api=1&query=Olvera+Street+Los+Angeles',
+        isFreeAdmission: true,
+        description: [
+          '傳統墨西哥街',
+          '手工藝品、餐廳、咖啡廳',
+        ]
+      },
+      {
+        time: '11:20 AM-12:00 PM',
+        period: '上午',
+        title: '景點',
+        type: 'attraction',
+        location: 'Angels Flight Railway',
+        activityDuration: '約40分鐘',
+        mapLink: 'https://www.google.com/maps/search/?api=1&query=Angels+Flight+Railway',
+        ticketCost: '門票 $3',
+        description: [
+          '步行 5 分鐘到達',
+          '搭乘往返：$3 紀念票（或 $1.50 one-way）',
+          '俯瞰 Downtown'
+        ]
+      },
+      {
+        time: '12:00-12:30 PM',
+        period: '下午',
+        title: '景點',
+        type: 'attraction',
+        location: 'Grand Central Market',
+        activityDuration: '約30分鐘',
+        mapLink: 'https://www.google.com/maps/search/?api=1&query=Grand+Central+Market+Los+Angeles',
+        isFreeAdmission: true,
+        description: [
+          '位置：在 Angels Flight 下方',
+          '食品攤位、新鮮食材',
+        ]
+      },
+      {
+        time: '12:30-1:00 PM',
+        period: '下午',
+        title: '其他類型',
+        type: 'other',
+        location: 'Union Station',
+        activityDuration: '約30分鐘',
+        description: [
+          '休息或逛街'
+        ]
+      },
+      {
+        time: '1:00-2:30 PM',
+        period: '下午',
+        title: '交通',
+        type: 'transportation',
+        from: 'Union Station',
+        to: 'Rowland Heights Airbnb',
+        duration: '約 45-60 分鐘',
+        mapLink: 'https://www.google.com/maps/dir//Rowland+Heights',
+        description: [
+          '自駕回 Airbnb'
+        ]
+      },
+      {
+        time: '2:30-8:00 PM',
+        period: '下午',
+        title: '其他類型',
+        type: 'other',
+        location: 'airbnb',
+        activityDuration: '約5.5小時',
+        description: [
+          'Airbnb 休息、整理',
+          '晚上可選擇出門或在家休息',
+        ]
+      }
+    ],
   },
   {
     day: 5,
