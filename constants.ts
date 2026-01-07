@@ -380,7 +380,8 @@ export const ITINERARY: DayItinerary[] = [
         period: '全天',
         title: '景點/場館',
         location: '歡迎來到絢麗的拉斯維加斯招牌 (外觀)、M&M\'s World（拉斯維加斯店） (外觀)、可口可樂主題專賣店（拉斯維加斯店） (外觀)',
-        activityDuration: '約1小時'
+        activityDuration: '約1小時',
+        mapLink: 'https://www.google.com/maps/search/?api=1&query=Welcome+to+Las+Vegas+Sign'
       },
       {
         time: '上午',
@@ -396,7 +397,8 @@ export const ITINERARY: DayItinerary[] = [
         period: '上午',
         title: '景點/場館',
         location: '七彩石 (外觀)',
-        activityDuration: '約30分鐘'
+        activityDuration: '約30分鐘',
+        mapLink: 'https://www.google.com/maps/search/?api=1&query=Seven+Magic+Mountains'
       },
       {
         time: '下午',
@@ -418,7 +420,8 @@ export const ITINERARY: DayItinerary[] = [
         period: '下午',
         title: '景點/場館',
         location: '巴斯托 Outlets',
-        activityDuration: '約2小時'
+        activityDuration: '約2小時',
+        mapLink: 'https://www.google.com/maps/search/?api=1&query=Barstow+Outlets'
       },
       {
         time: '晚上',
@@ -484,6 +487,7 @@ export const ITINERARY: DayItinerary[] = [
         option: '一',
         location: 'Brea Downtown',
         activityDuration: '約2小時',
+        mapLink: 'https://www.google.com/maps/search/?api=1&query=Brea+Downtown+CA',
         description: [
           '9:30 AM 抵達 Brea Downtown',
           '9:30-11:00 AM Brea Downtown 散步、購物',
@@ -497,6 +501,7 @@ export const ITINERARY: DayItinerary[] = [
         option: '二',
         location: '西來寺',
         activityDuration: '約2小時30分鐘',
+        mapLink: 'https://www.google.com/maps/search/?api=1&query=Hsi+Lai+Temple',
         description: [
           '9:30 AM 抵達西來寺停車場（15-20 分鐘）',
           '9:30-11:00 AM 西來寺自導遊覽（拍照、花園）',
@@ -534,6 +539,7 @@ export const ITINERARY: DayItinerary[] = [
         title: '景點',
         location: '棕櫚泉空中纜車',
         activityDuration: '約2小時30分鐘',
+        mapLink: 'https://www.google.com/maps/search/?api=1&query=Palm+Springs+Aerial+Tramway',
         description: '下午搭乘空中纜車，欣賞傍晚山景'
       },
       {
@@ -542,6 +548,7 @@ export const ITINERARY: DayItinerary[] = [
         title: '景點',
         location: 'Palm Springs VillageFest',
         activityDuration: '18:00–22:00',
+        mapLink: 'https://www.google.com/maps/search/?api=1&query=Villagefest+Main+Office+Palm+Springs',
         description: [
           '每週四晚上在 Downtown Palm Canyon Drive 舉辦，是棕櫚泉最熱鬧的活動。',
           '特色：食品攤販、現場表演、手工藝品、街頭藝術展示',
@@ -695,20 +702,148 @@ export const ITINERARY: DayItinerary[] = [
   {
     day: 11,
     date: '4/11 (週六)',
-    title: '沙漠綠洲 & 前往聖地牙哥',
-    description: '體驗棕櫚泉空中纜車，午後驅車南下前往美麗的軍港城市聖地牙哥。',
-    highlights: ['棕櫚泉空中纜車', '聖地牙哥 (San Diego)', '瓦斯燈街區 (Gaslamp Quarter)'],
+    title: '聖地牙哥城市探索',
+    description: '上午在 airbnb 悠閒享用早餐，前往巴爾波亞公園參觀博物館與花園，下午參觀聖地牙哥動物園，傍晚前往托里松州立公園欣賞海景，晚上在 Old Town 享用墨西哥料理。',
+    highlights: ['巴爾波亞公園 (Balboa Park)', '聖地牙哥動物園 (San Diego Zoo)', '托里松州立公園 (Torrey Pines State Park)', 'Old Town San Diego'],
     accommodation: {
       location: '聖地牙哥 (San Diego)',
-      hotels: ['La Valencia Hotel', 'Manchester Grand Hyatt San Diego']
+      hotels: ['airbnb 住宿'],
+      roomAssignment: ['爸爸、媽媽', '文馨', '宏翔、小藍']
     },
     meals: {
-      breakfast: '棕櫚泉',
-      lunch: '途中自理',
-      dinner: '瓦斯燈街區'
+      breakfast: 'airbnb 早餐',
+      lunch: 'Balboa Park：Panama 66 / The Prado Restaurant',
+      dinner: 'Old Town：Casa Guadalajara / Cafe Coyote / Harrah\'s Cocina'
     },
-    transport: ['自駕 (約 2.5 小時)'],
-    mapLink: 'https://www.google.com/maps/dir/Palm+Springs/San+Diego'
+    transport: [
+      '自駕前往 Balboa Park（約 15-20 分鐘）',
+      'Balboa Park 內移動（約 5-10 分鐘）',
+      '自駕前往 Torrey Pines（約 20-30 分鐘）',
+      '自駕前往 Old Town（約 25-30 分鐘）'
+    ],
+    timeline: [
+      {
+        time: '9:00-10:00 AM',
+        period: '上午',
+        title: '早餐',
+        location: 'airbnb',
+        activityDuration: '約1小時',
+        description: 'airbnb 早餐、悠閒起床'
+      },
+      {
+        time: '10:00-10:20 AM',
+        period: '上午',
+        title: '交通',
+        from: 'airbnb',
+        to: 'Balboa Park',
+        duration: '約15-20分鐘'
+      },
+      {
+        time: '10:20 AM-1:00 PM',
+        period: '上午',
+        title: '景點',
+        location: 'Balboa Park（巴爾波亞公園）',
+        activityDuration: '約2小時40分鐘',
+        mapLink: 'https://www.google.com/maps/search/?api=1&query=Balboa+Park+San+Diego',
+        description: [
+          '選擇 1-2 個博物館或重點花園',
+          '玫瑰花園、日本友誼花園、蓮花池、沙漠花園',
+          '可驅車移動各區域'
+        ]
+      },
+      {
+        time: '12:50-1:00 PM',
+        period: '下午',
+        title: '交通',
+        from: 'Balboa Park',
+        to: '聖地牙哥動物園',
+        duration: '約5-10分鐘',
+        description: 'Balboa Park 內移動'
+      },
+      {
+        time: '1:00-2:00 PM',
+        period: '下午',
+        title: '景點',
+        location: '聖地牙哥動物園 (可選)',
+        activityDuration: '約1小時',
+        mapLink: 'https://www.google.com/maps/search/?api=1&query=San+Diego+Zoo',
+        ticketLink: 'https://activity.eztravel.com.tw/detail/TKNKL-6698',
+        description: [
+          '[購票]（USD 60-70/人）',
+          '乘坐遊園車',
+          '重點看大貓科動物、鳥舍'
+        ]
+      },
+      {
+        time: '2:00-3:30 PM',
+        period: '下午',
+        title: '午餐',
+        location: 'Balboa Park',
+        activityDuration: '約1小時30分鐘',
+        description: [
+          'Panama 66（露天咖啡館）',
+          'The Prado Restaurant（西班牙風格，USD 15-25/人）'
+        ]
+      },
+      {
+        time: '3:30-3:50 PM',
+        period: '下午',
+        title: '交通',
+        from: 'Balboa Park',
+        to: 'Torrey Pines / Old Town',
+        duration: '約20-30分鐘 / 約25-30分鐘',
+        description: '前往選項一或選項二'
+      },
+      {
+        time: '3:50-5:30 PM',
+        period: '下午',
+        title: '景點',
+        option: '一',
+        location: 'Torrey Pines State Park（托里松州立公園）',
+        activityDuration: '約1小時40分鐘',
+        mapLink: 'https://www.google.com/maps/search/?api=1&query=Torrey+Pines+State+Park',
+        description: [
+          'Guy Fleming Trail（0.7 英里簡易步道，20-30 分鐘），俯瞰海景',
+          '停車費 USD 20/日',
+          '可租借拐杖',
+          '5:30-6:00 PM 自駕前往 Old Town（約25-30分鐘）',
+          '6:00-7:30 PM Old Town 晚餐'
+        ]
+      },
+      {
+        time: '4:00-6:00 PM',
+        period: '下午',
+        title: '景點',
+        option: '二',
+        location: 'Old Town San Diego',
+        activityDuration: '約2小時',
+        mapLink: 'https://www.google.com/maps/search/?api=1&query=Old+Town+San+Diego',
+        description: [
+          '參觀 Old Town 歷史街區',
+          '可在此享用晚餐：',
+          'Casa Guadalajara（傳統墨西哥菜，室外露台，USD 15-28/人）',
+          'Cafe Coyote（美食家推薦墨西哥菜，USD 12-22/人）',
+          'Harrah\'s Cocina（道地風味，USD 15-25/人）'
+        ]
+      },
+      {
+        time: '6:00-8:00 PM',
+        period: '晚上',
+        title: '交通',
+        from: 'Old Town / Torrey Pines',
+        to: 'airbnb',
+        duration: '約25-35分鐘',
+        description: '從選項一或選項二返回 airbnb（選項一約 7:30 PM 出發，選項二約 6:00 PM 出發）'
+      },
+      {
+        time: '8:45 PM',
+        period: '晚上',
+        title: '住宿',
+        location: 'airbnb',
+        description: '抵達 airbnb，休息'
+      }
+    ],
+    mapLink: 'https://www.google.com/maps/dir/San+Diego/Balboa+Park/San+Diego+Zoo/Torrey+Pines+State+Park/Old+Town+San+Diego'
   },
   {
     day: 12,

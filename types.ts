@@ -38,6 +38,7 @@ export interface TimelineItem {
   location?: string; // 景點地點
   activityDuration?: string; // 活動時間
   mapLink?: string; // 地圖連結
+  ticketLink?: string; // 購票連結
 }
 
 export interface DayItinerary {

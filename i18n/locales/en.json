@@ -343,7 +343,8 @@
           {
             "title": "Attractions",
             "location": "Welcome to Fabulous Las Vegas Sign (exterior), M&M's World (Las Vegas) (exterior), Coca-Cola Store (Las Vegas) (exterior)",
-            "activityDuration": "approx. 1 hour"
+            "activityDuration": "approx. 1 hour",
+            "mapLink": "https://www.google.com/maps/search/?api=1&query=Welcome+to+Las+Vegas+Sign"
           },
           {
             "title": "Transportation",
@@ -355,7 +356,8 @@
           {
             "title": "Attractions",
             "location": "Seven Magic Mountains (exterior)",
-            "activityDuration": "approx. 30 minutes"
+            "activityDuration": "approx. 30 minutes",
+            "mapLink": "https://www.google.com/maps/search/?api=1&query=Seven+Magic+Mountains"
           },
           {
             "title": "Lunch",
@@ -371,7 +373,8 @@
           {
             "title": "Attractions",
             "location": "Barstow Outlets",
-            "activityDuration": "approx. 2 hours"
+            "activityDuration": "approx. 2 hours",
+            "mapLink": "https://www.google.com/maps/search/?api=1&query=Barstow+Outlets"
           },
           {
             "title": "Dinner",
@@ -411,11 +414,27 @@
             "time": "9:30-11:00 AM",
             "period": "Morning",
             "title": "Attractions",
-            "location": "Brea Downtown (Option 1) / Hsi Lai Temple (Option 2)",
+            "option": "1",
+            "location": "Brea Downtown",
             "activityDuration": "Approx 2 hrs",
+            "mapLink": "https://www.google.com/maps/search/?api=1&query=Brea+Downtown+CA",
             "description": [
-              "Option 1: 9:30 AM arrive at Brea Downtown, stroll and shopping until 11:00 AM.",
-              "Option 2: 9:30 AM arrive at Hsi Lai Temple parking lot, self-guided tour (photos, garden) until 11:00 AM."
+              "9:30 AM arrive at Brea Downtown, stroll and shopping until 11:00 AM.",
+              "11:00 AM-12:15 PM Lunch at Bruxie / Ruby's / Cha Cha's in Brea Downtown."
+            ]
+          },
+          {
+            "time": "9:30-11:00 AM",
+            "period": "Morning",
+            "title": "Attractions",
+            "option": "2",
+            "location": "Hsi Lai Temple",
+            "activityDuration": "Approx 2 hrs 30 min",
+            "mapLink": "https://www.google.com/maps/search/?api=1&query=Hsi+Lai+Temple",
+            "description": [
+              "9:30 AM arrive at Hsi Lai Temple parking lot (15-20 min).",
+              "9:30-11:00 AM Hsi Lai Temple self-guided tour (photos, garden).",
+              "11:30 AM-12:15 PM Vegetarian buffet lunch (around USD 10 per person)."
             ]
           },
           {
@@ -458,6 +477,7 @@
             "title": "Attractions",
             "location": "Palm Springs Aerial Tramway",
             "activityDuration": "Approx 2.5 hrs",
+            "mapLink": "https://www.google.com/maps/search/?api=1&query=Palm+Springs+Aerial+Tramway",
             "description": "Afternoon tram ride and enjoy the mountain view and sunset."
           },
           {
@@ -466,6 +486,7 @@
             "title": "Attractions",
             "location": "Palm Springs VillageFest (downtown street fair, every Thursday)",
             "activityDuration": "6:00 pm–10:00 pm",
+            "mapLink": "https://www.google.com/maps/search/?api=1&query=Villagefest+Main+Office+Palm+Springs",
             "description": [
               "Weekly street fair held every Thursday evening on Downtown Palm Canyon Drive.",
               "Highlights: food vendors, live performances, handicrafts, street art displays.",
@@ -612,19 +633,146 @@
         ]
       },
       "day11": {
-        "title": "Desert Oasis & To San Diego",
-        "description": "Experience Palm Springs Aerial Tramway, then drive south in the afternoon to the beautiful port city of San Diego.",
-        "highlights": ["Palm Springs Aerial Tramway", "San Diego", "Gaslamp Quarter"],
+        "title": "San Diego City Exploration",
+        "description": "Enjoy a relaxed breakfast at the Airbnb in the morning, then visit Balboa Park to explore museums and gardens. In the afternoon, visit San Diego Zoo, then head to Torrey Pines State Park for ocean views in the evening, and end the day with Mexican cuisine in Old Town.",
+        "highlights": ["Balboa Park", "San Diego Zoo", "Torrey Pines State Park", "Old Town San Diego"],
         "accommodation": {
           "location": "San Diego",
-          "hotels": ["La Valencia Hotel", "Manchester Grand Hyatt San Diego"]
+          "hotels": ["Airbnb"]
         },
         "meals": {
-          "breakfast": "Palm Springs",
-          "lunch": "On your own during the journey",
-          "dinner": "Gaslamp Quarter"
+          "breakfast": "Airbnb breakfast",
+          "lunch": "Balboa Park: Panama 66 / The Prado Restaurant",
+          "dinner": "Old Town: Casa Guadalajara / Cafe Coyote / Harrah's Cocina"
         },
-        "transport": ["Self-drive (approx. 2.5 hours)"]
+        "transport": [
+          "Self-drive to Balboa Park (approx. 15–20 min)",
+          "Within Balboa Park (approx. 5–10 min)",
+          "Self-drive to Torrey Pines (approx. 20–30 min)",
+          "Self-drive to Old Town (approx. 25–30 min)"
+        ],
+        "timeline": [
+          {
+            "time": "9:00-10:00 AM",
+            "period": "Morning",
+            "title": "Breakfast",
+            "location": "Airbnb",
+            "activityDuration": "Approx 1 hour",
+            "description": "Airbnb breakfast and a relaxed start to the day."
+          },
+          {
+            "time": "10:00-10:20 AM",
+            "period": "Morning",
+            "title": "Transport",
+            "from": "Airbnb",
+            "to": "Balboa Park",
+            "duration": "Approx 15–20 min"
+          },
+          {
+            "time": "10:20 AM-1:00 PM",
+            "period": "Morning",
+            "title": "Attractions",
+            "location": "Balboa Park",
+            "activityDuration": "Approx 2 hrs 40 min",
+            "mapLink": "https://www.google.com/maps/search/?api=1&query=Balboa+Park+San+Diego",
+            "description": [
+              "Choose 1–2 museums or key gardens to visit.",
+              "Rose Garden, Japanese Friendship Garden, Lily Pond, Desert Garden.",
+              "You can drive between different areas of the park."
+            ]
+          },
+          {
+            "time": "12:50-1:00 PM",
+            "period": "Afternoon",
+            "title": "Transport",
+            "from": "Balboa Park",
+            "to": "San Diego Zoo",
+            "duration": "Approx 5–10 min",
+            "description": "Move within Balboa Park"
+          },
+          {
+            "time": "1:00-2:00 PM",
+            "period": "Afternoon",
+            "title": "Attractions",
+            "location": "San Diego Zoo (Optional)",
+            "activityDuration": "Approx 1 hour",
+            "mapLink": "https://www.google.com/maps/search/?api=1&query=San+Diego+Zoo",
+            "ticketLink": "https://activity.eztravel.com.tw/detail/TKNKL-6698",
+            "description": [
+              "[tickets] (USD 60–70 per person).",
+              "Take the guided bus tour.",
+              "Focus on big cats and aviary."
+            ]
+          },
+          {
+            "time": "2:00-3:30 PM",
+            "period": "Afternoon",
+            "title": "Lunch",
+            "location": "Balboa Park",
+            "activityDuration": "Approx 1.5 hrs",
+            "description": [
+              "Panama 66 (outdoor cafe).",
+              "The Prado Restaurant (Spanish-style, USD 15–25 per person)."
+            ]
+          },
+          {
+            "time": "3:30-3:50 PM",
+            "period": "Afternoon",
+            "title": "Transport",
+            "from": "Balboa Park",
+            "to": "Torrey Pines / Old Town",
+            "duration": "Approx 20–30 min / Approx 25–30 min",
+            "description": "Drive to Option 1 or Option 2"
+          },
+          {
+            "time": "3:50-5:30 PM",
+            "period": "Afternoon",
+            "title": "Attractions",
+            "option": "1",
+            "location": "Torrey Pines State Park",
+            "activityDuration": "Approx 1 hr 40 min",
+            "mapLink": "https://www.google.com/maps/search/?api=1&query=Torrey+Pines+State+Park",
+            "description": [
+              "Guy Fleming Trail (0.7-mile easy trail, 20–30 minutes) with ocean views.",
+              "Parking fee: USD 20 per day.",
+              "Walking sticks available for rent.",
+              "5:30-6:00 PM Drive to Old Town (approx. 25–30 min).",
+              "6:00-7:30 PM Dinner at Old Town."
+            ]
+          },
+          {
+            "time": "4:00-6:00 PM",
+            "period": "Afternoon",
+            "title": "Attractions",
+            "option": "2",
+            "location": "Old Town San Diego",
+            "activityDuration": "Approx 2 hrs",
+            "mapLink": "https://www.google.com/maps/search/?api=1&query=Old+Town+San+Diego",
+            "description": [
+              "Visit Old Town historic district.",
+              "Dinner options available:",
+              "Casa Guadalajara (traditional Mexican cuisine, outdoor patio, USD 15–28 per person).",
+              "Cafe Coyote (food critic-recommended Mexican cuisine, USD 12–22 per person).",
+              "Harrah's Cocina (authentic flavors, USD 15–25 per person)."
+            ]
+          },
+          {
+            "time": "6:00-8:00 PM",
+            "period": "Evening",
+            "title": "Transport",
+            "from": "Old Town / Torrey Pines",
+            "to": "Airbnb",
+            "duration": "Approx 25–35 min",
+            "description": "Return to Airbnb from Option 1 or Option 2 (Option 1 departs around 7:30 PM, Option 2 departs around 6:00 PM)"
+          },
+          {
+            "time": "8:45 PM",
+            "period": "Evening",
+            "title": "Accommodation",
+            "location": "Airbnb",
+            "description": "Arrive at Airbnb and rest."
+          }
+        ]
       },
       "day12": {
         "title": "San Diego Highlights",

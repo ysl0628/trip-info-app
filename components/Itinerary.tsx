@@ -12,6 +12,40 @@ export const Itinerary: React.FC = () => {
   const [selectedMap, setSelectedMap] = useState<DayItinerary | null>(null);
   const [selectedDay, setSelectedDay] = useState<number | 'overview'>('overview');
 
+  // 處理描述中的連結（使用特殊標記 [購票] 或 [tickets]）
+  const renderDescriptionWithLinks = (text: string, ticketLink?: string) => {
+    if (!ticketLink) {
+      return text;
+    }    
+    // 使用 split 但保留分隔符
+    const parts = text.split(/(\[(?:購票|tickets|購票連結|ticket link)\])/gi);
+    
+    return (
+      <>
+        {parts.map((part, partIdx) => {
+          // 檢查是否為標記（不區分大小寫）
+          const isTicketMark = /\[(購票|tickets|購票連結|ticket link)\]/i.test(part);
+          if (isTicketMark) {
+            // 根據標記內容決定顯示文字
+            const linkText = part.toLowerCase().includes('ticket') ? 'Purchase tickets online' : '線上購票';
+            return (
+              <a
+                key={partIdx}
+                href={ticketLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:text-blue-800 underline font-medium"
+              >
+                {linkText}
+              </a>
+            );
+          }
+          return <span key={partIdx}>{part}</span>;
+        })}
+      </>
+    );
+  };
+
   const getEmbedUrl = (url: string) => {
     try {
       if (url.includes('/dir/')) {
@@ -305,14 +339,19 @@ export const Itinerary: React.FC = () => {
                                                         </span>
                                                     </div>
                                                 )}
-                                                {timelineItem.description && Array.isArray(timelineItem.description) && timelineItem.description.length > 1 && (
+                                                {timelineItem.description && Array.isArray(timelineItem.description) && (
                                                     <div className="text-sm text-stone-600 leading-relaxed mt-2">
-                                                        {timelineItem.description.slice(1).map((line, idx) => (
+                                                        {timelineItem.description.map((line, idx) => (
                                                             <div key={idx} className={idx > 0 ? 'mt-1' : ''}>
-                                                                {line}
+                                                                {renderDescriptionWithLinks(line, timelineItem.ticketLink)}
                                                             </div>
                                                         ))}
                                                     </div>
+                                                )}
+                                                {timelineItem.description && !Array.isArray(timelineItem.description) && (
+                                                    <p className="text-sm text-stone-600 leading-relaxed mt-2">
+                                                        {timelineItem.description}
+                                                    </p>
                                                 )}
                                             </div>
                                         ) : (
@@ -369,9 +408,9 @@ export const Itinerary: React.FC = () => {
                                                     <p className="text-sm text-stone-600 leading-relaxed">
                                                         {Array.isArray(timelineItem.description) ? timelineItem.description.map((line, idx) => (
                                                             <div key={idx} className={idx > 0 ? 'mt-1' : ''}>
-                                                                {line}
+                                                                {renderDescriptionWithLinks(line, timelineItem.ticketLink)}
                                                             </div>
-                                                        )) : timelineItem.description}
+                                                        )) : renderDescriptionWithLinks(timelineItem.description, timelineItem.ticketLink)}
                                                     </p>
                                                 )}
                                             </div>
