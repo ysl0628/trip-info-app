@@ -364,7 +364,7 @@ export const ITINERARY: DayItinerary[] = [
         ]
       }
     ],
-    mapLink: 'https://www.google.com/maps/dir/Rowland+Heights/The+Getty+Center/UCLA+Campus/Santa+Monica+Pier/LACMA/The+Original+Farmers+Market'
+    mapLink: 'https://www.google.com/maps/dir//The+Getty+Center/UCLA+Campus/Santa+Monica+Pier/LACMA/The+Original+Farmers+Market'
   },
   {
     day: 3,
