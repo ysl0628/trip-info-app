@@ -34,7 +34,8 @@ export const ITINERARY: DayItinerary[] = [
     highlights: ['安大略國際機場(ONT)', '羅蘭岡(Rowland Heights)'],
     accommodation: {
       location: '羅蘭岡 (Rowland Heights)',
-      hotels: ['airbnb 住宿']
+      hotels: ['airbnb 住宿'],
+      roomAssignment: ['爸爸、媽媽', '文馨', '宏翔、小藍']
     },
     meals: {
       breakfast: '飛機上',
@@ -83,7 +84,7 @@ export const ITINERARY: DayItinerary[] = [
         from: 'ONT',
         to: 'Rowland Heights Airbnb',
         duration: '約 25-30 分鐘',
-        luggage: '帶著行李',
+        luggage: '行李在車上',
         mapLink: 'https://www.google.com/maps/dir/Ontario+International+Airport/Rowland+Heights',
         description: [
           '路線：I-10 East'
@@ -145,7 +146,8 @@ export const ITINERARY: DayItinerary[] = [
     highlights: ['蓋蒂中心 (Getty Center)', 'UCLA 校園（可選）', 'Santa Monica Pier', 'LACMA Urban Light', '農夫市場 (The Original Farmers Market)'],
     accommodation: {
       location: '羅蘭岡 (Rowland Heights)',
-      hotels: ['airbnb 住宿']
+      hotels: ['airbnb 住宿'],
+      roomAssignment: ['爸爸、媽媽', '文馨', '宏翔、小藍']
     },
     meals: {
       breakfast: 'airbnb 早餐',
@@ -197,7 +199,6 @@ export const ITINERARY: DayItinerary[] = [
         isFreeAdmission: true,
         description: [
           '建築、花園、景觀',
-          '免費進入'
         ]
       },
       {
@@ -226,8 +227,6 @@ export const ITINERARY: DayItinerary[] = [
         isFreeAdmission: true,
         description: [
           '加州大學洛杉磯分校美麗校園',
-          '免費進入',
-          '停車免費'
         ]
       },
       {
@@ -263,12 +262,12 @@ export const ITINERARY: DayItinerary[] = [
         activityDuration: '約2小時40分鐘',
         mapLink: 'https://www.google.com/maps/search/?api=1&query=Santa+Monica+Pier',
         isFreeAdmission: true,
+        parkingCost: '$2 - $3.5', 
         description: [
-          'Pier 遊樂園、海灘拍照',
+          '導航 Parking Structure 6 或 Parking Structure 8',
           'Third Street Promenade 逛街',
           '海邊餐廳用餐',
-          '免費進入',
-          '停車費另計'
+          '停車費前 90 分鐘免費，$2 - $3.5'
         ]
       },
       {
@@ -296,7 +295,6 @@ export const ITINERARY: DayItinerary[] = [
         isFreeAdmission: true,
         description: [
           '著名裝置藝術',
-          '免費進入'
         ]
       },
       {
@@ -427,7 +425,6 @@ export const ITINERARY: DayItinerary[] = [
         isFreeAdmission: true,
         description: [
           '看明星名字、拍照',
-          '停留 30 分鐘',
         ]
       },
       {
@@ -453,7 +450,7 @@ export const ITINERARY: DayItinerary[] = [
         mapLink: 'https://www.google.com/maps/search/?api=1&query=Hollywood+Sign',
         isFreeAdmission: true,
         description: [
-          '停留 25 分鐘拍照',
+          '可以在半山拍照',
         ]
       },
       {
@@ -480,8 +477,7 @@ export const ITINERARY: DayItinerary[] = [
         parkingCost: '停車 $10',
         isFreeAdmission: true,
         description: [
-          '選項 A（推薦）：只看室外景觀、城市景觀、俯瞰 LA',
-          '停留 45 分鐘',
+          '只看室外景觀、城市景觀、俯瞰 LA',
         ]
       },
       {
@@ -507,7 +503,6 @@ export const ITINERARY: DayItinerary[] = [
         mapLink: 'https://www.google.com/maps/search/?api=1&query=Porto\'s+Bakery+Downey',
         description: [
           '地址：8233 Firestone Blvd, Downey',
-          '排隊 15-30 分鐘',
           '推薦：Cubano 三明治、Guava Strudel、Potato Ball',
         ]
       },
@@ -536,7 +531,6 @@ export const ITINERARY: DayItinerary[] = [
         isFreeAdmission: true,
         description: [
           '精品街、咖啡廳、手工藝、拍照',
-          '停留 2.5 小時',
         ]
       },
       {
@@ -1270,6 +1264,7 @@ export const ITINERARY: DayItinerary[] = [
         from: '棕櫚泉',
         to: '約書亞樹西入口',
         duration: '約1小時',
+        luggage: '行李在車上',
         mapLink: 'https://www.google.com/maps/dir/Palm+Springs/Joshua+Tree+National+Park'
       },
       {
@@ -1280,6 +1275,7 @@ export const ITINERARY: DayItinerary[] = [
         location: '約書亞樹國家公園',
         activityDuration: '約2小時',
         ticketCost: '門票 $30/車',
+        luggage: '行李在車上',
         description: [
           '約書亞樹淺遊拍照（2 小時）',
           '建議點：Keys View、Skull Rock、Cholla Cactus Garden'
@@ -1290,6 +1286,7 @@ export const ITINERARY: DayItinerary[] = [
         period: '下午',
         title: '交通',
         type: 'transportation',
+        luggage: '行李在車上',
         description: '離開公園、開往餐廳'
       },
       {
@@ -1297,6 +1294,7 @@ export const ITINERARY: DayItinerary[] = [
         period: '下午',
         title: '午餐',
         type: 'meal',
+        luggage: '帶著行李',
         description: [
           'Crossroads Cafe（西餐沙龍風，香蕉麵包必點，約 USD 10–20）',
           '或 In-N-Out Burger（Cabazon 區快速漢堡）',
@@ -1529,7 +1527,6 @@ export const ITINERARY: DayItinerary[] = [
         isFreeAdmission: true,
         description: [
           'Guy Fleming Trail（0.7 英里簡易步道，20-30 分鐘），俯瞰海景',
-          '可租借拐杖',
           '5:30-6:00 PM 自駕前往 Old Town（約25-30分鐘）',
           '6:00-7:30 PM Old Town 晚餐'
         ]
@@ -1630,8 +1627,7 @@ export const ITINERARY: DayItinerary[] = [
         description: [
           '[購票]（USD 39-41/人）',
           '參觀真實戰艦、駕駛艙、飛機展示',
-          '約 3-4 小時',
-          '有中文音頻導覽'
+          '有中文語音導覽'
         ]
       },
       {
@@ -1682,7 +1678,7 @@ export const ITINERARY: DayItinerary[] = [
           'Orange Avenue 散步購物',
           'Centennial Park 看聖地牙哥天際線',
           '海灘散步',
-          '可租自行車環島（需體力）'
+          '可租自行車環島'
         ]
       },
       {
@@ -1697,7 +1693,6 @@ export const ITINERARY: DayItinerary[] = [
           'Coronado 渡輪回市中心',
           '看灣景和城市景觀',
           'USD 5/人',
-          '很適合老人家'
         ]
       },
       {
@@ -1805,6 +1800,7 @@ export const ITINERARY: DayItinerary[] = [
         type: 'attraction',
         location: 'Ocean Beach',
         activityDuration: '約1小時40分鐘',
+        luggage: '行李在車上',
         mapLink: 'https://www.google.com/maps/search/?api=1&query=Ocean+Beach+San+Diego',
         description: [
           '沙灘漫步、拍照',
@@ -1818,6 +1814,7 @@ export const ITINERARY: DayItinerary[] = [
         type: 'meal',
         location: 'Ocean Beach 海灘餐廳',
         activityDuration: '約1小時30分鐘',
+        luggage: '行李在車上',
         mapLink: 'https://www.google.com/maps/search/?api=1&query=Ocean+Beach+San+Diego+restaurants',
         description: [
           'The Taco Stand（墨西哥塔可）',
@@ -1832,7 +1829,7 @@ export const ITINERARY: DayItinerary[] = [
         title: '自由活動',
         location: '三選一',
         activityDuration: '約2小時',
-        luggage: '帶著行李',
+        luggage: '行李在車上',
         description: [
           '① Fashion Valley Mall 購物（約 20 分鐘車程）',
           '② Seaport Village 散步（約 25 分鐘車程）',
