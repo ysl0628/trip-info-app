@@ -140,7 +140,7 @@ export const ITINERARY: DayItinerary[] = [
   {
     day: 2,
     date: '4/2 (週四)',
-    title: 'Getty → UCLA（optional）→ Santa Monica → LACMA → 農夫市場',
+    title: '藝術、校園與海灘之旅',
     description: '上午參觀 Getty Center 和 UCLA 校園，中午在 Santa Monica 海灘散步用餐，下午前往 LACMA 拍照，傍晚到農夫市場採買食材，晚上回 Airbnb 自煮晚餐。',
     highlights: ['蓋蒂中心 (Getty Center)', 'UCLA 校園（可選）', 'Santa Monica Pier', 'LACMA Urban Light', '農夫市場 (The Original Farmers Market)'],
     accommodation: {
