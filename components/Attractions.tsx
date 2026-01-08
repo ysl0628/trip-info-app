@@ -55,14 +55,14 @@ export const Attractions: React.FC = () => {
                   </div>
                 ) : (
                   <>
-                    <img
+                <img 
                       src={spot.image ? `${import.meta.env.BASE_URL}${spot.image.startsWith('/') ? spot.image.slice(1) : spot.image}` : ''}
-                      alt={spot.name}
-                      loading="lazy"
+                  alt={spot.name}
+                  loading="lazy"
                       onError={() => handleImageError(spot.name)}
-                      className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-80"></div>
+                  className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-80"></div>
                   </>
                 )}
                 

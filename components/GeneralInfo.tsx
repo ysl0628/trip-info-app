@@ -143,10 +143,11 @@ export const GeneralInfo: React.FC = () => {
               </h3>
               <div className="space-y-4">
                  {[
-                     { area: '羅蘭岡', eng: 'Rowland Heights', tag: '基地', desc: '華人區生活機能佳，輻射旅遊中心點。', color: 'bg-indigo-50 text-indigo-700' },
-                     { area: '拉斯維加斯', eng: 'Las Vegas', tag: '跟團', desc: '跟團行程已安排 (如: STRAT Hotel)。', color: 'bg-amber-50 text-amber-700' },
-                     { area: '棕櫚泉', eng: 'Palm Springs', tag: '度假', desc: '建議選擇附泳池的度假飯店，享受沙漠綠洲。', color: 'bg-sky-50 text-sky-700' },
-                     { area: '聖地牙哥', eng: 'San Diego', tag: '海景', desc: '推薦 Downtown 或 La Jolla 享受無敵海景。', color: 'bg-emerald-50 text-emerald-700' }
+                     { area: '哈仙達崗', eng: 'Hacienda Heights', tag: '基地', desc: '華人區生活機能佳，輻射旅遊中心點。4/1-4/4 住宿於此。', address: '1251 Marchmont Avenue, Hacienda Heights, CA 91745', color: 'bg-indigo-50 text-indigo-700' },
+                     { area: '拉斯維加斯', eng: 'Las Vegas', tag: '跟團', desc: '跟團行程已安排：拉斯維加斯楓丹白露 (Fontainebleau Las Vegas)。', address: '2777 S Las Vegas Blvd, Las Vegas, NV 89109', color: 'bg-amber-50 text-amber-700' },
+                     { area: '佩吉', eng: 'Page, AZ', tag: '跟團', desc: '跟團行程已安排：佩奇/鮑威爾湖戴斯套房酒店。', address: 'Page, AZ (具體地址依實際預訂為準)', color: 'bg-amber-50 text-amber-700' },
+                     { area: '棕櫚泉', eng: 'Palm Springs', tag: '度假', desc: '建議選擇附泳池的度假飯店，享受沙漠綠洲。', address: '', color: 'bg-sky-50 text-sky-700' },
+                     { area: '聖地牙哥', eng: 'San Diego', tag: '海景', desc: '推薦 Downtown 或 La Jolla 享受無敵海景。', address: '', color: 'bg-emerald-50 text-emerald-700' }
                  ].map((item, i) => (
                      <div key={i} className="flex items-start gap-4 pb-4 border-b border-stone-100 last:border-0 last:pb-0">
                          <span className={`text-[10px] font-bold px-2.5 py-1.5 rounded-lg uppercase tracking-wider shrink-0 w-12 text-center ${item.color}`}>{item.tag}</span>
@@ -156,6 +157,9 @@ export const GeneralInfo: React.FC = () => {
                                 <span className="text-[10px] text-stone-400 font-normal">{item.eng}</span>
                              </h4>
                              <p className="text-xs text-stone-500 mt-1 leading-relaxed">{item.desc}</p>
+                             {item.address && (
+                                 <p className="text-[10px] text-stone-400 mt-1 font-mono">{item.address}</p>
+                             )}
                          </div>
                      </div>
                  ))}
