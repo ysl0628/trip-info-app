@@ -283,12 +283,6 @@ export const ItineraryTimelineItem: React.FC<ItineraryTimelineItemProps> = ({
             {renderDescriptionWithLinks(item.description)}
           </p>
         )}
-      {item.luggage && (
-        <div className="mt-2 inline-flex items-center gap-2 text-xs font-bold text-blue-700">
-          <Luggage size={14} className="text-blue-600" />
-          <span>{item.luggage}</span>
-        </div>
-      )}
       </div>
     );
   }
@@ -468,12 +462,6 @@ export const ItineraryTimelineItem: React.FC<ItineraryTimelineItemProps> = ({
             </>
           ) : null}
         </p>
-      )}
-      {item.luggage && (
-        <div className="mt-2 inline-flex items-center gap-2 text-xs font-bold text-blue-700">
-          <Luggage size={14} className="text-blue-600" />
-          <span>{item.luggage}</span>
-        </div>
       )}
     </div>
   );
