@@ -6,6 +6,7 @@ import { ItineraryTimeline } from "./ItineraryTimeline";
 import { ItineraryAccommodation } from "./ItineraryAccommodation";
 import { ItineraryMeals } from "./ItineraryMeals";
 import { ItineraryBudgetSummary } from "./ItineraryBudgetSummary";
+import { ItineraryReferenceLinks } from "./ItineraryReferenceLinks";
 import { DayNavigation } from "./DayNavigation";
 
 interface ItineraryDayDetailProps {
@@ -197,6 +198,9 @@ export const ItineraryDayDetail: React.FC<ItineraryDayDetailProps> = ({
 
         {/* Budget Summary */}
         <ItineraryBudgetSummary timeline={item.timeline} />
+
+        {/* Reference Links */}
+        <ItineraryReferenceLinks links={item.referenceLinks} />
 
         {/* Day Navigation */}
         <DayNavigation

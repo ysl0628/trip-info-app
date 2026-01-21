@@ -62,6 +62,10 @@
     "parkingFees": "Parking Fees",
     "ticketFees": "Ticket Fees",
     "freeAdmission": "Free Admission",
+    "purchaseTicketsOnline": "Purchase tickets online",
+    "openingHours": "Opening Hours",
+    "referenceLinks": "Reference Links",
+    "attractionInfo": "Attraction Info",
     "days": {
       "day1": {
         "title": "Arrival and Settling In",

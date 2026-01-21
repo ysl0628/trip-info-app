@@ -1,44 +1,12 @@
 import React from "react";
 
-// 處理描述中的連結（使用特殊標記 [購票] 或 [tickets]）
+// 處理描述中的連結
+// 移除可能存在的舊標記（向後兼容）
 export const renderDescriptionWithLinks = (
-  text: string,
-  ticketLink?: string
+  text: string
 ): React.ReactNode => {
-  if (!ticketLink) {
-    return text;
-  }
-  // 使用 split 但保留分隔符
-  const parts = text.split(/(\[(?:購票|tickets|購票連結|ticket link)\])/gi);
-
-  return (
-    <>
-      {parts.map((part, partIdx) => {
-        // 檢查是否為標記（不區分大小寫）
-        const isTicketMark = /\[(購票|tickets|購票連結|ticket link)\]/i.test(
-          part
-        );
-        if (isTicketMark) {
-          // 根據標記內容決定顯示文字
-          const linkText = part.toLowerCase().includes("ticket")
-            ? "Purchase tickets online"
-            : "線上購票";
-          return (
-            <a
-              key={partIdx}
-              href={ticketLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-600 hover:text-blue-800 underline font-medium"
-            >
-              {linkText}
-            </a>
-          );
-        }
-        return <span key={partIdx}>{part}</span>;
-      })}
-    </>
-  );
+  // 移除可能存在的舊標記
+  return text.replace(/\[(?:購票|tickets|購票連結|ticket link)\]/gi, "");
 };
 
 export const getEmbedUrl = (url: string): string | null => {

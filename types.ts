@@ -40,6 +40,8 @@ export interface TimelineItem {
   activityDuration?: string; // 活動時間
   mapLink?: string; // 地圖連結
   ticketLink?: string; // 購票連結
+  openingHours?: string; // 營業時間
+  infoLink?: string; // 景點介紹連結
   luggage?: string; // 行李注意事項
   parkingCost?: string; // 停車費用
   ticketCost?: string; // 門票費用
@@ -64,6 +66,7 @@ export interface DayItinerary {
   departureTime?: string;
   departureLocation?: string;
   timeline?: TimelineItem[];
+  referenceLinks?: Array<{ label: string; url: string }>;
 }
 
 export type Region = '洛杉磯' | '拉斯維加斯/大峽谷' | '聖地牙哥' | '棕櫚泉';

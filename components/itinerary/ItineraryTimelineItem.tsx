@@ -1,12 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import {
-  Map,
-  Clock,
-  Luggage,
-  ParkingCircle,
-  DollarSign,
-} from "lucide-react";
+import { Map, Clock, Luggage, ParkingCircle, DollarSign } from "lucide-react";
 import { TimelineItem } from "../../types";
 import { renderDescriptionWithLinks } from "../../utils/itineraryHelpers";
 
@@ -141,14 +135,32 @@ export const ItineraryTimelineItem: React.FC<ItineraryTimelineItemProps> = ({
     return (
       <div className="space-y-2">
         <div className="flex items-start justify-between gap-2">
-          <h5 className="text-base font-bold text-stone-800">
-            {item.title} :{" "}
-            <span className="font-normal text-stone-700">
-              {item.location ||
-                (item.description &&
-                  (Array.isArray(item.description)
-                    ? item.description[0]
-                    : item.description))}
+          <h5 className="text-base font-bold text-stone-800 flex flex-wrap items-center gap-2">
+            <span>
+              {item.title} :{" "}
+              {item.location ? (
+                item.infoLink ? (
+                  <a
+                    href={item.infoLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-normal text-stone-700 underline"
+                  >
+                    {item.location}
+                  </a>
+                ) : (
+                  <span className="font-normal text-stone-700">
+                    {item.location}
+                  </span>
+                )
+              ) : (
+                <span className="font-normal text-stone-700">
+                  {item.description &&
+                    (Array.isArray(item.description)
+                      ? item.description[0]
+                      : item.description)}
+                </span>
+              )}
             </span>
           </h5>
           {item.mapLink && (
@@ -191,6 +203,14 @@ export const ItineraryTimelineItem: React.FC<ItineraryTimelineItemProps> = ({
               </span>
             </div>
           )}
+          {item.openingHours && (
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-stone-50 border border-stone-200">
+              <Clock size={14} className="text-stone-500" />
+              <span className="text-xs font-bold text-stone-600 whitespace-nowrap">
+                {t("itinerary.openingHours") || "營業時間"}：{item.openingHours}
+              </span>
+            </div>
+          )}
           {item.luggage && (
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-blue-50 border border-blue-200">
               <Luggage size={14} className="text-blue-600" />
@@ -226,19 +246,49 @@ export const ItineraryTimelineItem: React.FC<ItineraryTimelineItemProps> = ({
         </div>
         {item.description && Array.isArray(item.description) && (
           <div className="text-sm text-stone-600 leading-relaxed mt-2">
-            {item.description
-              .map((line, idx) => (
-                <div key={idx} className={idx > 0 ? "mt-1" : ""}>
-                  {renderDescriptionWithLinks(line, item.ticketLink)}
-                </div>
-              ))}
+            {item.ticketLink && (
+              <div className="mb-1">
+                <a
+                  href={item.ticketLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-600 hover:text-blue-800 underline font-medium"
+                >
+                  {t("itinerary.purchaseTicketsOnline") || "線上購票"}
+                </a>
+              </div>
+            )}
+            {item.description.map((line, idx) => (
+              <div key={idx} className={idx > 0 ? "mt-1" : ""}>
+                {line}
+              </div>
+            ))}
           </div>
         )}
         {item.description && !Array.isArray(item.description) && (
           <p className="text-sm text-stone-600 leading-relaxed mt-2">
-            {renderDescriptionWithLinks(item.description, item.ticketLink)}
+            {item.ticketLink && (
+              <>
+                <a
+                  href={item.ticketLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-600 hover:text-blue-800 underline font-medium"
+                >
+                  {t("itinerary.purchaseTicketsOnline") || "線上購票"}
+                </a>
+                {" "}
+              </>
+            )}
+            {renderDescriptionWithLinks(item.description)}
           </p>
         )}
+      {item.luggage && (
+        <div className="mt-2 inline-flex items-center gap-2 text-xs font-bold text-blue-700">
+          <Luggage size={14} className="text-blue-600" />
+          <span>{item.luggage}</span>
+        </div>
+      )}
       </div>
     );
   }
@@ -247,19 +297,39 @@ export const ItineraryTimelineItem: React.FC<ItineraryTimelineItemProps> = ({
   return (
     <div className="space-y-2">
       <div className="flex items-start justify-between gap-2 mb-1">
-        <div className="flex items-center gap-2 flex-1">
+        <div className="flex items-center gap-2 flex-1 flex-wrap">
           <h5
             className={`text-base font-bold ${
               item.option ? "text-sky-700" : "text-stone-800"
-            }`}
+            } flex items-center gap-2 flex-wrap`}
           >
-            {item.option
-              ? `${item.title}選項${item.option}`
-              : item.title}
-            {item.location && ` : ${item.location}`}
+            <span className="flex items-center gap-1 flex-wrap">
+              {item.option
+                ? `${item.title}選項${item.option}`
+                : item.title}
+              {item.location && (
+                <>
+                  {" : "}
+                  {item.infoLink ? (
+                    <a
+                      href={item.infoLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-normal text-stone-700 underline"
+                    >
+                      {item.location}
+                    </a>
+                  ) : (
+                    <span className="font-normal text-stone-700">
+                      {item.location}
+                    </span>
+                  )}
+                </>
+              )}
+            </span>
           </h5>
           {item.option && (
-            <span className="text-[11px] font-bold px-2 py-0.5 rounded-full bg-sky-50 text-sky-700 border border-sky-200">
+            <span className="text-[11px] font-bold px-2.5 py-0.5 rounded-full bg-sky-50 text-sky-700 border border-sky-200 whitespace-nowrap shrink-0">
               擇一
             </span>
           )}
@@ -280,6 +350,15 @@ export const ItineraryTimelineItem: React.FC<ItineraryTimelineItemProps> = ({
         )}
       </div>
       <div className="flex flex-wrap items-center gap-2">
+        {item.duration && (
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-stone-50 border border-stone-200">
+            <Clock size={14} className="text-stone-500" />
+            <span className="text-xs font-bold text-stone-600">
+              {t("itinerary.activityTime")}
+              <span className="font-semibold">{item.duration}</span>
+            </span>
+          </div>
+        )}
         {item.activityDuration && (
           <div
             className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-lg ${
@@ -301,6 +380,14 @@ export const ItineraryTimelineItem: React.FC<ItineraryTimelineItemProps> = ({
                 ? t("itinerary.mealTime")
                 : t("itinerary.activityTime")}
               <span className="font-semibold">{item.activityDuration}</span>
+            </span>
+          </div>
+        )}
+        {item.openingHours && (
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-stone-50 border border-stone-200">
+            <Clock size={14} className="text-stone-500" />
+            <span className="text-xs font-bold text-stone-600 whitespace-nowrap">
+              {t("itinerary.openingHours") || "營業時間"}：{item.openingHours}
             </span>
           </div>
         )}
@@ -339,19 +426,54 @@ export const ItineraryTimelineItem: React.FC<ItineraryTimelineItemProps> = ({
       </div>
       {item.description && (
         <p className="text-sm text-stone-600 leading-relaxed mt-2">
-          {Array.isArray(item.description)
-            ? item.description
+          {Array.isArray(item.description) ? (
+            <>
+              {item.ticketLink && (
+                <div className="mb-1">
+                  <a
+                    href={item.ticketLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-600 hover:text-blue-800 underline font-medium"
+                  >
+                    {t("itinerary.purchaseTicketsOnline") || "線上購票"}
+                  </a>
+                </div>
+              )}
+              {item.description
                 .filter((line) => !line.includes("免費進入") && !line.includes("Free Admission"))
                 .map((line, idx) => (
                   <div key={idx} className={idx > 0 ? "mt-1" : ""}>
-                    {renderDescriptionWithLinks(line, item.ticketLink)}
+                    {renderDescriptionWithLinks(line)}
                   </div>
-                ))
-            : !item.description.includes("免費進入") &&
-              !item.description.includes("Free Admission")
-            ? renderDescriptionWithLinks(item.description, item.ticketLink)
-            : null}
+                ))}
+            </>
+          ) : !item.description.includes("免費進入") &&
+            !item.description.includes("Free Admission") ? (
+            <>
+              {item.ticketLink && (
+                <>
+                  <a
+                    href={item.ticketLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-600 hover:text-blue-800 underline font-medium"
+                  >
+                    {t("itinerary.purchaseTicketsOnline") || "線上購票"}
+                  </a>
+                  {" "}
+                </>
+              )}
+              {renderDescriptionWithLinks(item.description)}
+            </>
+          ) : null}
         </p>
+      )}
+      {item.luggage && (
+        <div className="mt-2 inline-flex items-center gap-2 text-xs font-bold text-blue-700">
+          <Luggage size={14} className="text-blue-600" />
+          <span>{item.luggage}</span>
+        </div>
       )}
     </div>
   );

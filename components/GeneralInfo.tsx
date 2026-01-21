@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Hotel, Sun, CheckSquare, FileText, Smartphone, Briefcase, Map, ShieldAlert, ThermometerSun, Globe, ExternalLink } from 'lucide-react';
+import { Hotel, Sun, CheckSquare, FileText, Smartphone, Briefcase, Map, ShieldAlert, ThermometerSun, Globe, ExternalLink, Mountain } from 'lucide-react';
 
 export const GeneralInfo: React.FC = () => {
   const [checkedItems, setCheckedItems] = useState<Set<number>>(new Set());
@@ -147,7 +147,7 @@ export const GeneralInfo: React.FC = () => {
                      { area: '拉斯維加斯', eng: 'Las Vegas', tag: '跟團', desc: '跟團行程已安排：拉斯維加斯楓丹白露 (Fontainebleau Las Vegas)。', address: '2777 S Las Vegas Blvd, Las Vegas, NV 89109', color: 'bg-amber-50 text-amber-700' },
                      { area: '佩吉', eng: 'Page, AZ', tag: '跟團', desc: '跟團行程已安排：佩奇/鮑威爾湖戴斯套房酒店。', address: 'Page, AZ (具體地址依實際預訂為準)', color: 'bg-amber-50 text-amber-700' },
                      { area: '棕櫚泉', eng: 'Palm Springs', tag: '度假', desc: '建議選擇附泳池的度假飯店，享受沙漠綠洲。', address: '', color: 'bg-sky-50 text-sky-700' },
-                     { area: '聖地牙哥', eng: 'San Diego', tag: '海景', desc: '推薦 Downtown 或 La Jolla 享受無敵海景。', address: '', color: 'bg-emerald-50 text-emerald-700' }
+                     { area: '聖地牙哥', eng: 'San Diego', tag: '海景', desc: '推薦 Downtown 或 La Jolla 享受無敵海景。', address: '8431 Neva Ave, San Diego, CA 92123', color: 'bg-emerald-50 text-emerald-700' }
                  ].map((item, i) => (
                      <div key={i} className="flex items-start gap-4 pb-4 border-b border-stone-100 last:border-0 last:pb-0">
                          <span className={`text-[10px] font-bold px-2.5 py-1.5 rounded-lg uppercase tracking-wider shrink-0 w-12 text-center ${item.color}`}>{item.tag}</span>
@@ -196,6 +196,78 @@ export const GeneralInfo: React.FC = () => {
                       <span className="flex-1 text-sm leading-relaxed">水龍頭生水雖安全但口感不佳，建議去超市買大桶水飲用。</span>
                   </li>
               </ul>
+          </div>
+
+          {/* National Park Tips */}
+          <div className="md:col-span-12 bg-gradient-to-br from-emerald-50 to-teal-50 rounded-3xl p-6 border border-emerald-200 shadow-sm">
+             <h3 className="font-serif font-bold text-stone-800 mb-6 flex items-center gap-2 text-lg">
+                  <div className="w-8 h-8 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600">
+                     <Mountain size={18} />
+                  </div>
+                  遊玩注意事項 & 建議
+              </h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="bg-white/60 backdrop-blur-sm p-4 rounded-2xl border border-emerald-100">
+                      <div className="flex items-start gap-3">
+                          <span className="font-serif font-bold text-emerald-600 text-xl leading-none shrink-0">1</span>
+                          <div className="flex-1">
+                              <p className="text-sm text-stone-700 leading-relaxed">
+                                  <strong className="text-emerald-700">玩國家公園的通用法則：</strong>提前下載離線地圖、加滿油，園區內沒有半格訊號
+                              </p>
+                          </div>
+                      </div>
+                  </div>
+                  <div className="bg-white/60 backdrop-blur-sm p-4 rounded-2xl border border-emerald-100">
+                      <div className="flex items-start gap-3">
+                          <span className="font-serif font-bold text-emerald-600 text-xl leading-none shrink-0">2</span>
+                          <div className="flex-1">
+                              <p className="text-sm text-stone-700 leading-relaxed">
+                                  園區內沒有餐廳，也沒有小賣部、超市，<strong className="text-emerald-700">一定帶足水和食物</strong>，最好買一箱水放後車箱
+                              </p>
+                          </div>
+                      </div>
+                  </div>
+                  <div className="bg-white/60 backdrop-blur-sm p-4 rounded-2xl border border-emerald-100">
+                      <div className="flex items-start gap-3">
+                          <span className="font-serif font-bold text-emerald-600 text-xl leading-none shrink-0">3</span>
+                          <div className="flex-1">
+                              <p className="text-sm text-stone-700 leading-relaxed">
+                                  氣候很乾燥，紫外線很強，女生要做好<strong className="text-emerald-700">防曬和補水</strong>，墨鏡、護唇膏和帽子也帶上
+                              </p>
+                          </div>
+                      </div>
+                  </div>
+                  <div className="bg-white/60 backdrop-blur-sm p-4 rounded-2xl border border-emerald-100">
+                      <div className="flex items-start gap-3">
+                          <span className="font-serif font-bold text-emerald-600 text-xl leading-none shrink-0">4</span>
+                          <div className="flex-1">
+                              <p className="text-sm text-stone-700 leading-relaxed">
+                                  早晚溫差大，如果有觀星計畫要待很晚，即使是夏天最好也<strong className="text-emerald-700">帶上一件厚衣服</strong>
+                              </p>
+                          </div>
+                      </div>
+                  </div>
+                  <div className="bg-white/60 backdrop-blur-sm p-4 rounded-2xl border border-emerald-100">
+                      <div className="flex items-start gap-3">
+                          <span className="font-serif font-bold text-emerald-600 text-xl leading-none shrink-0">5</span>
+                          <div className="flex-1">
+                              <p className="text-sm text-stone-700 leading-relaxed">
+                                  強烈建議穿<strong className="text-emerald-700">厚底的健行鞋</strong>，即使不徒步，也能避免看仙人掌的時候被扎
+                              </p>
+                          </div>
+                      </div>
+                  </div>
+                  <div className="bg-white/60 backdrop-blur-sm p-4 rounded-2xl border border-emerald-100">
+                      <div className="flex items-start gap-3">
+                          <span className="font-serif font-bold text-emerald-600 text-xl leading-none shrink-0">6</span>
+                          <div className="flex-1">
+                              <p className="text-sm text-stone-700 leading-relaxed">
+                                  園內蛇很多，包括劇毒的響尾蛇，<strong className="text-rose-600">聽到喀嚓咔嗒的聲音要警惕</strong>
+                              </p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
           </div>
       </div>
     </div>

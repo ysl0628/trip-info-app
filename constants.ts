@@ -144,9 +144,9 @@ export const ITINERARY: DayItinerary[] = [
   {
     day: 2,
     date: '4/2 (週四)',
-    title: '藝術、校園與海灘之旅',
-    description: '上午參觀 Getty Center 和 UCLA 校園，中午在 Santa Monica 海灘散步用餐，下午前往 LACMA 拍照，傍晚到農夫市場採買食材，晚上回 Airbnb 自煮晚餐。',
-    highlights: ['蓋蒂中心 (Getty Center)', 'UCLA 校園（可選）', 'Santa Monica Pier', 'LACMA Urban Light', '農夫市場 (The Original Farmers Market)'],
+    title: '藝術、海灘與天文台之旅',
+    description: '上午參觀 Getty Center，中午在 Santa Monica 海灘散步用餐，下午前往格里斐斯天文台欣賞日落與夜景，傍晚到農夫市場採買食材，晚上回 Airbnb 自煮晚餐。',
+    highlights: ['蓋蒂中心 (Getty Center)', 'Santa Monica Pier', '格里斐斯天文台 (Griffith Observatory)', '農夫市場 (The Original Farmers Market)'],
     accommodation: {
       location: '哈仙達崗住宿',
       hotels: [{
@@ -161,13 +161,181 @@ export const ITINERARY: DayItinerary[] = [
       dinner: 'airbnb 自煮（農夫市場食材）'
     },
     transport: [
-      '自駕前往 Getty Center（約 40-50 分鐘）',
-      '自駕前往 UCLA（約 10-15 分鐘，可選）',
-      '自駕前往 Santa Monica（約 10-15 分鐘）',
-      '自駕前往 LACMA（約 12-15 分鐘）',
-      '自駕前往農夫市場（約 5-10 分鐘）',
-      '自駕回 Airbnb（約 45-60 分鐘）'
+      '自駕前往 Getty Center（約 50-70 分鐘）',
+      '自駕前往 Santa Monica（約 20-30 分鐘）',
+      '自駕前往格里斐斯天文台（約 45-70 分鐘）',
+      '自駕前往農夫市場（約 20-30 分鐘）',
+      '自駕回 Airbnb（約 60-75 分鐘）'
     ],
+    timeline: [
+      {
+        time: '8:30-9:30 AM',
+        period: '上午',
+        title: '早餐',
+        type: 'meal',
+        location: 'airbnb',
+        activityDuration: '約1小時',
+        description: [
+          '早餐、準備出門'
+        ]
+      },
+      {
+        time: '9:30-10:40 AM',
+        period: '上午',
+        title: '交通',
+        type: 'transportation',
+        from: '哈仙達崗住宿',
+        to: '蓋蒂中心 (Getty Center)',
+        duration: '約 60-70 分鐘',
+        mapLink: 'https://www.google.com/maps/dir/Rowland+Heights/The+Getty+Center',
+        description: [
+          '直接從 Hacienda Heights 往西'
+        ]
+      },
+      {
+        time: '10:40 AM-12:10 PM',
+        period: '上午',
+        title: '景點',
+        type: 'attraction',
+        location: '蓋蒂中心 (Getty Center)',
+        activityDuration: '約1.5小時',
+        mapLink: 'https://www.google.com/maps/search/?api=1&query=The+Getty+Center+Los+Angeles',
+        parkingCost: '停車 $20',
+        isFreeAdmission: true,
+        description: [
+          '建築、花園、景觀',
+        ]
+      },
+      {
+        time: '12:10-12:50 PM',
+        period: '上午',
+        title: '交通',
+        type: 'transportation',
+        from: '蓋蒂中心',
+        to: '聖莫尼卡 (Santa Monica)',
+        duration: '約 40-60 分鐘',
+        mapLink: 'https://www.google.com/maps/dir/The+Getty+Center/Santa+Monica+Pier',
+        description: [
+          '前往 Santa Monica'
+        ]
+      },
+      {
+        time: '12:50-3:20 PM',
+        period: '下午',
+        title: '景點',
+        type: 'attraction',
+        location: '聖莫尼卡碼頭 (Santa Monica Pier) + 海灘散步 + 逛街 + 午餐',
+        activityDuration: '約2.5小時',
+        mapLink: 'https://www.google.com/maps/search/?api=1&query=Santa+Monica+Pier',
+        isFreeAdmission: true,
+        parkingCost: '$2 - $3.5',
+        description: [
+          '導航 Parking Structure 6 或 Parking Structure 8',
+          'Third Street Promenade 逛街',
+          '海邊餐廳用餐',
+          '停車費前 90 分鐘免費，$2 - $3.5'
+        ]
+      },
+      {
+        time: '3:20-4:30 PM',
+        period: '下午',
+        title: '交通',
+        type: 'transportation',
+        from: '聖莫尼卡',
+        to: '格里斐斯天文台 (Griffith Observatory)',
+        duration: '約 50-70 分鐘',
+        mapLink: 'https://www.google.com/maps/dir/Santa+Monica+Pier/Griffith+Observatory',
+        description: [
+          '自駕前往格里斐斯天文台'
+        ]
+      },
+      {
+        time: '4:30-6:30 PM',
+        period: '下午/傍晚',
+        title: '景點',
+        type: 'attraction',
+        location: '格里斐斯天文台 (Griffith Observatory)',
+        activityDuration: '約1.5-2小時',
+        openingHours: '12:00-22:00',
+        infoLink: 'https://www.17ybm.com/zh-tw/griffith-observatory/',
+        mapLink: 'https://www.google.com/maps/search/?api=1&query=Griffith+Observatory',
+        parkingCost: '停車 $10',
+        isFreeAdmission: true,
+        description: [
+          '室外景觀、城市景觀、俯瞰 LA',
+          '傍晚時段可欣賞日落與夜景',
+        ]
+      },
+      {
+        time: '6:30-7:00 PM',
+        period: '傍晚',
+        title: '交通',
+        type: 'transportation',
+        from: '格里斐斯天文台',
+        to: '農夫市場',
+        duration: '約 20-30 分鐘',
+        mapLink: 'https://www.google.com/maps/dir/Griffith+Observatory/The+Original+Farmers+Market',
+        description: [
+          '前往農夫市場採買'
+        ]
+      },
+      {
+        time: '7:00-8:00 PM',
+        period: '傍晚',
+        title: '景點',
+        type: 'attraction',
+        location: '農夫市場 (The Original Farmers Market)',
+        activityDuration: '約1小時',
+        mapLink: 'https://www.google.com/maps/search/?api=1&query=The+Original+Farmers+Market',
+        description: [
+          '地點：6333 W 3rd St, Los Angeles, CA 90036',
+          '新鮮農產品、麵包、起司、食品',
+          '直接吃晚餐或買食材回家煮（若太晚建議直接晚餐）',
+          '停車驗證免費（90 分鐘-2 小時）'
+        ]
+      },
+      {
+        time: '8:00-9:10 PM',
+        period: '晚上',
+        title: '交通',
+        type: 'transportation',
+        from: '農夫市場',
+        to: '哈仙達崗住宿',
+        duration: '約 60-70 分鐘',
+        mapLink: 'https://www.google.com/maps/dir/The+Original+Farmers+Market/1251+Marchmont+Avenue,+Hacienda+Heights,+CA+91745',
+        description: [
+          '晚上交通'
+        ]
+      },
+    ],
+    mapLink: 'https://www.google.com/maps/dir//The+Getty+Center/Santa+Monica+Pier/Griffith+Observatory/The+Original+Farmers+Market'
+  },
+  {
+    day: 3,
+    date: '4/3 (週四)',
+    title: '好萊塢經典景點之旅',
+    description: '上午參觀好萊塢星光大道和 Hollywood Sign，中午到 Porto\'s Bakery 享用午餐，下午在 Pasadena Old Town 逛街購物。',
+    highlights: ['好萊塢星光大道 (Hollywood Walk of Fame)', 'Hollywood Sign', 'Porto\'s Bakery', 'Pasadena Old Town'],
+    accommodation: {
+      location: '哈仙達崗住宿',
+      hotels: [{
+        name: 'airbnb 住宿',
+        link: 'https://www.airbnb.com.tw/rooms/1299494295130525390'
+      }]
+    },
+    meals: {
+      breakfast: 'airbnb 早餐',
+      lunch: 'Porto\'s Bakery',
+      dinner: 'airbnb 自煮晚餐'
+    },
+    transport: [
+      '自駕到 Hollywood Walk of Fame（約 40-60 分鐘）',
+      '自駕到 Hollywood Sign（約 15-25 分鐘）',
+      '自駕到 Porto\'s Bakery（約 35-50 分鐘）',
+      '自駕到 Pasadena（約 30-45 分鐘）',
+      '自駕回 Hacienda Heights Airbnb（約 30-45 分鐘）'
+    ],
+    mapLink: 'https://www.google.com/maps/dir//Hollywood+Walk+of+Fame/Hollywood+Sign/Porto\'s+Bakery/Pasadena+Old+Town',
     timeline: [
       {
         time: '8:30-9:30 AM',
@@ -186,249 +354,20 @@ export const ITINERARY: DayItinerary[] = [
         title: '交通',
         type: 'transportation',
         from: '哈仙達崗住宿',
-        to: '蓋蒂中心 (Getty Center)',
-        duration: '約 40-50 分鐘',
-        mapLink: 'https://www.google.com/maps/dir/Rowland+Heights/The+Getty+Center',
-        description: [
-          '直接從 Hacienda Heights 往西'
-        ]
-      },
-      {
-        time: '10:20-10:55 AM',
-        period: '上午',
-        title: '景點',
-        type: 'attraction',
-        location: '蓋蒂中心 (Getty Center)',
-        activityDuration: '約35分鐘',
-        mapLink: 'https://www.google.com/maps/search/?api=1&query=The+Getty+Center+Los+Angeles',
-        parkingCost: '停車 $20',
-        isFreeAdmission: true,
-        description: [
-          '建築、花園、景觀',
-        ]
-      },
-      {
-        time: '10:55-11:20 AM',
-        period: '上午',
-        title: '交通',
-        type: 'transportation',
-        option: '一',
-        from: '蓋蒂中心',
-        to: 'UCLA 校園',
-        duration: '約 10-15 分鐘',
-        mapLink: 'https://www.google.com/maps/dir/The+Getty+Center/UCLA+Campus',
-        description: [
-          '可選：前往 UCLA 校園'
-        ]
-      },
-      {
-        time: '11:20-11:35 AM',
-        period: '上午',
-        title: '景點',
-        type: 'attraction',
-        option: '一',
-        location: 'UCLA 校園',
-        activityDuration: '約15-20分鐘',
-        mapLink: 'https://www.google.com/maps/search/?api=1&query=UCLA+Campus',
-        isFreeAdmission: true,
-        description: [
-          '加州大學洛杉磯分校美麗校園',
-        ]
-      },
-      {
-        time: '11:20-11:35 AM',
-        period: '上午',
-        title: '交通',
-        type: 'transportation',
-        option: '一',
-        from: 'UCLA 校園',
-        to: '聖莫尼卡 (Santa Monica)',
-        duration: '約 10-15 分鐘'
-      },
-      {
-        time: '10:55-11:35 AM',
-        period: '上午',
-        title: '交通',
-        type: 'transportation',
-        option: '二',
-        from: '蓋蒂中心',
-        to: '聖莫尼卡 (Santa Monica)',
-        duration: '約 40 分鐘',
-        mapLink: 'https://www.google.com/maps/dir/The+Getty+Center/Santa+Monica+Pier',
-        description: [
-          '跳過 UCLA，直接前往 Santa Monica'
-        ]
-      },
-      {
-        time: '11:35 AM-2:15 PM',
-        period: '下午',
-        title: '景點',
-        type: 'attraction',
-        location: '聖莫尼卡碼頭 (Santa Monica Pier) + 海灘散步 + 逛街 + 午餐',
-        activityDuration: '約2小時40分鐘',
-        mapLink: 'https://www.google.com/maps/search/?api=1&query=Santa+Monica+Pier',
-        isFreeAdmission: true,
-        parkingCost: '$2 - $3.5', 
-        description: [
-          '導航 Parking Structure 6 或 Parking Structure 8',
-          'Third Street Promenade 逛街',
-          '海邊餐廳用餐',
-          '停車費前 90 分鐘免費，$2 - $3.5'
-        ]
-      },
-      {
-        time: '2:15-2:30 PM',
-        period: '下午',
-        title: '交通',
-        type: 'transportation',
-        from: '聖莫尼卡',
-        to: '洛杉磯郡立美術館 (LACMA)',
-        duration: '約 12-15 分鐘',
-        mapLink: 'https://www.google.com/maps/dir/Santa+Monica+Pier/LACMA',
-        description: [
-          'Fairfax 區域'
-        ]
-      },
-      {
-        time: '2:30-3:15 PM',
-        period: '下午',
-        title: '景點',
-        type: 'attraction',
-        location: '洛杉磯郡立美術館 (LACMA) Urban Light',
-        activityDuration: '約45分鐘',
-        mapLink: 'https://www.google.com/maps/search/?api=1&query=LACMA',
-        parkingCost: '停車 $20',
-        isFreeAdmission: true,
-        description: [
-          '著名裝置藝術',
-        ]
-      },
-      {
-        time: '3:15-3:30 PM',
-        period: '下午',
-        title: '交通',
-        type: 'transportation',
-        from: '洛杉磯郡立美術館',
-        to: '農夫市場',
-        duration: '約 5-10 分鐘',
-        mapLink: 'https://www.google.com/maps/dir/LACMA/The+Original+Farmers+Market',
-        description: [
-          '很近，同 Fairfax 區域'
-        ]
-      },
-      {
-        time: '3:30-5:15 PM',
-        period: '下午',
-        title: '景點',
-        type: 'attraction',
-        location: '農夫市場 (The Original Farmers Market)',
-        activityDuration: '約1小時45分鐘',
-        mapLink: 'https://www.google.com/maps/search/?api=1&query=The+Original+Farmers+Market',
-        description: [
-          '地點：6333 W 3rd St, Los Angeles, CA 90036',
-          '新鮮農產品、麵包、起司、食品',
-          '直接吃晚餐或買食材回家煮',
-          '停車驗證免費（90 分鐘-2 小時）'
-        ]
-      },
-      {
-        time: '5:15-6:15 PM',
-        period: '晚上',
-        title: '交通',
-        type: 'transportation',
-        from: '農夫市場',
-        to: '哈仙達崗住宿',
-        duration: '約 45-60 分鐘',
-        mapLink: 'https://www.google.com/maps/dir/The+Original+Farmers+Market/1251+Marchmont+Avenue,+Hacienda+Heights,+CA+91745',
-        description: [
-          '下午塞車'
-        ]
-      },
-      {
-        time: '6:15-7:15 PM',
-        period: '晚上',
-        title: '其他類型',
-        type: 'other',
-        location: '煮晚餐',
-        activityDuration: '約1小時',
-        description: [
-          '使用農夫市場採買的食材',
-          'Airbnb 廚房'
-        ]
-      },
-      {
-        time: '7:15-8:30 PM',
-        period: '晚上',
-        title: '晚餐',
-        type: 'meal',
-        location: 'airbnb',
-        activityDuration: '約1小時15分鐘',
-        description: [
-          '用餐、休息'
-        ]
-      }
-    ],
-    mapLink: 'https://www.google.com/maps/dir//The+Getty+Center/UCLA+Campus/Santa+Monica+Pier/LACMA/The+Original+Farmers+Market'
-  },
-  {
-    day: 3,
-    date: '4/3 (週四)',
-    title: '好萊塢經典景點之旅',
-    description: '上午參觀好萊塢星光大道和 Hollywood Sign，中午前往格里斐斯天文台俯瞰 LA，下午到 Porto\'s Bakery 享用午餐，傍晚在 Pasadena Old Town 逛街購物。',
-    highlights: ['好萊塢星光大道 (Hollywood Walk of Fame)', 'Hollywood Sign', '格里斐斯天文台 (Griffith Observatory)', 'Porto\'s Bakery', 'Pasadena Old Town'],
-    accommodation: {
-      location: '哈仙達崗住宿',
-      hotels: [{
-        name: 'airbnb 住宿',
-        link: 'https://www.airbnb.com.tw/rooms/1299494295130525390'
-      }]
-    },
-    meals: {
-      breakfast: 'airbnb 早餐',
-      lunch: 'Porto\'s Bakery',
-      dinner: 'airbnb 自煮晚餐'
-    },
-    transport: [
-      '自駕到 Hollywood Walk of Fame（約 30-40 分鐘）',
-      '自駕到 Hollywood Sign（約 5 分鐘）',
-      '自駕到 Griffith Observatory（約 12 分鐘）',
-      '自駕到 Porto\'s Bakery（約 25-30 分鐘）',
-      '自駕到 Pasadena（約 15-20 分鐘）',
-      '自駕回 Hacienda Heights Airbnb（約 30-40 分鐘）'
-    ],
-    mapLink: 'https://www.google.com/maps/dir//Hollywood+Walk+of+Fame/Hollywood+Sign/Griffith+Observatory/Porto\'s+Bakery/Pasadena+Old+Town',
-    timeline: [
-      {
-        time: '8:30-9:30 AM',
-        period: '上午',
-        title: '早餐',
-        type: 'meal',
-        location: 'airbnb',
-        activityDuration: '約1小時',
-        description: [
-          '早餐、準備出門'
-        ]
-      },
-      {
-        time: '9:30-10:00 AM',
-        period: '上午',
-        title: '交通',
-        type: 'transportation',
-        from: '哈仙達崗住宿',
         to: '好萊塢星光大道 (Hollywood Walk of Fame)',
-        duration: '約 30-40 分鐘',
+        duration: '約 40-60 分鐘',
         mapLink: 'https://www.google.com/maps/dir/1251+Marchmont+Avenue,+Hacienda+Heights,+CA+91745/Hollywood+Walk+of+Fame',
         description: [
           '自駕到 Hollywood Blvd'
         ]
       },
       {
-        time: '10:00-10:30 AM',
+        time: '10:20-11:00 AM',
         period: '上午',
         title: '景點',
         type: 'attraction',
         location: '好萊塢星光大道 (Hollywood Walk of Fame)',
-        activityDuration: '約30分鐘',
+        activityDuration: '約40分鐘',
         mapLink: 'https://www.google.com/maps/search/?api=1&query=Hollywood+Walk+of+Fame',
         parkingCost: '停車 $5-15',
         isFreeAdmission: true,
@@ -437,25 +376,26 @@ export const ITINERARY: DayItinerary[] = [
         ]
       },
       {
-        time: '10:30-10:35 AM',
+        time: '11:00-11:25 AM',
         period: '上午',
         title: '交通',
         type: 'transportation',
         from: '好萊塢星光大道',
         to: '好萊塢標誌 (Hollywood Sign)',
-        duration: '約5分鐘',
+        duration: '約 15-25 分鐘',
         mapLink: 'https://www.google.com/maps/dir//Lake+Hollywood+Park',
         description: [
           '自駕到 Lake Hollywood Park'
         ]
       },
       {
-        time: '10:35-11:00 AM',
+        time: '11:25 AM-12:10 PM',
         period: '上午',
         title: '景點',
         type: 'attraction',
         location: '好萊塢標誌 (Hollywood Sign)',
-        activityDuration: '約25分鐘',
+        activityDuration: '約45分鐘',
+        infoLink: 'https://www.wendyjourney.com/hollywood-sign/',
         mapLink: 'https://www.google.com/maps/search/?api=1&query=Hollywood+Sign',
         isFreeAdmission: true,
         description: [
@@ -463,47 +403,20 @@ export const ITINERARY: DayItinerary[] = [
         ]
       },
       {
-        time: '11:00-11:15 AM',
+        time: '12:10-12:55 PM',
         period: '上午',
         title: '交通',
         type: 'transportation',
         from: '好萊塢標誌',
-        to: '格里斐斯天文台 (Griffith Observatory)',
-        duration: '約12分鐘',
-        mapLink: 'https://www.google.com/maps/dir//Griffith+Observatory',
-        description: [
-          '自駕到山上天文台'
-        ]
-      },
-      {
-        time: '11:15 AM-12:00 PM',
-        period: '上午',
-        title: '景點',
-        type: 'attraction',
-        location: 'Griffith Observatory（格里斐斯天文台）',
-        activityDuration: '約45分鐘',
-        mapLink: 'https://www.google.com/maps/search/?api=1&query=Griffith+Observatory',
-        parkingCost: '停車 $10',
-        isFreeAdmission: true,
-        description: [
-          '只看室外景觀、城市景觀、俯瞰 LA',
-        ]
-      },
-      {
-        time: '12:00-12:30 PM',
-        period: '下午',
-        title: '交通',
-        type: 'transportation',
-        from: '格里斐斯天文台',
         to: '波托麵包店 (Porto\'s Bakery)',
-        duration: '約 25-30 分鐘',
-        mapLink: 'https://www.google.com/maps/dir//Porto\'s+Bakery+Downey',
+        duration: '約 35-50 分鐘',
+        mapLink: 'https://www.google.com/maps/dir/Hollywood+Sign/Porto\'s+Bakery+Downey',
         description: [
           '往南到 Downey'
         ]
       },
       {
-        time: '12:30-1:30 PM',
+        time: '12:55-2:00 PM',
         period: '下午',
         title: '午餐',
         type: 'meal',
@@ -516,25 +429,26 @@ export const ITINERARY: DayItinerary[] = [
         ]
       },
       {
-        time: '1:30-2:00 PM',
+        time: '2:00-2:45 PM',
         period: '下午',
         title: '交通',
         type: 'transportation',
         from: '波托麵包店',
         to: '帕薩迪納老城 (Pasadena Old Town)',
-        duration: '約 15-20 分鐘',
+        duration: '約 30-45 分鐘',
         mapLink: 'https://www.google.com/maps/dir//Pasadena+Old+Town',
         description: [
           '往東'
         ]
       },
       {
-        time: '2:00-4:30 PM',
+        time: '2:45-5:30 PM',
         period: '下午',
         title: '景點',
         type: 'attraction',
         location: '帕薩迪納老城 (Pasadena Old Town)',
-        activityDuration: '約2.5小時',
+        activityDuration: '約2.5-3小時',
+        infoLink: 'https://laweekly.asia/pasadena-one-day-trip/',
         mapLink: 'https://www.google.com/maps/search/?api=1&query=Pasadena+Old+Town',
         parkingCost: '停車 $2-5',
         isFreeAdmission: true,
@@ -543,37 +457,37 @@ export const ITINERARY: DayItinerary[] = [
         ]
       },
       {
-        time: '4:30-5:15 PM',
+        time: '5:30-6:15 PM',
         period: '下午',
         title: '交通',
         type: 'transportation',
         from: '帕薩迪納老城',
         to: '哈仙達崗住宿',
-        duration: '約 30-40 分鐘',
+        duration: '約 30-45 分鐘',
         mapLink: 'https://www.google.com/maps/dir//1251+Marchmont+Avenue,+Hacienda+Heights,+CA+91745',
         description: [
           '自駕回 Airbnb'
         ]
       },
       {
-        time: '5:15-6:30 PM',
+        time: '6:15-7:15 PM',
         period: '晚上',
         title: '其他類型',
         type: 'other',
         location: 'airbnb',
-        activityDuration: '約1小時15分鐘',
+        activityDuration: '約1小時',
         description: [
           '採買晚餐食材、煮晚餐',
           '使用 Day 2 農夫市場採買的食材'
         ]
       },
       {
-        time: '6:30-8:00 PM',
+        time: '7:15-8:30 PM',
         period: '晚上',
         title: '晚餐',
         type: 'meal',
         location: 'airbnb',
-        activityDuration: '約1小時30分鐘',
+        activityDuration: '約1小時15分鐘',
         description: [
           '用餐、休息'
         ]
@@ -599,10 +513,10 @@ export const ITINERARY: DayItinerary[] = [
       dinner: 'airbnb 自煮晚餐'
     },
     transport: [
-      '自駕到 Downtown LA（約 30-40 分鐘）',
+      '自駕到 Downtown LA（約 35-55 分鐘）',
       'Union Station 停車（$10 all day）',
-      '自駕到 Huntington Beach（約 45-60 分鐘）或 Malibu Beach（約 40-50 分鐘）',
-      '自駕回 Hacienda Heights Airbnb（約 45-60 分鐘）'
+      '自駕到 Huntington Beach（約 60-90 分鐘）或 Malibu Beach（約 55-85 分鐘）',
+      '自駕回 Hacienda Heights Airbnb（約 60-90 分鐘）'
     ],
     mapLink: 'https://www.google.com/maps/dir/Olvera+Street+Los+Angeles/Angels+Flight+Railway/Grand+Central+Market/Huntington+Beach+CA/Malibu+Beach+CA',
     timeline: [
@@ -618,20 +532,20 @@ export const ITINERARY: DayItinerary[] = [
         ]
       },
       {
-        time: '9:30-10:10 AM',
+        time: '9:30-10:25 AM',
         period: '上午',
         title: '交通',
         type: 'transportation',
         from: '哈仙達崗住宿',
         to: '洛杉磯市中心 (Downtown LA)',
-        duration: '約 30-40 分鐘',
+        duration: '約 35-55 分鐘',
         mapLink: 'https://www.google.com/maps/dir//Downtown+Los+Angeles',
         description: [
           '自駕到洛杉磯市中心'
         ]
       },
       {
-        time: '10:10 AM',
+        time: '10:25 AM',
         period: '上午',
         title: '其他類型',
         type: 'other',
@@ -643,26 +557,29 @@ export const ITINERARY: DayItinerary[] = [
         ]
       },
       {
-        time: '10:10-11:20 AM',
+        time: '10:25-11:10 AM',
         period: '上午',
         title: '景點',
         type: 'attraction',
+        option: '可選',
         location: 'Olvera Street（El Pueblo Historical Monument）',
-        activityDuration: '約1小時',
+        activityDuration: '約45分鐘',
         mapLink: 'https://www.google.com/maps/search/?api=1&query=Olvera+Street+Los+Angeles',
         isFreeAdmission: true,
         description: [
-          '傳統墨西哥街',
+          '傳統墨西哥街，可選擇跳過以節省時間',
           '手工藝品、餐廳、咖啡廳',
         ]
       },
       {
-        time: '11:20 AM-12:00 PM',
+        time: '11:10-11:40 AM',
         period: '上午',
         title: '景點',
         type: 'attraction',
         location: '天使鐵路 (Angels Flight Railway)',
-        activityDuration: '約40分鐘',
+        activityDuration: '約30分鐘',
+        openingHours: '06:45 - 22:00',
+        infoLink: 'https://www.wowlavie.com/article/260026667',
         mapLink: 'https://www.google.com/maps/search/?api=1&query=Angels+Flight+Railway',
         ticketCost: '門票 $3',
         description: [
@@ -672,12 +589,12 @@ export const ITINERARY: DayItinerary[] = [
         ]
       },
       {
-        time: '12:00-12:30 PM',
+        time: '11:40 AM-12:20 PM',
         period: '下午',
         title: '景點',
         type: 'attraction',
         location: '中央市場 (Grand Central Market)',
-        activityDuration: '約30分鐘',
+        activityDuration: '約40分鐘',
         mapLink: 'https://www.google.com/maps/search/?api=1&query=Grand+Central+Market+Los+Angeles',
         isFreeAdmission: true,
         description: [
@@ -686,41 +603,42 @@ export const ITINERARY: DayItinerary[] = [
         ]
       },
       {
-        time: '12:30-1:30 PM',
+        time: '12:20-1:35 PM',
         period: '下午',
         title: '交通',
         type: 'transportation',
         option: '一',
         from: '中央市場',
         to: '杭廷頓海灘 (Huntington Beach)',
-        duration: '約 45-60 分鐘',
+        duration: '約 60-90 分鐘',
         mapLink: 'https://www.google.com/maps/dir/Grand+Central+Market+Los+Angeles/Huntington+Beach+CA',
         description: [
           '自駕前往杭廷頓海灘'
         ]
       },
       {
-        time: '12:30-1:20 PM',
+        time: '12:20-1:45 PM',
         period: '下午',
         title: '交通',
         type: 'transportation',
         option: '二',
         from: '中央市場',
         to: '馬里布海灘 (Malibu Beach)',
-        duration: '約 40-50 分鐘',
+        duration: '約 55-85 分鐘',
         mapLink: 'https://www.google.com/maps/dir/Grand+Central+Market+Los+Angeles/Malibu+Beach+CA',
         description: [
           '自駕前往馬里布海灘'
         ]
       },
       {
-        time: '1:30-4:00 PM',
+        time: '1:35-4:45 PM',
         period: '下午',
         title: '景點',
         type: 'attraction',
         option: '一',
         location: '杭廷頓海灘 (Huntington Beach)',
-        activityDuration: '約2.5小時',
+        activityDuration: '約3小時',
+        infoLink: 'https://monacama.pixnet.net/blog/posts/11397297759',
         mapLink: 'https://www.google.com/maps/search/?api=1&query=Huntington+Beach+CA',
         isFreeAdmission: true,
         parkingCost: '停車 $2-5/小時',
@@ -732,63 +650,51 @@ export const ITINERARY: DayItinerary[] = [
         ]
       },
       {
-        time: '1:20-3:50 PM',
+        time: '1:45-4:15 PM',
         period: '下午',
         title: '景點',
         type: 'attraction',
         option: '二',
         location: '馬里布海灘 (Malibu Beach)',
-        activityDuration: '約2.5小時',
+        activityDuration: '約2-2.5小時',
         mapLink: 'https://www.google.com/maps/search/?api=1&query=Malibu+Beach+CA',
+        infoLink: 'https://www.chrisamericandream.com/malibu-paradise-cove-beach/',
         isFreeAdmission: true,
         parkingCost: '停車 $2-5/小時',
         description: [
           '海灘散步、拍照',
           'Malibu Pier 走走',
-          '欣賞太平洋海景',
           '周邊餐廳推薦：',
           '• Moonshadows',
           '• Malibu Farm Pier Café'
         ]
       },
       {
-        time: '4:00-5:00 PM',
+        time: '4:45-6:15 PM',
         period: '下午',
         title: '交通',
         type: 'transportation',
         option: '一',
         from: '杭廷頓海灘',
         to: '哈仙達崗住宿',
-        duration: '約 45-60 分鐘',
+        duration: '約 60-90 分鐘',
         mapLink: 'https://www.google.com/maps/dir/Huntington+Beach+CA/1251+Marchmont+Avenue,+Hacienda+Heights,+CA+91745',
         description: [
           '自駕回 Airbnb'
         ]
       },
       {
-        time: '3:50-4:50 PM',
+        time: '4:15-6:00 PM',
         period: '下午',
         title: '交通',
         type: 'transportation',
         option: '二',
         from: '馬里布海灘',
         to: '哈仙達崗住宿',
-        duration: '約 45-60 分鐘',
+        duration: '約 60-90 分鐘',
         mapLink: 'https://www.google.com/maps/dir/Malibu+Beach+CA/1251+Marchmont+Avenue,+Hacienda+Heights,+CA+91745',
         description: [
           '自駕回 Airbnb'
-        ]
-      },
-      {
-        time: '5:00-8:00 PM',
-        period: '晚上',
-        title: '其他類型',
-        type: 'other',
-        location: 'airbnb',
-        activityDuration: '約2.5小時',
-        description: [
-          'Airbnb 休息、整理',
-          '晚上可選擇出門或在家休息',
         ]
       }
     ],
@@ -1086,9 +992,28 @@ export const ITINERARY: DayItinerary[] = [
   {
     day: 8,
     date: '4/8 (週三)',
-    title: '【跟團結束】拉斯維加斯招牌 & 七彩石',
-    description: '拉斯網紅歡迎招牌打卡&M豆巧克力世界&可口可樂主題店（必付項目，60分鐘）→ 飛躍拉斯維加斯（自費，25分鐘）→ 七彩巨石陣（30分鐘）→ 巴斯托 Outlets （120分鐘）→ 洛杉磯',
-    highlights: ['歡迎來到絢麗的拉斯維加斯招牌', 'M&M\'s World', '可口可樂主題專賣店', '七彩石', '巴斯托 Outlets'],
+    title: '【跟團結束】拉斯維加斯 & 七彩石 → 取車前往約書亞樹住宿',
+    description: '跟團結束於 99 Ranch Rancho Cucamonga，搭 Uber 前往安大略機場取車後，直達約書亞樹附近住宿過夜（Day 8 & 9 連住同一間）。',
+    highlights: [
+      '拉斯維加斯歡迎招牌', 'M&M\'s World & 可口可樂店', '七彩石', '巴斯托 Outlets',
+      '99 Ranch Rancho Cucamonga 下團', '約書亞樹住宿'
+    ],
+    accommodation: {
+      location: '約書亞樹 / Twentynine Palms airbnb（Day 8 & 9 連住）',
+      hotels: [{
+        name: '約書亞樹附近 airbnb',
+      }]
+    },
+    meals: {
+      breakfast: '導遊推薦',
+      lunch: '導遊推薦',
+      dinner: '99 Ranch 附近或上路吃'
+    },
+    transport: [
+      '跟團全程巴士',
+      '19:00–19:30：99 Ranch Rancho Cucamonga → ONT 機場（Uber，17分鐘，$15–20）',
+      '20:30–22:30：ONT → 約書亞樹住宿（2小時，107英里）'
+    ],
     timeline: [
       {
         time: '上午',
@@ -1162,240 +1087,300 @@ export const ITINERARY: DayItinerary[] = [
         description: '導遊會根據實際情況為您推薦餐食'
       },
       {
-        time: '全天',
-        period: '全天',
+        time: '19:00',
+        period: '晚上',
+        title: '離團',
+        type: 'other',
+        location: '99 Ranch Rancho Cucamonga (9775 Base Line Rd)',
+        description: '跟團結束，下車點'
+      },
+      {
+        time: '19:15-19:30',
+        period: '晚上',
         title: '交通',
         type: 'transportation',
-        description: '行程結束後，可在以下地點離團：上島大酒樓（羅蘭崗德成行隔壁）；1463 Nogales St, Rowland Heights, CA 91748'
-      }
+        from: '99 Ranch Rancho Cucamonga',
+        to: '安大略機場 (ONT)',
+        duration: '17分鐘，5英里',
+        description: '搭 Uber / Lyft（5人約 $15–20）',
+        mapLink: 'https://www.google.com/maps/dir/9775+Base+Line+Rd,+Rancho+Cucamonga,+CA/Ontario+International+Airport'
+      },
+      {
+        time: '19:30-20:30',
+        period: '晚上',
+        title: '租車',
+        type: 'other',
+        location: '安大略機場租車櫃檯',
+        duration: '1小時',
+        description: '取 Minivan（after-hours drop 可用）',
+        mapLink: 'https://www.google.com/maps/dir/Ontario+International+Airport/Twentynine+Palms'
+      },
+      {
+        time: '20:30-22:30',
+        period: '晚上',
+        title: '交通',
+        type: 'transportation',
+        from: 'ONT 機場',
+        to: '約書亞樹 / Twentynine Palms airbnb',
+        duration: '2小時，107英里',
+        mapLink: 'https://www.google.com/maps/dir/Ontario+International+Airport/Twentynine+Palms'
+      },
+      {
+        time: '22:30',
+        period: '晚上',
+        title: '住宿',
+        type: 'accommodation',
+        description: '晚到約書亞樹住宿，休息（Day 8 & 9 連住）'
+      },
     ],
-    accommodation: {
-      location: '哈仙達崗住宿',
-      hotels: [{
-        name: 'airbnb 住宿',
-        link: 'https://www.airbnb.com.tw/rooms/1299494295130525390'
-      }]
-    },
-    meals: {
-      breakfast: '導遊會根據實際情況為您推薦餐食',
-      lunch: '導遊會根據實際情況為您推薦餐食',
-      dinner: '導遊會根據實際情況為您推薦餐食'
-    },
-    transport: [
-      '從拉斯維加斯招牌出發前往七彩石；行駛：約33公里/約30分鐘',
-      '從七彩石出發前往巴斯托 Outlets；行駛：約220公里/約150分鐘',
-      '行程結束後，可在以下地點離團：上島大酒樓（羅蘭崗德成行隔壁）；1463 Nogales St, Rowland Heights, CA 91748'
-    ],
-    mapLink: 'https://www.google.com/maps/dir/Las+Vegas/Seven+Magic+Mountains/Barstow/Rowland+Heights',
+    mapLink: 'https://www.google.com/maps/dir/9775+Base+Line+Rd,+Rancho+Cucamonga,+CA/Ontario+International+Airport/Twentynine+Palms,+CA',
     feeNote: '本產品有必付項目費用190美金每人，包含：錫安國家公園、布萊斯國家公園、馬蹄灣、大峽谷國家公園、拉斯網紅歡迎招牌打卡&M豆巧克力世界&可口可樂主題店費用，可預訂時選擇對應的可選項，也可在團上將此費用支付給導遊，感謝您的配合~'
   },
   {
     day: 9,
     date: '4/9 (週四)',
-    title: 'Brea & 棕櫚泉 VillageFest',
-    description: '早上前往銀行辦事及取車，上午從 Hacienda Heights 出發前往 Brea Downtown 逛街購物；中午過後自駕前往棕櫚泉，下午搭乘空中纜車欣賞沙漠山景，晚上在市中心 VillageFest 夜市散步與用餐。',
-    highlights: ['Brea Downtown', '棕櫚泉空中纜車', 'VillageFest 夜市'],
+    title: '約書亞樹 + 棕櫚泉纜車',
+    description: '上午遊覽約書亞樹國家公園，下午前往棕櫚泉搭乘空中纜車看日落，晚上回約書亞樹住宿休息。',
+    highlights: [
+      'Keys View 全景',
+      'Skull Rock',
+      'Cholla Cactus Garden',
+      'Hidden Valley',
+      '棕櫚泉空中纜車（日落）'
+    ],
     accommodation: {
-      location: '棕櫚泉 (Palm Springs)',
-      hotels: ['棕櫚泉 airbnb 住宿'],
+      location: '約書亞樹 / Twentynine Palms airbnb',
+      hotels: [
+        {
+          name: 'airbnb 住宿',
+        }
+      ],
       roomAssignment: ['爸爸、媽媽', '文馨', '宏翔、小藍']
     },
     meals: {
-      breakfast: 'Hacienda Heights 自理',
-      lunch: 'Brea Downtown',
-      dinner: '棕櫚泉 VillageFest 夜市'
+      breakfast: '住宿自理',
+      lunch: 'Joshua Tree 小鎮 Crossroads Cafe',
+      dinner: '住宿附近或自煮'
     },
-    transport: ['自駕 (單程約 1.5 小時)'],
+    transport: ['全程自駕（Minivan）'],
     timeline: [
       {
-        time: '08:00-09:00 AM',
+        time: '08:00-09:00',
         period: '上午',
-        title: '其他類型',
-        type: 'other',
-        location: '銀行辦事及取車',
-        activityDuration: '約1小時',
-        description: [
-          '前往銀行辦理相關事務',
-          '取車'
-        ]
+        title: '早餐',
+        type: 'meal',
+        description: '住宿早餐'
       },
       {
-        time: '09:00-09:30 AM',
+        time: '09:00-09:30',
         period: '上午',
         title: '交通',
         type: 'transportation',
-        from: 'Hacienda Heights',
-        to: '布雷亞市中心 (Brea Downtown)',
-        duration: '約30分鐘',
-        mapLink: 'https://www.google.com/maps/dir/1251+Marchmont+Avenue,+Hacienda+Heights,+CA+91745/Brea+CA',
-        description: '從 Hacienda Heights 出發，前往 Brea Downtown'
+        from: '住宿',
+        to: '約書亞樹西入口 / 北入口',
+        duration: '20–30分鐘',
+        description: '取國家公園年票 $30/車'
       },
       {
-        time: '09:30-12:00 PM',
+        time: '09:30-12:00',
         period: '上午',
+        title: '約書亞樹經典路線',
+        type: 'attraction',
+        location: 'Keys View → Skull Rock → Hidden Valley → Balanced Rock',
+        activityDuration: '2.5小時',
+        infoLink: 'https://www.17ybm.com/zh-tw/joshua-tree-national-park/',
+        mapLink: 'https://www.google.com/maps/search/?api=1&query=Keys+View+Joshua+Tree',
+        description: [
+          '⚠️ 注意事項：約書亞樹國家公園訊號不好，建議提前下載離線地圖',
+          'Keys View：沙漠全景，免費停車',
+          'Skull Rock：拍照打卡，步行5分鐘',
+          'Hidden Valley：短健行，攀岩區',
+          'Balanced Rock：奇石拍照'
+        ]
+      },
+      {
+        time: '12:00-12:45',
+        period: '下午',
+        title: '午餐',
+        type: 'meal',
+        location: 'Joshua Tree 小鎮 Crossroads Cafe（推薦）',
+        activityDuration: '45分鐘'
+      },
+      {
+        time: '12:45-14:00',
+        period: '下午',
+        title: '交通',
+        type: 'transportation',
+        from: 'Joshua Tree 小鎮',
+        to: '棕櫚泉空中纜車站',
+        duration: '1小時15分鐘（75英里）',
+        mapLink: 'https://www.google.com/maps/dir/Joshua+Tree/Palm+Springs+Aerial+Tramway'
+      },
+      {
+        time: '14:00-17:00',
+        period: '下午',
         title: '景點',
         type: 'attraction',
-        location: '布雷亞市中心 (Brea Downtown)',
-        activityDuration: '約2.5小時',
-        mapLink: 'https://www.google.com/maps/search/?api=1&query=Brea+Downtown+CA',
+        location: '棕櫚泉空中纜車站 (Palm Springs Aerial Tramway)',
+        activityDuration: '3小時',
+        ticketLink: 'https://activity.eztravel.com.tw/detail/TKNKL-92957',
+        ticketCost: 'USD $30-35/人',
+        infoLink: 'https://blog.udn.com/gloomybear/177213898',
+        mapLink: 'https://www.google.com/maps/search/?api=1&query=Palm+Springs+Aerial+Tramway',
         description: [
-          '9:30 AM 抵達 Brea Downtown',
-          '9:30-12:00 PM Brea Downtown 散步、購物',
-          '12:00-12:30 PM 午餐（Bruxie / Ruby\'s / Cha Cha\'s）'
+          '世界最大旋轉纜車，上升 8000 英尺到山頂',
+          '欣賞沙漠日落、山景、松林步道',
+          '山頂活動：觀景台、短健行、咖啡廳休息',
+          '4 月日落約 19:00，黃金時段最美'
         ]
       },
       {
-        time: '12:30-3:00 PM',
-        period: '下午',
+        time: '17:15-18:30',
+        period: '傍晚',
         title: '交通',
         type: 'transportation',
-        from: '洛杉磯',
-        to: '棕櫚泉',
-        distance: '約220公里',
-        duration: '約150分鐘',
-        luggage: '帶著行李',
-        mapLink: 'https://www.google.com/maps/dir/Los+Angeles/Palm+Springs'
+        from: '棕櫚泉纜車站',
+        to: '住宿',
+        duration: '1小時15分鐘',
+        mapLink: 'https://www.google.com/maps/dir/Palm+Springs+Aerial+Tramway/Twentynine+Palms'
       },
       {
-        time: '3:00-4:15 PM',
-        period: '下午',
+        time: '18:30',
+        period: '晚上',
         title: '住宿',
         type: 'accommodation',
-        location: '棕櫚泉 airbnb Check-in',
-        activityDuration: '約1小時15分鐘',
-        description: '放行李、休息'
-      },
-      {
-        time: '4:00-4:15 PM',
-        period: '下午',
-        title: '交通',
-        type: 'transportation',
-        from: 'airbnb',
-        to: '棕櫚泉空中纜車站',
-        duration: '約15分鐘',
-        mapLink: 'https://www.google.com/maps/dir/Palm+Springs/Palm+Springs+Aerial+Tramway'
-      },
-      {
-        time: '4:15-6:45 PM',
-        period: '下午',
-        title: '景點',
-        type: 'attraction',
-        location: '棕櫚泉空中纜車',
-        activityDuration: '約2小時30分鐘',
-        mapLink: 'https://www.google.com/maps/search/?api=1&query=Palm+Springs+Aerial+Tramway',
-        ticketLink: 'https://activity.eztravel.com.tw/detail/TKNKL-92957',
-        ticketCost: '門票 $30-35/人',
-        description: [
-          '[購票]（USD 30-35/人）',
-          '下午搭乘空中纜車，欣賞傍晚山景'
-        ]
-      },
-      {
-        time: '6:00-10:00 PM',
-        period: '晚上',
-        title: '景點',
-        type: 'attraction',
-        location: '棕櫚泉 VillageFest 夜市 (Palm Springs VillageFest)',
-        activityDuration: '18:00–22:00',
-        mapLink: 'https://www.google.com/maps/search/?api=1&query=Villagefest+Main+Office+Palm+Springs',
-        description: [
-          '每週四晚上在 Downtown Palm Canyon Drive 舉辦，是棕櫚泉最熱鬧的活動。',
-          '特色：食品攤販、現場表演、手工藝品、街頭藝術展示',
-          '美術館週四免費開放',
-          '充滿人潮，熱鬧氛圍'
-        ]
+        description: '回約書亞樹住宿休息（連住第二晚）'
       }
     ],
-    mapLink: 'https://www.google.com/maps/dir/1251+Marchmont+Avenue,+Hacienda+Heights,+CA+91745/Brea+Downtown/Palm+Springs'
+    mapLink: 'https://www.google.com/maps/dir/Twentynine+Palms/Joshua+Tree+National+Park/Palm+Springs+Aerial+Tramway/Twentynine+Palms'
   },
   {
     day: 10,
     date: '4/10 (週五)',
-    title: '約書亞樹淺遊 & 前往聖地牙哥',
-    description: '早上在棕櫚泉飯店悠閒享用早餐，前往約書亞樹國家公園淺遊拍照，下午南下自駕前往聖地牙哥並入住 airbnb。可擇一前往拉荷亞灣看海獅後在小義大利區享用晚餐，或直接前往超市買菜回 airbnb 煮晚餐。',
-    highlights: ['約書亞樹國家公園 (Joshua Tree National Park)', '聖地牙哥 (San Diego)', '拉荷亞灣 (La Jolla Cove)', '小義大利 (Little Italy)'],
+    title: '棕櫚泉早晨輕鬆散步 & 前往聖地牙哥',
+    description: '早上從約書亞樹附近住宿出發，前往棕櫚泉市區輕鬆走一個景點（可從植物園 / 飛機博物館 / 瀑布步道三選一），中午左右出發南下，自駕前往聖地牙哥並於下午三點入住 airbnb。',
+    highlights: [
+      '棕櫚泉 Moorten Botanical Garden（植物園，option A）',
+      'Palm Springs Air Museum 飛機博物館（option B）',
+      'Indian / Tahquitz Canyon 瀑布步道（option C）',
+      '聖地牙哥 (San Diego)'
+    ],
     accommodation: {
       location: '聖地牙哥 (San Diego)',
-      hotels: ['airbnb 住宿'],
+      hotels: [
+        {
+          name: 'airbnb 住宿',
+          link: 'https://www.google.com/maps/search/?api=1&query=8431+Neva+Avenue+San+Diego+CA+92123'
+        }
+      ],
       roomAssignment: ['爸爸、媽媽', '文馨', '宏翔、小藍']
     },
     meals: {
-      breakfast: '棕櫚泉飯店早餐',
-      lunch: 'Crossroads Cafe / In-N-Out Burger（Cabazon）/ Natural Sisters Cafe',
+      breakfast: '約書亞樹 / Twentynine Palms airbnb 早餐',
+      lunch: '棕櫚泉市區簡單用餐（咖啡廳 / 三明治 / 漢堡）',
       dinner: '選項一：小義大利區 / 選項二：超市買菜回 airbnb 煮'
     },
     transport: [
-      '自駕前往約書亞樹國家公園西入口（約 1 小時）',
-      '自駕前往聖地牙哥（約 2.5–3 小時）',
-      '自駕前往拉荷亞灣（約 15–20 分鐘）',
-      '自駕前往小義大利（約 20 分鐘）'
+      '從約書亞樹 / Twentynine Palms 開車前往棕櫚泉（約 1–1.5 小時，依住宿位置而定）',
+      '從棕櫚泉開車前往聖地牙哥 Neva Ave 附近（約 2.5–3 小時，正常塞車情況）',
+      '從聖地牙哥 airbnb 開車前往拉荷亞灣 / 小義大利（選項一）',
+      '從聖地牙哥 airbnb 開車前往超市採買（選項二）'
     ],
     timeline: [
       {
-        time: '8:30-9:30 AM',
+        time: '08:30-09:00 AM',
         period: '上午',
         title: '早餐',
         type: 'meal',
-        description: '飯店早餐、悠閒起床'
+        description: 'airbnb 早餐、悠閒起床'
       },
       {
-        time: '9:30-10:30 AM',
+        time: '09:00-10:30 AM',
         period: '上午',
         title: '交通',
         type: 'transportation',
-        from: '棕櫚泉',
-        to: '約書亞樹西入口',
-        duration: '約1小時',
+        from: '約書亞樹 / Twentynine Palms airbnb',
+        to: '棕櫚泉市區 (Palm Springs)',
+        duration: '約 1–1.5 小時',
         luggage: '行李在車上',
-        mapLink: 'https://www.google.com/maps/dir/Palm+Springs/Joshua+Tree+National+Park'
+        mapLink: 'https://www.google.com/maps/dir/Joshua+Tree+CA/Palm+Springs+CA'
       },
+
+      // Option A：植物園
       {
-        time: '10:30-12:30 PM',
+        time: '10:30-11:30 AM',
         period: '上午',
         title: '景點',
         type: 'attraction',
-        location: '約書亞樹國家公園',
-        activityDuration: '約2小時',
-        ticketCost: '門票 $30/車',
-        luggage: '行李在車上',
+        option: '一',
+        location: '摩登熱帶植物園 (Moorten Botanical Garden)',
+        activityDuration: '約1小時',
+        mapLink: 'https://www.google.com/maps/search/?api=1&query=Moorten+Botanical+Garden+Palm+Springs',
         description: [
-          '約書亞樹淺遊拍照（2 小時）',
-          '建議點：Keys View、Skull Rock、Cholla Cactus Garden'
+          '小巧精緻的沙漠植物園，滿滿仙人掌、多肉植物，非常適合拍照散步',
+          '走路路程短，適合爸媽輕鬆逛一圈（約 30–60 分鐘）',
+          '門票約 USD 5/人（現金/信用卡皆可）'
+        ]
+      },
+
+      // Option B：飛機博物館
+      {
+        time: '10:30-12:00 PM',
+        period: '上午',
+        title: '景點',
+        type: 'attraction',
+        option: '二',
+        location: '棕櫚泉飛機博物館 (Palm Springs Air Museum)',
+        activityDuration: '約1.5小時',
+        mapLink: 'https://www.google.com/maps/search/?api=1&query=Palm+Springs+Air+Museum',
+        infoLink: 'https://www.expedia.com.tw/Palm-Springs-Air-Museum-Palm-Springs.d6063411.Place-To-Visit',
+        description: [
+          '室內展覽為主，展示二戰與冷戰時期戰機，可近距離看飛機與拍照',
+          '冷氣充足、不曬太陽，適合長輩與不想走太多路的成員',
+          '建議停留約 1–2 小時，門票約 USD 20–25/人'
         ]
       },
       {
-        time: '12:30-1:00 PM',
-        period: '下午',
-        title: '交通',
-        type: 'transportation',
-        luggage: '行李在車上',
-        description: '離開公園、開往餐廳'
+        time: '10:00-12:00 PM',
+        period: '上午',
+        title: '景點',
+        type: 'attraction',
+        option: '三',
+        location: 'Indian Canyon 或 Tahquitz Canyon',
+        activityDuration: '約2小時',
+        mapLink: 'https://www.google.com/maps/search/?api=1&query=Tahquitz+Canyon+Palm+Springs',
+        infoLink: 'https://blog.udn.com/gloomybear/177214362',
+        description: [
+          '輕鬆步道，路況良好，往返約 2 英里，終點可看到瀑布或綠洲景觀',
+          '建議早上走，帶水、防曬、帽子（4 月中午以後較熱）',
+          '門票約 USD 15–20/人，依園區而定'
+        ]
       },
+
       {
-        time: '12:45-1:15 PM',
+        time: '12:00-12:45 PM',
         period: '下午',
         title: '午餐',
         type: 'meal',
-        luggage: '帶著行李',
         description: [
-          'Crossroads Cafe（西餐沙龍風，香蕉麵包必點，約 USD 10–20）',
-          '或 In-N-Out Burger（Cabazon 區快速漢堡）',
-          '或 Natural Sisters Cafe（約書亞樹小鎮健康素食）'
+          '棕櫚泉市區簡單用餐，可選咖啡廳、三明治、漢堡等快速餐點',
+          '建議吃飽後再上路前往聖地牙哥'
         ]
       },
       {
-        time: '1:15-4:00 PM',
+        time: '12:45-3:15 PM',
         period: '下午',
         title: '交通',
         type: 'transportation',
-        from: '約書亞樹',
-        to: '聖地牙哥',
-        duration: '約 2.75–3 小時',
-        luggage: '帶著行李',
-        mapLink: 'https://www.google.com/maps/dir/Joshua+Tree+National+Park/San+Diego'
+        from: '棕櫚泉',
+        to: '聖地牙哥 airbnb（Neva Ave 一帶）',
+        duration: '約 2.5–3 小時',
+        luggage: '行李在車上',
+        mapLink: 'https://www.google.com/maps/dir/Palm+Springs+CA/San+Diego+CA',
+        description: '沿 I-215 / I-15 南下，途中視情況可在休息站短暫停留上洗手間'
       },
       {
-        time: '4:00-4:30 PM',
+        time: '3:00-3:30 PM',
         period: '下午',
         title: '住宿',
         type: 'accommodation',
@@ -1409,10 +1394,10 @@ export const ITINERARY: DayItinerary[] = [
         title: '交通',
         type: 'transportation',
         from: 'airbnb',
-        to: '拉荷亞灣 (La Jolla Cove) / 超市',
-        duration: '約15-20分鐘',
-        mapLink: 'https://www.google.com/maps/dir/San+Diego/La+Jolla+Cove',
-        description: '前往選項一或選項二'
+        to: '拉霍亞海灣 (La Jolla Cove) / 超市',
+        duration: '約 15–20 分鐘',
+        description: '前往 La Jolla Cove 或前往超市採買食材',
+        mapLink: 'https://www.google.com/maps/dir/San+Diego+CA/La+Jolla+Cove'
       },
       {
         time: '4:50-6:00 PM',
@@ -1420,52 +1405,55 @@ export const ITINERARY: DayItinerary[] = [
         title: '景點',
         type: 'attraction',
         option: '一',
-        location: 'La Jolla Cove（拉荷亞灣）',
-        activityDuration: '約1小時10分鐘',
+        location: '拉霍亞海灣 (La Jolla Cove)',
+        activityDuration: '約 1 小時 10 分鐘',
+        infoLink: 'https://rosaroundtheworld.com/la-jolla-cove/',
         mapLink: 'https://www.google.com/maps/search/?api=1&query=La+Jolla+Cove',
         description: [
-          '看海獅、懸崖散步、拍照',
-          'Sunny Jim Sea Cave（USD 10/人）'
+          '觀看海獅、海豹在沙灘上曬太陽',
+          '海岸步道散步、拍照',
+          'Sunny Jim Sea Cave（可選，門票 USD 10/人）'
         ]
+      },
+      {
+        time: '6:15-6:30 PM',
+        period: '傍晚',
+        title: '交通',
+        type: 'transportation',
+        option: '一',
+        from: 'La Jolla',
+        to: 'Little Italy',
+        duration: '約 20 分鐘',
+        mapLink: 'https://www.google.com/maps/dir/La+Jolla+Cove/Little+Italy+San+Diego'
       },
       {
         time: '4:30-5:30 PM',
         period: '下午',
         title: '晚餐',
         type: 'meal',
-        option: '二',
-        location: '超市買菜回 airbnb 煮',
-        activityDuration: '約1小時',
-        description: [
-          '前往超市採買食材',
-          '返回 airbnb 自行烹煮晚餐'
-        ]
-      },
-      {
-        time: '6:15-6:30 PM',
-        period: '晚上',
-        title: '交通',
-        type: 'transportation',
         option: '一',
-        from: '拉荷亞灣',
-        to: '小義大利 (Little Italy)',
-        duration: '約20分鐘',
-        mapLink: 'https://www.google.com/maps/dir/La+Jolla+Cove/Little+Italy+San+Diego'
+        location: '超市採買 + airbnb 自煮',
+        activityDuration: '約 1 小時',
+        description: [
+          '前往附近超市採買食材（如 Vons、Ralphs、Whole Foods）',
+          '返回 airbnb 自己煮晚餐',
+          '早點休息，為隔天行程儲備體力'
+        ]
       },
       {
         time: '6:30-8:00 PM',
         period: '晚上',
         title: '晚餐',
         type: 'meal',
-        option: '一',
-        location: '小義大利 (Little Italy)',
-        activityDuration: '約1小時30分鐘',
+        option: '二',
+        location: '小義大利區 (Little Italy)',
+        activityDuration: '約 1.5 小時',
         mapLink: 'https://www.google.com/maps/search/?api=1&query=Little+Italy+San+Diego',
         description: [
-          'Filippi\'s Pizza Grotto（60年老字號披薩+餐廳，USD 15–25/人）',
-          'Vincenzo Cucina（高級義大利菜，起司輪麵包必試，USD 30–50/人）',
+          'Filippi\'s Pizza Grotto（60 年老字號披薩店，USD 15–25/人）',
+          'Vincenzo Cucina（高檔義式料理，必試起司輪義大利麵，USD 30–50/人）',
           'Herb & Wood（主廚餐廳，USD 35–45/人）',
-          'Born and Raised（頂級牛排，USD 40–60/人）'
+          'Born and Raised（高級牛排館，USD 40–60/人）'
         ]
       },
       {
@@ -1473,10 +1461,11 @@ export const ITINERARY: DayItinerary[] = [
         period: '晚上',
         title: '交通',
         type: 'transportation',
-        from: '小義大利',
+        option: '一',
+        from: 'Little Italy',
         to: 'airbnb',
-        duration: '約20-25分鐘',
-        mapLink: 'https://www.google.com/maps/dir/Little+Italy+San+Diego/San+Diego',
+        duration: '約 20–25 分鐘',
+        mapLink: 'https://www.google.com/maps/dir/Little+Italy+San+Diego/San+Diego+CA',
         description: '選項一：從 Little Italy 返回 airbnb'
       },
       {
@@ -1488,7 +1477,13 @@ export const ITINERARY: DayItinerary[] = [
         description: '抵達 airbnb，休息'
       }
     ],
-    mapLink: 'https://www.google.com/maps/dir/Palm+Springs/Joshua+Tree+National+Park/San+Diego/La+Jolla+Cove/Little+Italy+San+Diego'
+    mapLink: 'https://www.google.com/maps/dir/Joshua+Tree+CA/Palm+Springs+CA/San+Diego+CA',
+    referenceLinks: [
+      {
+        label: 'La Jolla Cove 推薦景點 (Instagram)',
+        url: 'https://www.instagram.com/p/C1LakWrNM10'
+      }
+    ]
   },
   {
     day: 11,
@@ -1498,7 +1493,12 @@ export const ITINERARY: DayItinerary[] = [
     highlights: ['巴爾波亞公園 (Balboa Park)', '聖地牙哥動物園 (San Diego Zoo)', '托里松州立公園 (Torrey Pines State Park)', 'Old Town San Diego'],
     accommodation: {
       location: '聖地牙哥 (San Diego)',
-      hotels: ['airbnb 住宿'],
+      hotels: [
+        {
+          name: 'airbnb 住宿',
+          link: 'https://www.google.com/maps/search/?api=1&query=8431+Neva+Avenue+San+Diego+CA+92123'
+        }
+      ],
       roomAssignment: ['爸爸、媽媽', '文馨', '宏翔、小藍']
     },
     meals: {
@@ -1568,7 +1568,6 @@ export const ITINERARY: DayItinerary[] = [
         ticketLink: 'https://activity.eztravel.com.tw/detail/TKNKL-6698',
         ticketCost: '門票 $60-70/人',
         description: [
-          '[購票]（USD 60-70/人）',
           '乘坐遊園車',
           '重點看大貓科動物、鳥舍'
         ]
@@ -1660,7 +1659,12 @@ export const ITINERARY: DayItinerary[] = [
     highlights: ['中途島號博物館 (USS Midway)', '海港村 (Seaport Village)', '科羅納多島 (Coronado Island)', '煤氣燈街區 (Gaslamp Quarter)'],
     accommodation: {
       location: '聖地牙哥 (San Diego)',
-      hotels: ['airbnb 住宿'],
+      hotels: [
+        {
+          name: 'airbnb 住宿',
+          link: 'https://www.google.com/maps/search/?api=1&query=8431+Neva+Avenue+San+Diego+CA+92123'
+        }
+      ],
       roomAssignment: ['爸爸、媽媽', '文馨', '宏翔、小藍']
     },
     meals: {
@@ -1707,7 +1711,6 @@ export const ITINERARY: DayItinerary[] = [
         ticketLink: 'https://activity.eztravel.com.tw/detail/TKNKL-6525',
         ticketCost: '門票 $39-41/人',
         description: [
-          '[購票]（USD 39-41/人）',
           '參觀真實戰艦、駕駛艙、飛機展示',
           '有中文語音導覽'
         ]
@@ -2474,7 +2477,7 @@ export const FOOD_SPOTS: FoodSpot[] = [
     mapLink: 'https://www.google.com/maps/search/?api=1&query=Urth+Caffe+Wynn+Las+Vegas',
     tags: ['Wynn Hotel', '有機', '拉花']
   },
-  
+
   // San Diego
   {
     name: 'Phil\'s BBQ',
