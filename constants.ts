@@ -711,6 +711,19 @@ export const ITINERARY: DayItinerary[] = [
     departureLocation: '上島大酒樓（羅蘭崗德成行隔壁）；1463 Nogales St, Rowland Heights, CA 91748',
     timeline: [
       {
+        time: '07:30-08:20',
+        period: '上午',
+        title: '交通',
+        type: 'transportation',
+        from: '哈仙達崗住宿',
+        to: '上島大酒樓',
+        duration: '約 40-50 分鐘',
+        luggage: '有行李',
+        description: [
+          '行李同行，可能需要兩輛車'
+        ]
+      },
+      {
         time: '08:30',
         period: '上午',
         title: '出發',
@@ -770,7 +783,10 @@ export const ITINERARY: DayItinerary[] = [
     },
     transport: ['從洛杉磯出發前往拉斯維加斯；行駛：約430公里/約300分鐘'],
     mapLink: 'https://www.google.com/maps/dir/1463+Nogales+St,+Rowland+Heights,+CA+91748/Las+Vegas',
-    feeNote: '本產品有必付項目費用190美金每人，包含：錫安國家公園、布萊斯國家公園、馬蹄灣、大峽谷國家公園、拉斯網紅歡迎招牌打卡&M豆巧克力世界&可口可樂主題店費用，可預訂時選擇對應的可選項，也可在團上將此費用支付給導遊，感謝您的配合~'
+    feeNote: [
+      '必付費用 USD 190 / 人（已於購買行程時支付，包含：錫安國家公園、布萊斯國家公園、馬蹄灣、大峽谷國家公園、拉斯網紅歡迎招牌打卡、M&M 豆巧克力世界、可口可樂主題店）',
+      '國家公園費約 USD 100 / 人；可評估年票 USD 250 / 人是否更划算'
+    ]
   },
   {
     day: 6,
