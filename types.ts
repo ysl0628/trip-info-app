@@ -69,7 +69,7 @@ export interface DayItinerary {
   referenceLinks?: Array<{ label: string; url: string }>;
 }
 
-export type Region = '洛杉磯' | '拉斯維加斯/大峽谷' | '聖地牙哥' | '棕櫚泉';
+export type Region = '洛杉磯' | '拉斯維加斯/大峽谷' | '聖地牙哥' | '棕櫚泉' | '約書亞樹';
 
 export interface Attraction {
   name: string;

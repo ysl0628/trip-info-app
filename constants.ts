@@ -1017,9 +1017,10 @@ export const ITINERARY: DayItinerary[] = [
       '99 Ranch Rancho Cucamonga 下團', '約書亞樹住宿'
     ],
     accommodation: {
-      location: '約書亞樹 / Twentynine Palms airbnb（Day 8 & 9 連住）',
+      location: '63955 Hollinger Rd, Joshua Tree, CA 92252, 美國',
       hotels: [{
         name: '約書亞樹附近 airbnb',
+        link: 'https://www.airbnb.com.tw/rooms/659545131627720122?guests=1&adults=1&s=67&unique_share_id=b0ba00be-e2bc-449b-8ea2-11f0ec140577'
       }]
     },
     meals: {
@@ -1133,16 +1134,16 @@ export const ITINERARY: DayItinerary[] = [
         description: '取 Minivan（after-hours drop 可用）',
         mapLink: 'https://www.google.com/maps/dir/Ontario+International+Airport/Twentynine+Palms'
       },
-      {
-        time: '20:30-22:30',
-        period: '晚上',
-        title: '交通',
-        type: 'transportation',
-        from: 'ONT 機場',
-        to: '約書亞樹 / Twentynine Palms airbnb',
-        duration: '2小時，107英里',
-        mapLink: 'https://www.google.com/maps/dir/Ontario+International+Airport/Twentynine+Palms'
-      },
+       {
+         time: '20:30-22:30',
+         period: '晚上',
+         title: '交通',
+         type: 'transportation',
+         from: 'ONT 機場',
+         to: '約書亞樹 / Twentynine Palms airbnb',
+         duration: '2小時，107英里',
+         mapLink: 'https://www.google.com/maps/dir/Ontario+International+Airport/63955+Hollinger+Rd,+Joshua+Tree,+CA+92252'
+       },
       {
         time: '22:30',
         period: '晚上',
@@ -1151,14 +1152,17 @@ export const ITINERARY: DayItinerary[] = [
         description: '晚到約書亞樹住宿，休息（Day 8 & 9 連住）'
       },
     ],
-    mapLink: 'https://www.google.com/maps/dir/9775+Base+Line+Rd,+Rancho+Cucamonga,+CA/Ontario+International+Airport/Twentynine+Palms,+CA',
+    mapLink: 'https://www.google.com/maps/dir/9775+Base+Line+Rd,+Rancho+Cucamonga,+CA/Ontario+International+Airport/63955+Hollinger+Rd,+Joshua+Tree,+CA+92252',
     feeNote: '本產品有必付項目費用190美金每人，包含：錫安國家公園、布萊斯國家公園、馬蹄灣、大峽谷國家公園、拉斯網紅歡迎招牌打卡&M豆巧克力世界&可口可樂主題店費用，可預訂時選擇對應的可選項，也可在團上將此費用支付給導遊，感謝您的配合~'
   },
   {
     day: 9,
     date: '4/9 (週四)',
     title: '約書亞樹 + 棕櫚泉纜車',
-    description: '上午遊覽約書亞樹國家公園，下午前往棕櫚泉搭乘空中纜車看日落，晚上回約書亞樹住宿休息。',
+    description: [
+      '上午遊覽約書亞樹國家公園，下午前往棕櫚泉搭乘空中纜車看日落，晚上回約書亞樹住宿休息。',
+      '備註：若 4/9 想走慵懶行程，可取消 4/10 上午行程，並把棕櫚泉纜車改到 4/10 結束後直接出發聖地牙哥。'
+    ],
     highlights: [
       'Keys View 全景',
       'Skull Rock',
@@ -1167,10 +1171,11 @@ export const ITINERARY: DayItinerary[] = [
       '棕櫚泉空中纜車（日落）'
     ],
     accommodation: {
-      location: '約書亞樹 / Twentynine Palms airbnb',
+      location: '63955 Hollinger Rd, Joshua Tree, CA 92252, 美國',
       hotels: [
         {
-          name: 'airbnb 住宿',
+          name: '約書亞樹附近 airbnb',
+          link: 'https://www.airbnb.com.tw/rooms/659545131627720122?guests=1&adults=1&s=67&unique_share_id=b0ba00be-e2bc-449b-8ea2-11f0ec140577'
         }
       ],
       roomAssignment: ['爸爸、媽媽', '文馨', '宏翔、小藍']
@@ -1197,7 +1202,12 @@ export const ITINERARY: DayItinerary[] = [
         from: '住宿',
         to: '約書亞樹西入口 / 北入口',
         duration: '20–30分鐘',
-        description: '取國家公園年票 $30/車'
+        mapLink: 'https://www.google.com/maps/dir/63955+Hollinger+Rd,+Joshua+Tree,+CA+92252/West+Entrance+Station,+Joshua+Tree+National+Park',
+        description: [
+          '取國家公園年票 $30/車',
+          '西入口（推薦，離住宿較近）：https://www.google.com/maps/dir/63955+Hollinger+Rd,+Joshua+Tree,+CA+92252/West+Entrance+Station,+Joshua+Tree+National+Park',
+          '北入口（Twentynine Palms）：https://www.google.com/maps/dir/63955+Hollinger+Rd,+Joshua+Tree,+CA+92252/North+Entrance+Station,+Joshua+Tree+National+Park'
+        ]
       },
       {
         time: '09:30-12:00',
@@ -1206,6 +1216,8 @@ export const ITINERARY: DayItinerary[] = [
         type: 'attraction',
         location: 'Keys View → Skull Rock → Hidden Valley → Balanced Rock',
         activityDuration: '2.5小時',
+        openingHours: '24小時開放',
+        ticketCost: '$30/車（7天有效）',
         infoLink: 'https://www.17ybm.com/zh-tw/joshua-tree-national-park/',
         mapLink: 'https://www.google.com/maps/search/?api=1&query=Keys+View+Joshua+Tree',
         description: [
@@ -1261,7 +1273,7 @@ export const ITINERARY: DayItinerary[] = [
         from: '棕櫚泉纜車站',
         to: '住宿',
         duration: '1小時15分鐘',
-        mapLink: 'https://www.google.com/maps/dir/Palm+Springs+Aerial+Tramway/Twentynine+Palms'
+         mapLink: 'https://www.google.com/maps/dir/Palm+Springs+Aerial+Tramway/63955+Hollinger+Rd,+Joshua+Tree,+CA+92252'
       },
       {
         time: '18:30',
@@ -1271,7 +1283,7 @@ export const ITINERARY: DayItinerary[] = [
         description: '回約書亞樹住宿休息（連住第二晚）'
       }
     ],
-    mapLink: 'https://www.google.com/maps/dir/Twentynine+Palms/Joshua+Tree+National+Park/Palm+Springs+Aerial+Tramway/Twentynine+Palms'
+    mapLink: 'https://www.google.com/maps/dir/63955+Hollinger+Rd,+Joshua+Tree,+CA+92252/Joshua+Tree+National+Park/Palm+Springs+Aerial+Tramway/63955+Hollinger+Rd,+Joshua+Tree,+CA+92252'
   },
   {
     day: 10,
@@ -1318,20 +1330,40 @@ export const ITINERARY: DayItinerary[] = [
         period: '上午',
         title: '交通',
         type: 'transportation',
-        from: '約書亞樹 / Twentynine Palms airbnb',
+        from: '約書亞樹',
         to: '棕櫚泉市區 (Palm Springs)',
         duration: '約 1–1.5 小時',
         luggage: '行李在車上',
         mapLink: 'https://www.google.com/maps/dir/Joshua+Tree+CA/Palm+Springs+CA'
       },
 
-      // Option A：植物園
+      // Option A：棕櫚泉纜車
+      {
+        time: '10:30-13:00 PM',
+        period: '上午',
+        title: '景點',
+        type: 'attraction',
+        option: '一',
+        location: '棕櫚泉空中纜車 (Palm Springs Aerial Tramway)',
+        activityDuration: '約2.5小時',
+        openingHours: '10:00–20:00',
+        infoLink: 'https://blog.udn.com/gloomybear/177213898',
+        mapLink: 'https://www.google.com/maps/search/?api=1&query=Palm+Springs+Aerial+Tramway',
+        ticketLink: 'https://activity.eztravel.com.tw/detail/TKNKL-92957',
+        ticketCost: 'USD $30-35/人',
+        description: [
+          '世界最大旋轉纜車，上升 8000 英尺到山頂',
+          '山頂步道散步、觀景台拍照'
+        ]
+      },
+
+      // Option B：植物園
       {
         time: '10:30-11:30 AM',
         period: '上午',
         title: '景點',
         type: 'attraction',
-        option: '一',
+        option: '二',
         location: '摩登熱帶植物園 (Moorten Botanical Garden)',
         activityDuration: '約1小時',
         openingHours: '10:00–16:00',
@@ -1343,13 +1375,13 @@ export const ITINERARY: DayItinerary[] = [
         ]
       },
 
-      // Option B：飛機博物館
+      // Option C：飛機博物館
       {
         time: '10:30-12:00 PM',
         period: '上午',
         title: '景點',
         type: 'attraction',
-        option: '二',
+        option: '三',
         location: '棕櫚泉飛機博物館 (Palm Springs Air Museum)',
         activityDuration: '約1.5小時',
         openingHours: '10:00–17:00',
@@ -1366,7 +1398,7 @@ export const ITINERARY: DayItinerary[] = [
         period: '上午',
         title: '景點',
         type: 'attraction',
-        option: '三',
+        option: '四',
         location: 'Indian Canyon 或 Tahquitz Canyon',
         activityDuration: '約2小時',
         openingHours: '08:00–17:00',
@@ -2325,7 +2357,7 @@ export const ATTRACTIONS: Attraction[] = [
     region: '棕櫚泉',
     description: '奇特的約書亞樹與巨石堆疊的沙漠景觀，是攀岩與觀星勝地。',
     category: 'Nature',
-    cost: '$30/車',
+    cost: '$30/車（7天有效）',
     openHours: '24小時開放',
     mapLink: 'https://www.google.com/maps/search/?api=1&query=Joshua+Tree+National+Park',
     tags: ['沙漠', '自然', '觀星']
@@ -2635,5 +2667,32 @@ export const FOOD_SPOTS: FoodSpot[] = [
     note: '主打天然食材與香草風味的冰淇淋品牌',
     mapLink: 'https://www.google.com/maps/search/?api=1&query=Carmela+Ice+Cream+Palm+Springs',
     tags: ['Palm Springs', '冰淇淋', '甜點']
+  },
+
+  // Joshua Tree
+  {
+    name: 'Joshua Tree Coffee Company',
+    location: 'Joshua Tree',
+    region: '約書亞樹',
+    type: 'Coffee',
+    cuisine: '咖啡',
+    cost: '$5-10',
+    openHours: '07:00 - 17:00',
+    mustOrder: '手沖咖啡, 招牌義式濃縮',
+    note: '約書亞樹當地知名咖啡店，自烘豆，沙漠風格裝潢',
+    mapLink: 'https://www.google.com/maps/search/?api=1&query=Joshua+Tree+Coffee+Company',
+    tags: ['Joshua Tree', '在地咖啡', '自烘豆']
+  },
+  {
+    name: 'Frontier Café',
+    location: '61738 29 Palms Hwy, Joshua Tree, CA 92252, 美國',
+    region: '約書亞樹',
+    type: 'Coffee',
+    cuisine: '咖啡',
+    cost: '$5-10',
+    openHours: '07:00 - 17:00',
+    note: '約書亞樹咖啡店',
+    mapLink: 'https://maps.app.goo.gl/GuLfbGA12L55wAeh7',
+    tags: ['Joshua Tree', '在地咖啡']
   }
 ];
