@@ -3,6 +3,18 @@ import { Hotel, Sun, CheckSquare, FileText, Smartphone, Briefcase, Map, ShieldAl
 
 export const GeneralInfo: React.FC = () => {
   const [checkedItems, setCheckedItems] = useState<Set<number>>(new Set());
+  const carRentalItems = [
+    {
+      period: '4/1 - 4/4',
+      orderUrl: 'https://www.klook.com/zh-TW/car-rentals/order-details/?orderGuid=5416149972&bookingNo=XAT779871',
+      voucherPath: '/documents/klook-car-rental-0401-0404.pdf'
+    },
+    {
+      period: '4/8 - 4/13',
+      orderUrl: 'https://www.klook.com/zh-TW/car-rentals/order-details/?orderGuid=5416641809&bookingNo=QKP615224',
+      voucherPath: '/documents/klook-car-rental-0408-0413.pdf'
+    }
+  ];
 
   const checklistItems = [
     { icon: FileText, title: 'ESTA 申請', desc: '出發前72小時, $21 USD' },
@@ -144,8 +156,6 @@ export const GeneralInfo: React.FC = () => {
               <div className="space-y-4">
                  {[
                      { area: '哈仙達崗', eng: 'Hacienda Heights', tag: '基地', desc: '華人區生活機能佳，輻射旅遊中心點。4/1-4/4 住宿於此。', address: '1251 Marchmont Avenue, Hacienda Heights, CA 91745', color: 'bg-indigo-50 text-indigo-700' },
-                     { area: '拉斯維加斯', eng: 'Las Vegas', tag: '跟團', desc: '跟團行程已安排：拉斯維加斯楓丹白露 (Fontainebleau Las Vegas)。', address: '2777 S Las Vegas Blvd, Las Vegas, NV 89109', color: 'bg-amber-50 text-amber-700' },
-                     { area: '佩吉', eng: 'Page, AZ', tag: '跟團', desc: '跟團行程已安排：佩奇/鮑威爾湖戴斯套房酒店。', address: 'Page, AZ (具體地址依實際預訂為準)', color: 'bg-amber-50 text-amber-700' },
                      { area: '棕櫚泉', eng: 'Palm Springs', tag: '度假', desc: '建議選擇附泳池的度假飯店，享受沙漠綠洲。', address: '', color: 'bg-sky-50 text-sky-700' },
                      { area: '聖地牙哥', eng: 'San Diego', tag: '海景', desc: '推薦 Downtown 或 La Jolla 享受無敵海景。', address: '8431 Neva Ave, San Diego, CA 92123', color: 'bg-emerald-50 text-emerald-700' }
                  ].map((item, i) => (
@@ -166,8 +176,45 @@ export const GeneralInfo: React.FC = () => {
               </div>
           </div>
 
+          {/* Car Rental Info */}
+          <div className="md:col-span-6 bg-white rounded-3xl shadow-sm border border-stone-200 p-6">
+               <h3 className="font-serif font-bold text-stone-800 mb-6 flex items-center gap-2 text-lg">
+                  <div className="w-8 h-8 rounded-full bg-sky-100 flex items-center justify-center text-sky-600">
+                    <Map size={18} />
+                  </div>
+                  租車資訊
+              </h3>
+              <div className="space-y-4">
+                  {carRentalItems.map((item) => (
+                    <div key={item.period} className="rounded-2xl border border-stone-100 bg-stone-50/60 p-4">
+                        <p className="text-sm font-bold text-stone-800">{item.period}</p>
+                        <div className="mt-3 space-y-2">
+                            <a
+                              href={item.orderUrl}
+                              target="_blank"
+                              rel="noreferrer"
+                              className="flex items-center gap-2 text-xs font-medium text-sky-700 hover:text-sky-900 underline underline-offset-2 break-all"
+                            >
+                              <ExternalLink size={14} />
+                              <span>{item.period} 租車網址</span>
+                            </a>
+                            <a
+                              href={item.voucherPath}
+                              target="_blank"
+                              rel="noreferrer"
+                              className="flex items-center gap-2 text-xs font-medium text-emerald-700 hover:text-emerald-900 underline underline-offset-2"
+                            >
+                              <FileText size={14} />
+                              <span>{item.period} 租車憑證</span>
+                            </a>
+                        </div>
+                    </div>
+                  ))}
+              </div>
+          </div>
+
           {/* Local Tips */}
-          <div className="md:col-span-6 bg-stone-900 rounded-3xl p-6 border border-stone-800 text-stone-300">
+          <div className="md:col-span-12 bg-stone-900 rounded-3xl p-6 border border-stone-800 text-stone-300">
              <h3 className="font-serif font-bold text-white mb-6 flex items-center gap-2 text-lg">
                   <div className="w-8 h-8 rounded-full bg-stone-800 flex items-center justify-center text-amber-400">
                      <Globe size={18} />
