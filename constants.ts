@@ -75,8 +75,10 @@ export const ITINERARY: DayItinerary[] = [
         type: 'other',
         location: '租車手續 + 驗車',
         activityDuration: '約 75 分鐘',
+        mapLink: 'https://www.google.com/maps/search/?api=1&query=3450+E+Airport+Dr+Suite+100+Ontario+CA+91761',
         description: [
-          '排隊、簽約、講解保險、驗車狀況、領鑰匙'
+          '排隊、簽約、講解保險、驗車狀況、領鑰匙',
+          '取車地點：美國,Ontario,91761,3450 E. AIRPORT DR. SUITE 100, ONTARIO, CA'
         ]
       },
       {
@@ -681,9 +683,10 @@ export const ITINERARY: DayItinerary[] = [
         from: '洛杉磯市中心 (Downtown LA)',
         to: '安大略機場 (ONT) 還車',
         duration: '約 40-60 分鐘',
-        mapLink: 'https://www.google.com/maps/dir/Downtown+Los+Angeles/Ontario+International+Airport',
+        mapLink: 'https://www.google.com/maps/dir/Downtown+Los+Angeles/3450+E+Airport+Dr+Suite+100,+Ontario,+CA+91761',
         description: [
-          '自駕前往 ONT 還車'
+          '自駕前往 ONT 還車',
+          '還車地點：美國,Ontario,91761,3450 E. AIRPORT DR. SUITE 100, ONTARIO, CA'
         ]
       },
       {
@@ -1131,8 +1134,11 @@ export const ITINERARY: DayItinerary[] = [
         type: 'other',
         location: '安大略機場租車櫃檯',
         duration: '1小時',
-        description: '取 Minivan（after-hours drop 可用）',
-        mapLink: 'https://www.google.com/maps/dir/Ontario+International+Airport/Twentynine+Palms'
+        description: [
+          '取 Minivan（after-hours drop 可用）',
+          '取車地點：美國,Ontario,91761,3450 E AIRPORT DR STE 400'
+        ],
+        mapLink: 'https://www.google.com/maps/search/?api=1&query=3450+E+Airport+Dr+Ste+400+Ontario+CA+91761'
       },
        {
          time: '20:30-22:30',
@@ -1984,10 +1990,11 @@ export const ITINERARY: DayItinerary[] = [
         title: '交通',
         type: 'transportation',
         from: '聖地牙哥',
-        to: '安大略機場 (ONT)',
+        to: '安大略機場 (ONT) 還車',
         duration: '約2小時',
         distance: '約 115 英里',
         luggage: '帶著行李',
+        mapLink: 'https://www.google.com/maps/dir/San+Diego/3450+E+Airport+Dr+Ste+400+Ontario+CA+91761',
         description: [
           '路線：I-15 North → I-10 East → I-215 North → ONT'
         ]
@@ -1997,9 +2004,11 @@ export const ITINERARY: DayItinerary[] = [
         period: '晚上',
         title: '其他類型',
         type: 'other',
-        location: '安大略機場 (ONT)',
+        location: '安大略機場 (ONT) 還車',
         activityDuration: '約30分鐘',
+        mapLink: 'https://www.google.com/maps/search/?api=1&query=3450+E+Airport+Dr+Ste+400+Ontario+CA+91761',
         description: [
+          '還車地點：美國,Ontario,91761,3450 E AIRPORT DR STE 400',
           '停車、取行李、Check-in',
           '國際航班建議 3 小時前到達（20:10 前）'
         ]

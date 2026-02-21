@@ -17,7 +17,7 @@ export const GeneralInfo: React.FC = () => {
   ];
 
   const checklistItems = [
-    { icon: FileText, title: 'ESTA 申請', desc: '出發前72小時, $21 USD' },
+    { icon: FileText, title: 'ESTA 申請', desc: '出發前72小時, $40 USD/人' },
     { icon: FileText, title: '護照效期', desc: '入境時需有6個月以上效期' },
     { icon: Briefcase, title: '旅遊保險', desc: '建議包含高額醫療與突發疾病' },
     { icon: FileText, title: '列印憑證', desc: '機票、住宿、ESTA 紙本備查' },
