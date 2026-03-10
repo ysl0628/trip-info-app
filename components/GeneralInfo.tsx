@@ -3,8 +3,9 @@ import { Hotel, Sun, CheckSquare, FileText, Smartphone, Briefcase, Map, ShieldAl
 
 export const GeneralInfo: React.FC = () => {
   const [checkedItems, setCheckedItems] = useState<Set<number>>(new Set());
+  const baseUrl = import.meta.env.BASE_URL;
   const customsDocument = {
-    path: '/documents/us-entry-travel-information.html',
+    path: `${baseUrl}documents/us-entry-travel-information.html`,
     title: '入境行程文件',
     desc: '可列印的中英對照行程、住宿、航班與憑證索引'
   };
@@ -12,12 +13,12 @@ export const GeneralInfo: React.FC = () => {
     {
       period: '4/1 - 4/4',
       orderUrl: 'https://www.klook.com/zh-TW/car-rentals/order-details/?orderGuid=5416149972&bookingNo=XAT779871',
-      voucherPath: '/documents/klook-car-rental-0401-0404.pdf'
+      voucherPath: `${baseUrl}documents/klook-car-rental-0401-0404.pdf`
     },
     {
       period: '4/8 - 4/13',
       orderUrl: 'https://www.klook.com/zh-TW/car-rentals/order-details/?orderGuid=5416641809&bookingNo=QKP615224',
-      voucherPath: '/documents/klook-car-rental-0408-0413.pdf'
+      voucherPath: `${baseUrl}documents/klook-car-rental-0408-0413.pdf`
     }
   ];
 
