@@ -50,6 +50,10 @@ export default defineConfig(({ mode }) => {
           },
           workbox: {
             globPatterns: ['**/*.{js,css,html,ico,png,svg,woff2}'],
+            navigateFallbackDenylist: [
+              /^\/trip-info-app\/documents\/.*/i,
+              /^\/documents\/.*/i
+            ],
             runtimeCaching: [
               {
                 urlPattern: /^https:\/\/picsum\.photos\/.*/i,
