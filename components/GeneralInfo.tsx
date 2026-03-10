@@ -146,8 +146,8 @@ export const GeneralInfo: React.FC = () => {
                      { area: '哈仙達崗', eng: 'Hacienda Heights', tag: '基地', desc: '華人區生活機能佳，輻射旅遊中心點。4/1-4/4 住宿於此。', address: '1251 Marchmont Avenue, Hacienda Heights, CA 91745', color: 'bg-indigo-50 text-indigo-700' },
                      { area: '拉斯維加斯', eng: 'Las Vegas', tag: '跟團', desc: '跟團行程已安排：拉斯維加斯楓丹白露 (Fontainebleau Las Vegas)。', address: '2777 S Las Vegas Blvd, Las Vegas, NV 89109', color: 'bg-amber-50 text-amber-700' },
                      { area: '佩吉', eng: 'Page, AZ', tag: '跟團', desc: '跟團行程已安排：佩奇/鮑威爾湖戴斯套房酒店。', address: 'Page, AZ (具體地址依實際預訂為準)', color: 'bg-amber-50 text-amber-700' },
-                     { area: '棕櫚泉', eng: 'Palm Springs', tag: '度假', desc: '建議選擇附泳池的度假飯店，享受沙漠綠洲。', address: '', color: 'bg-sky-50 text-sky-700' },
-                     { area: '聖地牙哥', eng: 'San Diego', tag: '海景', desc: '推薦 Downtown 或 La Jolla 享受無敵海景。', address: '8431 Neva Ave, San Diego, CA 92123', color: 'bg-emerald-50 text-emerald-700' }
+                     { area: '約書亞樹', eng: 'Joshua Tree', tag: '沙漠', desc: '4/8-4/9 連住兩晚，沙漠 airbnb 體驗。', address: '63969 Sullivan Rd, Joshua Tree, CA 92252', color: 'bg-orange-50 text-orange-700' },
+                     { area: '聖地牙哥', eng: 'San Diego', tag: '海景', desc: '4/10-4/12 住宿，推薦 Downtown 或 La Jolla 享受無敵海景。', address: '8431 Neva Ave, San Diego, CA 92123', color: 'bg-emerald-50 text-emerald-700' }
                  ].map((item, i) => (
                      <div key={i} className="flex items-start gap-4 pb-4 border-b border-stone-100 last:border-0 last:pb-0">
                          <span className={`text-[10px] font-bold px-2.5 py-1.5 rounded-lg uppercase tracking-wider shrink-0 w-12 text-center ${item.color}`}>{item.tag}</span>

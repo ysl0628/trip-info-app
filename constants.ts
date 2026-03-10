@@ -10,7 +10,7 @@ export const FLIGHTS: Flight[] = [
     airline: 'STARLUX 星宇航空',
     flightNo: 'JX010',
     duration: '約 12 小時',
-    seats: '2位 豪華經濟艙, 3位 經濟艙'
+    seats: '2位 豪華經濟艙, 3位 經濟艙 (51A, 51B, 51C)'
   },
   {
     type: 'Inbound',
@@ -21,7 +21,7 @@ export const FLIGHTS: Flight[] = [
     airline: 'STARLUX 星宇航空',
     flightNo: 'JX009',
     duration: '約 14 小時 5 分',
-    seats: '2位 豪華經濟艙, 3位 經濟艙'
+    seats: '2位 豪華經濟艙, 3位 經濟艙 (51A, 51B, 51C)'
   }
 ];
 
@@ -1017,9 +1017,10 @@ export const ITINERARY: DayItinerary[] = [
       '99 Ranch Rancho Cucamonga 下團', '約書亞樹住宿'
     ],
     accommodation: {
-      location: '約書亞樹 / Twentynine Palms airbnb（Day 8 & 9 連住）',
+      location: '約書亞樹',
       hotels: [{
-        name: '約書亞樹附近 airbnb',
+        name: '約書亞樹 airbnb',
+        link: 'https://www.google.com/maps/search/?api=1&query=63969+Sullivan+Rd,+Joshua+Tree,+CA+92252'
       }]
     },
     meals: {
@@ -1030,7 +1031,7 @@ export const ITINERARY: DayItinerary[] = [
     transport: [
       '跟團全程巴士',
       '19:00–19:30：99 Ranch Rancho Cucamonga → ONT 機場（Uber，17分鐘，$15–20）',
-      '20:30–22:30：ONT → 約書亞樹住宿（2小時，107英里）'
+      '20:30–22:30：ONT → 約書亞樹 airbnb (63969 Sullivan Rd)（2小時，107英里）'
     ],
     timeline: [
       {
@@ -1131,7 +1132,7 @@ export const ITINERARY: DayItinerary[] = [
         location: '安大略機場租車櫃檯',
         duration: '1小時',
         description: '取 Minivan（after-hours drop 可用）',
-        mapLink: 'https://www.google.com/maps/dir/Ontario+International+Airport/Twentynine+Palms'
+        mapLink: 'https://www.google.com/maps/dir/Ontario+International+Airport/63969+Sullivan+Rd,+Joshua+Tree,+CA+92252'
       },
       {
         time: '20:30-22:30',
@@ -1139,19 +1140,19 @@ export const ITINERARY: DayItinerary[] = [
         title: '交通',
         type: 'transportation',
         from: 'ONT 機場',
-        to: '約書亞樹 / Twentynine Palms airbnb',
+        to: '約書亞樹 airbnb (63969 Sullivan Rd)',
         duration: '2小時，107英里',
-        mapLink: 'https://www.google.com/maps/dir/Ontario+International+Airport/Twentynine+Palms'
+        mapLink: 'https://www.google.com/maps/dir/Ontario+International+Airport/63969+Sullivan+Rd,+Joshua+Tree,+CA+92252'
       },
       {
         time: '22:30',
         period: '晚上',
         title: '住宿',
         type: 'accommodation',
-        description: '晚到約書亞樹住宿，休息（Day 8 & 9 連住）'
+        description: '晚到約書亞樹住宿，休息'
       },
     ],
-    mapLink: 'https://www.google.com/maps/dir/9775+Base+Line+Rd,+Rancho+Cucamonga,+CA/Ontario+International+Airport/Twentynine+Palms,+CA',
+    mapLink: 'https://www.google.com/maps/dir/9775+Base+Line+Rd,+Rancho+Cucamonga,+CA/Ontario+International+Airport/63969+Sullivan+Rd,+Joshua+Tree,+CA+92252',
     feeNote: '本產品有必付項目費用190美金每人，包含：錫安國家公園、布萊斯國家公園、馬蹄灣、大峽谷國家公園、拉斯網紅歡迎招牌打卡&M豆巧克力世界&可口可樂主題店費用，可預訂時選擇對應的可選項，也可在團上將此費用支付給導遊，感謝您的配合~'
   },
   {
@@ -1167,10 +1168,11 @@ export const ITINERARY: DayItinerary[] = [
       '棕櫚泉空中纜車（日落）'
     ],
     accommodation: {
-      location: '約書亞樹 / Twentynine Palms airbnb',
+      location: '約書亞樹',
       hotels: [
         {
-          name: 'airbnb 住宿',
+          name: '約書亞樹 airbnb',
+          link: 'https://www.google.com/maps/search/?api=1&query=63969+Sullivan+Rd,+Joshua+Tree,+CA+92252'
         }
       ],
       roomAssignment: ['爸爸、媽媽', '文馨', '宏翔、小藍']
@@ -1261,7 +1263,7 @@ export const ITINERARY: DayItinerary[] = [
         from: '棕櫚泉纜車站',
         to: '住宿',
         duration: '1小時15分鐘',
-        mapLink: 'https://www.google.com/maps/dir/Palm+Springs+Aerial+Tramway/Twentynine+Palms'
+        mapLink: 'https://www.google.com/maps/dir/Palm+Springs+Aerial+Tramway/63969+Sullivan+Rd,+Joshua+Tree,+CA+92252'
       },
       {
         time: '18:30',
@@ -1271,7 +1273,7 @@ export const ITINERARY: DayItinerary[] = [
         description: '回約書亞樹住宿休息（連住第二晚）'
       }
     ],
-    mapLink: 'https://www.google.com/maps/dir/Twentynine+Palms/Joshua+Tree+National+Park/Palm+Springs+Aerial+Tramway/Twentynine+Palms'
+    mapLink: 'https://www.google.com/maps/dir/63969+Sullivan+Rd,+Joshua+Tree,+CA+92252/Joshua+Tree+National+Park/Palm+Springs+Aerial+Tramway/63969+Sullivan+Rd,+Joshua+Tree,+CA+92252'
   },
   {
     day: 10,
@@ -1295,12 +1297,12 @@ export const ITINERARY: DayItinerary[] = [
       roomAssignment: ['爸爸、媽媽', '文馨', '宏翔、小藍']
     },
     meals: {
-      breakfast: '約書亞樹 / Twentynine Palms airbnb 早餐',
+      breakfast: '約書亞樹 airbnb 早餐',
       lunch: '棕櫚泉市區簡單用餐（咖啡廳 / 三明治 / 漢堡）',
       dinner: '選項一：小義大利區 / 選項二：超市買菜回 airbnb 煮'
     },
     transport: [
-      '從約書亞樹 / Twentynine Palms 開車前往棕櫚泉（約 1–1.5 小時，依住宿位置而定）',
+      '從約書亞樹 airbnb (63969 Sullivan Rd) 開車前往棕櫚泉（約 1–1.5 小時）',
       '從棕櫚泉開車前往聖地牙哥 Neva Ave 附近（約 2.5–3 小時，正常塞車情況）',
       '從聖地牙哥 airbnb 開車前往拉荷亞灣 / 小義大利（選項一）',
       '從聖地牙哥 airbnb 開車前往超市採買（選項二）'
@@ -1318,7 +1320,7 @@ export const ITINERARY: DayItinerary[] = [
         period: '上午',
         title: '交通',
         type: 'transportation',
-        from: '約書亞樹 / Twentynine Palms airbnb',
+        from: '約書亞樹 airbnb (63969 Sullivan Rd, Joshua Tree)',
         to: '棕櫚泉市區 (Palm Springs)',
         duration: '約 1–1.5 小時',
         luggage: '行李在車上',
@@ -1395,10 +1397,10 @@ export const ITINERARY: DayItinerary[] = [
         title: '交通',
         type: 'transportation',
         from: '棕櫚泉',
-        to: '聖地牙哥 airbnb（Neva Ave 一帶）',
+        to: '聖地牙哥 airbnb（8431 Neva Ave）',
         duration: '約 2.5–3 小時',
         luggage: '行李在車上',
-        mapLink: 'https://www.google.com/maps/dir/Palm+Springs+CA/San+Diego+CA',
+        mapLink: 'https://www.google.com/maps/dir/Palm+Springs+CA/8431+Neva+Avenue,+San+Diego,+CA+92123',
         description: '沿 I-215 / I-15 南下，途中視情況可在休息站短暫停留上洗手間'
       },
       {
@@ -1485,9 +1487,9 @@ export const ITINERARY: DayItinerary[] = [
         type: 'transportation',
         option: '一',
         from: 'Little Italy',
-        to: 'airbnb',
+        to: 'airbnb (8431 Neva Ave)',
         duration: '約 20–25 分鐘',
-        mapLink: 'https://www.google.com/maps/dir/Little+Italy+San+Diego/San+Diego+CA',
+        mapLink: 'https://www.google.com/maps/dir/Little+Italy+San+Diego/8431+Neva+Avenue,+San+Diego,+CA+92123',
         description: '選項一：從 Little Italy 返回 airbnb'
       },
       {
