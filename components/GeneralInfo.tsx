@@ -3,6 +3,11 @@ import { Hotel, Sun, CheckSquare, FileText, Smartphone, Briefcase, Map, ShieldAl
 
 export const GeneralInfo: React.FC = () => {
   const [checkedItems, setCheckedItems] = useState<Set<number>>(new Set());
+  const customsDocument = {
+    path: '/documents/us-entry-travel-information.html',
+    title: '入境行程文件',
+    desc: '可列印的中英對照行程、住宿、航班與憑證索引'
+  };
   const carRentalItems = [
     {
       period: '4/1 - 4/4',
@@ -315,6 +320,32 @@ export const GeneralInfo: React.FC = () => {
                       </div>
                   </div>
               </div>
+          </div>
+
+          <div className="md:col-span-12 bg-white rounded-3xl shadow-sm border border-stone-200 p-6">
+              <h3 className="font-serif font-bold text-stone-800 mb-4 flex items-center gap-2 text-lg">
+                  <div className="w-8 h-8 rounded-full bg-sky-100 flex items-center justify-center text-sky-600">
+                    <FileText size={18} />
+                  </div>
+                  通關文件
+              </h3>
+              <a
+                href={customsDocument.path}
+                target="_blank"
+                rel="noreferrer"
+                className="block rounded-2xl border border-stone-100 bg-stone-50/70 p-5 hover:border-sky-200 hover:shadow-md transition-all"
+              >
+                <div className="flex items-start justify-between gap-3">
+                  <div>
+                    <p className="text-base font-bold text-stone-800">{customsDocument.title}</p>
+                    <p className="text-sm text-stone-500 mt-1 leading-relaxed">{customsDocument.desc}</p>
+                  </div>
+                  <ExternalLink size={18} className="text-sky-700 shrink-0 mt-0.5" />
+                </div>
+              </a>
+              <p className="text-xs text-stone-400 mt-3">
+                開啟後可直接列印，建議和 ESTA、護照影本、住宿憑證一起準備。
+              </p>
           </div>
       </div>
     </div>
