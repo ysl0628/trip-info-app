@@ -1165,7 +1165,13 @@ mapLink: 'https://www.google.com/maps/search/?api=1&query=3450+E+Airport+Dr+Ste+
         period: '晚上',
         title: '住宿',
         type: 'accommodation',
-        description: '晚到約書亞樹住宿，休息'
+        description: [
+          '晚到約書亞樹住宿，休息（Day 8 & 9 連住）',
+          '【房東路線指引】',
+          '房子位於 Sullivan Rd，介於 Arizona 和 California 兩條路之間，這兩條路都與 62 號公路交會。',
+          '如果從 10 號公路過來，走 62 號公路北上。我們在 Joshua Tree Saloon 東邊約 5 分鐘車程處。',
+          '房子就在 Arizona 和 Sullivan Rd 的交叉口。穿過 Sullivan Rd，通過大門，沿車道開上去即可。'
+        ]
       },
     ],
     mapLink: 'https://www.google.com/maps/dir/9775+Base+Line+Rd,+Rancho+Cucamonga,+CA/Ontario+International+Airport/63969+Sullivan+Rd,+Joshua+Tree,+CA+92252',
