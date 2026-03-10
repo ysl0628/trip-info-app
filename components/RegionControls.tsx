@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Region } from '../types';
 import { SlidersHorizontal } from 'lucide-react';
 
-const DEFAULT_REGIONS: Region[] = ['洛杉磯', '拉斯維加斯/大峽谷', '聖地牙哥', '棕櫚泉'];
+const DEFAULT_REGIONS: Region[] = ['洛杉磯', '拉斯維加斯/大峽谷', '聖地牙哥', '棕櫚泉', '約書亞樹'];
 
 interface RegionTabsProps {
   activeRegion: Region;

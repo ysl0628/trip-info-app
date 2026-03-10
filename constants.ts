@@ -75,8 +75,10 @@ export const ITINERARY: DayItinerary[] = [
         type: 'other',
         location: '租車手續 + 驗車',
         activityDuration: '約 75 分鐘',
+        mapLink: 'https://www.google.com/maps/search/?api=1&query=3450+E+Airport+Dr+Suite+100+Ontario+CA+91761',
         description: [
-          '排隊、簽約、講解保險、驗車狀況、領鑰匙'
+          '排隊、簽約、講解保險、驗車狀況、領鑰匙',
+          '取車地點：美國,Ontario,91761,3450 E. AIRPORT DR. SUITE 100, ONTARIO, CA'
         ]
       },
       {
@@ -681,9 +683,10 @@ export const ITINERARY: DayItinerary[] = [
         from: '洛杉磯市中心 (Downtown LA)',
         to: '安大略機場 (ONT) 還車',
         duration: '約 40-60 分鐘',
-        mapLink: 'https://www.google.com/maps/dir/Downtown+Los+Angeles/Ontario+International+Airport',
+        mapLink: 'https://www.google.com/maps/dir/Downtown+Los+Angeles/3450+E+Airport+Dr+Suite+100,+Ontario,+CA+91761',
         description: [
-          '自駕前往 ONT 還車'
+          '自駕前往 ONT 還車',
+          '還車地點：美國,Ontario,91761,3450 E. AIRPORT DR. SUITE 100, ONTARIO, CA'
         ]
       },
       {
@@ -1131,9 +1134,12 @@ export const ITINERARY: DayItinerary[] = [
         type: 'other',
         location: '安大略機場租車櫃檯',
         duration: '1小時',
-        description: '取 Minivan（after-hours drop 可用）',
-        mapLink: 'https://www.google.com/maps/dir/Ontario+International+Airport/63969+Sullivan+Rd,+Joshua+Tree,+CA+92252'
-      },
+description: [
+  '取 Minivan（after-hours drop 可用）',
+  '取車地點：美國,Ontario,91761,3450 E AIRPORT DR STE 400'
+],
+mapLink: 'https://www.google.com/maps/search/?api=1&query=3450+E+Airport+Dr+Ste+400+Ontario+CA+91761'
+},
       {
         time: '20:30-22:30',
         period: '晚上',
@@ -1144,6 +1150,16 @@ export const ITINERARY: DayItinerary[] = [
         duration: '2小時，107英里',
         mapLink: 'https://www.google.com/maps/dir/Ontario+International+Airport/63969+Sullivan+Rd,+Joshua+Tree,+CA+92252'
       },
+       {
+         time: '20:30-22:30',
+         period: '晚上',
+         title: '交通',
+         type: 'transportation',
+         from: 'ONT 機場',
+         to: '約書亞樹 / Twentynine Palms airbnb',
+         duration: '2小時，107英里',
+         mapLink: 'https://www.google.com/maps/dir/Ontario+International+Airport/63955+Hollinger+Rd,+Joshua+Tree,+CA+92252'
+       },
       {
         time: '22:30',
         period: '晚上',
@@ -1159,7 +1175,10 @@ export const ITINERARY: DayItinerary[] = [
     day: 9,
     date: '4/9 (週四)',
     title: '約書亞樹 + 棕櫚泉纜車',
-    description: '上午遊覽約書亞樹國家公園，下午前往棕櫚泉搭乘空中纜車看日落，晚上回約書亞樹住宿休息。',
+    description: [
+      '上午遊覽約書亞樹國家公園，下午前往棕櫚泉搭乘空中纜車看日落，晚上回約書亞樹住宿休息。',
+      '備註：若 4/9 想走慵懶行程，可取消 4/10 上午行程，並把棕櫚泉纜車改到 4/10 結束後直接出發聖地牙哥。'
+    ],
     highlights: [
       'Keys View 全景',
       'Skull Rock',
@@ -1168,7 +1187,7 @@ export const ITINERARY: DayItinerary[] = [
       '棕櫚泉空中纜車（日落）'
     ],
     accommodation: {
-      location: '約書亞樹',
+      location: '63969 Sullivan RoadJoshua Tree, CA 92252',
       hotels: [
         {
           name: '約書亞樹 airbnb',
@@ -1199,7 +1218,12 @@ export const ITINERARY: DayItinerary[] = [
         from: '住宿',
         to: '約書亞樹西入口 / 北入口',
         duration: '20–30分鐘',
-        description: '取國家公園年票 $30/車'
+        mapLink: 'https://www.google.com/maps/dir/63955+Hollinger+Rd,+Joshua+Tree,+CA+92252/West+Entrance+Station,+Joshua+Tree+National+Park',
+        description: [
+          '取國家公園年票 $30/車',
+          '西入口（推薦，離住宿較近）：https://www.google.com/maps/dir/63955+Hollinger+Rd,+Joshua+Tree,+CA+92252/West+Entrance+Station,+Joshua+Tree+National+Park',
+          '北入口（Twentynine Palms）：https://www.google.com/maps/dir/63955+Hollinger+Rd,+Joshua+Tree,+CA+92252/North+Entrance+Station,+Joshua+Tree+National+Park'
+        ]
       },
       {
         time: '09:30-12:00',
@@ -1208,6 +1232,8 @@ export const ITINERARY: DayItinerary[] = [
         type: 'attraction',
         location: 'Keys View → Skull Rock → Hidden Valley → Balanced Rock',
         activityDuration: '2.5小時',
+        openingHours: '24小時開放',
+        ticketCost: '$30/車（7天有效）',
         infoLink: 'https://www.17ybm.com/zh-tw/joshua-tree-national-park/',
         mapLink: 'https://www.google.com/maps/search/?api=1&query=Keys+View+Joshua+Tree',
         description: [
@@ -1327,13 +1353,33 @@ export const ITINERARY: DayItinerary[] = [
         mapLink: 'https://www.google.com/maps/dir/Joshua+Tree+CA/Palm+Springs+CA'
       },
 
-      // Option A：植物園
+      // Option A：棕櫚泉纜車
+      {
+        time: '10:30-13:00 PM',
+        period: '上午',
+        title: '景點',
+        type: 'attraction',
+        option: '一',
+        location: '棕櫚泉空中纜車 (Palm Springs Aerial Tramway)',
+        activityDuration: '約2.5小時',
+        openingHours: '10:00–20:00',
+        infoLink: 'https://blog.udn.com/gloomybear/177213898',
+        mapLink: 'https://www.google.com/maps/search/?api=1&query=Palm+Springs+Aerial+Tramway',
+        ticketLink: 'https://activity.eztravel.com.tw/detail/TKNKL-92957',
+        ticketCost: 'USD $30-35/人',
+        description: [
+          '世界最大旋轉纜車，上升 8000 英尺到山頂',
+          '山頂步道散步、觀景台拍照'
+        ]
+      },
+
+      // Option B：植物園
       {
         time: '10:30-11:30 AM',
         period: '上午',
         title: '景點',
         type: 'attraction',
-        option: '一',
+        option: '二',
         location: '摩登熱帶植物園 (Moorten Botanical Garden)',
         activityDuration: '約1小時',
         openingHours: '10:00–16:00',
@@ -1345,13 +1391,13 @@ export const ITINERARY: DayItinerary[] = [
         ]
       },
 
-      // Option B：飛機博物館
+      // Option C：飛機博物館
       {
         time: '10:30-12:00 PM',
         period: '上午',
         title: '景點',
         type: 'attraction',
-        option: '二',
+        option: '三',
         location: '棕櫚泉飛機博物館 (Palm Springs Air Museum)',
         activityDuration: '約1.5小時',
         openingHours: '10:00–17:00',
@@ -1368,7 +1414,7 @@ export const ITINERARY: DayItinerary[] = [
         period: '上午',
         title: '景點',
         type: 'attraction',
-        option: '三',
+        option: '四',
         location: 'Indian Canyon 或 Tahquitz Canyon',
         activityDuration: '約2小時',
         openingHours: '08:00–17:00',
@@ -1954,10 +2000,11 @@ export const ITINERARY: DayItinerary[] = [
         title: '交通',
         type: 'transportation',
         from: '聖地牙哥',
-        to: '安大略機場 (ONT)',
+        to: '安大略機場 (ONT) 還車',
         duration: '約2小時',
         distance: '約 115 英里',
         luggage: '帶著行李',
+        mapLink: 'https://www.google.com/maps/dir/San+Diego/3450+E+Airport+Dr+Ste+400+Ontario+CA+91761',
         description: [
           '路線：I-15 North → I-10 East → I-215 North → ONT'
         ]
@@ -1967,9 +2014,11 @@ export const ITINERARY: DayItinerary[] = [
         period: '晚上',
         title: '其他類型',
         type: 'other',
-        location: '安大略機場 (ONT)',
+        location: '安大略機場 (ONT) 還車',
         activityDuration: '約30分鐘',
+        mapLink: 'https://www.google.com/maps/search/?api=1&query=3450+E+Airport+Dr+Ste+400+Ontario+CA+91761',
         description: [
+          '還車地點：美國,Ontario,91761,3450 E AIRPORT DR STE 400',
           '停車、取行李、Check-in',
           '國際航班建議 3 小時前到達（20:10 前）'
         ]
@@ -2327,7 +2376,7 @@ export const ATTRACTIONS: Attraction[] = [
     region: '棕櫚泉',
     description: '奇特的約書亞樹與巨石堆疊的沙漠景觀，是攀岩與觀星勝地。',
     category: 'Nature',
-    cost: '$30/車',
+    cost: '$30/車（7天有效）',
     openHours: '24小時開放',
     mapLink: 'https://www.google.com/maps/search/?api=1&query=Joshua+Tree+National+Park',
     tags: ['沙漠', '自然', '觀星']
@@ -2637,5 +2686,32 @@ export const FOOD_SPOTS: FoodSpot[] = [
     note: '主打天然食材與香草風味的冰淇淋品牌',
     mapLink: 'https://www.google.com/maps/search/?api=1&query=Carmela+Ice+Cream+Palm+Springs',
     tags: ['Palm Springs', '冰淇淋', '甜點']
+  },
+
+  // Joshua Tree
+  {
+    name: 'Joshua Tree Coffee Company',
+    location: 'Joshua Tree',
+    region: '約書亞樹',
+    type: 'Coffee',
+    cuisine: '咖啡',
+    cost: '$5-10',
+    openHours: '07:00 - 17:00',
+    mustOrder: '手沖咖啡, 招牌義式濃縮',
+    note: '約書亞樹當地知名咖啡店，自烘豆，沙漠風格裝潢',
+    mapLink: 'https://www.google.com/maps/search/?api=1&query=Joshua+Tree+Coffee+Company',
+    tags: ['Joshua Tree', '在地咖啡', '自烘豆']
+  },
+  {
+    name: 'Frontier Café',
+    location: '61738 29 Palms Hwy, Joshua Tree, CA 92252, 美國',
+    region: '約書亞樹',
+    type: 'Coffee',
+    cuisine: '咖啡',
+    cost: '$5-10',
+    openHours: '07:00 - 17:00',
+    note: '約書亞樹咖啡店',
+    mapLink: 'https://maps.app.goo.gl/GuLfbGA12L55wAeh7',
+    tags: ['Joshua Tree', '在地咖啡']
   }
 ];
