@@ -33,11 +33,13 @@ export const ItineraryAccommodation: React.FC<ItineraryAccommodationProps> = ({
               const hotelName = typeof h === "string" ? h : h.name;
               const hotelLink = typeof h === "object" ? h.link : undefined;
               const hotelAddress = typeof h === "object" && "address" in h ? h.address : undefined;
+              // 僅 Airbnb/訂房連結顯示在名稱上，地圖連結由地址負責
+              const isAirbnbLink = hotelLink?.includes("airbnb.com");
 
               return (
                 <div key={i} className="space-y-0.5">
                   <div className="flex items-center gap-2">
-                    {hotelLink ? (
+                    {isAirbnbLink ? (
                       <a
                         href={hotelLink}
                         target="_blank"

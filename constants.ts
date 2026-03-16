@@ -35,7 +35,7 @@ export const ITINERARY: DayItinerary[] = [
     accommodation: {
       location: '哈仙達崗住宿',
       hotels: [{
-        name: 'airbnb 住宿',
+        name: 'airbnb住宿',
         link: 'https://www.airbnb.com.tw/rooms/1299494295130525390',
         address: '1251 Marchmont Avenue, 哈仙達岡, 加州 91745, 美國'
       }],
@@ -153,7 +153,7 @@ export const ITINERARY: DayItinerary[] = [
     accommodation: {
       location: '哈仙達崗住宿',
       hotels: [{
-        name: 'airbnb 住宿',
+        name: 'airbnb住宿',
         link: 'https://www.airbnb.com.tw/rooms/1299494295130525390',
         address: '1251 Marchmont Avenue, 哈仙達岡, 加州 91745, 美國'
       }],
@@ -318,7 +318,7 @@ export const ITINERARY: DayItinerary[] = [
     accommodation: {
       location: '哈仙達崗住宿',
       hotels: [{
-        name: 'airbnb 住宿',
+        name: 'airbnb住宿',
         link: 'https://www.airbnb.com.tw/rooms/1299494295130525390',
         address: '1251 Marchmont Avenue, 哈仙達岡, 加州 91745, 美國'
       }]
@@ -510,7 +510,7 @@ export const ITINERARY: DayItinerary[] = [
     accommodation: {
       location: '哈仙達崗住宿',
       hotels: [{
-        name: 'airbnb 住宿',
+        name: 'airbnb住宿',
         link: 'https://www.airbnb.com.tw/rooms/1299494295130525390',
         address: '1251 Marchmont Avenue, 哈仙達岡, 加州 91745, 美國'
       }]
@@ -1024,10 +1024,11 @@ export const ITINERARY: DayItinerary[] = [
       '99 Ranch Rancho Cucamonga 下團', '約書亞樹住宿'
     ],
     accommodation: {
-      location: '約書亞樹',
+      location: '約書亞樹住宿',
       hotels: [{
-        name: '約書亞樹 airbnb',
-        link: 'https://www.google.com/maps/search/?api=1&query=63969+Sullivan+Rd,+Joshua+Tree,+CA+92252'
+        name: 'airbnb住宿',
+        link: 'https://www.airbnb.com.tw/rooms/659545131627720122',
+        address: '63969 Sullivan Rd, Joshua Tree, CA 92252, 美國'
       }]
     },
     meals: {
@@ -1197,11 +1198,12 @@ mapLink: 'https://www.google.com/maps/search/?api=1&query=3450+E+Airport+Dr+Ste+
       '棕櫚泉空中纜車（日落）'
     ],
     accommodation: {
-      location: '63969 Sullivan RoadJoshua Tree, CA 92252',
+      location: '約書亞樹住宿',
       hotels: [
         {
-          name: '約書亞樹 airbnb',
-          link: 'https://www.google.com/maps/search/?api=1&query=63969+Sullivan+Rd,+Joshua+Tree,+CA+92252'
+          name: 'airbnb住宿',
+          link: 'https://www.airbnb.com.tw/rooms/659545131627720122',
+          address: '63969 Sullivan Rd, Joshua Tree, CA 92252, 美國'
         }
       ],
       roomAssignment: ['爸爸、媽媽', '文馨', '宏翔、小藍']
@@ -1323,11 +1325,12 @@ mapLink: 'https://www.google.com/maps/search/?api=1&query=3450+E+Airport+Dr+Ste+
       '聖地牙哥 (San Diego)'
     ],
     accommodation: {
-      location: '聖地牙哥 (San Diego)',
+      location: '聖地牙哥住宿',
       hotels: [
         {
-          name: 'airbnb 住宿',
-          link: 'https://www.google.com/maps/search/?api=1&query=8431+Neva+Avenue+San+Diego+CA+92123'
+          name: 'airbnb住宿',
+          link: 'https://www.airbnb.com.tw/rooms/1025632672608534953',
+          address: '8431 Neva Ave, San Diego, CA 92123, 美國'
         }
       ],
       roomAssignment: ['爸爸、媽媽', '文馨', '宏翔、小藍']
@@ -1572,11 +1575,12 @@ mapLink: 'https://www.google.com/maps/search/?api=1&query=3450+E+Airport+Dr+Ste+
     description: '上午在 airbnb 悠閒享用早餐，前往巴爾波亞公園參觀博物館與花園，下午參觀聖地牙哥動物園，傍晚前往托里松州立公園欣賞海景，晚上在 Old Town 享用墨西哥料理。',
     highlights: ['巴爾波亞公園 (Balboa Park)', '聖地牙哥動物園 (San Diego Zoo)', '托里松州立公園 (Torrey Pines State Park)', 'Old Town San Diego'],
     accommodation: {
-      location: '聖地牙哥 (San Diego)',
+      location: '聖地牙哥住宿',
       hotels: [
         {
-          name: 'airbnb 住宿',
-          link: 'https://www.google.com/maps/search/?api=1&query=8431+Neva+Avenue+San+Diego+CA+92123'
+          name: 'airbnb住宿',
+          link: 'https://www.airbnb.com.tw/rooms/1025632672608534953',
+          address: '8431 Neva Ave, San Diego, CA 92123, 美國'
         }
       ],
       roomAssignment: ['爸爸、媽媽', '文馨', '宏翔、小藍']
@@ -1739,13 +1743,12 @@ mapLink: 'https://www.google.com/maps/search/?api=1&query=3450+E+Airport+Dr+Ste+
     description: '上午參觀中途島號博物館，中午在海港村享用午餐，下午前往科羅納多島參觀 Hotel del Coronado 並散步購物，傍晚搭乘渡輪返回市中心，晚上參觀煤氣燈街區後前往超市買菜回住宿煮晚餐。',
     highlights: ['中途島號博物館 (USS Midway)', '海港村 (Seaport Village)', '科羅納多島 (Coronado Island)', '煤氣燈街區 (Gaslamp Quarter)'],
     accommodation: {
-      location: '聖地牙哥 (San Diego)',
-      hotels: [
-        {
-          name: 'airbnb 住宿',
-          link: 'https://www.google.com/maps/search/?api=1&query=8431+Neva+Avenue+San+Diego+CA+92123'
-        }
-      ],
+      location: '聖地牙哥住宿',
+      hotels: [{
+        name: 'airbnb住宿',
+        link: 'https://www.airbnb.com.tw/rooms/1025632672608534953',
+        address: '8431 Neva Ave, San Diego, CA 92123, 美國'
+      }],
       roomAssignment: ['爸爸、媽媽', '文馨', '宏翔、小藍']
     },
     meals: {
