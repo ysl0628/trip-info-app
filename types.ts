@@ -13,6 +13,7 @@ export interface Flight {
 export interface Hotel {
   name: string;
   link?: string;
+  address?: string;
 }
 
 export interface Accommodation {

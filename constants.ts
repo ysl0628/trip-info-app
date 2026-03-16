@@ -36,7 +36,8 @@ export const ITINERARY: DayItinerary[] = [
       location: '哈仙達崗住宿',
       hotels: [{
         name: 'airbnb 住宿',
-        link: 'https://www.airbnb.com.tw/rooms/1299494295130525390'
+        link: 'https://www.airbnb.com.tw/rooms/1299494295130525390',
+        address: '1251 Marchmont Avenue, 哈仙達岡, 加州 91745, 美國'
       }],
       roomAssignment: ['爸爸、媽媽', '文馨', '宏翔、小藍']
     },
@@ -153,7 +154,8 @@ export const ITINERARY: DayItinerary[] = [
       location: '哈仙達崗住宿',
       hotels: [{
         name: 'airbnb 住宿',
-        link: 'https://www.airbnb.com.tw/rooms/1299494295130525390'
+        link: 'https://www.airbnb.com.tw/rooms/1299494295130525390',
+        address: '1251 Marchmont Avenue, 哈仙達岡, 加州 91745, 美國'
       }],
       roomAssignment: ['爸爸、媽媽', '文馨', '宏翔、小藍']
     },
@@ -317,7 +319,8 @@ export const ITINERARY: DayItinerary[] = [
       location: '哈仙達崗住宿',
       hotels: [{
         name: 'airbnb 住宿',
-        link: 'https://www.airbnb.com.tw/rooms/1299494295130525390'
+        link: 'https://www.airbnb.com.tw/rooms/1299494295130525390',
+        address: '1251 Marchmont Avenue, 哈仙達岡, 加州 91745, 美國'
       }]
     },
     meals: {
@@ -508,7 +511,8 @@ export const ITINERARY: DayItinerary[] = [
       location: '哈仙達崗住宿',
       hotels: [{
         name: 'airbnb 住宿',
-        link: 'https://www.airbnb.com.tw/rooms/1299494295130525390'
+        link: 'https://www.airbnb.com.tw/rooms/1299494295130525390',
+        address: '1251 Marchmont Avenue, 哈仙達岡, 加州 91745, 美國'
       }]
     },
     meals: {

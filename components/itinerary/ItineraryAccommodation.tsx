@@ -32,21 +32,34 @@ export const ItineraryAccommodation: React.FC<ItineraryAccommodationProps> = ({
             {accommodation.hotels.map((h, i) => {
               const hotelName = typeof h === "string" ? h : h.name;
               const hotelLink = typeof h === "object" ? h.link : undefined;
+              const hotelAddress = typeof h === "object" && "address" in h ? h.address : undefined;
 
               return (
-                <div key={i} className="flex items-center gap-2">
-                  {hotelLink ? (
+                <div key={i} className="space-y-0.5">
+                  <div className="flex items-center gap-2">
+                    {hotelLink ? (
+                      <a
+                        href={hotelLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-1.5 text-stone-600 hover:text-stone-900 hover:underline transition-colors"
+                      >
+                        <span>{hotelName}</span>
+                        <LinkIcon size={14} className="shrink-0" />
+                      </a>
+                    ) : (
+                      <span>{hotelName}</span>
+                    )}
+                  </div>
+                  {hotelAddress && (
                     <a
-                      href={hotelLink}
+                      href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(hotelAddress)}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-1.5 text-stone-600 hover:text-stone-900 hover:underline transition-colors"
+                      className="block text-xs text-stone-400 font-mono pl-0 hover:text-stone-600 hover:underline transition-colors"
                     >
-                      <span>{hotelName}</span>
-                      <LinkIcon size={14} className="shrink-0" />
+                      {hotelAddress}
                     </a>
-                  ) : (
-                    <span>{hotelName}</span>
                   )}
                 </div>
               );
