@@ -148,8 +148,8 @@ export const ITINERARY: DayItinerary[] = [
     day: 2,
     date: '4/2 (週四)',
     title: '藝術、海灘與市集之旅',
-    description: '上午參觀 Getty Center，中午在 Santa Monica 海灘散步用餐，傍晚到農夫市場採買食材，晚上回 Airbnb 自煮晚餐。',
-    highlights: ['蓋蒂中心 (Getty Center)', 'Santa Monica Pier', '農夫市場 (The Original Farmers Market)'],
+    description: '上午兩種走法擇一：選項一為蓋蒂中心（Optional）後往聖莫尼卡；選項二為聖莫尼卡再往馬里布海灘。傍晚皆至農夫市場採買，晚上回 Airbnb 自煮晚餐。',
+    highlights: ['蓋蒂中心 Getty Center（選項一／Optional）', 'Santa Monica／Malibu（擇一路線）', '農夫市場 (The Original Farmers Market)'],
     accommodation: {
       location: '哈仙達崗住宿',
       hotels: [{
@@ -165,9 +165,9 @@ export const ITINERARY: DayItinerary[] = [
       dinner: 'airbnb 自煮（農夫市場食材）'
     },
     transport: [
-      '自駕前往 Getty Center（約 50-70 分鐘）',
-      '自駕前往 Santa Monica（約 20-30 分鐘）',
-      '自駕前往農夫市場（約 50-70 分鐘）',
+      '選項一：住宿 → 蓋蒂中心（約 60-70 分鐘）→ 聖莫尼卡（約 40-60 分鐘）',
+      '選項二：住宿 → 聖莫尼卡（約 60-75 分鐘）→ 馬里布海灘（約 25-40 分鐘）',
+      '聖莫尼卡或馬里布 → 農夫市場（約 50-70 分鐘）',
       '自駕回 Airbnb（約 60-75 分鐘）'
     ],
     timeline: [
@@ -187,12 +187,27 @@ export const ITINERARY: DayItinerary[] = [
         period: '上午',
         title: '交通',
         type: 'transportation',
+        option: '一',
         from: '哈仙達崗住宿',
         to: '蓋蒂中心 (Getty Center)',
         duration: '約 60-70 分鐘',
         mapLink: 'https://www.google.com/maps/dir/Rowland+Heights/The+Getty+Center',
         description: [
-          '直接從 Hacienda Heights 往西'
+          '選項一：先往蓋蒂中心'
+        ]
+      },
+      {
+        time: '9:30-10:45 AM',
+        period: '上午',
+        title: '交通',
+        type: 'transportation',
+        option: '二',
+        from: '哈仙達崗住宿',
+        to: '聖莫尼卡碼頭 (Santa Monica Pier)',
+        duration: '約 60-75 分鐘',
+        mapLink: 'https://www.google.com/maps/dir/1251+Marchmont+Avenue,+Hacienda+Heights,+CA+91745/Santa+Monica+Pier',
+        description: [
+          '選項二：跳過蓋蒂，直達聖莫尼卡'
         ]
       },
       {
@@ -200,14 +215,15 @@ export const ITINERARY: DayItinerary[] = [
         period: '上午',
         title: '景點',
         type: 'attraction',
-        location: '蓋蒂中心 (Getty Center)',
+        option: '一',
+        location: '蓋蒂中心 (Getty Center)（Optional）',
         activityDuration: '約1.5小時',
         openingHours: '10:00-18:30',
         mapLink: 'https://www.google.com/maps/search/?api=1&query=The+Getty+Center+Los+Angeles',
         parkingCost: '停車 $20',
         isFreeAdmission: true,
         description: [
-          '建築、花園、景觀',
+          'Optional：建築、花園、景觀；若想多留在海灘可縮短參觀或略過，直接開往聖莫尼卡。',
         ]
       },
       {
@@ -215,12 +231,60 @@ export const ITINERARY: DayItinerary[] = [
         period: '上午',
         title: '交通',
         type: 'transportation',
+        option: '一',
         from: '蓋蒂中心',
         to: '聖莫尼卡 (Santa Monica)',
         duration: '約 40-60 分鐘',
         mapLink: 'https://www.google.com/maps/dir/The+Getty+Center/Santa+Monica+Pier',
         description: [
-          '前往 Santa Monica'
+          '選項一：蓋蒂中心 → 聖莫尼卡'
+        ]
+      },
+      {
+        time: '10:45 AM-12:30 PM',
+        period: '上午',
+        title: '景點',
+        type: 'attraction',
+        option: '二',
+        location: '聖莫尼卡碼頭 (Santa Monica Pier) + 海灘散步（上午段）',
+        activityDuration: '約1.75小時',
+        mapLink: 'https://www.google.com/maps/search/?api=1&query=Santa+Monica+Pier',
+        isFreeAdmission: true,
+        parkingCost: '$2 - $3.5',
+        description: [
+          '選項二第一段：碼頭與海灘、Promenade',
+          '導航 Parking Structure 6 或 8；前 90 分鐘免費等方案'
+        ]
+      },
+      {
+        time: '12:30-1:10 PM',
+        period: '下午',
+        title: '交通',
+        type: 'transportation',
+        option: '二',
+        from: '聖莫尼卡',
+        to: '馬里布海灘 (Malibu Beach)',
+        duration: '約 25-40 分鐘',
+        mapLink: 'https://www.google.com/maps/dir/Santa+Monica+Pier/Malibu+Beach+CA',
+        description: [
+          '選項二：聖莫尼卡 → 馬里布海灘'
+        ]
+      },
+      {
+        time: '1:10-3:20 PM',
+        period: '下午',
+        title: '景點',
+        type: 'attraction',
+        option: '二',
+        location: '馬里布海灘 (Malibu Beach)',
+        activityDuration: '約2小時',
+        mapLink: 'https://www.google.com/maps/search/?api=1&query=Malibu+Beach+CA',
+        infoLink: 'https://www.chrisamericandream.com/malibu-paradise-cove-beach/',
+        isFreeAdmission: true,
+        parkingCost: '停車 $2-5/小時',
+        description: [
+          '海灘散步、Malibu Pier',
+          '周邊餐廳可選：Moonshadows、Malibu Farm Pier Cafe'
         ]
       },
       {
@@ -228,15 +292,15 @@ export const ITINERARY: DayItinerary[] = [
         period: '下午',
         title: '景點',
         type: 'attraction',
+        option: '一',
         location: '聖莫尼卡碼頭 (Santa Monica Pier) + 海灘散步 + 逛街 + 午餐',
         activityDuration: '約2.5小時',
         mapLink: 'https://www.google.com/maps/search/?api=1&query=Santa+Monica+Pier',
         isFreeAdmission: true,
         parkingCost: '$2 - $3.5',
         description: [
-          '導航 Parking Structure 6 或 Parking Structure 8',
-          'Third Street Promenade 逛街',
-          '海邊餐廳用餐',
+          '選項一：蓋蒂之後在聖莫尼卡活動',
+          'Third Street Promenade、海邊餐廳',
           '停車費前 90 分鐘免費，$2 - $3.5'
         ]
       },
@@ -245,12 +309,27 @@ export const ITINERARY: DayItinerary[] = [
         period: '下午',
         title: '交通',
         type: 'transportation',
+        option: '一',
         from: '聖莫尼卡',
         to: '農夫市場 (The Original Farmers Market)',
         duration: '約 50-70 分鐘',
         mapLink: 'https://www.google.com/maps/dir/Santa+Monica+Pier/The+Original+Farmers+Market',
         description: [
-          '自駕前往農夫市場'
+          '選項一：前往農夫市場'
+        ]
+      },
+      {
+        time: '3:20-4:30 PM',
+        period: '下午',
+        title: '交通',
+        type: 'transportation',
+        option: '二',
+        from: '馬里布海灘',
+        to: '農夫市場 (The Original Farmers Market)',
+        duration: '約 50-70 分鐘',
+        mapLink: 'https://www.google.com/maps/dir/Malibu+Beach+CA/The+Original+Farmers+Market',
+        description: [
+          '選項二：馬里布後前往農夫市場'
         ]
       },
       {
@@ -307,14 +386,14 @@ export const ITINERARY: DayItinerary[] = [
         ]
       },
     ],
-    mapLink: 'https://www.google.com/maps/dir//The+Getty+Center/Santa+Monica+Pier/The+Original+Farmers+Market'
+    mapLink: 'https://www.google.com/maps/dir/The+Getty+Center/Santa+Monica+Pier/Malibu+Beach+CA/The+Original+Farmers+Market'
   },
   {
     day: 3,
     date: '4/3 (週四)',
     title: '好萊塢經典景點之旅',
-    description: '早餐到 Porto\'s Bakery，上午參觀好萊塢星光大道和 Hollywood Sign，中午後前往格里斐斯天文台，下午在 Pasadena Old Town 逛街購物。',
-    highlights: ['Porto\'s Bakery', '好萊塢星光大道 (Hollywood Walk of Fame)', 'Hollywood Sign', '格里斐斯天文台 (Griffith Observatory)', 'Pasadena Old Town'],
+    description: '早餐到 Porto\'s Bakery，上午參觀好萊塢星光大道和 Hollywood Sign，中午後前往格里斐斯天文台，下午在 Pasadena Old Town 逛街購物；若時間允許可 Optional 加碼聖蓋博（San Gabriel）。',
+    highlights: ['Porto\'s Bakery', '好萊塢星光大道 (Hollywood Walk of Fame)', 'Hollywood Sign', '格里斐斯天文台 (Griffith Observatory)', 'Pasadena Old Town', '聖蓋博 San Gabriel（Optional）'],
     accommodation: {
       location: '哈仙達崗住宿',
       hotels: [{
@@ -334,7 +413,8 @@ export const ITINERARY: DayItinerary[] = [
       '自駕到 Hollywood Sign（約 15-25 分鐘）',
       '自駕到 格里斐斯天文台（約 20-30 分鐘）',
       '自駕到 Pasadena（約 25-35 分鐘）',
-      '自駕回 Hacienda Heights Airbnb（約 30-45 分鐘）'
+      'Optional：帕薩迪納 → 聖蓋博（約 10-20 分鐘）',
+      '自駕回 Hacienda Heights Airbnb（約 30-45 分鐘；若從聖蓋博出發約 25-40 分鐘）'
     ],
     mapLink: 'https://www.google.com/maps/dir//Porto\'s+Bakery+Downey/Hollywood+Walk+of+Fame/Hollywood+Sign/Griffith+Observatory/Pasadena+Old+Town',
     timeline: [
@@ -487,6 +567,22 @@ export const ITINERARY: DayItinerary[] = [
         ]
       },
       {
+        time: 'Optional（帕薩迪納之後）',
+        period: '下午',
+        title: '景點（Optional）',
+        type: 'attraction',
+        location: '聖蓋博（San Gabriel）',
+        activityDuration: '約 1-1.5 小時',
+        mapLink: 'https://www.google.com/maps/search/?api=1&query=Mission+San+Gabriel+Arcangel',
+        parkingCost: '商圈／街邊停車',
+        isFreeAdmission: true,
+        description: [
+          '非必排行程：若帕薩迪納提早結束或想加碼，可開車約 10-20 分鐘前往聖蓋博。',
+          '可選：聖蓋博傳教所 Mission San Gabriel Arcángel（歷史園區）；或 Valley Blvd 亞洲商圈（餐飲、超市、補貨）。',
+          '若安排此站，回程請改以「聖蓋博 → 住宿」導航，車程約 25-40 分鐘。',
+        ]
+      },
+      {
         time: '5:20-6:05 PM',
         period: '下午',
         title: '交通',
@@ -504,9 +600,9 @@ export const ITINERARY: DayItinerary[] = [
   {
     day: 4,
     date: '4/4 (週五)',
-    title: 'Downtown LA 歷史探索 & 海灘',
-    description: '上午先前往海灘（Huntington Beach 或 Malibu Beach），下午回 Downtown LA 走訪 Angels Flight Railway 與 Grand Central Market，之後前往機場還車再回住宿。',
-    highlights: ['Huntington Beach / Malibu Beach', 'Angels Flight Railway（百年電車）', 'Grand Central Market（百年老市場）'],
+    title: '海灘與爾灣',
+    description: '上午兩條海灘線擇一：杭廷頓＋長灘，或馬里布。下午兩線合流，同一段行程——爾灣／橙縣 Mall 購物，再至安大略機場還車回住宿。',
+    highlights: ['杭廷頓＋長灘 或 馬里布（上午擇一）', '爾灣／橙縣 Mall（共同行程）', '安大略機場還車'],
     accommodation: {
       location: '哈仙達崗住宿',
       hotels: [{
@@ -517,16 +613,15 @@ export const ITINERARY: DayItinerary[] = [
     },
     meals: {
       breakfast: 'airbnb 早餐',
-      lunch: '海灘周邊或 Grand Central Market',
+      lunch: '海灘／長灘或馬里布周邊',
       dinner: 'airbnb 自煮晚餐'
     },
     transport: [
-      '自駕到 Huntington Beach（約 70-95 分鐘）或 Malibu Beach（約 75-105 分鐘）',
-      '自駕到 Downtown LA（約 45-75 分鐘）',
-      'Union Station 停車（$10 all day）',
-      '自駕到安大略機場還車（約 40-60 分鐘），再搭車回 Airbnb（約 30-45 分鐘）'
+      '上午：杭廷頓／長灘線 或 馬里布線（擇一）→ 下午共同至爾灣／橙縣 Mall',
+      '爾灣／橙縣 Mall → 安大略機場還車（約 35-50 分鐘）',
+      '還車後搭車回 Airbnb（約 30-45 分鐘）'
     ],
-    mapLink: 'https://www.google.com/maps/dir/Malibu+Beach+CA/Downtown+Los+Angeles/Ontario+International+Airport/1251+Marchmont+Avenue,+Hacienda+Heights,+CA+91745',
+    mapLink: 'https://www.google.com/maps/dir/Malibu+Beach+CA/Irvine+Spectrum+Center/Ontario+International+Airport',
     timeline: [
       {
         time: '8:30-9:30 AM',
@@ -568,32 +663,32 @@ export const ITINERARY: DayItinerary[] = [
         ]
       },
       {
-        time: '11:00 AM-1:30 PM',
+        time: '11:00 AM-2:00 PM',
         period: '下午',
         title: '景點',
         type: 'attraction',
         option: '一',
-        location: '杭廷頓海灘 (Huntington Beach)',
-        activityDuration: '約2.5小時',
+        location: '杭廷頓海灘 (Huntington Beach) ＋ 長灘 (Long Beach)',
+        activityDuration: '約3小時',
         infoLink: 'https://monacama.pixnet.net/blog/posts/11397297759',
-        mapLink: 'https://www.google.com/maps/search/?api=1&query=Huntington+Beach+CA',
+        mapLink: 'https://www.google.com/maps/search/?api=1&query=Huntington+City+Beach+CA',
         isFreeAdmission: true,
         parkingCost: '停車 $2-5/小時',
         description: [
-          '海灘散步、拍照',
-          'Huntington Beach Pier 走走',
-          '欣賞太平洋海景',
-          '可選擇在海邊餐廳用餐'
+          '先玩杭廷頓：海灘、Huntington Beach Pier、海景',
+          '再開往長灘（約 20-35 分鐘）：Long Beach Waterfront、Queen Mary 周邊或 Shoreline Village 走走',
+          '午餐可選海邊或長灘餐廳',
+          '此路線結束後往爾灣（Irvine）方向，該區與鄰近橙縣有多座 Mall 可安排逛街、用餐'
         ]
       },
       {
-        time: '11:15 AM-1:15 PM',
+        time: '11:15 AM-1:45 PM',
         period: '下午',
         title: '景點',
         type: 'attraction',
         option: '二',
         location: '馬里布海灘 (Malibu Beach)',
-        activityDuration: '約2小時',
+        activityDuration: '約2.5小時',
         mapLink: 'https://www.google.com/maps/search/?api=1&query=Malibu+Beach+CA',
         infoLink: 'https://www.chrisamericandream.com/malibu-paradise-cove-beach/',
         isFreeAdmission: true,
@@ -607,90 +702,62 @@ export const ITINERARY: DayItinerary[] = [
         ]
       },
       {
-        time: '1:30-2:45 PM',
-        period: '下午',
-        title: '交通',
-        type: 'transportation',
-        option: '一',
-        from: '杭廷頓海灘',
-        to: '洛杉磯市中心 (Downtown LA)',
-        duration: '約 50-80 分鐘',
-        mapLink: 'https://www.google.com/maps/dir/Huntington+Beach+CA/Downtown+Los+Angeles',
-        description: [
-          '前往 Downtown LA'
-        ]
-      },
-      {
-        time: '1:15-2:30 PM',
+        time: '1:45-3:00 PM',
         period: '下午',
         title: '交通',
         type: 'transportation',
         option: '二',
         from: '馬里布海灘',
-        to: '洛杉磯市中心 (Downtown LA)',
-        duration: '約 45-75 分鐘',
-        mapLink: 'https://www.google.com/maps/dir/Malibu+Beach+CA/Downtown+Los+Angeles',
+        to: '爾灣／橙縣 Mall 一帶',
+        duration: '約 60-80 分鐘',
+        mapLink: 'https://www.google.com/maps/dir/Malibu+Beach+CA/Irvine+Spectrum+Center',
         description: [
-          '前往 Downtown LA'
+          '馬里布線：往爾灣／橙縣 Mall 一帶（不經 LA 市區）'
         ]
       },
       {
-        time: '2:45 PM',
-        period: '下午',
-        title: '其他類型',
-        type: 'other',
-        location: '聯合車站 (Union Station) 停車',
-        parkingCost: '停車 $10',
-        description: [
-          '位置：Chavez & Vignes（後出入）',
-          '$10 all day（最划算）'
-        ]
-      },
-      {
-        time: '2:45-3:20 PM',
-        period: '下午',
-        title: '景點',
-        type: 'attraction',
-        location: '天使鐵路 (Angels Flight Railway)',
-        activityDuration: '約35分鐘',
-        openingHours: '06:45 - 22:00',
-        infoLink: 'https://www.wowlavie.com/article/260026667',
-        mapLink: 'https://www.google.com/maps/search/?api=1&query=Angels+Flight+Railway',
-        ticketCost: '門票 $3',
-        description: [
-          '步行 5 分鐘到達',
-          '搭乘往返：$3 紀念票（或 $1.50 one-way）',
-          '俯瞰 Downtown'
-        ]
-      },
-      {
-        time: '3:20-4:05 PM',
-        period: '下午',
-        title: '景點',
-        type: 'attraction',
-        location: '中央市場 (Grand Central Market)',
-        activityDuration: '約45分鐘',
-        openingHours: '08:00–21:00',
-        infoLink: 'https://bobbyfun.tw/2023-03-19-2290/',
-        mapLink: 'https://www.google.com/maps/search/?api=1&query=Grand+Central+Market+Los+Angeles',
-        isFreeAdmission: true,
-        description: [
-          '位置：在 Angels Flight 下方',
-          '食品攤位、新鮮食材',
-        ]
-      },
-      {
-        time: '4:05-5:00 PM',
+        time: '2:00-2:45 PM',
         period: '下午',
         title: '交通',
         type: 'transportation',
-        from: '洛杉磯市中心 (Downtown LA)',
+        option: '一',
+        from: '長灘／海灘一帶',
+        to: '爾灣／橙縣 Mall 一帶',
+        duration: '約 25-45 分鐘',
+        mapLink: 'https://www.google.com/maps/dir/Long+Beach+CA/Irvine+Spectrum+Center',
+        description: [
+          '長灘線：往爾灣與鄰近橙縣（多座 Mall）'
+        ]
+      },
+      {
+        time: '2:45-4:15 PM',
+        period: '下午',
+        title: '景點',
+        type: 'attraction',
+        location: '爾灣／橙縣 Mall 購物',
+        activityDuration: '約1-1.5小時（長灘線約 2:45 起、馬里布線約 3:00 抵達後開始）',
+        mapLink: 'https://www.google.com/maps/search/?api=1&query=Irvine+Spectrum+Center',
+        isFreeAdmission: true,
+        description: [
+          '兩條海灘線下午合流，行程相同：',
+          '‧ Irvine Spectrum Center（爾灣，戶外步行街＋百貨）',
+          '‧ South Coast Plaza（科斯塔梅薩 Costa Mesa，距爾灣約 10-20 分鐘車程）',
+          '‧ Fashion Island（新港灘 Newport Beach，臨海購物中心）',
+          '逛街、用餐、休息加油；時間緊可縮短後直往機場還車'
+        ]
+      },
+      {
+        time: '4:15-5:10 PM',
+        period: '下午',
+        title: '交通',
+        type: 'transportation',
+        from: '爾灣／橙縣 Mall 一帶',
         to: '安大略機場 (ONT) 還車',
-        duration: '約 40-60 分鐘',
-        mapLink: 'https://www.google.com/maps/dir/Downtown+Los+Angeles/3450+E+Airport+Dr+Suite+100,+Ontario,+CA+91761',
+        duration: '約 35-50 分鐘',
+        mapLink: 'https://www.google.com/maps/dir/Irvine+Spectrum+Center/3450+E+Airport+Dr+Suite+100,+Ontario,+CA+91761',
         description: [
           '自駕前往 ONT 還車',
-          '還車地點：美國,Ontario,91761,3450 E. AIRPORT DR. SUITE 100, ONTARIO, CA'
+          '還車地點：3450 E. AIRPORT DR. SUITE 100, ONTARIO, CA'
         ]
       },
       {
@@ -1139,12 +1206,12 @@ export const ITINERARY: DayItinerary[] = [
         type: 'other',
         location: '安大略機場租車櫃檯',
         duration: '1小時',
-description: [
-  '取 Minivan（after-hours drop 可用）',
-  '取車地點：美國,Ontario,91761,3450 E AIRPORT DR STE 400'
-],
-mapLink: 'https://www.google.com/maps/search/?api=1&query=3450+E+Airport+Dr+Ste+400+Ontario+CA+91761'
-},
+        description: [
+          '取 Minivan（after-hours drop 可用）',
+          '取車地點：美國,Ontario,91761,3450 E AIRPORT DR STE 400'
+        ],
+        mapLink: 'https://www.google.com/maps/search/?api=1&query=3450+E+Airport+Dr+Ste+400+Ontario+CA+91761'
+      },
       {
         time: '20:30-22:30',
         period: '晚上',
@@ -1155,16 +1222,6 @@ mapLink: 'https://www.google.com/maps/search/?api=1&query=3450+E+Airport+Dr+Ste+
         duration: '2小時，107英里',
         mapLink: 'https://www.google.com/maps/dir/Ontario+International+Airport/63969+Sullivan+Rd,+Joshua+Tree,+CA+92252'
       },
-       {
-         time: '20:30-22:30',
-         period: '晚上',
-         title: '交通',
-         type: 'transportation',
-         from: 'ONT 機場',
-         to: '約書亞樹 / Twentynine Palms airbnb',
-         duration: '2小時，107英里',
-         mapLink: 'https://www.google.com/maps/dir/Ontario+International+Airport/63955+Hollinger+Rd,+Joshua+Tree,+CA+92252'
-       },
       {
         time: '22:30',
         period: '晚上',
@@ -1230,11 +1287,11 @@ mapLink: 'https://www.google.com/maps/search/?api=1&query=3450+E+Airport+Dr+Ste+
         from: '住宿',
         to: '約書亞樹西入口 / 北入口',
         duration: '20–30分鐘',
-        mapLink: 'https://www.google.com/maps/dir/63955+Hollinger+Rd,+Joshua+Tree,+CA+92252/West+Entrance+Station,+Joshua+Tree+National+Park',
+        mapLink: 'https://www.google.com/maps/dir/63969+Sullivan+Rd,+Joshua+Tree,+CA+92252/West+Entrance+Station,+Joshua+Tree+National+Park',
         description: [
           '取國家公園年票 $30/車',
-          '西入口（推薦，離住宿較近）：https://www.google.com/maps/dir/63955+Hollinger+Rd,+Joshua+Tree,+CA+92252/West+Entrance+Station,+Joshua+Tree+National+Park',
-          '北入口（Twentynine Palms）：https://www.google.com/maps/dir/63955+Hollinger+Rd,+Joshua+Tree,+CA+92252/North+Entrance+Station,+Joshua+Tree+National+Park'
+          '西入口（推薦，離住宿較近）：https://www.google.com/maps/dir/63969+Sullivan+Rd,+Joshua+Tree,+CA+92252/West+Entrance+Station,+Joshua+Tree+National+Park',
+          '北入口（Twentynine Palms）：https://www.google.com/maps/dir/63969+Sullivan+Rd,+Joshua+Tree,+CA+92252/North+Entrance+Station,+Joshua+Tree+National+Park'
         ]
       },
       {
@@ -1365,38 +1422,18 @@ mapLink: 'https://www.google.com/maps/search/?api=1&query=3450+E+Airport+Dr+Ste+
         luggage: '行李在車上',
         mapLink: 'https://www.google.com/maps/dir/Joshua+Tree+CA/Palm+Springs+CA'
       },
-
-      // Option A：棕櫚泉纜車
-      {
-        time: '10:30-13:00 PM',
-        period: '上午',
-        title: '景點',
-        type: 'attraction',
-        option: '一',
-        location: '棕櫚泉空中纜車 (Palm Springs Aerial Tramway)',
-        activityDuration: '約2.5小時',
-        openingHours: '10:00–20:00',
-        infoLink: 'https://blog.udn.com/gloomybear/177213898',
-        mapLink: 'https://www.google.com/maps/search/?api=1&query=Palm+Springs+Aerial+Tramway',
-        ticketLink: 'https://activity.eztravel.com.tw/detail/TKNKL-92957',
-        ticketCost: 'USD $30-35/人',
-        description: [
-          '世界最大旋轉纜車，上升 8000 英尺到山頂',
-          '山頂步道散步、觀景台拍照'
-        ]
-      },
-
       // Option B：植物園
       {
         time: '10:30-11:30 AM',
         period: '上午',
         title: '景點',
         type: 'attraction',
-        option: '二',
+        option: '一',
         location: '摩登熱帶植物園 (Moorten Botanical Garden)',
         activityDuration: '約1小時',
         openingHours: '10:00–16:00',
         mapLink: 'https://www.google.com/maps/search/?api=1&query=Moorten+Botanical+Garden+Palm+Springs',
+        luggage: '行李在車上',
         description: [
           '小巧精緻的沙漠植物園，滿滿仙人掌、多肉植物，非常適合拍照散步',
           '走路路程短，適合爸媽輕鬆逛一圈（約 30–60 分鐘）',
@@ -1410,9 +1447,10 @@ mapLink: 'https://www.google.com/maps/search/?api=1&query=3450+E+Airport+Dr+Ste+
         period: '上午',
         title: '景點',
         type: 'attraction',
-        option: '三',
+        option: '二',
         location: '棕櫚泉飛機博物館 (Palm Springs Air Museum)',
         activityDuration: '約1.5小時',
+        luggage: '行李在車上',
         openingHours: '10:00–17:00',
         mapLink: 'https://www.google.com/maps/search/?api=1&query=Palm+Springs+Air+Museum',
         infoLink: 'https://www.expedia.com.tw/Palm-Springs-Air-Museum-Palm-Springs.d6063411.Place-To-Visit',
@@ -1427,10 +1465,11 @@ mapLink: 'https://www.google.com/maps/search/?api=1&query=3450+E+Airport+Dr+Ste+
         period: '上午',
         title: '景點',
         type: 'attraction',
-        option: '四',
+        option: '三',
         location: 'Indian Canyon 或 Tahquitz Canyon',
         activityDuration: '約2小時',
         openingHours: '08:00–17:00',
+        luggage: '行李在車上',
         mapLink: 'https://www.google.com/maps/search/?api=1&query=Tahquitz+Canyon+Palm+Springs',
         infoLink: 'https://blog.udn.com/gloomybear/177214362',
         description: [
@@ -1444,6 +1483,7 @@ mapLink: 'https://www.google.com/maps/search/?api=1&query=3450+E+Airport+Dr+Ste+
         time: '12:00-12:45 PM',
         period: '下午',
         title: '午餐',
+        luggage: '行李在車上',
         type: 'meal',
         description: [
           '棕櫚泉市區簡單用餐，可選咖啡廳、三明治、漢堡等快速餐點',
