@@ -39,12 +39,23 @@ export const ItineraryTimelineItem: React.FC<ItineraryTimelineItemProps> = ({
     return (
       <div className="space-y-2">
         <div className="flex items-start justify-between gap-2">
-          <h5 className="text-base font-bold text-stone-800">
-            {item.title} :{" "}
-            <span className="font-normal text-stone-700">
-              {item.from} → {item.to}
-            </span>
-          </h5>
+          <div className="flex items-center gap-2 flex-wrap flex-1 min-w-0">
+            <h5
+              className={`text-base font-bold ${
+                item.option ? "text-sky-700" : "text-stone-800"
+              }`}
+            >
+              {item.option ? `${item.title}選項${item.option}` : item.title} :{" "}
+              <span className="font-normal text-stone-700">
+                {item.from} → {item.to}
+              </span>
+            </h5>
+            {item.option && (
+              <span className="text-[11px] font-bold px-2.5 py-0.5 rounded-full bg-sky-50 text-sky-700 border border-sky-200 whitespace-nowrap shrink-0">
+                擇一
+              </span>
+            )}
+          </div>
           {getTransportMapLink(item.mapLink, item.to) && (
             <a
               href={getTransportMapLink(item.mapLink, item.to)}

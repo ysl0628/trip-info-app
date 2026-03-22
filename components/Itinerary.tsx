@@ -93,7 +93,7 @@ export const Itinerary: React.FC<ItineraryProps> = ({ onScrollToTop }) => {
           selectedMap={selectedMap}
           onClose={() => setSelectedMap(null)}
         />
-        )}
+      )}
     </div>
   );
 };
