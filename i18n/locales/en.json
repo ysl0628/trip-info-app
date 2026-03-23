@@ -66,6 +66,13 @@
     "openingHours": "Opening Hours",
     "referenceLinks": "Reference Links",
     "attractionInfo": "Attraction Info",
+    "weatherForecast": "Weather Forecast",
+    "tempRange": "High / Low",
+    "precipitationChance": "Rain Chance",
+    "forecastMayChange": "Forecasts change as the date gets closer. Check again 1-2 days before departure.",
+    "weatherLoading": "Loading forecast...",
+    "weatherUnavailable": "Forecast is not available for this date yet.",
+    "weatherError": "Unable to load weather data.",
     "days": {
       "day1": {
         "title": "Arrival and Settling In",

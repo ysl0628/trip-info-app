@@ -1,5 +1,5 @@
 export interface Flight {
-  type: 'Outbound' | 'Inbound';
+  type: "Outbound" | "Inbound";
   route: string;
   date: string;
   departs: string;
@@ -22,33 +22,37 @@ export interface Accommodation {
   location: string;
   hotels: (string | Hotel)[];
   note?: string;
-  roomAssignment?: string[]; // 分房表，每個字串代表一房的成員
+  roomAssignment?: string[];
+}
+
+export interface WeatherLocation {
+  name: string;
+  latitude: number;
+  longitude: number;
+  timezone?: string;
 }
 
 export interface TimelineItem {
   time: string;
-  period?: string; // 上午、下午、晚上等
+  period?: string;
   title: string;
-  type?: 'transportation' | 'attraction' | 'meal' | 'accommodation' | 'other'; // 類型：交通、景點、餐食、住宿、其他
-  description?: string | DescriptionLine[]; // string | (string | {text, link})[]
-  // 選項類型（例如「1」「2」用來標記選項一/二）
+  type?: "transportation" | "attraction" | "meal" | "accommodation" | "other";
+  description?: string | DescriptionLine[];
   option?: string;
-  // 交通相關
-  from?: string; // 出發地
-  to?: string; // 目的地
-  distance?: string; // 行駛距離
-  duration?: string; // 行駛時間
-  // 景點相關
-  location?: string; // 景點地點
-  activityDuration?: string; // 活動時間
-  mapLink?: string; // 地圖連結
-  ticketLink?: string; // 購票連結
-  openingHours?: string; // 營業時間
-  infoLink?: string; // 景點介紹連結
-  luggage?: string; // 行李注意事項
-  parkingCost?: string; // 停車費用
-  ticketCost?: string; // 門票費用
-  isFreeAdmission?: boolean; // 是否免費進入
+  from?: string;
+  to?: string;
+  distance?: string;
+  duration?: string;
+  location?: string;
+  activityDuration?: string;
+  mapLink?: string;
+  ticketLink?: string;
+  openingHours?: string;
+  infoLink?: string;
+  luggage?: string;
+  parkingCost?: string;
+  ticketCost?: string;
+  isFreeAdmission?: boolean;
 }
 
 export interface DayItinerary {
@@ -56,6 +60,7 @@ export interface DayItinerary {
   date: string;
   title: string;
   highlights: string[];
+  weatherLocations?: WeatherLocation[];
   accommodation: Accommodation;
   meals: {
     breakfast: string;
@@ -72,15 +77,15 @@ export interface DayItinerary {
   referenceLinks?: Array<{ label: string; url: string }>;
 }
 
-export type Region = '洛杉磯' | '拉斯維加斯/大峽谷' | '聖地牙哥' | '棕櫚泉' | '約書亞樹';
+export type Region = string;
 
 export interface Attraction {
   name: string;
   location: string;
   region: Region;
   description: string;
-  image?: string; // Add image property
-  category: 'Nature' | 'City' | 'Entertainment' | 'Shopping' | 'Culture' | 'Food';
+  image?: string;
+  category: "Nature" | "City" | "Entertainment" | "Shopping" | "Culture" | "Food";
   cost: string;
   openHours: string;
   mapLink: string;
@@ -91,7 +96,7 @@ export interface FoodSpot {
   name: string;
   location: string;
   region: Region;
-  type: 'Food' | 'Coffee' | 'Dessert';
+  type: "Food" | "Coffee" | "Dessert";
   cuisine: string;
   note?: string;
   mustOrder?: string;

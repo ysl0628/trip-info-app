@@ -8,6 +8,7 @@ import { ItineraryMeals } from "./ItineraryMeals";
 import { ItineraryBudgetSummary } from "./ItineraryBudgetSummary";
 import { ItineraryReferenceLinks } from "./ItineraryReferenceLinks";
 import { DayNavigation } from "./DayNavigation";
+import { ItineraryWeatherCards } from "./ItineraryWeatherCards";
 
 interface ItineraryDayDetailProps {
   item: DayItinerary;
@@ -72,6 +73,8 @@ export const ItineraryDayDetail: React.FC<ItineraryDayDetailProps> = ({
             {item.description}
           </p>
         </div>
+
+        <ItineraryWeatherCards item={item} />
 
         {/* 2. Departure Info */}
         {(item.departureTime || item.departureLocation) && (

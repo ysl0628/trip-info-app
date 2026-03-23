@@ -65,6 +65,13 @@
     "purchaseTicketsOnline": "線上購票",
     "openingHours": "營業時間",
     "referenceLinks": "參考連結",
-    "attractionInfo": "景點介紹"
+    "attractionInfo": "景點介紹",
+    "weatherForecast": "天氣預報",
+    "tempRange": "高低溫",
+    "precipitationChance": "降雨機率",
+    "forecastMayChange": "預報會隨日期接近而更新，出發前再確認一次。",
+    "weatherLoading": "讀取天氣中...",
+    "weatherUnavailable": "目前尚無此日期的預報資料。",
+    "weatherError": "天氣資料讀取失敗。"
   }
 }

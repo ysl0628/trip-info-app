@@ -29,6 +29,20 @@ export const ITINERARY: DayItinerary[] = [
   {
     day: 1,
     date: "4/1 (週三)",
+    weatherLocations: [
+      {
+        name: "Ontario Airport",
+        latitude: 34.056,
+        longitude: -117.6012,
+        timezone: "America/Los_Angeles",
+      },
+      {
+        name: "Hacienda Heights",
+        latitude: 33.9931,
+        longitude: -117.9687,
+        timezone: "America/Los_Angeles",
+      },
+    ],
     title: "抵達與安頓",
     description:
       "傍晚抵達安大略機場，辦理出關手續後前往 Hacienda Heights 住宿點休息，調整時差。",
@@ -141,6 +155,26 @@ export const ITINERARY: DayItinerary[] = [
   {
     day: 2,
     date: "4/2 (週四)",
+    weatherLocations: [
+      {
+        name: "Santa Monica",
+        latitude: 34.0195,
+        longitude: -118.4912,
+        timezone: "America/Los_Angeles",
+      },
+      {
+        name: "Malibu",
+        latitude: 34.0259,
+        longitude: -118.7798,
+        timezone: "America/Los_Angeles",
+      },
+      {
+        name: "Farmers Market LA",
+        latitude: 34.0722,
+        longitude: -118.3615,
+        timezone: "America/Los_Angeles",
+      },
+    ],
     title: "海灘與市集之旅",
     description:
       "上午自駕前往聖莫尼卡，逛碼頭與海灘後繼續前往馬里布；傍晚前往農夫市場採買，晚上回 Airbnb 自煮晚餐。",
@@ -325,6 +359,26 @@ export const ITINERARY: DayItinerary[] = [
   {
     day: 3,
     date: "4/3 (週四)",
+    weatherLocations: [
+      {
+        name: "Hollywood",
+        latitude: 34.1019,
+        longitude: -118.3269,
+        timezone: "America/Los_Angeles",
+      },
+      {
+        name: "Pasadena",
+        latitude: 34.1478,
+        longitude: -118.1445,
+        timezone: "America/Los_Angeles",
+      },
+      {
+        name: "San Gabriel",
+        latitude: 34.0961,
+        longitude: -118.1058,
+        timezone: "America/Los_Angeles",
+      },
+    ],
     title: "好萊塢經典景點之旅",
     description:
       "早餐到 Porto's Bakery Glendale 分店，上午參觀好萊塢星光大道和 Hollywood Sign，中午後前往格里斐斯天文台，下午在 Pasadena Old Town 逛街購物，傍晚接著前往聖蓋博（San Gabriel）；Valley Blvd 一帶可順路買手搖：50 嵐。",
@@ -554,6 +608,26 @@ export const ITINERARY: DayItinerary[] = [
   {
     day: 4,
     date: "4/4 (週五)",
+    weatherLocations: [
+      {
+        name: "Long Beach",
+        latitude: 33.7701,
+        longitude: -118.1937,
+        timezone: "America/Los_Angeles",
+      },
+      {
+        name: "Huntington Beach",
+        latitude: 33.6595,
+        longitude: -117.9988,
+        timezone: "America/Los_Angeles",
+      },
+      {
+        name: "Irvine",
+        latitude: 33.6846,
+        longitude: -117.8265,
+        timezone: "America/Los_Angeles",
+      },
+    ],
     title: "海灘與爾灣",
     description:
       "上午先到長灘（Long Beach）走海邊與港灣一帶，中午前後前往杭廷頓海灘（Huntington Beach），下午再到爾灣／橙縣 Mall 一帶購物用餐，最後前往安大略機場（ONT）還車後回住宿。",
@@ -726,6 +800,20 @@ export const ITINERARY: DayItinerary[] = [
   {
     day: 5,
     date: "4/5 (週日)",
+    weatherLocations: [
+      {
+        name: "Rowland Heights",
+        latitude: 33.9792,
+        longitude: -117.9053,
+        timezone: "America/Los_Angeles",
+      },
+      {
+        name: "Las Vegas",
+        latitude: 36.1699,
+        longitude: -115.1398,
+        timezone: "America/Los_Angeles",
+      },
+    ],
     title: "【跟團】前往拉斯維加斯",
     description:
       "早晨集合出發前往賭城，途經沙漠風光。晚上自由活動，可參觀百樂宮噴泉或舊城區燈光秀。",
@@ -821,6 +909,32 @@ export const ITINERARY: DayItinerary[] = [
   {
     day: 6,
     date: "4/6 (週一)",
+    weatherLocations: [
+      {
+        name: "Las Vegas",
+        latitude: 36.1699,
+        longitude: -115.1398,
+        timezone: "America/Los_Angeles",
+      },
+      {
+        name: "Zion National Park",
+        latitude: 37.1889,
+        longitude: -112.9986,
+        timezone: "America/Denver",
+      },
+      {
+        name: "Bryce Canyon",
+        latitude: 37.593,
+        longitude: -112.1871,
+        timezone: "America/Denver",
+      },
+      {
+        name: "Page",
+        latitude: 36.9147,
+        longitude: -111.4558,
+        timezone: "America/Phoenix",
+      },
+    ],
     title: "【跟團】錫安國家公園 & 布萊斯峽谷",
     description:
       "拉斯維加斯 → 錫安國家公園（45分鐘）→ 布萊斯峽谷國家公園（60分鐘）→ 葛蘭峽谷大壩（途徑）→ 鮑威爾湖（途徑）→ 佩吉",
@@ -945,6 +1059,26 @@ export const ITINERARY: DayItinerary[] = [
   {
     day: 7,
     date: "4/7 (週二)",
+    weatherLocations: [
+      {
+        name: "Page",
+        latitude: 36.9147,
+        longitude: -111.4558,
+        timezone: "America/Phoenix",
+      },
+      {
+        name: "Grand Canyon",
+        latitude: 36.0544,
+        longitude: -112.1401,
+        timezone: "America/Phoenix",
+      },
+      {
+        name: "Las Vegas",
+        latitude: 36.1699,
+        longitude: -115.1398,
+        timezone: "America/Los_Angeles",
+      },
+    ],
     title: "【跟團】羚羊峽谷 & 大峽谷國家公園",
     description:
       "今天我們將從佩吉出發，前往羚羊彩穴和馬蹄灣，開啓一段自然奇景之旅。今天的旅程中，您還將有機會去到大峽谷的起源點 - 包偉湖，或者在大峽谷國家公園欣賞科羅拉多河蜿蜒谷底的壯麗景色。最後，我們將帶着滿滿的自然回憶，返回拉斯維加斯。",
@@ -1066,6 +1200,32 @@ export const ITINERARY: DayItinerary[] = [
   {
     day: 8,
     date: "4/8 (週三)",
+    weatherLocations: [
+      {
+        name: "Las Vegas",
+        latitude: 36.1699,
+        longitude: -115.1398,
+        timezone: "America/Los_Angeles",
+      },
+      {
+        name: "Barstow",
+        latitude: 34.8958,
+        longitude: -117.0173,
+        timezone: "America/Los_Angeles",
+      },
+      {
+        name: "Rancho Cucamonga",
+        latitude: 34.1064,
+        longitude: -117.5931,
+        timezone: "America/Los_Angeles",
+      },
+      {
+        name: "Joshua Tree",
+        latitude: 34.1347,
+        longitude: -116.3131,
+        timezone: "America/Los_Angeles",
+      },
+    ],
     title: "【跟團結束】拉斯維加斯 & 七彩石 → 取車前往約書亞樹住宿",
     description:
       "跟團結束於 99 Ranch Rancho Cucamonga，搭 Uber 前往安大略機場取車後，直達約書亞樹附近住宿過夜（Day 8 & 9 連住同一間）。",
@@ -1242,6 +1402,20 @@ export const ITINERARY: DayItinerary[] = [
   {
     day: 9,
     date: "4/9 (週四)",
+    weatherLocations: [
+      {
+        name: "Joshua Tree",
+        latitude: 34.1347,
+        longitude: -116.3131,
+        timezone: "America/Los_Angeles",
+      },
+      {
+        name: "Palm Springs",
+        latitude: 33.8303,
+        longitude: -116.5453,
+        timezone: "America/Los_Angeles",
+      },
+    ],
     title: "約書亞樹 + 棕櫚泉纜車",
     description: [
       "上午遊覽約書亞樹國家公園，下午前往棕櫚泉搭乘空中纜車看日落，晚上回約書亞樹住宿休息。",
@@ -1395,6 +1569,20 @@ export const ITINERARY: DayItinerary[] = [
   {
     day: 10,
     date: "4/10 (週五)",
+    weatherLocations: [
+      {
+        name: "Palm Springs",
+        latitude: 33.8303,
+        longitude: -116.5453,
+        timezone: "America/Los_Angeles",
+      },
+      {
+        name: "San Diego",
+        latitude: 32.7157,
+        longitude: -117.1611,
+        timezone: "America/Los_Angeles",
+      },
+    ],
     title: "棕櫚泉早晨輕鬆散步 & 前往聖地牙哥",
     description:
       "早上從約書亞樹附近住宿出發，前往棕櫚泉市區輕鬆走一個景點（可從植物園 / 飛機博物館 / 瀑布步道三選一），中午左右出發南下，自駕前往聖地牙哥並於下午三點入住 airbnb。",
@@ -1646,6 +1834,26 @@ export const ITINERARY: DayItinerary[] = [
   {
     day: 11,
     date: "4/11 (週六)",
+    weatherLocations: [
+      {
+        name: "Balboa Park",
+        latitude: 32.7341,
+        longitude: -117.1446,
+        timezone: "America/Los_Angeles",
+      },
+      {
+        name: "Torrey Pines",
+        latitude: 32.9207,
+        longitude: -117.2514,
+        timezone: "America/Los_Angeles",
+      },
+      {
+        name: "Old Town San Diego",
+        latitude: 32.754,
+        longitude: -117.197,
+        timezone: "America/Los_Angeles",
+      },
+    ],
     title: "聖地牙哥城市探索",
     description:
       "上午在 airbnb 悠閒享用早餐，前往巴爾波亞公園參觀博物館與花園，下午參觀聖地牙哥動物園，傍晚前往托里松州立公園欣賞海景，晚上在 Old Town 享用墨西哥料理。",
@@ -1827,6 +2035,20 @@ export const ITINERARY: DayItinerary[] = [
   {
     day: 12,
     date: "4/12 (週日)",
+    weatherLocations: [
+      {
+        name: "San Diego Waterfront",
+        latitude: 32.7138,
+        longitude: -117.1756,
+        timezone: "America/Los_Angeles",
+      },
+      {
+        name: "Coronado",
+        latitude: 32.6859,
+        longitude: -117.1831,
+        timezone: "America/Los_Angeles",
+      },
+    ],
     title: "聖地牙哥精華遊",
     description:
       "上午參觀中途島號博物館，中午在海港村享用午餐，下午前往科羅納多島參觀 Hotel del Coronado 並散步購物，傍晚搭乘渡輪返回市中心，晚上參觀煤氣燈街區後前往超市買菜回住宿煮晚餐。",
@@ -2005,6 +2227,26 @@ export const ITINERARY: DayItinerary[] = [
   {
     day: 13,
     date: "4/13 (週一)",
+    weatherLocations: [
+      {
+        name: "Ocean Beach",
+        latitude: 32.7503,
+        longitude: -117.2511,
+        timezone: "America/Los_Angeles",
+      },
+      {
+        name: "Del Mar",
+        latitude: 32.9595,
+        longitude: -117.2653,
+        timezone: "America/Los_Angeles",
+      },
+      {
+        name: "Ontario Airport",
+        latitude: 34.056,
+        longitude: -117.6012,
+        timezone: "America/Los_Angeles",
+      },
+    ],
     title: "最後悠閒時光 & 準備返家",
     description:
       "上午二選一：選項一為海洋海灘 (Ocean Beach)；選項二為 Del Mar（海濱小鎮、沙灘與主街）。下午共同行程：自由活動，傍晚前往安大略機場還車、準備搭機返台。",
