@@ -68,11 +68,11 @@ export const ItineraryDayDetail: React.FC<ItineraryDayDetailProps> = ({
       {/* Page Content */}
       <div className="space-y-8">
         {/* 1. Description */}
-        <div>
+        {/* <div>
           <p className="text-stone-700 leading-relaxed text-base md:text-lg text-justify max-w-4xl">
             {item.description}
           </p>
-        </div>
+        </div> */}
 
         <ItineraryWeatherCards item={item} />
 
