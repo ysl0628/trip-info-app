@@ -1,4 +1,4 @@
-import { Flight, DayItinerary, Attraction, FoodSpot } from "./types";
+﻿import { Flight, DayItinerary, Attraction, FoodSpot } from "./types";
 
 export const FLIGHTS: Flight[] = [
   {
@@ -30,7 +30,8 @@ export const ITINERARY: DayItinerary[] = [
     day: 1,
     date: "4/1 (週三)",
     title: "抵達與安頓",
-    description: "傍晚抵達安大略機場，辦理出關手續後前往 Hacienda Heights 住宿點休息，調整時差。",
+    description:
+      "傍晚抵達安大略機場，辦理出關手續後前往 Hacienda Heights 住宿點休息，調整時差。",
     highlights: ["安大略國際機場(ONT)", "Hacienda Heights"],
     accommodation: {
       location: "哈仙達崗住宿",
@@ -48,7 +49,10 @@ export const ITINERARY: DayItinerary[] = [
       lunch: "飛機上",
       dinner: "便利店或餐廳外帶",
     },
-    transport: ["自駕前往 Hacienda Heights Airbnb（約 25-30 分鐘）", "路線：I-10 East"],
+    transport: [
+      "自駕前往 Hacienda Heights Airbnb（約 25-30 分鐘）",
+      "路線：I-10 East",
+    ],
     timeline: [
       {
         time: "17:05",
@@ -73,7 +77,8 @@ export const ITINERARY: DayItinerary[] = [
         type: "other",
         location: "租車手續 + 驗車",
         activityDuration: "約 75 分鐘",
-        mapLink: "https://www.google.com/maps/search/?api=1&query=3450+E+Airport+Dr+Suite+100+Ontario+CA+91761",
+        mapLink:
+          "https://www.google.com/maps/search/?api=1&query=3450+E+Airport+Dr+Suite+100+Ontario+CA+91761",
         description: [
           "排隊、簽約、講解保險、驗車狀況、領鑰匙",
           "取車地點：美國,Ontario,91761,3450 E. AIRPORT DR. SUITE 100, ONTARIO, CA",
@@ -88,7 +93,8 @@ export const ITINERARY: DayItinerary[] = [
         to: "哈仙達崗住宿",
         duration: "約 25-30 分鐘",
         luggage: "行李在車上",
-        mapLink: "https://www.google.com/maps/dir/Ontario+International+Airport/Rowland+Heights",
+        mapLink:
+          "https://www.google.com/maps/search/?api=1&query=1251+Marchmont+Avenue,+Hacienda+Heights,+CA+91745",
         description: ["路線：I-10 East"],
       },
       {
@@ -107,12 +113,9 @@ export const ITINERARY: DayItinerary[] = [
         from: "住宿",
         to: "便利店或餐廳",
         duration: "約 10-15 分鐘",
-        mapLink: "https://www.google.com/maps/dir/Rowland+Heights/7-Eleven",
-        description: [
-          "便利店：7-Eleven、In-N-Out",
-          { text: "7-Eleven 官網", link: "https://www.7-eleven.com/" },
-          "便當店：中式、日式便當"
-        ],
+        mapLink:
+          "https://www.google.com/maps/search/?api=1&query=18495+Colima+Rd+ste+3%264,+Rowland+Heights,+CA+91748",
+        description: ["蘭州拉麵", "華人 food court"],
       },
       {
         time: "21:30-22:30",
@@ -139,8 +142,13 @@ export const ITINERARY: DayItinerary[] = [
     day: 2,
     date: "4/2 (週四)",
     title: "海灘與市集之旅",
-    description: "上午自駕前往聖莫尼卡，逛碼頭與海灘後繼續前往馬里布；傍晚前往農夫市場採買，晚上回 Airbnb 自煮晚餐。",
-    highlights: ["聖莫尼卡 (Santa Monica)", "馬里布 (Malibu)", "農夫市場 (The Original Farmers Market)"],
+    description:
+      "上午自駕前往聖莫尼卡，逛碼頭與海灘後繼續前往馬里布；傍晚前往農夫市場採買，晚上回 Airbnb 自煮晚餐。",
+    highlights: [
+      "聖莫尼卡 (Santa Monica)",
+      "馬里布 (Malibu)",
+      "農夫市場 (The Original Farmers Market)",
+    ],
     accommodation: {
       location: "哈仙達崗住宿",
       hotels: [
@@ -181,7 +189,8 @@ export const ITINERARY: DayItinerary[] = [
         from: "哈仙達崗住宿",
         to: "聖莫尼卡碼頭 (Santa Monica Pier)",
         duration: "約 60-75 分鐘",
-        mapLink: "https://www.google.com/maps/dir/1251+Marchmont+Avenue,+Hacienda+Heights,+CA+91745/Santa+Monica+Pier",
+        mapLink:
+          "https://www.google.com/maps/dir/1251+Marchmont+Avenue,+Hacienda+Heights,+CA+91745/Santa+Monica+Pier",
         description: ["自駕前往聖莫尼卡"],
       },
       {
@@ -191,13 +200,17 @@ export const ITINERARY: DayItinerary[] = [
         type: "attraction",
         location: "聖莫尼卡碼頭 (Santa Monica Pier) + 海灘散步",
         activityDuration: "約2.75小時",
-        mapLink: "https://www.google.com/maps/search/?api=1&query=Santa+Monica+Pier",
+        mapLink:
+          "https://www.google.com/maps/search/?api=1&query=Santa+Monica+Pier",
         isFreeAdmission: true,
         parkingCost: "$2 - $3.5",
         infoLink: "https://bobbytravel.tw/santa-monica/",
         description: [
           "碼頭與海灘、Third Street Promenade",
-          "導航 Parking Structure 6 或 Parking Structure 8",
+          {
+            text: "導航 Parking Structure 6 或 Parking Structure 8",
+            link: "https://maps.app.goo.gl/kL5yWeUBYUqiSwjo6",
+          },
           "前 90 分鐘免費等方案，過時間後每小時 $2-5",
         ],
       },
@@ -208,7 +221,8 @@ export const ITINERARY: DayItinerary[] = [
         type: "meal",
         location: "聖莫尼卡海邊餐廳 (Santa Monica Beach Restaurant)",
         activityDuration: "約1小時",
-        mapLink: "https://www.google.com/maps/search/?api=1&query=Santa+Monica+Beach+Restaurant",
+        mapLink:
+          "https://www.google.com/maps/search/?api=1&query=Santa+Monica+Beach+Restaurant",
         description: [
           "平價義大利熟食店 (Bay Cities Italian Deli)",
           "Bluestone Lane",
@@ -223,7 +237,8 @@ export const ITINERARY: DayItinerary[] = [
         from: "聖莫尼卡",
         to: "馬里布海灘 (Malibu Beach)",
         duration: "約 25-40 分鐘",
-        mapLink: "https://www.google.com/maps/dir/Santa+Monica+Pier/Malibu+Beach+CA",
+        mapLink:
+          "https://www.google.com/maps/dir/Santa+Monica+Pier/Malibu+Beach+CA",
         description: ["沿海岸公路前往馬里布"],
       },
       {
@@ -233,11 +248,23 @@ export const ITINERARY: DayItinerary[] = [
         type: "attraction",
         location: "馬里布海灘 (Malibu Beach)",
         activityDuration: "約2小時",
-        mapLink: "https://www.google.com/maps/search/?api=1&query=Malibu+Beach+CA",
-        infoLink: "https://www.chrisamericandream.com/malibu-paradise-cove-beach/",
+        mapLink:
+          "https://www.google.com/maps/search/?api=1&query=Malibu+Beach+CA",
+        infoLink:
+          "https://www.chrisamericandream.com/malibu-paradise-cove-beach/",
         isFreeAdmission: true,
         parkingCost: "停車 $2-5/小時",
-        description: ["海灘散步、Malibu Pier", "午餐已可在 Santa Monica 解決，這段以海景散步與拍照為主"],
+        description: [
+          "海灘散步、Malibu Pier",
+          {
+            text: "Paradise Cove Beach Cafe (建議訂位)",
+            link: "https://maps.app.goo.gl/EbyNANrjWGdys4T69",
+          },
+          {
+            text: "景點推薦",
+            link: "https://www.17ybm.com/zh-tw/malibu",
+          },
+        ],
       },
       {
         time: "4:10-5:20 PM",
@@ -247,7 +274,8 @@ export const ITINERARY: DayItinerary[] = [
         from: "馬里布海灘",
         to: "農夫市場 (The Original Farmers Market)",
         duration: "約 50-70 分鐘",
-        mapLink: "https://www.google.com/maps/dir/Malibu+Beach+CA/The+Original+Farmers+Market",
+        mapLink:
+          "https://www.google.com/maps/dir/Malibu+Beach+CA/The+Original+Farmers+Market",
         description: ["前往農夫市場"],
       },
       {
@@ -259,11 +287,12 @@ export const ITINERARY: DayItinerary[] = [
         activityDuration: "約1小時10分鐘",
         openingHours: "09:00–21:00",
         infoLink: "wendyjourney.com/farmers-market-grove/",
-        mapLink: "https://www.google.com/maps/search/?api=1&query=The+Original+Farmers+Market",
+        mapLink:
+          "https://www.google.com/maps/search/?api=1&query=The+Original+Farmers+Market",
         description: [
           "地點：6333 W 3rd St, Los Angeles, CA 90036",
           "新鮮農產品、麵包、起司、食品",
-          "直接吃晚餐或買食材回家煮（若太晚建議直接晚餐）",
+          "直接吃晚餐",
           "停車驗證免費（90 分鐘-2 小時）",
         ],
       },
@@ -298,14 +327,14 @@ export const ITINERARY: DayItinerary[] = [
     date: "4/3 (週四)",
     title: "好萊塢經典景點之旅",
     description:
-      "早餐到 Porto's Bakery，上午參觀好萊塢星光大道和 Hollywood Sign，中午後前往格里斐斯天文台，下午在 Pasadena Old Town 逛街購物；若時間允許可 Optional 加碼聖蓋博（San Gabriel），Valley Blvd 一帶可順路買手搖：50 嵐（美國門市招牌多為 KQ Tea）。",
+      "早餐到 Porto's Bakery Glendale 分店，上午參觀好萊塢星光大道和 Hollywood Sign，中午後前往格里斐斯天文台，下午在 Pasadena Old Town 逛街購物；若時間允許可 Optional 加碼聖蓋博（San Gabriel），Valley Blvd 一帶可順路買手搖：50 嵐（美國門市招牌多為 KQ Tea）。",
     highlights: [
-      "Porto's Bakery",
+      "Porto's Bakery Glendale",
       "好萊塢星光大道 (Hollywood Walk of Fame)",
       "Hollywood Sign",
       "格里斐斯天文台 (Griffith Observatory)",
       "Pasadena Old Town",
-      "聖蓋博 San Gabriel（Optional，可含 50 嵐／KQ Tea）",
+      "聖蓋博 San Gabriel",
     ],
     accommodation: {
       location: "哈仙達崗住宿",
@@ -318,13 +347,13 @@ export const ITINERARY: DayItinerary[] = [
       ],
     },
     meals: {
-      breakfast: "Porto's Bakery",
+      breakfast: "Porto's Bakery Glendale",
       lunch: "Pasadena Old Town（簡餐或咖啡廳）",
       dinner: "airbnb 自煮晚餐",
     },
     transport: [
-      "自駕到 Porto's Bakery（約 20-35 分鐘）",
-      "自駕到 Hollywood Walk of Fame（約 35-50 分鐘）",
+      "自駕到 Porto's Bakery Glendale（約 35-50 分鐘）",
+      "自駕到 Hollywood Walk of Fame（約 20-30 分鐘）",
       "自駕到 Hollywood Sign（約 15-25 分鐘）",
       "自駕到 格里斐斯天文台（約 20-30 分鐘）",
       "自駕到 Pasadena（約 25-35 分鐘）",
@@ -332,68 +361,69 @@ export const ITINERARY: DayItinerary[] = [
       "自駕回 Hacienda Heights Airbnb（約 30-45 分鐘；若從聖蓋博出發約 25-40 分鐘）",
     ],
     mapLink:
-      "https://www.google.com/maps/dir/1251+Marchmont+Avenue,+Hacienda+Heights,+CA+91745/Porto's+Bakery+Downey/Hollywood+Walk+of+Fame/Hollywood+Sign/Griffith+Observatory/Pasadena+Old+Town/Mission+San+Gabriel+Arcangel/1251+Marchmont+Avenue,+Hacienda+Heights,+CA+91745",
+      "https://www.google.com/maps/dir/1251+Marchmont+Avenue,+Hacienda+Heights,+CA+91745/315+N+Brand+Blvd,+Glendale,+CA+91203/Hollywood+Walk+of+Fame/Hollywood+Sign/Griffith+Observatory/Pasadena+Old+Town/Mission+San+Gabriel+Arcangel/1251+Marchmont+Avenue,+Hacienda+Heights,+CA+91745",
     referenceLinks: [
       {
-        label: "整日路線圖（不經聖蓋博 Optional）",
-        url: "https://www.google.com/maps/dir/1251+Marchmont+Avenue,+Hacienda+Heights,+CA+91745/Porto's+Bakery+Downey/Hollywood+Walk+of+Fame/Hollywood+Sign/Griffith+Observatory/Pasadena+Old+Town/1251+Marchmont+Avenue,+Hacienda+Heights,+CA+91745",
-      },
-      {
-        label: "50 嵐 San Gabriel（KQ Tea，Valley Blvd）",
-        url: "https://www.google.com/maps/search/?api=1&query=KQ+Tea+527+W+Valley+Blvd+San+Gabriel+CA",
+        label: "50 嵐 San Gabriel（WUSHILAND BOBA）",
+        url: "https://maps.app.goo.gl/fVNo1ZmNKB8dNxaAA",
       },
     ],
     timeline: [
       {
-        time: "8:00-8:40 AM",
+        time: "8:00-8:50 AM",
         period: "上午",
         title: "交通",
         type: "transportation",
         from: "哈仙達崗住宿",
-        to: "波托麵包店 (Porto's Bakery)",
-        duration: "約 20-35 分鐘",
+        to: "波托麵包店 Glendale 分店 (Porto's Bakery)",
+        duration: "約 35-50 分鐘",
         mapLink:
-          "https://www.google.com/maps/dir/1251+Marchmont+Avenue,+Hacienda+Heights,+CA+91745/Porto's+Bakery+Downey",
+          "https://www.google.com/maps/dir/1251+Marchmont+Avenue,+Hacienda+Heights,+CA+91745/315+N+Brand+Blvd,+Glendale,+CA+91203",
         description: ["早上先到 Porto's"],
       },
       {
-        time: "8:40-9:30 AM",
+        time: "8:50-9:40 AM",
         period: "上午",
         title: "早餐",
         type: "meal",
-        location: "波托麵包店 (Porto's Bakery)",
+        location: "波托麵包店 Glendale 分店 (Porto's Bakery)",
         activityDuration: "約50分鐘",
-        mapLink: "https://www.google.com/maps/search/?api=1&query=Porto's+Bakery+Downey",
-        description: ["地址：8233 Firestone Blvd, Downey", "推薦：Cubano 三明治、Guava Strudel、Potato Ball"],
+        mapLink:
+          "https://www.google.com/maps/search/?api=1&query=315+N+Brand+Blvd,+Glendale,+CA+91203",
+        description: [
+          "推薦：Cubano 三明治、Guava Strudel、Potato Ball",
+        ],
       },
       {
-        time: "9:30-9:50 AM",
+        time: "9:40-10:00 AM",
         period: "上午",
         title: "緩衝",
         type: "other",
-        location: "Porto's Bakery 周邊",
+        location: "Porto's Bakery Glendale 周邊",
         activityDuration: "約20分鐘",
         description: ["停車/整理/臨時補位"],
       },
       {
-        time: "9:50-10:40 AM",
+        time: "10:00-10:30 AM",
         period: "上午",
         title: "交通",
         type: "transportation",
-        from: "波托麵包店",
+        from: "波托麵包店 Glendale 分店",
         to: "好萊塢星光大道 (Hollywood Walk of Fame)",
-        duration: "約 35-50 分鐘",
-        mapLink: "https://www.google.com/maps/dir/Porto's+Bakery+Downey/Hollywood+Walk+of+Fame",
+        duration: "約 20-30 分鐘",
+        mapLink:
+          "https://www.google.com/maps/dir/315+N+Brand+Blvd,+Glendale,+CA+91203/Hollywood+Walk+of+Fame",
         description: ["自駕到 Hollywood Blvd"],
       },
       {
-        time: "10:40-11:20 AM",
+        time: "10:30-11:10 AM",
         period: "上午",
         title: "景點",
         type: "attraction",
         location: "好萊塢星光大道 (Hollywood Walk of Fame)",
         activityDuration: "約40分鐘",
-        mapLink: "https://www.google.com/maps/search/?api=1&query=Hollywood+Walk+of+Fame",
+        mapLink:
+          "https://www.google.com/maps/search/?api=1&query=Hollywood+Walk+of+Fame",
         parkingCost: "停車 $5-15",
         isFreeAdmission: true,
         description: ["看明星名字、拍照"],
@@ -417,7 +447,8 @@ export const ITINERARY: DayItinerary[] = [
         location: "好萊塢標誌 (Hollywood Sign)",
         activityDuration: "約40分鐘",
         infoLink: "https://www.wendyjourney.com/hollywood-sign/",
-        mapLink: "https://www.google.com/maps/search/?api=1&query=Hollywood+Sign",
+        mapLink:
+          "https://www.google.com/maps/search/?api=1&query=Hollywood+Sign",
         isFreeAdmission: true,
         description: ["可以在半山拍照"],
       },
@@ -429,7 +460,8 @@ export const ITINERARY: DayItinerary[] = [
         from: "好萊塢標誌",
         to: "格里斐斯天文台 (Griffith Observatory)",
         duration: "約 20-30 分鐘",
-        mapLink: "https://www.google.com/maps/dir/Lake+Hollywood+Park/Griffith+Observatory",
+        mapLink:
+          "https://www.google.com/maps/dir/Lake+Hollywood+Park/Griffith+Observatory",
         description: ["前往 Griffith"],
       },
       {
@@ -441,7 +473,8 @@ export const ITINERARY: DayItinerary[] = [
         activityDuration: "約1.5小時",
         openingHours: "12:00-22:00",
         infoLink: "https://www.17ybm.com/zh-tw/griffith-observatory/",
-        mapLink: "https://www.google.com/maps/search/?api=1&query=Griffith+Observatory",
+        mapLink:
+          "https://www.google.com/maps/search/?api=1&query=Griffith+Observatory",
         parkingCost: "停車 $10",
         isFreeAdmission: true,
         description: ["室外景觀、城市景觀、俯瞰 LA"],
@@ -454,7 +487,8 @@ export const ITINERARY: DayItinerary[] = [
         from: "格里斐斯天文台",
         to: "帕薩迪納老城 (Pasadena Old Town)",
         duration: "約 25-35 分鐘",
-        mapLink: "https://www.google.com/maps/dir/Griffith+Observatory/Pasadena+Old+Town",
+        mapLink:
+          "https://www.google.com/maps/dir/Griffith+Observatory/Pasadena+Old+Town",
         description: ["往東"],
       },
       {
@@ -465,7 +499,8 @@ export const ITINERARY: DayItinerary[] = [
         location: "帕薩迪納老城 (Pasadena Old Town)",
         activityDuration: "約2.5小時",
         infoLink: "https://laweekly.asia/pasadena-one-day-trip/",
-        mapLink: "https://www.google.com/maps/search/?api=1&query=Pasadena+Old+Town",
+        mapLink:
+          "https://www.google.com/maps/search/?api=1&query=Pasadena+Old+Town",
         parkingCost: "停車 $2-5",
         isFreeAdmission: true,
         description: ["精品街、咖啡廳、手工藝、拍照"],
@@ -477,14 +512,13 @@ export const ITINERARY: DayItinerary[] = [
         type: "attraction",
         location: "聖蓋博（San Gabriel）",
         activityDuration: "約 1-1.5 小時",
-        mapLink: "https://www.google.com/maps/search/?api=1&query=Mission+San+Gabriel+Arcangel",
+        mapLink:
+          "https://www.google.com/maps/search/?api=1&query=Mission+San+Gabriel+Arcangel",
         parkingCost: "商圈／街邊停車",
         isFreeAdmission: true,
         description: [
-          "非必排行程：若帕薩迪納提早結束或想加碼，可開車約 10-20 分鐘前往聖蓋博。",
-          "可選：聖蓋博傳教所 Mission San Gabriel Arcángel（歷史園區）；或 Valley Blvd 亞洲商圈（餐飲、超市、補貨）。",
-          "手搖飲：50 嵐（美國門市多掛牌 KQ Tea；Valley Blvd 有分店，見下方參考連結）。",
-          "若安排此站，回程請改以「聖蓋博 → 住宿」導航，車程約 25-40 分鐘。",
+          "聖蓋博傳教所 Mission San Gabriel Arcángel（歷史園區）；或 Valley Blvd 亞洲商圈（餐飲、超市、補貨）。",
+          "手搖飲：50 嵐。",
         ],
       },
       {
@@ -495,7 +529,8 @@ export const ITINERARY: DayItinerary[] = [
         from: "帕薩迪納老城",
         to: "哈仙達崗住宿",
         duration: "約 30-45 分鐘",
-        mapLink: "https://www.google.com/maps/dir//1251+Marchmont+Avenue,+Hacienda+Heights,+CA+91745",
+        mapLink:
+          "https://www.google.com/maps/dir//1251+Marchmont+Avenue,+Hacienda+Heights,+CA+91745",
         description: ["自駕回 Airbnb"],
       },
     ],
@@ -571,7 +606,8 @@ export const ITINERARY: DayItinerary[] = [
         from: "哈仙達崗住宿",
         to: "馬里布海灘 (Malibu Beach)",
         duration: "約 75-105 分鐘",
-        mapLink: "https://www.google.com/maps/dir/1251+Marchmont+Avenue,+Hacienda+Heights,+CA+91745/Malibu+Beach+CA",
+        mapLink:
+          "https://www.google.com/maps/dir/1251+Marchmont+Avenue,+Hacienda+Heights,+CA+91745/Malibu+Beach+CA",
         description: [
           "自駕前往海灘",
           "前提：4/2 Day 2 若已走「選項二」到馬里布，建議本日改選杭廷頓＋長灘線，不必重複馬里布",
@@ -586,10 +622,14 @@ export const ITINERARY: DayItinerary[] = [
         location: "杭廷頓海灘 (Huntington Beach)",
         activityDuration: "約1.5小時",
         infoLink: "https://monacama.pixnet.net/blog/posts/11397297759",
-        mapLink: "https://www.google.com/maps/search/?api=1&query=Huntington+City+Beach+CA",
+        mapLink:
+          "https://www.google.com/maps/search/?api=1&query=Huntington+City+Beach+CA",
         isFreeAdmission: true,
         parkingCost: "停車 $2-5/小時",
-        description: ["海灘散步、Huntington Beach Pier、海景", "可視時間簡單吃點小食；正餐可留到長灘"],
+        description: [
+          "海灘散步、Huntington Beach Pier、海景",
+          "可視時間簡單吃點小食；正餐可留到長灘",
+        ],
       },
       {
         time: "12:30-1:00 PM",
@@ -600,7 +640,8 @@ export const ITINERARY: DayItinerary[] = [
         from: "杭廷頓海灘",
         to: "長灘 (Long Beach)",
         duration: "約 20-35 分鐘",
-        mapLink: "https://www.google.com/maps/dir/Huntington+Beach+CA/Long+Beach+Waterfront+CA",
+        mapLink:
+          "https://www.google.com/maps/dir/Huntington+Beach+CA/Long+Beach+Waterfront+CA",
         description: ["沿海岸公路往長灘一帶"],
       },
       {
@@ -613,7 +654,8 @@ export const ITINERARY: DayItinerary[] = [
         infoLink: "https://kaitimy.pixnet.net/blog/posts/14214370448",
         ticketLink: "https://www.klook.com/zh-TW/activity/159862",
         activityDuration: "約1小時",
-        mapLink: "https://www.google.com/maps/search/?api=1&query=Long+Beach+Waterfront+Queen+Mary",
+        mapLink:
+          "https://www.google.com/maps/search/?api=1&query=Long+Beach+Waterfront+Queen+Mary",
         isFreeAdmission: true,
         parkingCost: "停車 $2-5/小時",
         description: [
@@ -631,8 +673,10 @@ export const ITINERARY: DayItinerary[] = [
         option: "二",
         location: "馬里布海灘 (Malibu Beach)",
         activityDuration: "約2.5小時",
-        mapLink: "https://www.google.com/maps/search/?api=1&query=Malibu+Beach+CA",
-        infoLink: "https://www.chrisamericandream.com/malibu-paradise-cove-beach/",
+        mapLink:
+          "https://www.google.com/maps/search/?api=1&query=Malibu+Beach+CA",
+        infoLink:
+          "https://www.chrisamericandream.com/malibu-paradise-cove-beach/",
         isFreeAdmission: true,
         parkingCost: "停車 $2-5/小時",
         description: [
@@ -650,8 +694,12 @@ export const ITINERARY: DayItinerary[] = [
         from: "馬里布海灘",
         to: "爾灣／橙縣 Mall 一帶",
         duration: "約 60-80 分鐘",
-        mapLink: "https://www.google.com/maps/dir/Malibu+Beach+CA/Irvine+Spectrum+Center",
-        description: ["馬里布線：往爾灣／橙縣 Mall 一帶（不經 LA 市區）", "同上，建議接在「Day 2 尚未玩馬里布」時選擇"],
+        mapLink:
+          "https://www.google.com/maps/dir/Malibu+Beach+CA/Irvine+Spectrum+Center",
+        description: [
+          "馬里布線：往爾灣／橙縣 Mall 一帶（不經 LA 市區）",
+          "同上，建議接在「Day 2 尚未玩馬里布」時選擇",
+        ],
       },
       {
         time: "2:00-2:45 PM",
@@ -662,7 +710,8 @@ export const ITINERARY: DayItinerary[] = [
         from: "長灘／海灘一帶",
         to: "爾灣／橙縣 Mall 一帶",
         duration: "約 25-45 分鐘",
-        mapLink: "https://www.google.com/maps/dir/Long+Beach+CA/Irvine+Spectrum+Center",
+        mapLink:
+          "https://www.google.com/maps/dir/Long+Beach+CA/Irvine+Spectrum+Center",
         description: ["長灘線：往爾灣與鄰近橙縣（多座 Mall）"],
       },
       {
@@ -671,8 +720,10 @@ export const ITINERARY: DayItinerary[] = [
         title: "景點",
         type: "attraction",
         location: "爾灣／橙縣 Mall 購物",
-        activityDuration: "約1-1.5小時（長灘線約 2:45 起、馬里布線約 3:00 抵達後開始）",
-        mapLink: "https://www.google.com/maps/search/?api=1&query=Irvine+Spectrum+Center",
+        activityDuration:
+          "約1-1.5小時（長灘線約 2:45 起、馬里布線約 3:00 抵達後開始）",
+        mapLink:
+          "https://www.google.com/maps/search/?api=1&query=Irvine+Spectrum+Center",
         isFreeAdmission: true,
         description: [
           "兩條海灘線下午合流，行程相同：",
@@ -692,7 +743,10 @@ export const ITINERARY: DayItinerary[] = [
         duration: "約 35-50 分鐘",
         mapLink:
           "https://www.google.com/maps/dir/Irvine+Spectrum+Center/3450+E+Airport+Dr+Suite+100,+Ontario,+CA+91761",
-        description: ["自駕前往 ONT 還車", "還車地點：3450 E. AIRPORT DR. SUITE 100, ONTARIO, CA"],
+        description: [
+          "自駕前往 ONT 還車",
+          "還車地點：3450 E. AIRPORT DR. SUITE 100, ONTARIO, CA",
+        ],
       },
       {
         time: "5:00-5:45 PM",
@@ -712,10 +766,12 @@ export const ITINERARY: DayItinerary[] = [
     day: 5,
     date: "4/5 (週日)",
     title: "【跟團】前往拉斯維加斯",
-    description: "早晨集合出發前往賭城，途經沙漠風光。晚上自由活動，可參觀百樂宮噴泉或舊城區燈光秀。",
+    description:
+      "早晨集合出發前往賭城，途經沙漠風光。晚上自由活動，可參觀百樂宮噴泉或舊城區燈光秀。",
     highlights: ["拉斯維加斯大道", "百樂宮噴泉", "Fremont Street Experience"],
     departureTime: "08:30",
-    departureLocation: "上島大酒樓（羅蘭崗德成行隔壁）；1463 Nogales St, Rowland Heights, CA 91748",
+    departureLocation:
+      "上島大酒樓（羅蘭崗德成行隔壁）；1463 Nogales St, Rowland Heights, CA 91748",
     timeline: [
       {
         time: "07:30-08:20",
@@ -732,7 +788,8 @@ export const ITINERARY: DayItinerary[] = [
         time: "08:30",
         period: "上午",
         title: "出發",
-        description: "上島大酒樓（羅蘭崗德成行隔壁）；1463 Nogales St, Rowland Heights, CA 91748",
+        description:
+          "上島大酒樓（羅蘭崗德成行隔壁）；1463 Nogales St, Rowland Heights, CA 91748",
       },
       {
         time: "上午",
@@ -770,7 +827,10 @@ export const ITINERARY: DayItinerary[] = [
         time: "晚上",
         period: "晚上",
         title: "飯店",
-        description: ["拉斯維加斯楓丹白露", "飯店僅供參考，最終入住飯店請以實際預訂為準。"],
+        description: [
+          "拉斯維加斯楓丹白露",
+          "飯店僅供參考，最終入住飯店請以實際預訂為準。",
+        ],
       },
     ],
     accommodation: {
@@ -789,7 +849,8 @@ export const ITINERARY: DayItinerary[] = [
       dinner: "導遊會根據實際情況為您推薦餐食",
     },
     transport: ["從洛杉磯出發前往拉斯維加斯；行駛：約430公里/約300分鐘"],
-    mapLink: "https://www.google.com/maps/dir/1463+Nogales+St,+Rowland+Heights,+CA+91748/Las+Vegas",
+    mapLink:
+      "https://www.google.com/maps/dir/1463+Nogales+St,+Rowland+Heights,+CA+91748/Las+Vegas",
     feeNote: [
       "必付費用 USD 190 / 人（已於購買行程時支付，包含：錫安國家公園、布萊斯國家公園、馬蹄灣、大峽谷國家公園、拉斯網紅歡迎招牌打卡、M&M 豆巧克力世界、可口可樂主題店）",
       "國家公園費約 USD 100 / 人；可評估年票 USD 250 / 人是否更划算",
@@ -801,7 +862,12 @@ export const ITINERARY: DayItinerary[] = [
     title: "【跟團】錫安國家公園 & 布萊斯峽谷",
     description:
       "拉斯維加斯 → 錫安國家公園（45分鐘）→ 布萊斯峽谷國家公園（60分鐘）→ 葛蘭峽谷大壩（途徑）→ 鮑威爾湖（途徑）→ 佩吉",
-    highlights: ["錫安國家公園", "布萊斯峽谷國家公園", "格倫峽谷大壩", "鮑威爾湖"],
+    highlights: [
+      "錫安國家公園",
+      "布萊斯峽谷國家公園",
+      "格倫峽谷大壩",
+      "鮑威爾湖",
+    ],
     timeline: [
       {
         time: "上午",
@@ -845,7 +911,8 @@ export const ITINERARY: DayItinerary[] = [
         to: "布萊斯峽谷國家公園",
         distance: "約135公里",
         duration: "約120分鐘",
-        mapLink: "https://www.google.com/maps/dir/Zion+National+Park/Bryce+Canyon+National+Park",
+        mapLink:
+          "https://www.google.com/maps/dir/Zion+National+Park/Bryce+Canyon+National+Park",
       },
       {
         time: "下午",
@@ -863,7 +930,8 @@ export const ITINERARY: DayItinerary[] = [
         from: "布萊斯峽谷國家公園",
         to: "飯店",
         distance: "約243公里",
-        mapLink: "https://www.google.com/maps/dir/Bryce+Canyon+National+Park/Page+AZ",
+        mapLink:
+          "https://www.google.com/maps/dir/Bryce+Canyon+National+Park/Page+AZ",
         duration: "約180分鐘",
         description: "途徑格倫峽谷大壩、鮑威爾湖",
       },
@@ -886,7 +954,10 @@ export const ITINERARY: DayItinerary[] = [
         time: "晚上",
         period: "晚上",
         title: "飯店",
-        description: ["佩奇/鮑威爾湖戴斯套房酒店", "飯店僅供參考，最終入住飯店請以實際預訂為準。"],
+        description: [
+          "佩奇/鮑威爾湖戴斯套房酒店",
+          "飯店僅供參考，最終入住飯店請以實際預訂為準。",
+        ],
       },
     ],
     accommodation: {
@@ -931,7 +1002,11 @@ export const ITINERARY: DayItinerary[] = [
         type: "attraction",
         location: "下羚羊峽谷",
         activityDuration: "約2小時",
-        description: ["門票", "包含門票、當地接送及嚮導服務費", "參考價格：USD 105"],
+        description: [
+          "門票",
+          "包含門票、當地接送及嚮導服務費",
+          "參考價格：USD 105",
+        ],
       },
       {
         time: "上午",
@@ -942,7 +1017,8 @@ export const ITINERARY: DayItinerary[] = [
         to: "馬蹄灣",
         distance: "約12公里",
         duration: "約15分鐘",
-        mapLink: "https://www.google.com/maps/dir/Lower+Antelope+Canyon/Horseshoe+Bend",
+        mapLink:
+          "https://www.google.com/maps/dir/Lower+Antelope+Canyon/Horseshoe+Bend",
       },
       {
         time: "上午",
@@ -961,7 +1037,8 @@ export const ITINERARY: DayItinerary[] = [
         to: "大峽谷國家公園",
         distance: "約177公里",
         duration: "約120分鐘",
-        mapLink: "https://www.google.com/maps/dir/Horseshoe+Bend/Grand+Canyon+National+Park",
+        mapLink:
+          "https://www.google.com/maps/dir/Horseshoe+Bend/Grand+Canyon+National+Park",
       },
       {
         time: "下午",
@@ -990,7 +1067,10 @@ export const ITINERARY: DayItinerary[] = [
         time: "晚上",
         period: "晚上",
         title: "飯店",
-        description: ["拉斯維加斯楓丹白露", "飯店僅供參考，最終入住飯店請以實際預訂為準。"],
+        description: [
+          "拉斯維加斯楓丹白露",
+          "飯店僅供參考，最終入住飯店請以實際預訂為準。",
+        ],
       },
     ],
     accommodation: {
@@ -1072,7 +1152,8 @@ export const ITINERARY: DayItinerary[] = [
         location:
           "歡迎來到絢麗的拉斯維加斯招牌 (外觀)、M&M's World（拉斯維加斯店） (外觀)、可口可樂主題專賣店（拉斯維加斯店） (外觀)",
         activityDuration: "約1小時",
-        mapLink: "https://www.google.com/maps/search/?api=1&query=Welcome+to+Las+Vegas+Sign",
+        mapLink:
+          "https://www.google.com/maps/search/?api=1&query=Welcome+to+Las+Vegas+Sign",
       },
       {
         time: "上午",
@@ -1083,7 +1164,8 @@ export const ITINERARY: DayItinerary[] = [
         to: "七彩石",
         distance: "約33公里",
         duration: "約30分鐘",
-        mapLink: "https://www.google.com/maps/dir/Welcome+to+Las+Vegas+Sign/Seven+Magic+Mountains",
+        mapLink:
+          "https://www.google.com/maps/dir/Welcome+to+Las+Vegas+Sign/Seven+Magic+Mountains",
       },
       {
         time: "上午",
@@ -1092,7 +1174,8 @@ export const ITINERARY: DayItinerary[] = [
         type: "attraction",
         location: "七彩石 (外觀)",
         activityDuration: "約30分鐘",
-        mapLink: "https://www.google.com/maps/search/?api=1&query=Seven+Magic+Mountains",
+        mapLink:
+          "https://www.google.com/maps/search/?api=1&query=Seven+Magic+Mountains",
       },
       {
         time: "下午",
@@ -1110,7 +1193,8 @@ export const ITINERARY: DayItinerary[] = [
         to: "巴斯托 Outlets (Barstow Outlets)",
         distance: "約220公里",
         duration: "約150分鐘",
-        mapLink: "https://www.google.com/maps/dir/Seven+Magic+Mountains/Barstow+Outlets",
+        mapLink:
+          "https://www.google.com/maps/dir/Seven+Magic+Mountains/Barstow+Outlets",
       },
       {
         time: "下午",
@@ -1119,7 +1203,8 @@ export const ITINERARY: DayItinerary[] = [
         type: "attraction",
         location: "巴斯托 Outlets (Barstow Outlets)",
         activityDuration: "約2小時",
-        mapLink: "https://www.google.com/maps/search/?api=1&query=Barstow+Outlets",
+        mapLink:
+          "https://www.google.com/maps/search/?api=1&query=Barstow+Outlets",
       },
       {
         time: "晚上",
@@ -1155,8 +1240,12 @@ export const ITINERARY: DayItinerary[] = [
         type: "other",
         location: "安大略機場租車櫃檯",
         duration: "1小時",
-        description: ["取 Minivan（after-hours drop 可用）", "取車地點：美國,Ontario,91761,3450 E AIRPORT DR STE 400"],
-        mapLink: "https://www.google.com/maps/search/?api=1&query=3450+E+Airport+Dr+Ste+400+Ontario+CA+91761",
+        description: [
+          "取 Minivan（after-hours drop 可用）",
+          "取車地點：美國,Ontario,91761,3450 E AIRPORT DR STE 400",
+        ],
+        mapLink:
+          "https://www.google.com/maps/search/?api=1&query=3450+E+Airport+Dr+Ste+400+Ontario+CA+91761",
       },
       {
         time: "20:30-22:30",
@@ -1196,7 +1285,13 @@ export const ITINERARY: DayItinerary[] = [
       "上午遊覽約書亞樹國家公園，下午前往棕櫚泉搭乘空中纜車看日落，晚上回約書亞樹住宿休息。",
       "備註：若 4/9 想走慵懶行程，可取消 4/10 上午行程，並把棕櫚泉纜車改到 4/10 結束後直接出發聖地牙哥。",
     ],
-    highlights: ["Keys View 全景", "Skull Rock", "Cholla Cactus Garden", "Hidden Valley", "棕櫚泉空中纜車（日落）"],
+    highlights: [
+      "Keys View 全景",
+      "Skull Rock",
+      "Cholla Cactus Garden",
+      "Hidden Valley",
+      "棕櫚泉空中纜車（日落）",
+    ],
     accommodation: {
       location: "約書亞樹住宿",
       hotels: [
@@ -1248,7 +1343,8 @@ export const ITINERARY: DayItinerary[] = [
         openingHours: "24小時開放",
         ticketCost: "$30/車（7天有效）",
         infoLink: "https://www.17ybm.com/zh-tw/joshua-tree-national-park/",
-        mapLink: "https://www.google.com/maps/search/?api=1&query=Keys+View+Joshua+Tree",
+        mapLink:
+          "https://www.google.com/maps/search/?api=1&query=Keys+View+Joshua+Tree",
         description: [
           "⚠️ 注意事項：約書亞樹國家公園訊號不好，建議提前下載離線地圖",
           "Keys View：沙漠全景，免費停車",
@@ -1273,7 +1369,8 @@ export const ITINERARY: DayItinerary[] = [
         from: "Joshua Tree 小鎮",
         to: "棕櫚泉空中纜車站",
         duration: "1小時15分鐘（75英里）",
-        mapLink: "https://www.google.com/maps/dir/Joshua+Tree/Palm+Springs+Aerial+Tramway",
+        mapLink:
+          "https://www.google.com/maps/dir/Joshua+Tree/Palm+Springs+Aerial+Tramway",
       },
       {
         time: "14:00-17:00",
@@ -1286,7 +1383,8 @@ export const ITINERARY: DayItinerary[] = [
         ticketCost: "USD $30-35/人",
         openingHours: "10:00–20:00",
         infoLink: "https://blog.udn.com/gloomybear/177213898",
-        mapLink: "https://www.google.com/maps/search/?api=1&query=Palm+Springs+Aerial+Tramway",
+        mapLink:
+          "https://www.google.com/maps/search/?api=1&query=Palm+Springs+Aerial+Tramway",
         description: [
           "世界最大旋轉纜車，上升 8000 英尺到山頂",
           "欣賞沙漠日落、山景、松林步道",
@@ -1302,7 +1400,8 @@ export const ITINERARY: DayItinerary[] = [
         from: "棕櫚泉纜車站",
         to: "住宿",
         duration: "1小時15分鐘",
-        mapLink: "https://www.google.com/maps/dir/Palm+Springs+Aerial+Tramway/63969+Sullivan+Rd,+Joshua+Tree,+CA+92252",
+        mapLink:
+          "https://www.google.com/maps/dir/Palm+Springs+Aerial+Tramway/63969+Sullivan+Rd,+Joshua+Tree,+CA+92252",
       },
       {
         time: "18:30",
@@ -1376,7 +1475,8 @@ export const ITINERARY: DayItinerary[] = [
         to: "棕櫚泉市區 (Palm Springs)",
         duration: "約 1–1.5 小時",
         luggage: "行李在車上",
-        mapLink: "https://www.google.com/maps/dir/Joshua+Tree+CA/Palm+Springs+CA",
+        mapLink:
+          "https://www.google.com/maps/dir/Joshua+Tree+CA/Palm+Springs+CA",
       },
       // Option B：植物園
       {
@@ -1388,7 +1488,8 @@ export const ITINERARY: DayItinerary[] = [
         location: "摩登熱帶植物園 (Moorten Botanical Garden)",
         activityDuration: "約1小時",
         openingHours: "10:00–16:00",
-        mapLink: "https://www.google.com/maps/search/?api=1&query=Moorten+Botanical+Garden+Palm+Springs",
+        mapLink:
+          "https://www.google.com/maps/search/?api=1&query=Moorten+Botanical+Garden+Palm+Springs",
         luggage: "行李在車上",
         description: [
           "小巧精緻的沙漠植物園，滿滿仙人掌、多肉植物，非常適合拍照散步",
@@ -1408,8 +1509,10 @@ export const ITINERARY: DayItinerary[] = [
         activityDuration: "約1.5小時",
         luggage: "行李在車上",
         openingHours: "10:00–17:00",
-        mapLink: "https://www.google.com/maps/search/?api=1&query=Palm+Springs+Air+Museum",
-        infoLink: "https://www.expedia.com.tw/Palm-Springs-Air-Museum-Palm-Springs.d6063411.Place-To-Visit",
+        mapLink:
+          "https://www.google.com/maps/search/?api=1&query=Palm+Springs+Air+Museum",
+        infoLink:
+          "https://www.expedia.com.tw/Palm-Springs-Air-Museum-Palm-Springs.d6063411.Place-To-Visit",
         description: [
           "室內展覽為主，展示二戰與冷戰時期戰機，可近距離看飛機與拍照",
           "冷氣充足、不曬太陽，適合長輩與不想走太多路的成員",
@@ -1426,7 +1529,8 @@ export const ITINERARY: DayItinerary[] = [
         activityDuration: "約2小時",
         openingHours: "08:00–17:00",
         luggage: "行李在車上",
-        mapLink: "https://www.google.com/maps/search/?api=1&query=Tahquitz+Canyon+Palm+Springs",
+        mapLink:
+          "https://www.google.com/maps/search/?api=1&query=Tahquitz+Canyon+Palm+Springs",
         infoLink: "https://blog.udn.com/gloomybear/177214362",
         description: [
           "輕鬆步道，路況良好，往返約 2 英里，終點可看到瀑布或綠洲景觀",
@@ -1441,7 +1545,10 @@ export const ITINERARY: DayItinerary[] = [
         title: "午餐",
         luggage: "行李在車上",
         type: "meal",
-        description: ["棕櫚泉市區簡單用餐，可選咖啡廳、三明治、漢堡等快速餐點", "建議吃飽後再上路前往聖地牙哥"],
+        description: [
+          "棕櫚泉市區簡單用餐，可選咖啡廳、三明治、漢堡等快速餐點",
+          "建議吃飽後再上路前往聖地牙哥",
+        ],
       },
       {
         time: "12:45-3:15 PM",
@@ -1452,8 +1559,10 @@ export const ITINERARY: DayItinerary[] = [
         to: "聖地牙哥 airbnb（8431 Neva Ave）",
         duration: "約 2.5–3 小時",
         luggage: "行李在車上",
-        mapLink: "https://www.google.com/maps/dir/Palm+Springs+CA/8431+Neva+Avenue,+San+Diego,+CA+92123",
-        description: "沿 I-215 / I-15 南下，途中視情況可在休息站短暫停留上洗手間",
+        mapLink:
+          "https://www.google.com/maps/dir/Palm+Springs+CA/8431+Neva+Avenue,+San+Diego,+CA+92123",
+        description:
+          "沿 I-215 / I-15 南下，途中視情況可在休息站短暫停留上洗手間",
       },
       {
         time: "3:00-3:30 PM",
@@ -1484,7 +1593,8 @@ export const ITINERARY: DayItinerary[] = [
         location: "拉霍亞海灣 (La Jolla Cove)",
         activityDuration: "約 1 小時 10 分鐘",
         infoLink: "https://rosaroundtheworld.com/la-jolla-cove/",
-        mapLink: "https://www.google.com/maps/search/?api=1&query=La+Jolla+Cove",
+        mapLink:
+          "https://www.google.com/maps/search/?api=1&query=La+Jolla+Cove",
         description: [
           "觀看海獅、海豹在沙灘上曬太陽",
           "海岸步道散步、拍照",
@@ -1500,7 +1610,8 @@ export const ITINERARY: DayItinerary[] = [
         from: "La Jolla",
         to: "Little Italy",
         duration: "約 20 分鐘",
-        mapLink: "https://www.google.com/maps/dir/La+Jolla+Cove/Little+Italy+San+Diego",
+        mapLink:
+          "https://www.google.com/maps/dir/La+Jolla+Cove/Little+Italy+San+Diego",
       },
       {
         time: "4:30-5:30 PM",
@@ -1524,7 +1635,8 @@ export const ITINERARY: DayItinerary[] = [
         option: "二",
         location: "小義大利區 (Little Italy)",
         activityDuration: "約 1.5 小時",
-        mapLink: "https://www.google.com/maps/search/?api=1&query=Little+Italy+San+Diego",
+        mapLink:
+          "https://www.google.com/maps/search/?api=1&query=Little+Italy+San+Diego",
         description: [
           "Filippi's Pizza Grotto（60 年老字號披薩店，USD 15–25/人）",
           "Vincenzo Cucina（高檔義式料理，必試起司輪義大利麵，USD 30–50/人）",
@@ -1541,7 +1653,8 @@ export const ITINERARY: DayItinerary[] = [
         from: "Little Italy",
         to: "airbnb (8431 Neva Ave)",
         duration: "約 20–25 分鐘",
-        mapLink: "https://www.google.com/maps/dir/Little+Italy+San+Diego/8431+Neva+Avenue,+San+Diego,+CA+92123",
+        mapLink:
+          "https://www.google.com/maps/dir/Little+Italy+San+Diego/8431+Neva+Avenue,+San+Diego,+CA+92123",
         description: "選項一：從 Little Italy 返回 airbnb",
       },
       {
@@ -1614,7 +1727,8 @@ export const ITINERARY: DayItinerary[] = [
         from: "住宿",
         to: "巴爾波亞公園 (Balboa Park)",
         duration: "約15-20分鐘",
-        mapLink: "https://www.google.com/maps/dir/San+Diego/Balboa+Park+San+Diego",
+        mapLink:
+          "https://www.google.com/maps/dir/San+Diego/Balboa+Park+San+Diego",
       },
       {
         time: "10:20 AM-1:00 PM",
@@ -1624,8 +1738,13 @@ export const ITINERARY: DayItinerary[] = [
         location: "巴爾波亞公園 (Balboa Park)",
         activityDuration: "約2小時40分鐘",
         infoLink: "https://rosaroundtheworld.com/balboa-park/",
-        mapLink: "https://www.google.com/maps/search/?api=1&query=Balboa+Park+San+Diego",
-        description: ["選擇 1-2 個博物館或重點花園", "玫瑰花園、日本友誼花園、蓮花池、沙漠花園", "可驅車移動各區域"],
+        mapLink:
+          "https://www.google.com/maps/search/?api=1&query=Balboa+Park+San+Diego",
+        description: [
+          "選擇 1-2 個博物館或重點花園",
+          "玫瑰花園、日本友誼花園、蓮花池、沙漠花園",
+          "可驅車移動各區域",
+        ],
       },
       {
         time: "12:50-1:00 PM",
@@ -1635,7 +1754,8 @@ export const ITINERARY: DayItinerary[] = [
         from: "巴爾波亞公園",
         to: "聖地牙哥動物園",
         duration: "約5-10分鐘",
-        mapLink: "https://www.google.com/maps/dir/Balboa+Park+San+Diego/San+Diego+Zoo",
+        mapLink:
+          "https://www.google.com/maps/dir/Balboa+Park+San+Diego/San+Diego+Zoo",
         description: "巴爾波亞公園內移動",
       },
       {
@@ -1645,7 +1765,8 @@ export const ITINERARY: DayItinerary[] = [
         type: "attraction",
         location: "聖地牙哥動物園 (可選)",
         activityDuration: "約1小時",
-        mapLink: "https://www.google.com/maps/search/?api=1&query=San+Diego+Zoo",
+        mapLink:
+          "https://www.google.com/maps/search/?api=1&query=San+Diego+Zoo",
         ticketLink: "https://activity.eztravel.com.tw/detail/TKNKL-6698",
         ticketCost: "門票 $60-70/人",
         description: ["乘坐遊園車", "重點看大貓科動物、鳥舍"],
@@ -1657,7 +1778,10 @@ export const ITINERARY: DayItinerary[] = [
         type: "meal",
         location: "巴爾波亞公園 (Balboa Park)",
         activityDuration: "約1小時30分鐘",
-        description: ["Panama 66（露天咖啡館）", "The Prado Restaurant（西班牙風格，USD 15-25/人）"],
+        description: [
+          "Panama 66（露天咖啡館）",
+          "The Prado Restaurant（西班牙風格，USD 15-25/人）",
+        ],
       },
       {
         time: "3:30-3:50 PM",
@@ -1667,7 +1791,8 @@ export const ITINERARY: DayItinerary[] = [
         from: "巴爾波亞公園",
         to: "托里松州立公園 (Torrey Pines) / 老城聖地牙哥 (Old Town)",
         duration: "約20-30分鐘 / 約25-30分鐘",
-        mapLink: "https://www.google.com/maps/dir/Balboa+Park+San+Diego/Torrey+Pines+State+Park",
+        mapLink:
+          "https://www.google.com/maps/dir/Balboa+Park+San+Diego/Torrey+Pines+State+Park",
         description: "前往選項一或選項二",
       },
       {
@@ -1678,7 +1803,8 @@ export const ITINERARY: DayItinerary[] = [
         option: "一",
         location: "托里松州立公園 (Torrey Pines State Park)",
         activityDuration: "約1小時40分鐘",
-        mapLink: "https://www.google.com/maps/search/?api=1&query=Torrey+Pines+State+Park",
+        mapLink:
+          "https://www.google.com/maps/search/?api=1&query=Torrey+Pines+State+Park",
         parkingCost: "停車 $20/日",
         isFreeAdmission: true,
         description: [
@@ -1696,7 +1822,8 @@ export const ITINERARY: DayItinerary[] = [
         location: "老城聖地牙哥 (Old Town San Diego)",
         infoLink: "https://kimiyo.tw/san-diego-old-town/",
         activityDuration: "約2小時",
-        mapLink: "https://www.google.com/maps/search/?api=1&query=Old+Town+San+Diego",
+        mapLink:
+          "https://www.google.com/maps/search/?api=1&query=Old+Town+San+Diego",
         description: [
           "參觀老城聖地牙哥歷史街區",
           "可在此享用晚餐：",
@@ -1714,7 +1841,8 @@ export const ITINERARY: DayItinerary[] = [
         to: "住宿",
         duration: "約25-35分鐘",
         mapLink: "https://www.google.com/maps/dir/Old+Town+San+Diego/San+Diego",
-        description: "從選項一或選項二返回住宿（選項一約 7:30 PM 出發，選項二約 6:00 PM 出發）",
+        description:
+          "從選項一或選項二返回住宿（選項一約 7:30 PM 出發，選項二約 6:00 PM 出發）",
       },
       {
         time: "8:45 PM",
@@ -1753,7 +1881,8 @@ export const ITINERARY: DayItinerary[] = [
     },
     meals: {
       breakfast: "住宿早餐",
-      lunch: "海港村 (Seaport Village)：The Fish Market / Puesto / Ironside Fish & Oyster / Hard Rock Cafe",
+      lunch:
+        "海港村 (Seaport Village)：The Fish Market / Puesto / Ironside Fish & Oyster / Hard Rock Cafe",
       dinner: "超市買菜回住宿煮",
     },
     transport: [
@@ -1793,7 +1922,8 @@ export const ITINERARY: DayItinerary[] = [
         activityDuration: "約2小時45分鐘",
         openingHours: "10:00–17:00",
         infoLink: "https://rosaroundtheworld.com/uss-midway-museum/",
-        mapLink: "https://www.google.com/maps/search/?api=1&query=USS+Midway+Museum",
+        mapLink:
+          "https://www.google.com/maps/search/?api=1&query=USS+Midway+Museum",
         ticketLink: "https://activity.eztravel.com.tw/detail/TKNKL-6525",
         ticketCost: "門票 $39-41/人",
         description: ["參觀真實戰艦、駕駛艙、飛機展示", "有中文語音導覽"],
@@ -1806,7 +1936,8 @@ export const ITINERARY: DayItinerary[] = [
         from: "中途島號博物館",
         to: "海港村 (Seaport Village)",
         duration: "約5分鐘",
-        mapLink: "https://www.google.com/maps/dir/USS+Midway+Museum/Seaport+Village+San+Diego",
+        mapLink:
+          "https://www.google.com/maps/dir/USS+Midway+Museum/Seaport+Village+San+Diego",
         description: "步行",
       },
       {
@@ -1816,7 +1947,8 @@ export const ITINERARY: DayItinerary[] = [
         type: "meal",
         location: "海港村 (Seaport Village)",
         activityDuration: "約1小時30分鐘",
-        mapLink: "https://www.google.com/maps/search/?api=1&query=Seaport+Village+San+Diego",
+        mapLink:
+          "https://www.google.com/maps/search/?api=1&query=Seaport+Village+San+Diego",
         description: [
           "The Fish Market（海鮮自助，USD 18-35/人）",
           "Puesto（墨西哥菜，USD 15-28/人）",
@@ -1840,7 +1972,8 @@ export const ITINERARY: DayItinerary[] = [
         type: "attraction",
         location: "科羅納多島 (Coronado Island)",
         activityDuration: "約2小時10分鐘",
-        mapLink: "https://www.google.com/maps/search/?api=1&query=Coronado+Island+San+Diego",
+        mapLink:
+          "https://www.google.com/maps/search/?api=1&query=Coronado+Island+San+Diego",
         description: [
           "Hotel del Coronado 拍照（著名粉紅宮殿飯店，免費拍照）",
           "Orange Avenue 散步購物",
@@ -1875,7 +2008,8 @@ export const ITINERARY: DayItinerary[] = [
         type: "attraction",
         location: "煤氣燈街區 (Gaslamp Quarter) (可選)",
         activityDuration: "約45分鐘",
-        mapLink: "https://www.google.com/maps/search/?api=1&query=Gaslamp+Quarter+San+Diego",
+        mapLink:
+          "https://www.google.com/maps/search/?api=1&query=Gaslamp+Quarter+San+Diego",
         description: ["參觀歷史街區", "散步、拍照"],
       },
       {
@@ -1906,7 +2040,11 @@ export const ITINERARY: DayItinerary[] = [
     title: "最後悠閒時光 & 準備返家",
     description:
       "上午二選一：選項一為海洋海灘 (Ocean Beach)；選項二為 Del Mar（海濱小鎮、沙灘與主街）。下午共同行程：自由活動，傍晚前往安大略機場還車、準備搭機返台。",
-    highlights: ["上午擇一：Ocean Beach／Del Mar", "自由活動（購物/散步）", "安大略機場 (ONT)"],
+    highlights: [
+      "上午擇一：Ocean Beach／Del Mar",
+      "自由活動（購物/散步）",
+      "安大略機場 (ONT)",
+    ],
     accommodation: {
       location: "飛機上",
       hotels: ["無"],
@@ -1939,7 +2077,10 @@ export const ITINERARY: DayItinerary[] = [
         type: "other",
         location: "airbnb",
         activityDuration: "約30分鐘",
-        description: ["整理行李、Airbnb Check-out", "上午海灘線二選一（選項一：Ocean Beach；選項二：Del Mar）"],
+        description: [
+          "整理行李、Airbnb Check-out",
+          "上午海灘線二選一（選項一：Ocean Beach；選項二：Del Mar）",
+        ],
       },
       {
         time: "10:30-10:50 AM",
@@ -1950,7 +2091,8 @@ export const ITINERARY: DayItinerary[] = [
         from: "airbnb",
         to: "海洋海灘 (Ocean Beach)",
         duration: "約20分鐘",
-        mapLink: "https://www.google.com/maps/dir/8431+Neva+Avenue,+San+Diego,+CA+92123/Ocean+Beach+San+Diego",
+        mapLink:
+          "https://www.google.com/maps/dir/8431+Neva+Avenue,+San+Diego,+CA+92123/Ocean+Beach+San+Diego",
         description: ["選項一：自駕前往 Ocean Beach"],
       },
       {
@@ -1962,7 +2104,8 @@ export const ITINERARY: DayItinerary[] = [
         from: "airbnb",
         to: "Del Mar（海濱／Del Mar City Beach）",
         duration: "約25-40分鐘",
-        mapLink: "https://www.google.com/maps/dir/8431+Neva+Avenue,+San+Diego,+CA+92123/Del+Mar+City+Beach",
+        mapLink:
+          "https://www.google.com/maps/dir/8431+Neva+Avenue,+San+Diego,+CA+92123/Del+Mar+City+Beach",
         description: ["選項二：先往北海岸至 Del Mar"],
       },
       {
@@ -1974,7 +2117,8 @@ export const ITINERARY: DayItinerary[] = [
         location: "海洋海灘 (Ocean Beach)",
         activityDuration: "約1小時40分鐘",
         luggage: "行李在車上",
-        mapLink: "https://www.google.com/maps/search/?api=1&query=Ocean+Beach+San+Diego",
+        mapLink:
+          "https://www.google.com/maps/search/?api=1&query=Ocean+Beach+San+Diego",
         parkingCost: "街邊／停車場 $2-5/小時",
         isFreeAdmission: true,
         description: ["沙灘漫步、拍照", "Ocean Beach Pier 走走"],
@@ -1988,10 +2132,14 @@ export const ITINERARY: DayItinerary[] = [
         location: "Del Mar（海濱小鎮）",
         activityDuration: "約1.5小時",
         luggage: "行李在車上",
-        mapLink: "https://www.google.com/maps/search/?api=1&query=Del+Mar+City+Beach+CA",
+        mapLink:
+          "https://www.google.com/maps/search/?api=1&query=Del+Mar+City+Beach+CA",
         parkingCost: "街邊／停車場",
         isFreeAdmission: true,
-        description: ["Del Mar City Beach、主街與咖啡小店走走", "選項二：北海岸小鎮與海景，結束後於當地或附近午餐"],
+        description: [
+          "Del Mar City Beach、主街與咖啡小店走走",
+          "選項二：北海岸小鎮與海景，結束後於當地或附近午餐",
+        ],
       },
       {
         time: "12:30-2:00 PM",
@@ -2002,7 +2150,8 @@ export const ITINERARY: DayItinerary[] = [
         location: "海洋海灘 (Ocean Beach) 海灘餐廳",
         activityDuration: "約1小時30分鐘",
         luggage: "行李在車上",
-        mapLink: "https://www.google.com/maps/search/?api=1&query=Ocean+Beach+San+Diego+restaurants",
+        mapLink:
+          "https://www.google.com/maps/search/?api=1&query=Ocean+Beach+San+Diego+restaurants",
         description: [
           "The Taco Stand（墨西哥塔可）",
           "The Cottage（美式早午餐）",
@@ -2019,8 +2168,12 @@ export const ITINERARY: DayItinerary[] = [
         location: "Del Mar 周邊餐廳",
         activityDuration: "約1小時30分鐘",
         luggage: "行李在車上",
-        mapLink: "https://www.google.com/maps/search/?api=1&query=Del+Mar+CA+restaurants",
-        description: ["海鮮、早午餐或主街咖啡輕食，依當天位置選店", "甜點: An's Hatmakers"],
+        mapLink:
+          "https://www.google.com/maps/search/?api=1&query=Del+Mar+CA+restaurants",
+        description: [
+          "海鮮、早午餐或主街咖啡輕食，依當天位置選店",
+          "甜點: An's Hatmakers",
+        ],
       },
       {
         time: "2:00-4:00 PM",
@@ -2045,7 +2198,8 @@ export const ITINERARY: DayItinerary[] = [
         duration: "約2小時",
         distance: "約 115 英里",
         luggage: "帶著行李",
-        mapLink: "https://www.google.com/maps/dir/San+Diego/3450+E+Airport+Dr+Ste+400+Ontario+CA+91761",
+        mapLink:
+          "https://www.google.com/maps/dir/San+Diego/3450+E+Airport+Dr+Ste+400+Ontario+CA+91761",
         description: ["路線：I-15 North → I-10 East → I-215 North → ONT"],
       },
       {
@@ -2055,7 +2209,8 @@ export const ITINERARY: DayItinerary[] = [
         type: "other",
         location: "安大略機場 (ONT) 還車",
         activityDuration: "約30分鐘",
-        mapLink: "https://www.google.com/maps/search/?api=1&query=3450+E+Airport+Dr+Ste+400+Ontario+CA+91761",
+        mapLink:
+          "https://www.google.com/maps/search/?api=1&query=3450+E+Airport+Dr+Ste+400+Ontario+CA+91761",
         description: [
           "還車地點：美國,Ontario,91761,3450 E AIRPORT DR STE 400",
           "停車、取行李、Check-in",
@@ -2097,7 +2252,8 @@ export const ATTRACTIONS: Attraction[] = [
     category: "City",
     cost: "免費",
     openHours: "全天開放",
-    mapLink: "https://www.google.com/maps/search/?api=1&query=Hollywood+Walk+of+Fame",
+    mapLink:
+      "https://www.google.com/maps/search/?api=1&query=Hollywood+Walk+of+Fame",
     tags: ["地標", "拍照", "好萊塢"],
   },
   {
@@ -2109,7 +2265,8 @@ export const ATTRACTIONS: Attraction[] = [
     category: "Entertainment",
     cost: "外觀免費",
     openHours: "依電影場次",
-    mapLink: "https://www.google.com/maps/search/?api=1&query=TCL+Chinese+Theatre",
+    mapLink:
+      "https://www.google.com/maps/search/?api=1&query=TCL+Chinese+Theatre",
     tags: ["電影", "歷史", "地標"],
   },
   {
@@ -2117,11 +2274,13 @@ export const ATTRACTIONS: Attraction[] = [
     image: "/images/attractions/uni_studios_hollywood.jpg",
     location: "100 Universal City Plaza, Universal City",
     region: "洛杉磯",
-    description: "結合電影主題樂園與製片廠，體驗哈利波特、超級任天堂世界等刺激設施。",
+    description:
+      "結合電影主題樂園與製片廠，體驗哈利波特、超級任天堂世界等刺激設施。",
     category: "Entertainment",
     cost: "$109+",
     openHours: "09:00 - 21:00 (建議查官網)",
-    mapLink: "https://www.google.com/maps/search/?api=1&query=Universal+Studios+Hollywood",
+    mapLink:
+      "https://www.google.com/maps/search/?api=1&query=Universal+Studios+Hollywood",
     tags: ["主題樂園", "親子", "必玩"],
   },
   {
@@ -2129,11 +2288,13 @@ export const ATTRACTIONS: Attraction[] = [
     image: "/images/attractions/Hollywood_Sign.jpg",
     location: "Griffith Park",
     region: "洛杉磯",
-    description: "世界知名的文化地標，可從格里斐斯天文台或 Lake Hollywood Park 觀賞。",
+    description:
+      "世界知名的文化地標，可從格里斐斯天文台或 Lake Hollywood Park 觀賞。",
     category: "Nature",
     cost: "免費",
     openHours: "全天開放",
-    mapLink: "https://www.google.com/maps/search/?api=1&query=Lake+Hollywood+Park",
+    mapLink:
+      "https://www.google.com/maps/search/?api=1&query=Lake+Hollywood+Park",
     tags: ["地標", "健行", "拍照"],
   },
   {
@@ -2141,11 +2302,13 @@ export const ATTRACTIONS: Attraction[] = [
     image: "/images/attractions/santa-monica-pier.webp",
     location: "200 Santa Monica Pier, Santa Monica",
     region: "洛杉磯",
-    description: "加州最著名的海灘地標，66號公路的終點，擁有太平洋遊樂園的摩天輪。",
+    description:
+      "加州最著名的海灘地標，66號公路的終點，擁有太平洋遊樂園的摩天輪。",
     category: "Entertainment",
     cost: "免費進入 (遊樂設施另計)",
     openHours: "06:00 - 22:00",
-    mapLink: "https://www.google.com/maps/search/?api=1&query=Santa+Monica+Pier",
+    mapLink:
+      "https://www.google.com/maps/search/?api=1&query=Santa+Monica+Pier",
     tags: ["海灘", "親子", "夕陽"],
   },
   {
@@ -2157,7 +2320,8 @@ export const ATTRACTIONS: Attraction[] = [
     category: "Nature",
     cost: "免費入場 (天文劇場收費)",
     openHours: "週二-週五 12:00-22:00",
-    mapLink: "https://www.google.com/maps/search/?api=1&query=Griffith+Observatory",
+    mapLink:
+      "https://www.google.com/maps/search/?api=1&query=Griffith+Observatory",
     tags: ["夜景", "電影場景", "天文"],
   },
   {
@@ -2165,11 +2329,13 @@ export const ATTRACTIONS: Attraction[] = [
     image: "/images/attractions/grand-central-market.jpg",
     location: "317 S Broadway, Downtown LA",
     region: "洛杉磯",
-    description: "超過百年的美食市集，匯集洛杉磯的多元美食，從墨西哥塔可到美式漢堡應有盡有。",
+    description:
+      "超過百年的美食市集，匯集洛杉磯的多元美食，從墨西哥塔可到美式漢堡應有盡有。",
     category: "Food",
     cost: "依店家",
     openHours: "08:00 - 21:00",
-    mapLink: "https://www.google.com/maps/search/?api=1&query=Grand+Central+Market+Los+Angeles",
+    mapLink:
+      "https://www.google.com/maps/search/?api=1&query=Grand+Central+Market+Los+Angeles",
     tags: ["美食", "市場", "歷史"],
   },
   {
@@ -2177,11 +2343,13 @@ export const ATTRACTIONS: Attraction[] = [
     image: "/images/attractions/The_Getty.webp",
     location: "1200 Getty Center Dr, LA",
     region: "洛杉磯",
-    description: "洛杉磯首屈一指的藝術博物館，建築與花園本身就是藝術品，可俯瞰整個LA盆地。需預約入場時間。",
+    description:
+      "洛杉磯首屈一指的藝術博物館，建築與花園本身就是藝術品，可俯瞰整個LA盆地。需預約入場時間。",
     category: "Culture",
     cost: "免費入場 (停車 $20)",
     openHours: "10:00 - 17:30 (週一休館)",
-    mapLink: "https://www.google.com/maps/search/?api=1&query=The+Getty+Center+Los+Angeles",
+    mapLink:
+      "https://www.google.com/maps/search/?api=1&query=The+Getty+Center+Los+Angeles",
     tags: ["博物館", "風景", "必訪"],
   },
   {
@@ -2201,11 +2369,13 @@ export const ATTRACTIONS: Attraction[] = [
     image: "/images/attractions/angelflight.webp",
     location: "351 S Hill St, Downtown LA",
     region: "洛杉磯",
-    description: "世界最短的纜索鐵路，也是《樂來樂愛你》的場景之一，連接山頂與中央市場。",
+    description:
+      "世界最短的纜索鐵路，也是《樂來樂愛你》的場景之一，連接山頂與中央市場。",
     category: "City",
     cost: "$1/單程",
     openHours: "06:45 - 22:00",
-    mapLink: "https://www.google.com/maps/search/?api=1&query=Angels+Flight+Railway",
+    mapLink:
+      "https://www.google.com/maps/search/?api=1&query=Angels+Flight+Railway",
     tags: ["電影場景", "歷史", "交通"],
   },
   {
@@ -2213,11 +2383,13 @@ export const ATTRACTIONS: Attraction[] = [
     image: "/images/attractions/Beverly-Hills.jpg",
     location: "Rodeo Drive, Beverly Hills",
     region: "洛杉磯",
-    description: "世界知名的奢華購物區，羅迪歐大道充滿精品旗艦店，適合逛街感受氣氛。",
+    description:
+      "世界知名的奢華購物區，羅迪歐大道充滿精品旗艦店，適合逛街感受氣氛。",
     category: "City",
     cost: "免費",
     openHours: "全天開放 (店家約 10-18)",
-    mapLink: "https://www.google.com/maps/search/?api=1&query=Rodeo+Drive+Beverly+Hills",
+    mapLink:
+      "https://www.google.com/maps/search/?api=1&query=Rodeo+Drive+Beverly+Hills",
     tags: ["購物", "奢華", "拍照"],
   },
   {
@@ -2225,11 +2397,13 @@ export const ATTRACTIONS: Attraction[] = [
     image: "/images/attractions/original-farmers-market.jpg",
     location: "6333 W 3rd St, LA",
     region: "洛杉磯",
-    description: "歷史悠久的戶外市集，鄰近 The Grove 購物中心，充滿美食攤位與商店。",
+    description:
+      "歷史悠久的戶外市集，鄰近 The Grove 購物中心，充滿美食攤位與商店。",
     category: "Food",
     cost: "依店家",
     openHours: "10:00 - 20:00",
-    mapLink: "https://www.google.com/maps/search/?api=1&query=The+Original+Farmers+Market",
+    mapLink:
+      "https://www.google.com/maps/search/?api=1&query=The+Original+Farmers+Market",
     tags: ["美食", "市場", "購物"],
   },
   {
@@ -2237,7 +2411,8 @@ export const ATTRACTIONS: Attraction[] = [
     image: "/images/attractions/crypto-com-arena-completes-phase.webp",
     location: "1111 S Figueroa St, LA",
     region: "洛杉磯",
-    description: "前身為史坦波中心，是湖人隊、快艇隊的主場，也是舉辦大型演唱會的場地。",
+    description:
+      "前身為史坦波中心，是湖人隊、快艇隊的主場，也是舉辦大型演唱會的場地。",
     category: "Entertainment",
     cost: "依活動",
     openHours: "依活動時間",
@@ -2249,11 +2424,13 @@ export const ATTRACTIONS: Attraction[] = [
     image: "/images/attractions/Walt_Disney_Concert_Hall.jpg",
     location: "111 S Grand Ave, Downtown LA",
     region: "洛杉磯",
-    description: "由建築大師 Frank Gehry 設計的解構主義建築，是洛杉磯愛樂的家。",
+    description:
+      "由建築大師 Frank Gehry 設計的解構主義建築，是洛杉磯愛樂的家。",
     category: "Culture",
     cost: "外觀免費",
     openHours: "導覽時間請查官網",
-    mapLink: "https://www.google.com/maps/search/?api=1&query=Walt+Disney+Concert+Hall",
+    mapLink:
+      "https://www.google.com/maps/search/?api=1&query=Walt+Disney+Concert+Hall",
     tags: ["建築", "藝術", "音樂"],
   },
   {
@@ -2261,11 +2438,13 @@ export const ATTRACTIONS: Attraction[] = [
     image: "/images/attractions/la-central-library-.webp",
     location: "630 W 5th St, Downtown LA",
     region: "洛杉磯",
-    description: "融合埃及復興與裝飾藝術風格的歷史建築，內部壁畫與中庭非常值得一看。",
+    description:
+      "融合埃及復興與裝飾藝術風格的歷史建築，內部壁畫與中庭非常值得一看。",
     category: "Culture",
     cost: "免費",
     openHours: "10:00 - 20:00 (週末至18:00)",
-    mapLink: "https://www.google.com/maps/search/?api=1&query=Central+Library+Los+Angeles",
+    mapLink:
+      "https://www.google.com/maps/search/?api=1&query=Central+Library+Los+Angeles",
     tags: ["建築", "歷史", "圖書館"],
   },
   {
@@ -2273,7 +2452,8 @@ export const ATTRACTIONS: Attraction[] = [
     image: "/images/attractions/olvera-st-3.jpg",
     location: "Downtown LA",
     region: "洛杉磯",
-    description: "被稱為「洛杉磯的發源地」，充滿墨西哥風情的市集，可以體驗墨西哥文化與美食。",
+    description:
+      "被稱為「洛杉磯的發源地」，充滿墨西哥風情的市集，可以體驗墨西哥文化與美食。",
     category: "City",
     cost: "免費",
     openHours: "10:00 - 19:00",
@@ -2285,7 +2465,8 @@ export const ATTRACTIONS: Attraction[] = [
     image: "/images/attractions/Ontario_Mills.jpg",
     location: "1 Mills Cir, Ontario",
     region: "洛杉磯",
-    description: "南加州最大的室內 Outlet 之一，品牌眾多，適合天氣炎熱或下雨時的購物行程。",
+    description:
+      "南加州最大的室內 Outlet 之一，品牌眾多，適合天氣炎熱或下雨時的購物行程。",
     category: "Shopping",
     cost: "免費",
     openHours: "10:00 - 21:00",
@@ -2298,23 +2479,27 @@ export const ATTRACTIONS: Attraction[] = [
     image: "/images/attractions/Cape_Royal_Sunset.jpg",
     location: "Arizona",
     region: "拉斯維加斯/大峽谷",
-    description: "世界七大奇景之一，經歷億萬年切割出的壯麗峽谷，南緣設施最完善。",
+    description:
+      "世界七大奇景之一，經歷億萬年切割出的壯麗峽谷，南緣設施最完善。",
     category: "Nature",
     cost: "$35/車",
     openHours: "24小時開放",
-    mapLink: "https://www.google.com/maps/search/?api=1&query=Grand+Canyon+National+Park",
+    mapLink:
+      "https://www.google.com/maps/search/?api=1&query=Grand+Canyon+National+Park",
     tags: ["世界遺產", "健行", "自然"],
   },
   {
     name: "羚羊峽谷 (Lower Antelope Canyon)",
-    image: "/images/attractions/Antelope-Canyon-Tours-from-Phoenix-DETOURS-LP.jpg",
+    image:
+      "/images/attractions/Antelope-Canyon-Tours-from-Phoenix-DETOURS-LP.jpg",
     location: "Page, AZ",
     region: "拉斯維加斯/大峽谷",
     description: "光影交織的狹縫型峽谷，正午時分光線最佳，需參加導覽團。",
     category: "Nature",
     cost: "約 $50-70/人 (需預約)",
     openHours: "依導覽團時間",
-    mapLink: "https://www.google.com/maps/search/?api=1&query=Lower+Antelope+Canyon",
+    mapLink:
+      "https://www.google.com/maps/search/?api=1&query=Lower+Antelope+Canyon",
     tags: ["攝影", "奇景"],
   },
   {
@@ -2326,7 +2511,8 @@ export const ATTRACTIONS: Attraction[] = [
     category: "Nature",
     cost: "$10 (停車費)",
     openHours: "日出至日落",
-    mapLink: "https://www.google.com/maps/search/?api=1&query=Horseshoe+Bend+Page",
+    mapLink:
+      "https://www.google.com/maps/search/?api=1&query=Horseshoe+Bend+Page",
     tags: ["自然", "拍照"],
   },
   {
@@ -2350,7 +2536,8 @@ export const ATTRACTIONS: Attraction[] = [
     category: "Entertainment",
     cost: "免費",
     openHours: "每15-30分鐘一場",
-    mapLink: "https://www.google.com/maps/search/?api=1&query=Bellagio+Fountains",
+    mapLink:
+      "https://www.google.com/maps/search/?api=1&query=Bellagio+Fountains",
     tags: ["經典", "夜景", "免費"],
   },
 
@@ -2364,7 +2551,8 @@ export const ATTRACTIONS: Attraction[] = [
     category: "Culture",
     cost: "約 $39/人",
     openHours: "10:00 - 17:00",
-    mapLink: "https://www.google.com/maps/search/?api=1&query=USS+Midway+Museum",
+    mapLink:
+      "https://www.google.com/maps/search/?api=1&query=USS+Midway+Museum",
     tags: ["軍事", "歷史", "必訪"],
   },
   {
@@ -2372,7 +2560,8 @@ export const ATTRACTIONS: Attraction[] = [
     image: "/images/attractions/spotlightbalboapark.webp",
     location: "San Diego",
     region: "聖地牙哥",
-    description: "美國最大的城市文化公園，擁有西班牙殖民復興風格建築與十多座博物館。",
+    description:
+      "美國最大的城市文化公園，擁有西班牙殖民復興風格建築與十多座博物館。",
     category: "Culture",
     cost: "公園免費 / 博物館另計",
     openHours: "全天開放",
@@ -2412,7 +2601,8 @@ export const ATTRACTIONS: Attraction[] = [
     category: "City",
     cost: "免費",
     openHours: "全天開放",
-    mapLink: "https://www.google.com/maps/search/?api=1&query=Unconditional+Surrender+Statue",
+    mapLink:
+      "https://www.google.com/maps/search/?api=1&query=Unconditional+Surrender+Statue",
     tags: ["地標", "拍照"],
   },
 
@@ -2426,7 +2616,8 @@ export const ATTRACTIONS: Attraction[] = [
     category: "Nature",
     cost: "$30/車（7天有效）",
     openHours: "24小時開放",
-    mapLink: "https://www.google.com/maps/search/?api=1&query=Joshua+Tree+National+Park",
+    mapLink:
+      "https://www.google.com/maps/search/?api=1&query=Joshua+Tree+National+Park",
     tags: ["沙漠", "自然", "觀星"],
   },
   {
@@ -2438,7 +2629,8 @@ export const ATTRACTIONS: Attraction[] = [
     category: "Nature",
     cost: "約 $36.95/人",
     openHours: "週一-五 10:00起",
-    mapLink: "https://www.google.com/maps/search/?api=1&query=Palm+Springs+Aerial+Tramway",
+    mapLink:
+      "https://www.google.com/maps/search/?api=1&query=Palm+Springs+Aerial+Tramway",
     tags: ["纜車", "風景", "避暑"],
   },
   {
@@ -2450,7 +2642,8 @@ export const ATTRACTIONS: Attraction[] = [
     category: "Entertainment",
     cost: "外觀免費",
     openHours: "09:00 - 19:00",
-    mapLink: "https://www.google.com/maps/search/?api=1&query=Cabazon+Dinosaurs",
+    mapLink:
+      "https://www.google.com/maps/search/?api=1&query=Cabazon+Dinosaurs",
     tags: ["親子", "拍照"],
   },
   {
@@ -2462,7 +2655,8 @@ export const ATTRACTIONS: Attraction[] = [
     category: "Shopping",
     cost: "免費",
     openHours: "10:00 - 20:00",
-    mapLink: "https://www.google.com/maps/search/?api=1&query=Desert+Hills+Premium+Outlets",
+    mapLink:
+      "https://www.google.com/maps/search/?api=1&query=Desert+Hills+Premium+Outlets",
     tags: ["購物", "精品"],
   },
 ];
@@ -2479,7 +2673,8 @@ export const FOOD_SPOTS: FoodSpot[] = [
     openHours: "06:30 - 20:00",
     mustOrder: "Potato Ball, Cheese Roll, Guava & Cheese Strudel",
     note: "洛杉磯最受歡迎的古巴麵包店，價格實惠，排隊名店",
-    mapLink: "https://maps.app.goo.gl/iQUfp4PZJWaNkLnV9?g_st=il",
+    mapLink:
+      "https://www.google.com/maps/search/?api=1&query=315+N+Brand+Blvd,+Glendale,+CA+91203",
     tags: ["洛杉磯", "麵包店", "平價", "必吃"],
   },
 
@@ -2493,7 +2688,8 @@ export const FOOD_SPOTS: FoodSpot[] = [
     openHours: "11:00 - 21:30",
     mustOrder: "小籠包, 排骨蛋炒飯",
     note: "建議事先訂位",
-    mapLink: "https://www.google.com/maps/search/?api=1&query=Din+Tai+Fung+Westfield+Santa+Anita",
+    mapLink:
+      "https://www.google.com/maps/search/?api=1&query=Din+Tai+Fung+Westfield+Santa+Anita",
     tags: ["Arcadia", "米其林", "聚餐"],
   },
   {
@@ -2519,7 +2715,8 @@ export const FOOD_SPOTS: FoodSpot[] = [
     openHours: "08:00 - 15:00",
     mustOrder: "早午餐, 糕點, 咖啡",
     note: "建築超美，咖啡水準極高",
-    mapLink: "https://www.google.com/maps/search/?api=1&query=Republique+624+S+La+Brea+Ave",
+    mapLink:
+      "https://www.google.com/maps/search/?api=1&query=Republique+624+S+La+Brea+Ave",
     tags: ["Los Angeles", "網美", "早午餐"],
   },
   {
@@ -2532,7 +2729,8 @@ export const FOOD_SPOTS: FoodSpot[] = [
     openHours: "07:00 - 18:00",
     mustOrder: "New Orleans Style Iced Coffee",
     note: "藍瓶咖啡",
-    mapLink: "https://www.google.com/maps/search/?api=1&query=Blue+Bottle+Coffee+Beverly+Hills",
+    mapLink:
+      "https://www.google.com/maps/search/?api=1&query=Blue+Bottle+Coffee+Beverly+Hills",
     tags: ["Santa Monica", "連鎖精品", "手沖"],
   },
   {
@@ -2545,7 +2743,8 @@ export const FOOD_SPOTS: FoodSpot[] = [
     openHours: "07:00 - 19:00",
     mustOrder: "Pour-over Coffee (手沖)",
     note: "美國第三波咖啡浪潮代表之一，Venice分店氣氛很好",
-    mapLink: "https://www.google.com/maps/search/?api=1&query=Intelligentsia+Coffee+Abbot+Kinney+Blvd",
+    mapLink:
+      "https://www.google.com/maps/search/?api=1&query=Intelligentsia+Coffee+Abbot+Kinney+Blvd",
     tags: ["Venice", "精品咖啡", "氣氛佳"],
   },
   {
@@ -2558,7 +2757,8 @@ export const FOOD_SPOTS: FoodSpot[] = [
     openHours: "依店家公告",
     mustOrder: "義式三明治",
     note: "Day 2 Santa Monica 午餐候選，平價且在地人很常買。",
-    mapLink: "https://www.google.com/maps/search/?api=1&query=Bay+Cities+Italian+Deli+Santa+Monica",
+    mapLink:
+      "https://www.google.com/maps/search/?api=1&query=Bay+Cities+Italian+Deli+Santa+Monica",
     tags: ["Santa Monica", "三明治", "平價"],
   },
   {
@@ -2571,7 +2771,8 @@ export const FOOD_SPOTS: FoodSpot[] = [
     openHours: "依店家公告",
     mustOrder: "咖啡, 酪梨吐司, 輕食早午餐",
     note: "Day 2 Santa Monica 午餐候選，也適合喝咖啡稍作休息。",
-    mapLink: "https://www.google.com/maps/search/?api=1&query=Bluestone+Lane+Santa+Monica",
+    mapLink:
+      "https://www.google.com/maps/search/?api=1&query=Bluestone+Lane+Santa+Monica",
     tags: ["Santa Monica", "咖啡", "輕食"],
   },
   {
@@ -2584,7 +2785,8 @@ export const FOOD_SPOTS: FoodSpot[] = [
     openHours: "依店家公告",
     mustOrder: "招牌手工甜甜圈",
     note: "Day 2 Santa Monica 午餐後甜點候選。",
-    mapLink: "https://www.google.com/maps/search/?api=1&query=Sidecar+Doughnuts+Santa+Monica",
+    mapLink:
+      "https://www.google.com/maps/search/?api=1&query=Sidecar+Doughnuts+Santa+Monica",
     tags: ["Santa Monica", "甜點", "甜甜圈"],
   },
   {
@@ -2597,7 +2799,8 @@ export const FOOD_SPOTS: FoodSpot[] = [
     openHours: "依店家公告",
     mustOrder: "Brunch, 沙拉, 三明治",
     note: "位在 Malibu Pier 上，行程中馬里布停留可順路安排。",
-    mapLink: "https://www.google.com/maps/search/?api=1&query=Malibu+Farm+Pier+Cafe",
+    mapLink:
+      "https://www.google.com/maps/search/?api=1&query=Malibu+Farm+Pier+Cafe",
     tags: ["Malibu", "Pier", "早午餐"],
   },
 
@@ -2612,7 +2815,8 @@ export const FOOD_SPOTS: FoodSpot[] = [
     openHours: "11:00 - 23:00",
     mustOrder: "Hell's Kitchen Burger",
     note: "地獄廚神漢堡店",
-    mapLink: "https://www.google.com/maps/search/?api=1&query=Gordon+Ramsay+Burger+Planet+Hollywood",
+    mapLink:
+      "https://www.google.com/maps/search/?api=1&query=Gordon+Ramsay+Burger+Planet+Hollywood",
     tags: ["Las Vegas Strip", "名人餐廳", "漢堡"],
   },
   {
@@ -2625,7 +2829,8 @@ export const FOOD_SPOTS: FoodSpot[] = [
     openHours: "13:00 - 22:00",
     mustOrder: "海鮮, 蟹腳, 肋眼牛排",
     note: "賭城評價最高的 Buffet 之一，海鮮非常豐富",
-    mapLink: "https://www.google.com/maps/search/?api=1&query=Bacchanal+Buffet+Caesars+Palace",
+    mapLink:
+      "https://www.google.com/maps/search/?api=1&query=Bacchanal+Buffet+Caesars+Palace",
     tags: ["Caesars Palace", "吃到飽", "海鮮"],
   },
   {
@@ -2638,7 +2843,8 @@ export const FOOD_SPOTS: FoodSpot[] = [
     openHours: "06:30 - 23:00",
     mustOrder: "Spanish Latte",
     note: "來自LA的有機咖啡名店",
-    mapLink: "https://www.google.com/maps/search/?api=1&query=Urth+Caffe+Wynn+Las+Vegas",
+    mapLink:
+      "https://www.google.com/maps/search/?api=1&query=Urth+Caffe+Wynn+Las+Vegas",
     tags: ["Wynn Hotel", "有機", "拉花"],
   },
 
@@ -2653,7 +2859,8 @@ export const FOOD_SPOTS: FoodSpot[] = [
     openHours: "11:00 - 22:00",
     mustOrder: "Baby Back Ribs (豬肋排)",
     note: "聖地牙哥排隊名店，肉質極為軟嫩",
-    mapLink: "https://www.google.com/maps/search/?api=1&query=Phil's+BBQ+Sports+Arena+Blvd",
+    mapLink:
+      "https://www.google.com/maps/search/?api=1&query=Phil's+BBQ+Sports+Arena+Blvd",
     tags: ["Point Loma", "排隊店", "肉食"],
   },
   {
@@ -2666,7 +2873,8 @@ export const FOOD_SPOTS: FoodSpot[] = [
     openHours: "11:30 - 21:00",
     mustOrder: "生蠔, 海鮮湯 (Cioppino)",
     note: "就在中途島號旁，景觀無敵",
-    mapLink: "https://www.google.com/maps/search/?api=1&query=The+Fish+Market+San+Diego+G+Street",
+    mapLink:
+      "https://www.google.com/maps/search/?api=1&query=The+Fish+Market+San+Diego+G+Street",
     tags: ["Downtown", "海景", "海鮮"],
   },
   {
@@ -2679,7 +2887,8 @@ export const FOOD_SPOTS: FoodSpot[] = [
     openHours: "06:30 - 18:00",
     mustOrder: "Single Origin Pour Over",
     note: "聖地牙哥本土最佳烘豆商之一，獲獎無數；這裡列的是 La Jolla 分店。",
-    mapLink: "https://www.google.com/maps/search/?api=1&query=Bird+Rock+Coffee+Roasters+La+Jolla",
+    mapLink:
+      "https://www.google.com/maps/search/?api=1&query=Bird+Rock+Coffee+Roasters+La+Jolla",
     tags: ["La Jolla", "在地", "冠軍咖啡"],
   },
   {
@@ -2692,7 +2901,8 @@ export const FOOD_SPOTS: FoodSpot[] = [
     openHours: "05:30 - 20:00",
     mustOrder: "Best Drink Ever (招牌特調)",
     note: "店面裝潢很美，適合拍照",
-    mapLink: "https://www.google.com/maps/search/?api=1&query=Better+Buzz+Coffee+Hillcrest",
+    mapLink:
+      "https://www.google.com/maps/search/?api=1&query=Better+Buzz+Coffee+Hillcrest",
     tags: ["San Diego", "在地連鎖", "特調"],
   },
   {
@@ -2718,7 +2928,8 @@ export const FOOD_SPOTS: FoodSpot[] = [
     openHours: "依店家公告",
     mustOrder: "生蠔, Lobster Roll",
     note: "行程中海港村午餐備選之一，海鮮類評價高。",
-    mapLink: "https://www.google.com/maps/search/?api=1&query=Ironside+Fish+%26+Oyster+San+Diego",
+    mapLink:
+      "https://www.google.com/maps/search/?api=1&query=Ironside+Fish+%26+Oyster+San+Diego",
     tags: ["Little Italy", "海鮮", "生蠔"],
   },
   {
@@ -2731,7 +2942,8 @@ export const FOOD_SPOTS: FoodSpot[] = [
     openHours: "依店家公告",
     mustOrder: "Burger, BBQ combo",
     note: "行程中海港村 / 市區午餐備選之一。",
-    mapLink: "https://www.google.com/maps/search/?api=1&query=Hard+Rock+Cafe+San+Diego",
+    mapLink:
+      "https://www.google.com/maps/search/?api=1&query=Hard+Rock+Cafe+San+Diego",
     tags: ["Gaslamp", "美式", "連鎖"],
   },
   {
@@ -2744,7 +2956,8 @@ export const FOOD_SPOTS: FoodSpot[] = [
     openHours: "依店家公告",
     mustOrder: "披薩, 義大利麵",
     note: "Day 11 小義大利晚餐名單中的老字號披薩店。",
-    mapLink: "https://www.google.com/maps/search/?api=1&query=Filippi%27s+Pizza+Grotto+San+Diego",
+    mapLink:
+      "https://www.google.com/maps/search/?api=1&query=Filippi%27s+Pizza+Grotto+San+Diego",
     tags: ["Little Italy", "披薩", "老字號"],
   },
   {
@@ -2757,7 +2970,8 @@ export const FOOD_SPOTS: FoodSpot[] = [
     openHours: "依店家公告",
     mustOrder: "起司輪義大利麵",
     note: "Day 11 小義大利晚餐推薦，較偏正式聚餐。",
-    mapLink: "https://www.google.com/maps/search/?api=1&query=Vincenzo+Cucina+San+Diego",
+    mapLink:
+      "https://www.google.com/maps/search/?api=1&query=Vincenzo+Cucina+San+Diego",
     tags: ["Little Italy", "義式", "聚餐"],
   },
   {
@@ -2770,7 +2984,8 @@ export const FOOD_SPOTS: FoodSpot[] = [
     openHours: "依店家公告",
     mustOrder: "主廚料理, 義麵",
     note: "Day 11 小義大利晚餐推薦，氛圍與餐點都偏精緻。",
-    mapLink: "https://www.google.com/maps/search/?api=1&query=Herb+%26+Wood+San+Diego",
+    mapLink:
+      "https://www.google.com/maps/search/?api=1&query=Herb+%26+Wood+San+Diego",
     tags: ["Little Italy", "主廚餐廳", "精緻"],
   },
   {
@@ -2783,7 +2998,8 @@ export const FOOD_SPOTS: FoodSpot[] = [
     openHours: "依店家公告",
     mustOrder: "Steak, 經典牛排館配菜",
     note: "Day 11 小義大利晚餐推薦，適合想吃高級牛排時安排。",
-    mapLink: "https://www.google.com/maps/search/?api=1&query=Born+and+Raised+San+Diego",
+    mapLink:
+      "https://www.google.com/maps/search/?api=1&query=Born+and+Raised+San+Diego",
     tags: ["Little Italy", "牛排", "高級"],
   },
   {
@@ -2796,7 +3012,8 @@ export const FOOD_SPOTS: FoodSpot[] = [
     openHours: "依店家公告",
     mustOrder: "傳統墨西哥菜, 戶外露台用餐",
     note: "Day 11 Old Town 晚餐推薦之一。",
-    mapLink: "https://www.google.com/maps/search/?api=1&query=Casa+Guadalajara+San+Diego",
+    mapLink:
+      "https://www.google.com/maps/search/?api=1&query=Casa+Guadalajara+San+Diego",
     tags: ["Old Town", "墨西哥菜", "露台"],
   },
   {
@@ -2809,7 +3026,8 @@ export const FOOD_SPOTS: FoodSpot[] = [
     openHours: "依店家公告",
     mustOrder: "Tacos, Fajitas",
     note: "Day 11 Old Town 晚餐推薦之一，觀光客很常去。",
-    mapLink: "https://www.google.com/maps/search/?api=1&query=Cafe+Coyote+San+Diego",
+    mapLink:
+      "https://www.google.com/maps/search/?api=1&query=Cafe+Coyote+San+Diego",
     tags: ["Old Town", "墨西哥菜", "人氣店"],
   },
   {
@@ -2822,7 +3040,8 @@ export const FOOD_SPOTS: FoodSpot[] = [
     openHours: "依店家公告",
     mustOrder: "墨西哥家常菜",
     note: "Day 11 Old Town 晚餐名單中的備選餐廳。",
-    mapLink: "https://www.google.com/maps/search/?api=1&query=Harrah%27s+Cocina+San+Diego",
+    mapLink:
+      "https://www.google.com/maps/search/?api=1&query=Harrah%27s+Cocina+San+Diego",
     tags: ["San Diego", "墨西哥菜", "在地風味"],
   },
   {
@@ -2835,7 +3054,8 @@ export const FOOD_SPOTS: FoodSpot[] = [
     openHours: "依店家公告",
     mustOrder: "Tacos, Burritos",
     note: "Day 13 Ocean Beach 午餐候選名單。",
-    mapLink: "https://www.google.com/maps/search/?api=1&query=The+Taco+Stand+San+Diego",
+    mapLink:
+      "https://www.google.com/maps/search/?api=1&query=The+Taco+Stand+San+Diego",
     tags: ["San Diego", "塔可", "平價"],
   },
   {
@@ -2848,7 +3068,8 @@ export const FOOD_SPOTS: FoodSpot[] = [
     openHours: "依店家公告",
     mustOrder: "Pancakes, Brunch",
     note: "Day 13 午餐候選，可當早午餐安排。",
-    mapLink: "https://www.google.com/maps/search/?api=1&query=The+Cottage+La+Jolla",
+    mapLink:
+      "https://www.google.com/maps/search/?api=1&query=The+Cottage+La+Jolla",
     tags: ["La Jolla", "早午餐", "人氣店"],
   },
   {
@@ -2861,7 +3082,8 @@ export const FOOD_SPOTS: FoodSpot[] = [
     openHours: "依店家公告",
     mustOrder: "經典漢堡, Fries",
     note: "Day 13 Ocean Beach 午餐候選，屬聖地牙哥經典漢堡店。",
-    mapLink: "https://www.google.com/maps/search/?api=1&query=Hodad%27s+Ocean+Beach+San+Diego",
+    mapLink:
+      "https://www.google.com/maps/search/?api=1&query=Hodad%27s+Ocean+Beach+San+Diego",
     tags: ["Ocean Beach", "漢堡", "經典"],
   },
 
@@ -2876,7 +3098,8 @@ export const FOOD_SPOTS: FoodSpot[] = [
     openHours: "09:00 - 17:00",
     mustOrder: "Date Shake (椰棗奶昔)",
     note: "特產椰棗 (Date) 製作，非常濃郁甜美",
-    mapLink: "https://www.google.com/maps/search/?api=1&query=Shields+Date+Garden+Indio",
+    mapLink:
+      "https://www.google.com/maps/search/?api=1&query=Shields+Date+Garden+Indio",
     tags: ["Indio", "特產", "甜點"],
   },
   {
@@ -2889,7 +3112,8 @@ export const FOOD_SPOTS: FoodSpot[] = [
     openHours: "07:00 - 18:00",
     mustOrder: "Cold Brew (冷萃咖啡)",
     note: "當地評價很高的獨立咖啡店",
-    mapLink: "https://www.google.com/maps/search/?api=1&query=Kartchner's+Coffees+Palm+Springs",
+    mapLink:
+      "https://www.google.com/maps/search/?api=1&query=Kartchner's+Coffees+Palm+Springs",
     tags: ["Downtown", "獨立咖啡", "冷萃"],
   },
   {
@@ -2915,7 +3139,8 @@ export const FOOD_SPOTS: FoodSpot[] = [
     openHours: "07:00 - 15:00",
     mustOrder: "咖啡飲品, 早餐碗, 三明治",
     note: "主打永續咖啡與健康餐點的早午餐咖啡店",
-    mapLink: "https://www.google.com/maps/search/?api=1&query=Cafe+La+Jefa+Palm+Springs",
+    mapLink:
+      "https://www.google.com/maps/search/?api=1&query=Cafe+La+Jefa+Palm+Springs",
     tags: ["Palm Springs", "永續", "健康餐"],
   },
   {
@@ -2928,7 +3153,8 @@ export const FOOD_SPOTS: FoodSpot[] = [
     openHours: "12:00 - 21:00",
     mustOrder: "自製冰淇淋, 特調口味",
     note: "結合選物店的冰淇淋小店",
-    mapLink: "https://www.google.com/maps/search/?api=1&query=Ice+Cream+%26+Shoppe+Palm+Springs",
+    mapLink:
+      "https://www.google.com/maps/search/?api=1&query=Ice+Cream+%26+Shoppe+Palm+Springs",
     tags: ["Palm Springs", "冰淇淋", "甜點"],
   },
   {
@@ -2941,7 +3167,8 @@ export const FOOD_SPOTS: FoodSpot[] = [
     openHours: "12:00 - 21:00",
     mustOrder: "季節口味冰淇淋",
     note: "主打天然食材與香草風味的冰淇淋品牌",
-    mapLink: "https://www.google.com/maps/search/?api=1&query=Carmela+Ice+Cream+Palm+Springs",
+    mapLink:
+      "https://www.google.com/maps/search/?api=1&query=Carmela+Ice+Cream+Palm+Springs",
     tags: ["Palm Springs", "冰淇淋", "甜點"],
   },
 
@@ -2956,7 +3183,8 @@ export const FOOD_SPOTS: FoodSpot[] = [
     openHours: "07:00 - 17:00",
     mustOrder: "手沖咖啡, 招牌義式濃縮",
     note: "約書亞樹當地知名咖啡店，自烘豆，沙漠風格裝潢",
-    mapLink: "https://www.google.com/maps/search/?api=1&query=Joshua+Tree+Coffee+Company",
+    mapLink:
+      "https://www.google.com/maps/search/?api=1&query=Joshua+Tree+Coffee+Company",
     tags: ["Joshua Tree", "在地咖啡", "自烘豆"],
   },
   {

@@ -15,27 +15,23 @@ export const ItineraryTimelineItem: React.FC<ItineraryTimelineItemProps> = ({
 }) => {
   const { t } = useTranslation();
 
-  // 交通類型：標題和內容合併顯示
-  if (item.type === "transportation" && item.from && item.to) {
-    // 對於交通項目，mapLink 應該只指向目的地，讓 Google Maps 使用當前位置作為起點
-    const getTransportMapLink = (mapLink?: string, to?: string) => {
+  // /dir/ 格式轉成地點搜尋（不要導航）
+  const getMapSearchLink = (mapLink?: string) => {
       if (!mapLink) return undefined;
-      // 如果是 /dir/ 格式，轉換為只包含目的地的格式（使用當前位置作為起點）
       if (mapLink.includes("/dir/")) {
-        // 提取目的地（最後一個 / 後面的部分）
-        const parts = mapLink.split("/dir/")[1];
-        if (parts) {
-          const destinations = parts.split("/").filter(p => p.length > 0);
-          // 只保留目的地，起點留空讓 Google Maps 使用當前位置
-          if (destinations.length > 0) {
-            const destination = destinations[destinations.length - 1];
-            return `https://www.google.com/maps/dir//${destination}`;
-          }
+        const dirPart = mapLink.split("/dir/")[1]?.split("?")[0] || "";
+        const parts = dirPart.split("/").filter((p) => p.length > 0);
+        if (parts.length > 0) {
+          const dest = parts[parts.length - 1];
+          const query = decodeURIComponent(dest.replace(/\+/g, " "));
+          return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(query)}`;
         }
       }
       return mapLink;
-    };
+  };
 
+  // 交通類型：標題和內容合併顯示
+  if (item.type === "transportation" && item.from && item.to) {
     return (
       <div className="space-y-2">
         <div className="flex items-start justify-between gap-2">
@@ -56,9 +52,9 @@ export const ItineraryTimelineItem: React.FC<ItineraryTimelineItemProps> = ({
               </span>
             )}
           </div>
-          {getTransportMapLink(item.mapLink, item.to) && (
+          {getMapSearchLink(item.mapLink) && (
             <a
-              href={getTransportMapLink(item.mapLink, item.to)}
+              href={getMapSearchLink(item.mapLink)}
               target="_blank"
               rel="noopener noreferrer"
               className="flex-shrink-0 flex items-center gap-1 text-xs font-medium text-stone-600 hover:text-stone-900 hover:bg-stone-100 px-2 py-1 rounded transition-colors"
@@ -176,9 +172,9 @@ export const ItineraryTimelineItem: React.FC<ItineraryTimelineItemProps> = ({
               )}
             </span>
           </h5>
-          {item.mapLink && (
+          {getMapSearchLink(item.mapLink) && (
             <a
-              href={item.mapLink}
+              href={getMapSearchLink(item.mapLink)}
               target="_blank"
               rel="noopener noreferrer"
               className="flex-shrink-0 flex items-center gap-1 text-xs font-medium text-stone-600 hover:text-stone-900 hover:bg-stone-100 px-2 py-1 rounded transition-colors"
@@ -341,9 +337,9 @@ export const ItineraryTimelineItem: React.FC<ItineraryTimelineItemProps> = ({
             </span>
           )}
         </div>
-        {item.mapLink && (
+        {getMapSearchLink(item.mapLink) && (
           <a
-            href={item.mapLink}
+            href={getMapSearchLink(item.mapLink)}
             target="_blank"
             rel="noopener noreferrer"
             className="flex-shrink-0 flex items-center gap-1 text-xs font-medium text-stone-600 hover:text-stone-900 hover:bg-stone-100 px-2 py-1 rounded transition-colors"
