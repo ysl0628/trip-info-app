@@ -1291,8 +1291,14 @@ export const ITINERARY: DayItinerary[] = [
           "https://www.google.com/maps/dir/63969+Sullivan+Rd,+Joshua+Tree,+CA+92252/West+Entrance+Station,+Joshua+Tree+National+Park",
         description: [
           "取國家公園年票 $30/車",
-          "西入口（推薦，離住宿較近）：https://www.google.com/maps/dir/63969+Sullivan+Rd,+Joshua+Tree,+CA+92252/West+Entrance+Station,+Joshua+Tree+National+Park",
-          "北入口（Twentynine Palms）：https://www.google.com/maps/dir/63969+Sullivan+Rd,+Joshua+Tree,+CA+92252/North+Entrance+Station,+Joshua+Tree+National+Park",
+          {
+            text: "西入口（推薦，離住宿較近）",
+            link: "https://www.google.com/maps/dir/63969+Sullivan+Rd,+Joshua+Tree,+CA+92252/West+Entrance+Station,+Joshua+Tree+National+Park",
+          },
+          {
+            text: "北入口（Twentynine Palms）",
+            link: "https://www.google.com/maps/dir/63969+Sullivan+Rd,+Joshua+Tree,+CA+92252/North+Entrance+Station,+Joshua+Tree+National+Park",
+          },
         ],
       },
       {
@@ -2134,21 +2140,18 @@ export const ITINERARY: DayItinerary[] = [
           "https://www.google.com/maps/search/?api=1&query=Del+Mar+CA+restaurants",
         description: [
           "海鮮、早午餐或主街咖啡輕食，依當天位置選店",
-          "甜點: An's Hatmakers",
+          { 
+            text: "甜點: An's Hatmakers",
+            link: "https://maps.app.goo.gl/grbwmnUCvxqWhhsn9",
+          },
         ],
       },
       {
         time: "2:00-4:00 PM",
         period: "下午",
         title: "自由活動",
-        location: "三選一",
         activityDuration: "約2小時",
         luggage: "行李在車上",
-        description: [
-          "① Fashion Valley Mall 購物（約 20 分鐘車程）",
-          "② Seaport Village 散步（約 25 分鐘車程）",
-          "③ 直接前往機場",
-        ],
       },
       {
         time: "4:00-6:00 PM",
