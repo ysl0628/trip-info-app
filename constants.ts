@@ -108,7 +108,11 @@ export const ITINERARY: DayItinerary[] = [
         to: "便利店或餐廳",
         duration: "約 10-15 分鐘",
         mapLink: "https://www.google.com/maps/dir/Rowland+Heights/7-Eleven",
-        description: ["便利店：7-Eleven、In-N-Out", "便當店：中式、日式便當"],
+        description: [
+          "便利店：7-Eleven、In-N-Out",
+          { text: "7-Eleven 官網", link: "https://www.7-eleven.com/" },
+          "便當店：中式、日式便當"
+        ],
       },
       {
         time: "21:30-22:30",

@@ -16,6 +16,8 @@ export interface Hotel {
   address?: string;
 }
 
+export type DescriptionLine = string | { text: string; link: string };
+
 export interface Accommodation {
   location: string;
   hotels: (string | Hotel)[];
@@ -28,7 +30,7 @@ export interface TimelineItem {
   period?: string; // 上午、下午、晚上等
   title: string;
   type?: 'transportation' | 'attraction' | 'meal' | 'accommodation' | 'other'; // 類型：交通、景點、餐食、住宿、其他
-  description?: string | string[]; // 改為可選
+  description?: string | DescriptionLine[]; // string | (string | {text, link})[]
   // 選項類型（例如「1」「2」用來標記選項一/二）
   option?: string;
   // 交通相關

@@ -2,7 +2,7 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import { Map, Clock, Luggage, ParkingCircle, DollarSign } from "lucide-react";
 import { TimelineItem } from "../../types";
-import { renderDescriptionWithLinks } from "../../utils/itineraryHelpers";
+import { renderDescriptionWithLinks, renderDescriptionLine } from "../../utils/itineraryHelpers";
 
 interface ItineraryTimelineItemProps {
   item: TimelineItem;
@@ -130,7 +130,7 @@ export const ItineraryTimelineItem: React.FC<ItineraryTimelineItemProps> = ({
               ? item.description
                   .map((line, idx) => (
                     <div key={idx} className={idx > 0 ? "mt-1" : ""}>
-                      {line}
+                      {renderDescriptionLine(line)}
                     </div>
                   ))
               : typeof item.description === "string" ? item.description : null
@@ -168,7 +168,9 @@ export const ItineraryTimelineItem: React.FC<ItineraryTimelineItemProps> = ({
                 <span className="font-normal text-stone-700">
                   {item.description &&
                     (Array.isArray(item.description)
-                      ? item.description[0]
+                      ? (item.description[0] && (typeof item.description[0] === "string"
+                          ? item.description[0]
+                          : item.description[0].text))
                       : item.description)}
                 </span>
               )}
@@ -271,7 +273,7 @@ export const ItineraryTimelineItem: React.FC<ItineraryTimelineItemProps> = ({
             )}
             {item.description.map((line, idx) => (
               <div key={idx} className={idx > 0 ? "mt-1" : ""}>
-                {line}
+                {renderDescriptionLine(line)}
               </div>
             ))}
           </div>
@@ -446,14 +448,20 @@ export const ItineraryTimelineItem: React.FC<ItineraryTimelineItemProps> = ({
                 </div>
               )}
               {item.description
-                .filter((line) => !line.includes("免費進入") && !line.includes("Free Admission"))
+                .filter((line) => {
+                  const t = typeof line === "string" ? line : line.text;
+                  return !t.includes("免費進入") && !t.includes("Free Admission");
+                })
                 .map((line, idx) => (
                   <div key={idx} className={idx > 0 ? "mt-1" : ""}>
-                    {renderDescriptionWithLinks(line)}
+                    {typeof line === "string"
+                      ? renderDescriptionWithLinks(line)
+                      : renderDescriptionLine(line)}
                   </div>
                 ))}
             </>
-          ) : !item.description.includes("免費進入") &&
+          ) : typeof item.description === "string" &&
+            !item.description.includes("免費進入") &&
             !item.description.includes("Free Admission") ? (
             <>
               {item.ticketLink && (

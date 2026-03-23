@@ -1,4 +1,15 @@
 import React from "react";
+import type { DescriptionLine } from "../types";
+
+// 渲染單一描述行：string 直接顯示，{ text, link } 轉為可點擊連結
+export const renderDescriptionLine = (line: DescriptionLine): React.ReactNode => {
+  if (typeof line === "string") return line;
+  return (
+    <a href={line.link} target="_blank" rel="noopener noreferrer" className="text-sky-600 hover:text-sky-800 underline">
+      {line.text}
+    </a>
+  );
+};
 
 // 處理描述中的連結
 // 移除可能存在的舊標記（向後兼容）
