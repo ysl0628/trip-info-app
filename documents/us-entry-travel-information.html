@@ -12,6 +12,9 @@
         --line: #d1d5db;
         --soft: #f8fafc;
         --accent: #0f766e;
+        --font-sans-cjk: "PingFang TC", "Hiragino Sans GB", "Noto Sans CJK TC",
+          "Noto Sans TC", "Microsoft JhengHei", "Heiti TC", "Source Han Sans TC",
+          "Segoe UI", Arial, sans-serif;
       }
 
       * {
@@ -20,10 +23,11 @@
 
       body {
         margin: 0;
-        font-family: "Segoe UI", Arial, sans-serif;
+        font-family: var(--font-sans-cjk);
         color: var(--ink);
         background: #eef2f7;
         line-height: 1.45;
+        text-rendering: optimizeLegibility;
       }
 
       main {
@@ -144,6 +148,9 @@
         html,
         body {
           font-size: 11px;
+          font-family: var(--font-sans-cjk);
+          -webkit-print-color-adjust: exact;
+          print-color-adjust: exact;
         }
 
         .grid.two {
